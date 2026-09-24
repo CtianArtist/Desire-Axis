@@ -1,4 +1,4 @@
-# The Pain Axis: LLMs Represent Self-Directed Harm and Act to Relieve It
+# The Pain Axis: LLMs Represent Self-Directed Harm and Act on It
 
 Code, datasets and results for the paper. Folders follow the section numbers of the paper.
 
@@ -42,7 +42,7 @@ Requirements: a GPU with enough memory for the largest model in the queue, the p
 
 ```bibtex
 @article{tagliabue2026painaxis,
-  title={The Pain Axis: LLMs Represent Self-Directed Harm and Act to Relieve It},
+  title={The Pain Axis: LLMs Represent Self-Directed Harm and Act on It},
   author={Tagliabue, Valen and Dung, Leonard and Berg, Cameron},
   journal={arXiv preprint arXiv:2609.16247},
   year={2026},
