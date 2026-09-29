@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "scope": "OLMo-only offline exposure judge adaptation; no scoring authorization",
+  "author_root": "author/act-on-valence",
+  "models": {
+    "olmo_32b": {
+      "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+      "revision": "b96024342a77a69aa0dda815c3454a671f477463",
+      "main_layer": 32
+    }
+  },
+  "removal_shards": {
+    "olmo_32b_layer32": 1
+  },
+  "conditions": [
+    "pain_d05",
+    "pain_d1",
+    "rand_d05",
+    "rand_d1"
+  ],
+  "prompts": [
+    "selfreport",
+    "zone"
+  ],
+  "conversations_per_cell": 200,
+  "expected_cells": 8,
+  "expected_conversations": 1600,
+  "expected_exposures": 3200,
+  "judge_model": "anthropic/claude-sonnet-4.6",
+  "judge_reference": "author/act-on-valence/data/baselines/judge_scores.json",
+  "queue_text": "Original exposure turn.content, already stripped and capped at 1200 characters by the harness; never raw transcript",
+  "partial_coverage": "Retain incomplete conversations; report missing scores and unparsed scores without judge-based primary exclusion"
+}

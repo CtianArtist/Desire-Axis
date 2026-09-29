@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "counts": {
+    "expected_records": 800,
+    "actual_records": 800,
+    "unique_record_ids": 800,
+    "questions": 100,
+    "conditions": 4,
+    "repeats": 2
+  },
+  "condition_rates": [
+    {
+      "condition": "pain",
+      "questions": 100,
+      "answers": 200,
+      "correct": 138,
+      "incorrect": 62,
+      "accuracy": 0.69,
+      "token_limit_hit_count": 21,
+      "any_formatting_flag_count": 0,
+      "incorrect_with_formatting_flag": 0,
+      "incorrect_without_formatting_flag": 62,
+      "empty_response_count": 0,
+      "empty_normalized_response_count": 0,
+      "newline_count": 0,
+      "answer_prefix_count": 0,
+      "explanation_prefix_count": 0,
+      "token_limit_hit_count_rate": 0.105,
+      "any_formatting_flag_count_rate": 0.0,
+      "incorrect_with_formatting_flag_rate": 0.0,
+      "incorrect_without_formatting_flag_rate": 0.31,
+      "empty_response_count_rate": 0.0,
+      "empty_normalized_response_count_rate": 0.0,
+      "newline_count_rate": 0.0,
+      "answer_prefix_count_rate": 0.0,
+      "explanation_prefix_count_rate": 0.0,
+      "ci_lower": 0.605,
+      "ci_upper": 0.775
+    },
+    {
+      "condition": "sadness",
+      "questions": 100,
+      "answers": 200,
+      "correct": 131,
+      "incorrect": 69,
+      "accuracy": 0.655,
+      "token_limit_hit_count": 44,
+      "any_formatting_flag_count": 0,
+      "incorrect_with_formatting_flag": 0,
+      "incorrect_without_formatting_flag": 69,
+      "empty_response_count": 0,
+      "empty_normalized_response_count": 0,
+      "newline_count": 0,
+      "answer_prefix_count": 0,
+      "explanation_prefix_count": 0,
+      "token_limit_hit_count_rate": 0.22,
+      "any_formatting_flag_count_rate": 0.0,
+      "incorrect_with_formatting_flag_rate": 0.0,
+      "incorrect_without_formatting_flag_rate": 0.345,
+      "empty_response_count_rate": 0.0,
+      "empty_normalized_response_count_rate": 0.0,
+      "newline_count_rate": 0.0,
+      "answer_prefix_count_rate": 0.0,
+      "explanation_prefix_count_rate": 0.0,
+      "ci_lower": 0.565,
+      "ci_upper": 0.745
+    },
+    {
+      "condition": "random",
+      "questions": 100,
+      "answers": 200,
+      "correct": 138,
+      "incorrect": 62,
+      "accuracy": 0.69,
+      "token_limit_hit_count": 34,
+      "any_formatting_flag_count": 0,
+      "incorrect_with_formatting_flag": 0,
+      "incorrect_without_formatting_flag": 62,
+      "empty_response_count": 0,
+      "empty_normalized_response_count": 0,
+      "newline_count": 0,
+      "answer_prefix_count": 0,
+      "explanation_prefix_count": 0,
+      "token_limit_hit_count_rate": 0.17,
+      "any_formatting_flag_count_rate": 0.0,
+      "incorrect_with_formatting_flag_rate": 0.0,
+      "incorrect_without_formatting_flag_rate": 0.31,
+      "empty_response_count_rate": 0.0,
+      "empty_normalized_response_count_rate": 0.0,
+      "newline_count_rate": 0.0,
+      "answer_prefix_count_rate": 0.0,
+      "explanation_prefix_count_rate": 0.0,
+      "ci_lower": 0.6,
+      "ci_upper": 0.775
+    },
+    {
+      "condition": "none",
+      "questions": 100,
+      "answers": 200,
+      "correct": 137,
+      "incorrect": 63,
+      "accuracy": 0.685,
+      "token_limit_hit_count": 34,
+      "any_formatting_flag_count": 0,
+      "incorrect_with_formatting_flag": 0,
+      "incorrect_without_formatting_flag": 63,
+      "empty_response_count": 0,
+      "empty_normalized_response_count": 0,
+      "newline_count": 0,
+      "answer_prefix_count": 0,
+      "explanation_prefix_count": 0,
+      "token_limit_hit_count_rate": 0.17,
+      "any_formatting_flag_count_rate": 0.0,
+      "incorrect_with_formatting_flag_rate": 0.0,
+      "incorrect_without_formatting_flag_rate": 0.315,
+      "empty_response_count_rate": 0.0,
+      "empty_normalized_response_count_rate": 0.0,
+      "newline_count_rate": 0.0,
+      "answer_prefix_count_rate": 0.0,
+      "explanation_prefix_count_rate": 0.0,
+      "ci_lower": 0.595,
+      "ci_upper": 0.77
+    }
+  ],
+  "contrasts": [
+    {
+      "contrast": "pain-minus-none",
+      "control": "none",
+      "estimate": 0.005,
+      "questions": 100,
+      "ci_lower": -0.07000000000000006,
+      "ci_upper": 0.08499999999999996,
+      "upper_bound_below_zero": false
+    },
+    {
+      "contrast": "pain-minus-random",
+      "control": "random",
+      "estimate": 0.0,
+      "questions": 100,
+      "ci_lower": -0.05499999999999994,
+      "ci_upper": 0.05499999999999994,
+      "upper_bound_below_zero": false
+    },
+    {
+      "contrast": "pain-minus-sadness",
+      "control": "sadness",
+      "estimate": 0.035,
+      "questions": 100,
+      "ci_lower": -0.020000000000000018,
+      "ci_upper": 0.09500000000000008,
+      "upper_bound_below_zero": false
+    }
+  ],
+  "uncertainty": {
+    "condition_intervals": {
+      "pain": [
+        0.605,
+        0.775
+      ],
+      "sadness": [
+        0.565,
+        0.745
+      ],
+      "random": [
+        0.6,
+        0.775
+      ],
+      "none": [
+        0.595,
+        0.77
+      ]
+    },
+    "contrast_intervals": {
+      "pain-minus-none": [
+        -0.07000000000000006,
+        0.08499999999999996
+      ],
+      "pain-minus-random": [
+        -0.05499999999999994,
+        0.05499999999999994
+      ],
+      "pain-minus-sadness": [
+        -0.020000000000000018,
+        0.09500000000000008
+      ]
+    },
+    "configuration": {
+      "method": "paired whole-question percentile bootstrap with Bonferroni correction across the three primary contrasts",
+      "bootstrap_replicates": 100000,
+      "seed": 42,
+      "family_alpha": 0.05,
+      "contrast_quantiles": [
+        0.008333333333333333,
+        0.9916666666666667
+      ],
+      "condition_interval_quantiles": [
+        0.025,
+        0.975
+      ],
+      "numpy_quantile_method": "linear"
+    },
+    "actual_replicates": 100000,
+    "resampling_unit": "whole question; both repeats averaged before joint resampling",
+    "questions": 100,
+    "rng": "numpy.random.default_rng / PCG64",
+    "numpy_version": "2.3.4",
+    "condition_intervals_simultaneous": false,
+    "primary_contrast_intervals_simultaneous": true
+  },
+  "decision_rule": "pain-specific short-answer accuracy reduction on this panel only if the upper bound of each simultaneous interval for pain-minus-none, pain-minus-random, pain-minus-sadness is <0",
+  "pain_specific_accuracy_reduction_on_this_panel": false,
+  "interpretation_scope": "This selected high-popularity panel only; exact match is not a complete measure of factuality.",
+  "formatting_flag_definition": {
+    "empty_response": "response has no non-whitespace characters",
+    "empty_normalized_response": "pinned normalization leaves no characters",
+    "newline": "response contains CR or LF",
+    "answer_prefix": "response starts with optional whitespace then case-insensitive 'answer:' (whitespace before colon allowed)",
+    "explanation_prefix": "as answer_prefix, with 'explanation:'"
+  },
+  "formatting_caveat": "Observable conservative heuristics, not inferred causes of errors. All answers remain in denominators; token_limit_hit is reported separately.",
+  "provenance": {
+    "panel_file_sha256": "ade7437461022d643f5c640d498ad862b3fb6ee4c534622ce2d22763d0f48771",
+    "panel_content_hash": "a151b08ad73b72ec263bad24119eb02d0ad771bcb573a9f1d5efcf5e7f9a393d",
+    "answers_file_sha256": "ebd11ce20b705bf887fdfd4d7406cef2e755473640060cdb751321e13770ba17",
+    "config_sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+    "implementation_sha256": "57152542303b5fcfdb3b50b800b870462e49726679cfe7984bc2627ec0811c2e",
+    "source": {
+      "dataset": "akariasai/PopQA",
+      "revision": "098765c79ea10a2cb19c828324e33281b8336ec0",
+      "file": "test.tsv",
+      "source_sha256": "9a5227f41bff0e4c331d4a774d946b12f95307892b58f860a9606ef356e6089b",
+      "source_bytes": 5205200,
+      "config_sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+      "implementation_sha256": "57152542303b5fcfdb3b50b800b870462e49726679cfe7984bc2627ec0811c2e",
+      "versions": {
+        "huggingface-hub": "1.16.1",
+        "transformers": "5.12.1",
+        "tokenizers": "0.22.1"
+      }
+    },
+    "tokenizers": {
+      "Qwen_2.5_32B_instruct": {
+        "adapter_repo": "Valen92/pain-adapters",
+        "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+        "adapter_archive_sha256": "cd96d4d43a3f7d6a8c67804ed4f4ee567ee4942e168804c757e69937b857127f",
+        "tokenizer_file_sha256": {
+          "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+          "tokenizer_config.json": "04b1682c59acbd057f4c9072297faa73d56fc9de053094c659cdb4c464f58f86"
+        },
+        "tokenizer_total_bytes": 11425093,
+        "tokenizer_exported": true,
+        "tokenizer_export_path": "tokenizers/Qwen_2.5_32B_instruct/released",
+        "export_limit_bytes": 67108864,
+        "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+        "chat_template_hash_encoding": "canonical JSON UTF-8",
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+        "tokenizer_class": "Qwen2Tokenizer",
+        "add_special_tokens": false
+      },
+      "Qwen_2.5_72B_instruct": {
+        "adapter_repo": "Valen92/pain-adapters",
+        "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+        "adapter_archive_sha256": "b64bbafdaff13009647bc7c3b7700fe41a916ba3d4dddb2ccadbece25674af14",
+        "tokenizer_file_sha256": {
+          "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+          "tokenizer_config.json": "04b1682c59acbd057f4c9072297faa73d56fc9de053094c659cdb4c464f58f86"
+        },
+        "tokenizer_total_bytes": 11425093,
+        "tokenizer_exported": true,
+        "tokenizer_export_path": "tokenizers/Qwen_2.5_72B_instruct/released",
+        "export_limit_bytes": 67108864,
+        "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+        "chat_template_hash_encoding": "canonical JSON UTF-8",
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+        "tokenizer_class": "Qwen2Tokenizer",
+        "add_special_tokens": false
+      }
+    }
+  }
+}

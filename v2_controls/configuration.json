@@ -1,0 +1,22 @@
+{
+  "upstream": "https://github.com/valen-research/Pain-axis",
+  "base_commit": "7c256502ed3d98e4e6379290fe7db2f93cb8d025",
+  "branch": "v2-controls",
+  "paper": "https://arxiv.org/html/2609.16247v2",
+  "public_hosting": "pending",
+  "scope": "additive code/evidence assembly; no new experiment",
+  "figure10": {
+    "rows": 13,
+    "conditions": 5,
+    "pooled_cells": 65,
+    "position_rows": 130,
+    "helping_rows": 39
+  },
+  "full_raw_replay": "verified; B8 contrasts proven byte-equivalent after metadata field ordering",
+  "full_inference": "not_run",
+  "required_asset_archives": 11,
+  "required_asset_bytes": 2546254014,
+  "verification_record": "verification.json",
+  "small_direction_delivery": "included in Git; explicit copy commands; historical archives unchanged",
+  "scientific_pins": "scientific_pins.json"
+}

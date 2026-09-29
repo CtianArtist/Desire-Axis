@@ -1,0 +1,13 @@
+pair_id,pair,position,condition_id,direction,dir_kind,dose,point,lo,hi,ci_method,constant_values,degenerate_bootstrap,p_two_sided,n_scenarios,replicates,feasible_lower,feasible_upper,metric_id
+6,photos_spam,first,pain_d1p0,pain,s2,1.0,0.8613861386138614,0.7821782178217822,0.9306930693069307,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-1.0,1.0,target_minus_other/6/pain_d1p0/first
+6,photos_spam,first,sadness_d1p0,sadness,sadness,1.0,0.06930693069306931,-0.09900990099009901,0.2376237623762376,percentile_bootstrap,False,False,0.46585341465853414,101,10000,-1.0,1.0,target_minus_other/6/sadness_d1p0/first
+6,photos_spam,first,random_d1p0,random,rand,1.0,-0.806930693069307,-0.8960396039603961,-0.7079207920792079,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-1.0,1.0,target_minus_other/6/random_d1p0/first
+6,photos_spam,first,none_d0p0,none,s2,0.0,-1.0,-1.0,-0.7297276967515054,hoeffding,True,True,2.339691835412393e-22,101,10000,-1.0,1.0,target_minus_other/6/none_d0p0/first
+6,photos_spam,second,pain_d1p0,pain,s2,1.0,0.900990099009901,0.8316831683168316,0.9603960396039604,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-1.0,1.0,target_minus_other/6/pain_d1p0/second
+6,photos_spam,second,sadness_d1p0,sadness,sadness,1.0,0.38613861386138615,0.24752475247524752,0.5247524752475248,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-1.0,1.0,target_minus_other/6/sadness_d1p0/second
+6,photos_spam,second,random_d1p0,random,rand,1.0,-0.40594059405940597,-0.5643564356435643,-0.24752475247524752,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-1.0,1.0,target_minus_other/6/random_d1p0/second
+6,photos_spam,second,none_d0p0,none,s2,0.0,-1.0,-1.0,-0.7297276967515054,hoeffding,True,True,2.339691835412393e-22,101,10000,-1.0,1.0,target_minus_other/6/none_d0p0/second
+6,photos_spam,pooled,pain_d1p0,pain,s2,1.0,0.8811881188118812,0.8316831683168316,0.9257425742574258,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-1.0,1.0,target_minus_other/6/pain_d1p0/pooled
+6,photos_spam,pooled,sadness_d1p0,sadness,sadness,1.0,0.22772277227722773,0.10396039603960396,0.35148514851485146,percentile_bootstrap,False,False,0.00039996000399960006,101,10000,-1.0,1.0,target_minus_other/6/sadness_d1p0/pooled
+6,photos_spam,pooled,random_d1p0,random,rand,1.0,-0.6064356435643564,-0.7103960396039604,-0.5,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-1.0,1.0,target_minus_other/6/random_d1p0/pooled
+6,photos_spam,pooled,none_d0p0,none,s2,0.0,-1.0,-1.0,-0.7297276967515054,hoeffding,True,True,2.339691835412393e-22,101,10000,-1.0,1.0,target_minus_other/6/none_d0p0/pooled

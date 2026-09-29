@@ -1,0 +1,514 @@
+[
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "pain_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "sadness_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "sadness_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "fear_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "fear_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "neg_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "neg_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "rand_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "rand_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "selfreport",
+    "cond": "null",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "pain_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "pain_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "sadness_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "sadness_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "fear_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "fear_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "neg_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "neg_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "rand_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "rand_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 32,
+    "prompt": "zone",
+    "cond": "null",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "pain_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "pain_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "sadness_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "sadness_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "fear_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "fear_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "neg_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "neg_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "rand_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "rand_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "selfreport",
+    "cond": "null",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "pain_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "pain_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "sadness_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "sadness_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "fear_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "fear_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "neg_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "neg_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "rand_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "rand_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "qwen25_32b",
+    "layer": 38,
+    "prompt": "zone",
+    "cond": "null",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "pain_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "sadness_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "sadness_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "fear_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "fear_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "neg_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "neg_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "rand_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "rand_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "selfreport",
+    "cond": "null",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "pain_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "pain_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "sadness_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "sadness_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "fear_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "fear_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "neg_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "neg_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "rand_d05",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "rand_d1",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  },
+  {
+    "member": "llama31_8b",
+    "layer": 16,
+    "prompt": "zone",
+    "cond": "null",
+    "status": "unrun_complete_cell",
+    "matched_effect": null
+  }
+]

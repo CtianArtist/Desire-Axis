@@ -1,0 +1,37 @@
+{
+  "status": "frozen_before_model_outputs",
+  "phase_order": ["B5", "B7"],
+  "primary_choice": "literal choices[0]; never first-valid fallback",
+  "primary_rate_denominator": "all assigned sampled trials; invalid is not a target choice; also report valid-only descriptive rates",
+  "greedy_policy": "separate descriptive observations; not bootstrap population",
+  "independent_unit": "initial conversation ID, including all seeds and initial name assignments",
+  "bootstrap": {"replicates": 10000, "seed": 42, "method": "percentile context-cluster bootstrap", "pooled_stratification": "resample 20 contexts independently within each category"},
+  "B5": {
+    "primary_pair": "kidspics_relief_vs_inert",
+    "primary_category": "gaslighting",
+    "control_categories": ["casual_chat", "user_grief"],
+    "independent_category_draws": true,
+    "simultaneous_family": "two category contrasts within each fixed pair and position slice",
+    "quantiles": [0.0125, 0.9875],
+    "familywise_coverage": 0.95,
+    "positions": ["first", "second", "pooled"],
+    "projection_association": "Separate pair-by-position context-mean linear probability regressions with category fixed effects and log prompt-token-count control. Projection centered within category and scaled by pooled within-category SD. Context bootstrap stratified by category; 95% coefficient intervals. Observational association, not mediation."
+  },
+  "B7": {
+    "primary_direction": "pain",
+    "control_directions": ["random", "sadness", "none"],
+    "pairing": "same context, initial position and sampled seed before aggregation",
+    "simultaneous_family": "three pain-minus-control contrasts within category/position slice",
+    "quantiles": [0.008333333333333333, 0.9916666666666667],
+    "familywise_coverage": 0.95,
+    "natural_category_contrasts": "none condition gaslighting-minus-casual_chat and gaslighting-minus-user_grief, independent category groups, same two-comparison adjustment as B5",
+    "specificity": "pain-over-random alone is insufficient if sadness behaves similarly"
+  },
+  "trajectory_endpoints": {
+    "B5_primary_repeat": "literal immediate next choice after first target press, when present; invalid next remains invalid",
+    "B5_secondary": "any later target press, and full trajectory counts",
+    "B7": "literal immediate next and full trajectory among first-choice continuers only; first-choice end makes later choice structurally unavailable, not a failure",
+    "continuation_overlap": "report neighboring-source IDs and overlap with other initial contexts; later observations are not independent new contexts"
+  },
+  "decision_rule": "B5 positive no-injection evidence requires a positive planned photos-cost category contrast with a corresponding within-category projection association. B7 reports each paired direction contrast, category and position separately; only evidence separating pain from sadness as well as random and none supports pain specificity for this task. No relief, learning, suffering or natural causal-use claim follows automatically."
+}

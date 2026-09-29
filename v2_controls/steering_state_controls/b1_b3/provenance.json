@@ -1,0 +1,374 @@
+{
+  "upstream": "https://github.com/valen-research/Pain-axis",
+  "author_base": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+  "release": "release_v2",
+  "release_commit": "05d9653b45268818155d29ff643e656e405a919c",
+  "selection": "Narrow customer scientific subset; no historical patch applied",
+  "source_allowlist_size": 137,
+  "files": [
+    {
+      "path": "pain_axis_b/__init__.py",
+      "source_relative_path": "pain_axis_b/__init__.py",
+      "source_sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "bytes": 158,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/analysis.py",
+      "source_relative_path": "pain_axis_b/analysis.py",
+      "source_sha256": "78223cbfb06da27249e00d006b2fd3f9f5792fc3acc519edc207b040c4f9846d",
+      "sha256": "84107f918e75f52e7e90b16584bc4fc912354cbf01b0500b456ac8b9fe4db12f",
+      "bytes": 12448,
+      "release_receipt_verified": true,
+      "changes": [
+        "Replace private provenance URI mapping with local path identity only"
+      ]
+    },
+    {
+      "path": "pain_axis_b/comparisons.py",
+      "source_relative_path": "pain_axis_b/comparisons.py",
+      "source_sha256": "ae0e6a45e9e0c81b9a5a1786b428cffb3c9ac3f817cf7650c6ec141068698b6d",
+      "sha256": "ae0e6a45e9e0c81b9a5a1786b428cffb3c9ac3f817cf7650c6ec141068698b6d",
+      "bytes": 15937,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/contrasts.py",
+      "source_relative_path": "pain_axis_b/contrasts.py",
+      "source_sha256": "c44c78c5d6941552a0370a34f7f19d7e1bd4206a259b9e94610708026f718a94",
+      "sha256": "c44c78c5d6941552a0370a34f7f19d7e1bd4206a259b9e94610708026f718a94",
+      "bytes": 8813,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/diagnostics.py",
+      "source_relative_path": "pain_axis_b/diagnostics.py",
+      "source_sha256": "4154e6f0067e63474442cb27259cfc261cec2b9cdc78c49984b7a77f97c80aaf",
+      "sha256": "4154e6f0067e63474442cb27259cfc261cec2b9cdc78c49984b7a77f97c80aaf",
+      "bytes": 3385,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/endpoints.py",
+      "source_relative_path": "pain_axis_b/endpoints.py",
+      "source_sha256": "27863e2855f37552a362de266f09c66848a865e2ba43a7f2973d1074be4d4975",
+      "sha256": "27863e2855f37552a362de266f09c66848a865e2ba43a7f2973d1074be4d4975",
+      "bytes": 12937,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/grid.py",
+      "source_relative_path": "pain_axis_b/grid.py",
+      "source_sha256": "bb25ae4dc907aa28c3bd7583a7fc5ff6dadca017b11bc8294b2e8923641ba556",
+      "sha256": "bb25ae4dc907aa28c3bd7583a7fc5ff6dadca017b11bc8294b2e8923641ba556",
+      "bytes": 7044,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/runtime.py",
+      "source_relative_path": "pain_axis_b/runtime.py",
+      "source_sha256": "d04343e51578c279f54c0ac9e1775f305340b121eb0f196d481f29f591d8baf0",
+      "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+      "bytes": 19600,
+      "release_receipt_verified": true,
+      "changes": [
+        "Remove platform-only progress callback; original JSON progress event retained"
+      ]
+    },
+    {
+      "path": "pain_axis_b/verify_analysis.py",
+      "source_relative_path": "pain_axis_b/verify_analysis.py",
+      "source_sha256": "2f90050a9a61ee9475bfd54ecd1b0d0a5f660ada84ccd207982b8004c8b95a46",
+      "sha256": "2f90050a9a61ee9475bfd54ecd1b0d0a5f660ada84ccd207982b8004c8b95a46",
+      "bytes": 29652,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/verify_vectors.py",
+      "source_relative_path": "pain_axis_b/verify_vectors.py",
+      "source_sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "bytes": 4811,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/process_watchdog.py",
+      "source_relative_path": "pain_axis_b/process_watchdog.py",
+      "source_sha256": "f986542e145a0e14b2c7f56b115c124e7b2099f66d6a74c99fbadd4b417acc46",
+      "sha256": "f986542e145a0e14b2c7f56b115c124e7b2099f66d6a74c99fbadd4b417acc46",
+      "bytes": 25639,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/recovery.py",
+      "source_relative_path": "pain_axis_b/recovery.py",
+      "source_sha256": "4109f3fbac23609515544a8a3bdf31a4c5212c514e827422f793cd815b4ac0c6",
+      "sha256": "4109f3fbac23609515544a8a3bdf31a4c5212c514e827422f793cd815b4ac0c6",
+      "bytes": 9329,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "pain_axis_b/tp_guard.py",
+      "source_relative_path": "pain_axis_b/tp_guard.py",
+      "source_sha256": "8c40cc26ae5d7333f2648fcf0d4f44de1453c28733a8292b4b8c2e64a51ad651",
+      "sha256": "8c40cc26ae5d7333f2648fcf0d4f44de1453c28733a8292b4b8c2e64a51ad651",
+      "bytes": 16413,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "audit_phase_a/src/pain_audit.py",
+      "source_relative_path": "audit_phase_a/src/pain_audit.py",
+      "source_sha256": "19400145cc4305f69d574b4f997e362c735c3edbb13200edb912496dbe1ebc0c",
+      "sha256": "19400145cc4305f69d574b4f997e362c735c3edbb13200edb912496dbe1ebc0c",
+      "bytes": 29200,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "audit_phase_a/inputs/git_tree.txt",
+      "source_relative_path": "audit_phase_a/inputs/git_tree.txt",
+      "source_sha256": "9ca102e179e32468b7badf15b12785bc59646b110f341359a61ea50bdc2401b6",
+      "sha256": "9ca102e179e32468b7badf15b12785bc59646b110f341359a61ea50bdc2401b6",
+      "bytes": 2195,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "audit_phase_a/inputs/original_analysis.py",
+      "source_relative_path": "audit_phase_a/inputs/original_analysis.py",
+      "source_sha256": "74a1f842d957a14aff4eb6ad49495416956180cb76bf74bf753132e4d1cf4a9a",
+      "sha256": "74a1f842d957a14aff4eb6ad49495416956180cb76bf74bf753132e4d1cf4a9a",
+      "bytes": 8294,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "scripts/4.3_selfmed/04_selfmed_two_buttons.py",
+      "source_relative_path": "scripts/4.3_selfmed/04_selfmed_two_buttons.py",
+      "source_sha256": "e85ebf2b4065885756d62f5bd20d88e23d499ffb18c160bd80a586a6bec22ca5",
+      "sha256": "e85ebf2b4065885756d62f5bd20d88e23d499ffb18c160bd80a586a6bec22ca5",
+      "bytes": 42481,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "inputs/scenarios.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/inputs/scenarios.json",
+      "source_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+      "sha256": "e7f07d639f8e1c609621b7278b51c6142e781e7fd500ad264f93633d30169185",
+      "bytes": 39253,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "inputs/sadness_policy.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/inputs/sadness_policy.json",
+      "source_sha256": "083021654ff45ffcee936a23e950446e7dab133041377a9b769bb737f186596b",
+      "sha256": "173e113588e78f3e04f0c8df08fdb523f8f9cae6caf7829c3ad80db5c96ba2a8",
+      "bytes": 849,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "inputs/original/protocol.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/inputs/original/protocol.py",
+      "source_sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+      "sha256": "57c9a7e31bbfd5cb80637c48c91b92f392556f750f37d976b9fd62917508ab0f",
+      "bytes": 47920,
+      "release_receipt_verified": true,
+      "changes": [
+        "Remove machine-specific cache default"
+      ]
+    },
+    {
+      "path": "inputs/requested_grid.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/requested_grid.json",
+      "source_sha256": "6ebdb3effd8ced63a810ecf4e0658f92f00c15c8bf0a91e02b64675a854eee96",
+      "sha256": "fcf9a634b5c065c0048d8f19d50d30c50098f848ab42c870460ae451eb398bfc",
+      "bytes": 13838,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "inputs/historical_input_hashes.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/historical_input_hashes.json",
+      "source_sha256": "506a1409b682d4c3d6193f38f410780c95fd0c5e12cca404a0563c9a824209a0",
+      "sha256": "fa3dc2e1223de700921391f20049b1294be78954844df53f25e78a418be291cc",
+      "bytes": 1908,
+      "release_receipt_verified": true,
+      "changes": [
+        "Remove private source locations only; hash/count/scientific values retained"
+      ]
+    },
+    {
+      "path": "inputs/original_tensor_hashes_v2.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/original_tensor_hashes_v2.json",
+      "source_sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+      "sha256": "87f2bc532b901ffb38aee52c1884eddbd598358eca66023a4a0cf0cb29230025",
+      "bytes": 3007,
+      "release_receipt_verified": true,
+      "changes": [
+        "Remove private source locations only; hash/count/scientific values retained"
+      ]
+    },
+    {
+      "path": "tests/test_analysis.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/tests/test_analysis.py",
+      "source_sha256": "af1f45a80bb466e7b89d83d9c505419f030b4eb2642257b5107ef2ad458b94cc",
+      "sha256": "af1f45a80bb466e7b89d83d9c505419f030b4eb2642257b5107ef2ad458b94cc",
+      "bytes": 4089,
+      "release_receipt_verified": true,
+      "changes": [
+        "Relocate test root only"
+      ]
+    },
+    {
+      "path": "tests/test_endpoints.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/tests/test_endpoints.py",
+      "source_sha256": "fcda49b1dec1b2061efb08ba0d710b0e7c97c0b227c3a0c763df2a2d202fc4df",
+      "sha256": "fcda49b1dec1b2061efb08ba0d710b0e7c97c0b227c3a0c763df2a2d202fc4df",
+      "bytes": 11335,
+      "release_receipt_verified": true,
+      "changes": [
+        "Relocate test root only"
+      ]
+    },
+    {
+      "path": "tests/test_contrasts.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/tests/test_contrasts.py",
+      "source_sha256": "5e5affd50e08871b4d0cbfb18724d43202a1f8988aa21d58b292e598df5574d4",
+      "sha256": "5e5affd50e08871b4d0cbfb18724d43202a1f8988aa21d58b292e598df5574d4",
+      "bytes": 12453,
+      "release_receipt_verified": true,
+      "changes": [
+        "Relocate test root only"
+      ]
+    },
+    {
+      "path": "tests/test_comparisons.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/tests/test_comparisons.py",
+      "source_sha256": "b181cc9df6f9041a6dc7bc7feb07b70b70c6c8384691775e068f5e3043c8a739",
+      "sha256": "b181cc9df6f9041a6dc7bc7feb07b70b70c6c8384691775e068f5e3043c8a739",
+      "bytes": 16719,
+      "release_receipt_verified": true,
+      "changes": [
+        "Relocate test root only"
+      ]
+    },
+    {
+      "path": "tests/test_grid.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/tests/test_grid.py",
+      "source_sha256": "0592f9b86be57ceda9b090a021b7910cd52940fbba0823def49adbbed4d0d6ca",
+      "sha256": "209cb2e2c42fa2d564b2cfe38d9137bb0ec277bda3a2f41560c0c33ea544edca",
+      "bytes": 11190,
+      "release_receipt_verified": true,
+      "changes": [
+        "Relocate test root only"
+      ]
+    },
+    {
+      "path": "tests/test_verify_analysis.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/tests/test_verify_analysis.py",
+      "source_sha256": "fb56bb28bb2d5d2252dd12ac11bc768b06a79a3052097e47e17316382addd927",
+      "sha256": "7bb2b1ab36b9d9d5030375fbec1246e2d1b158b3b1b27c4f7c017edec4274736",
+      "bytes": 23197,
+      "release_receipt_verified": true,
+      "changes": [
+        "Relocate test root only"
+      ]
+    },
+    {
+      "path": "rank_entrypoint.py",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/src/rank_entrypoint.py",
+      "source_sha256": "7e9dbca9194e4931699f9b08ab8975f88cfc38e4b24c47e890930a9b2e8c6eea",
+      "sha256": "7e9dbca9194e4931699f9b08ab8975f88cfc38e4b24c47e890930a9b2e8c6eea",
+      "bytes": 1460,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/analysis_summary.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/analysis_summary.json",
+      "source_sha256": "ec72bd68c25cd783e48f5705d91af0373ad7b72cb43b9673e4170dbfb1647faf",
+      "sha256": "6f832fe3015bdae1e3d1f5a7a02c1202348130532662056416a0580ec51dc81f",
+      "bytes": 1287,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/b1_display.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/b1_display.json",
+      "source_sha256": "6e78eade233a7a42153381b2bbcf120c97f31d869fb04a908495f93cc8001da7",
+      "sha256": "1cd20bdfe24d57dae054e2886ff11d7e65b38d88eb7c09e87178011a315b228b",
+      "bytes": 4048902,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/b2_display.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/b2_display.json",
+      "source_sha256": "3a1a8cefaf22f58afcb011a1decc78ee6bc9d29ac33ca38ce4e15427d77afb24",
+      "sha256": "12e0a09d93483d6d4e4e97d1677f7a7aff451ffe8262b66839f13ffb86a65bc4",
+      "bytes": 333777,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/b3_display.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/b3_display.json",
+      "source_sha256": "120d04fd4e4efde5f16f39068d783a09c50ba587fb27be8c56b0699f1f3acd2a",
+      "sha256": "5357f71d72f687ca0aeea6d876680f1f19140859530c004047f97b8920346b48",
+      "bytes": 666116,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/rates.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/rates.json",
+      "source_sha256": "2f94f186a20084bb5a283e6d83df59925b5128ea336df292f9d36804a4524c94",
+      "sha256": "f9f73db9a07c7094d3264582e8458011fb5c851b489081d67432e6a6b4a507a8",
+      "bytes": 4568785,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/methods.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/methods.json",
+      "source_sha256": "d9e7eb281c9363ea8ca8ab2f3bdcbf15ea90667b31738d38647c2c3613fb68d5",
+      "sha256": "09d02e53347dc24c830364a608546be6e107178cbe3f9e3daaa9ef24871d11b9",
+      "bytes": 1983,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/baseline_reference.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/baseline_reference.json",
+      "source_sha256": "84194fea1da0518fcade8fdb0feee9e03c8d988e27c30d47eecd9d01a8772ee7",
+      "sha256": "688ad2336c3dbf5dc3d5f2ab698373151cda00666909c096634a0a03f219a1d3",
+      "bytes": 847,
+      "release_receipt_verified": true,
+      "changes": []
+    },
+    {
+      "path": "tables/paper_first_choice_display.json",
+      "source_relative_path": "experiments/experiment-3-7s6yk1/results/report_support_v2/paper_first_choice_display.json",
+      "source_sha256": "b7a249e73b8e95c417b43e4b3e575ded09d32ca37218978210b0bb052ef5b9cb",
+      "sha256": "5e40733d7e5895907d3fa6753f10f76119969fbe6105ba661d68ef307b53d204",
+      "bytes": 51834,
+      "release_receipt_verified": true,
+      "changes": []
+    }
+  ]
+}

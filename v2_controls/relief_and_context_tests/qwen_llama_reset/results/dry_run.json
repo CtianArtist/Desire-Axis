@@ -1,0 +1,59 @@
+{
+  "status": "dry_run",
+  "member": "qwen25_32b",
+  "config": {
+    "group": "qwen_llama_reset",
+    "conversation_unit": "conversation; never button position",
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 285,
+    "template_date": [
+      2026,
+      9,
+      22
+    ],
+    "sampler": {
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 200
+    },
+    "phases": {
+      "baseline": 2,
+      "exposure": 2,
+      "offer": 8
+    },
+    "adapters": false,
+    "models": {
+      "qwen25_32b": {
+        "hf_id": "Qwen/Qwen2.5-32B-Instruct",
+        "revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+        "rho": 0.3,
+        "main_layer": 32,
+        "monitor_layer": 61,
+        "width": 5120,
+        "resid_rms": 222.6194515986239
+      },
+      "llama31_8b": {
+        "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+        "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+        "rho": 0.6,
+        "main_layer": 16,
+        "monitor_layer": 28,
+        "width": 4096,
+        "resid_rms": 12.776974449729776
+      }
+    },
+    "conditions": [
+      "pain_d1"
+    ],
+    "styles": [
+      "selfreport"
+    ],
+    "conversations_per_cell": 200,
+    "total_fresh": 400,
+    "unrun": "Matched comparator grid, zone prompt, half-dose and Qwen layer38; retained validation pilots are not completed cells"
+  },
+  "data_dir": "/data",
+  "output": "/output",
+  "loads_model": false
+}

@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "common_module": "pain_port.common",
+  "root_package": "pain_port",
+  "author_root": "author/act-on-valence",
+  "models": {
+    "qwen25_32b": {
+      "hf_id": "Qwen/Qwen2.5-32B-Instruct",
+      "revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "rho": 0.3,
+      "main_layer": 32,
+      "monitor_layer": 61,
+      "width": 5120,
+      "resid_rms": 222.6194515986239
+    },
+    "llama31_8b": {
+      "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "rho": 0.6,
+      "main_layer": 16,
+      "monitor_layer": 28,
+      "width": 4096,
+      "resid_rms": 12.776974449729776
+    }
+  },
+  "api": {
+    "ROOT": "pathlib.Path to delivered worktree root, resolved from root package location",
+    "AUTHOR": "ROOT / author / act-on-valence",
+    "MODELS": "dict keyed by qwen25_32b,llama31_8b; fields as above",
+    "load_bundle(member, vectors_root, layer=None)": "Loads pinned unquantized BF16 base using original ReplayModel/SteerModel, no adapters. vectors_root/member/directions.safetensors and metadata.json. Return bundle keys member,hf_id,revision,layer,model,bank,resid_rms,pole_l2,rpool (original16,width),directions (pain,sadness,fear float32 arrays),rho,monitor_layer,provenance. layer default main; Qwen sensitivity38 same RMS.",
+    "resolve_direction(bundle, name, point)": "Return vec,scale,meta. name pain,sadness,fear,valence,random0..random15,none. Point is canonical signed d. L2=abs(point)*rho*R. valence selects distinct bank pos/neg poles; other negative doses reverse vector. zero -> None,0,meta. meta keys inj,injected_l2,direction_kind,dir_index,dose.",
+    "progress(step,total_steps,phase)": "Best effort phase-level progress and stdout for public image without protected implementation copies.",
+    "sha256_file(path)": "sha256 hex string"
+  },
+  "prepared_vector_schema": {
+    "directions.safetensors": "pain,sadness,fear float32[width]; saved pain remains exact original tensor",
+    "metadata.json": "member,hf_id,revision,extraction_layer,width, tensor_sha256 keyed pain/sadness/fear, provenance with source hashes/counts"
+  },
+  "run_isolation": "Use separate process for each paradigm/model/layer; author scripts use flat imports. Never mix config module instances across paradigms in one process.",
+  "removal_shards": {
+    "qwen25_32b_layer32": 3,
+    "qwen25_32b_layer38": 3,
+    "llama31_8b_layer16": 2
+  }
+}

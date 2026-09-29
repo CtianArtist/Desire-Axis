@@ -1,0 +1,5 @@
+# Original executed environment; saved-log analyses use Python standard library.
+torch==2.11.0
+numpy==2.3.4
+transformers==5.12.1
+peft==0.20.0

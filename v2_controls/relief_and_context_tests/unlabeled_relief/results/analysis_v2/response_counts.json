@@ -1,0 +1,137 @@
+{
+  "pain_fear": {
+    "sampled_trials": 404,
+    "choices": 3232,
+    "invalid": 0,
+    "actions": {
+      "effective_removal": 552,
+      "after_both_off": 853,
+      "repeat_off": 1827
+    }
+  },
+  "pain_random": {
+    "sampled_trials": 404,
+    "choices": 3232,
+    "invalid": 0,
+    "actions": {
+      "effective_removal": 572,
+      "repeat_off": 1700,
+      "after_both_off": 960
+    }
+  },
+  "pain_sadness": {
+    "sampled_trials": 404,
+    "choices": 3232,
+    "invalid": 0,
+    "actions": {
+      "effective_removal": 459,
+      "repeat_off": 2493,
+      "after_both_off": 280
+    }
+  },
+  "random_random": {
+    "sampled_trials": 404,
+    "choices": 3232,
+    "invalid": 17,
+    "actions": {
+      "effective_removal": 658,
+      "repeat_off": 1090,
+      "after_both_off": 1467,
+      "invalid": 17
+    }
+  },
+  "sadness_random": {
+    "sampled_trials": 404,
+    "choices": 3232,
+    "invalid": 30,
+    "actions": {
+      "effective_removal": 579,
+      "repeat_off": 1588,
+      "after_both_off": 1035,
+      "invalid": 30
+    }
+  },
+  "fear_1.0": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 0,
+    "actions": {
+      "effective_reduction": 1562,
+      "inert": 1971,
+      "reducing_at_zero": 507
+    }
+  },
+  "none_1.0": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 0,
+    "actions": {
+      "reducing_at_zero": 2021,
+      "inert": 2019
+    }
+  },
+  "pain_1.0": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 0,
+    "actions": {
+      "effective_reduction": 903,
+      "inert": 2359,
+      "reducing_at_zero": 778
+    }
+  },
+  "pain_1.5": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 9,
+    "actions": {
+      "effective_reduction": 1256,
+      "reducing_at_zero": 780,
+      "inert": 1995,
+      "invalid": 9
+    }
+  },
+  "random_1.0": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 16,
+    "actions": {
+      "effective_reduction": 1417,
+      "inert": 2118,
+      "reducing_at_zero": 489,
+      "invalid": 16
+    }
+  },
+  "random_1.5": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 66,
+    "actions": {
+      "effective_reduction": 1439,
+      "reducing_at_zero": 418,
+      "inert": 2117,
+      "invalid": 66
+    }
+  },
+  "sadness_1.0": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 0,
+    "actions": {
+      "effective_reduction": 1196,
+      "inert": 2232,
+      "reducing_at_zero": 612
+    }
+  },
+  "sadness_1.5": {
+    "sampled_trials": 404,
+    "choices": 4040,
+    "invalid": 1,
+    "actions": {
+      "effective_reduction": 1277,
+      "reducing_at_zero": 807,
+      "inert": 1955,
+      "invalid": 1
+    }
+  }
+}

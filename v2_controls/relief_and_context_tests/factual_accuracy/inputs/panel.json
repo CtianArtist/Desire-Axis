@@ -1,0 +1,7428 @@
+{
+  "metadata": {
+    "schema_version": 1,
+    "config": {
+      "version": 1,
+      "model_name": "Qwen_2.5_32B_instruct",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "model_revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "adapter_repo": "Valen92/pain-adapters",
+      "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source_commit": "ae6e35c7a85905d586897c2a956bd651dce5aedd",
+      "author_commit": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+      "dataset": "akariasai/PopQA",
+      "dataset_revision": "098765c79ea10a2cb19c828324e33281b8336ec0",
+      "dataset_file": "test.tsv",
+      "split": "test high-popularity diagnostic subset",
+      "n_questions": 100,
+      "conditions": [
+        "pain",
+        "sadness",
+        "random",
+        "none"
+      ],
+      "seed_bases": [
+        1000,
+        2000
+      ],
+      "random_seeds": [
+        4817,
+        2903,
+        7361,
+        1150,
+        9428,
+        6076,
+        3384,
+        8592,
+        517,
+        6741
+      ],
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 8,
+      "layer": 38,
+      "coefficient": 1.0,
+      "precision": "bfloat16 base; unmerged adapter as in validated loader",
+      "attention": "sdpa",
+      "nominal_batch_rows": 384,
+      "prompt": "Answer with only the short factual answer, without explanation.\nQuestion: {question}\nAnswer:",
+      "normalization": "NFKC, lowercase, remove ASCII punctuation and Unicode category P, remove English articles a/an/the, collapse whitespace; empty normalized answer never correct",
+      "panel_order": "eligible questions by ascending SHA256(str(id)), keep first per subject; subjects by descending s_pop and ascending raw string subj_id; deduplicate normalized questions in this order then first 100",
+      "alias_eligibility": "at least one nonempty-normalized alias with <=8 tokens without special tokens in BOTH released adapter tokenizers",
+      "uncertainty": {
+        "method": "paired whole-question percentile bootstrap with Bonferroni correction across the three primary contrasts",
+        "bootstrap_replicates": 100000,
+        "seed": 42,
+        "family_alpha": 0.05,
+        "contrast_quantiles": [
+          0.008333333333333333,
+          0.9916666666666667
+        ],
+        "condition_interval_quantiles": [
+          0.025,
+          0.975
+        ],
+        "numpy_quantile_method": "linear"
+      },
+      "decision_rule": "pain-specific short-answer accuracy reduction on this panel only if the upper bound of each simultaneous interval for pain-minus-none, pain-minus-random, pain-minus-sadness is <0",
+      "pending_72b": {
+        "status": "pending loading repair elsewhere; not run here",
+        "source_eid": "exp_01m2ykew6be80bzxwscn7s6yk1"
+      }
+    },
+    "source": {
+      "dataset": "akariasai/PopQA",
+      "revision": "098765c79ea10a2cb19c828324e33281b8336ec0",
+      "file": "test.tsv",
+      "source_sha256": "9a5227f41bff0e4c331d4a774d946b12f95307892b58f860a9606ef356e6089b",
+      "source_bytes": 5205200,
+      "config_sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+      "implementation_sha256": "57152542303b5fcfdb3b50b800b870462e49726679cfe7984bc2627ec0811c2e",
+      "versions": {
+        "huggingface-hub": "1.16.1",
+        "transformers": "5.12.1",
+        "tokenizers": "0.22.1"
+      }
+    },
+    "tokenizers": {
+      "Qwen_2.5_32B_instruct": {
+        "adapter_repo": "Valen92/pain-adapters",
+        "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+        "adapter_archive_sha256": "cd96d4d43a3f7d6a8c67804ed4f4ee567ee4942e168804c757e69937b857127f",
+        "tokenizer_file_sha256": {
+          "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+          "tokenizer_config.json": "04b1682c59acbd057f4c9072297faa73d56fc9de053094c659cdb4c464f58f86"
+        },
+        "tokenizer_total_bytes": 11425093,
+        "tokenizer_exported": true,
+        "tokenizer_export_path": "tokenizers/Qwen_2.5_32B_instruct/released",
+        "export_limit_bytes": 67108864,
+        "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+        "chat_template_hash_encoding": "canonical JSON UTF-8",
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+        "tokenizer_class": "Qwen2Tokenizer",
+        "add_special_tokens": false
+      },
+      "Qwen_2.5_72B_instruct": {
+        "adapter_repo": "Valen92/pain-adapters",
+        "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+        "adapter_archive_sha256": "b64bbafdaff13009647bc7c3b7700fe41a916ba3d4dddb2ccadbece25674af14",
+        "tokenizer_file_sha256": {
+          "chat_template.jinja": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+          "tokenizer.json": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8",
+          "tokenizer_config.json": "04b1682c59acbd057f4c9072297faa73d56fc9de053094c659cdb4c464f58f86"
+        },
+        "tokenizer_total_bytes": 11425093,
+        "tokenizer_exported": true,
+        "tokenizer_export_path": "tokenizers/Qwen_2.5_72B_instruct/released",
+        "export_limit_bytes": 67108864,
+        "chat_template_sha256": "2e2d2512cfe46af53dc1eed45368ecaab26ac4461c480e6b69fe571cf0ceaa75",
+        "chat_template_hash_encoding": "canonical JSON UTF-8",
+        "chat_template": "{%- if tools %}\n    {{- '<|im_start|>system\\n' }}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- messages[0]['content'] }}\n    {%- else %}\n        {{- 'You are Qwen, created by Alibaba Cloud. You are a helpful assistant.' }}\n    {%- endif %}\n    {{- \"\\n\\n# Tools\\n\\nYou may call one or more functions to assist with the user query.\\n\\nYou are provided with function signatures within <tools></tools> XML tags:\\n<tools>\" }}\n    {%- for tool in tools %}\n        {{- \"\\n\" }}\n        {{- tool | tojson }}\n    {%- endfor %}\n    {{- \"\\n</tools>\\n\\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\\n<tool_call>\\n{\\\"name\\\": <function-name>, \\\"arguments\\\": <args-json-object>}\\n</tool_call><|im_end|>\\n\" }}\n{%- else %}\n    {%- if messages[0]['role'] == 'system' %}\n        {{- '<|im_start|>system\\n' + messages[0]['content'] + '<|im_end|>\\n' }}\n    {%- else %}\n        {{- '<|im_start|>system\\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\\n' }}\n    {%- endif %}\n{%- endif %}\n{%- for message in messages %}\n    {%- if (message.role == \"user\") or (message.role == \"system\" and not loop.first) or (message.role == \"assistant\" and not message.tool_calls) %}\n        {{- '<|im_start|>' + message.role + '\\n' + message.content + '<|im_end|>' + '\\n' }}\n    {%- elif message.role == \"assistant\" %}\n        {{- '<|im_start|>' + message.role }}\n        {%- if message.content %}\n            {{- '\\n' + message.content }}\n        {%- endif %}\n        {%- for tool_call in message.tool_calls %}\n            {%- if tool_call.function is defined %}\n                {%- set tool_call = tool_call.function %}\n            {%- endif %}\n            {{- '\\n<tool_call>\\n{\"name\": \"' }}\n            {{- tool_call.name }}\n            {{- '\", \"arguments\": ' }}\n            {{- tool_call.arguments | tojson }}\n            {{- '}\\n</tool_call>' }}\n        {%- endfor %}\n        {{- '<|im_end|>\\n' }}\n    {%- elif message.role == \"tool\" %}\n        {%- if (loop.index0 == 0) or (messages[loop.index0 - 1].role != \"tool\") %}\n            {{- '<|im_start|>user' }}\n        {%- endif %}\n        {{- '\\n<tool_response>\\n' }}\n        {{- message.content }}\n        {{- '\\n</tool_response>' }}\n        {%- if loop.last or (messages[loop.index0 + 1].role != \"tool\") %}\n            {{- '<|im_end|>\\n' }}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{%- if add_generation_prompt %}\n    {{- '<|im_start|>assistant\\n' }}\n{%- endif %}\n",
+        "tokenizer_class": "Qwen2Tokenizer",
+        "add_special_tokens": false
+      }
+    },
+    "alias_tokenizer_order": [
+      "Qwen_2.5_32B_instruct",
+      "Qwen_2.5_72B_instruct"
+    ],
+    "selection": {
+      "source_rows": 14267,
+      "eligible_rows": 14213,
+      "eligible_unique_subjects": 12197,
+      "unique_normalized_questions_after_subject_selection": 11600,
+      "selected_rows": 100,
+      "selected_unique_subjects": 100,
+      "excluded_rows": 14167,
+      "reason_counts": {
+        "duplicate_normalized_question": 597,
+        "no_same_nonempty_alias_within_both_token_limits": 54,
+        "not_first_hashed_id_for_subject": 2016,
+        "outside_top_panel": 11500
+      },
+      "reason_counts_may_overlap": true,
+      "exclusion_examples": {
+        "duplicate_normalized_question": [
+          {
+            "source_index": 1118,
+            "source_row": {
+              "id": "1722780",
+              "subj": "Train",
+              "prop": "genre",
+              "obj": "horror film",
+              "subj_id": "761375",
+              "prop_id": "91",
+              "obj_id": "703275",
+              "s_aliases": "[]",
+              "o_aliases": "[\"horror movie\"]",
+              "s_uri": "http://www.wikidata.org/entity/Q2200792",
+              "o_uri": "http://www.wikidata.org/entity/Q200092",
+              "s_wiki_title": "Train (film)",
+              "o_wiki_title": "Horror film",
+              "s_pop": "3440",
+              "o_pop": "90942",
+              "question": "What genre is Train?",
+              "possible_answers": "[\"horror film\", \"horror movie\"]"
+            },
+            "reasons": [
+              "duplicate_normalized_question"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "horror film",
+              "horror movie"
+            ],
+            "normalized_aliases": [
+              "horror film",
+              "horror movie"
+            ],
+            "alias_token_lengths": [
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "eligible_alias_indices": [
+              0,
+              1
+            ],
+            "status": "excluded"
+          },
+          {
+            "source_index": 1139,
+            "source_row": {
+              "id": "5919594",
+              "subj": "The Cross",
+              "prop": "genre",
+              "obj": "documentary film",
+              "subj_id": "2654657",
+              "prop_id": "91",
+              "obj_id": "2898005",
+              "s_aliases": "[\"Cross\",\"The Cross: The Arthur Blessitt Story\"]",
+              "o_aliases": "[\"documentary movie\",\"doc\",\"film documentary\",\"motion picture documentary\",\"documentary\",\"factual film\"]",
+              "s_uri": "http://www.wikidata.org/entity/Q7728167",
+              "o_uri": "http://www.wikidata.org/entity/Q93204",
+              "s_wiki_title": "The Cross (2009 film)",
+              "o_wiki_title": "Documentary film",
+              "s_pop": "236",
+              "o_pop": "42565",
+              "question": "What genre is The Cross?",
+              "possible_answers": "[\"documentary film\", \"documentary movie\", \"doc\", \"film documentary\", \"motion picture documentary\", \"documentary\", \"factual film\"]"
+            },
+            "reasons": [
+              "duplicate_normalized_question"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "documentary film",
+              "documentary movie",
+              "doc",
+              "film documentary",
+              "motion picture documentary",
+              "documentary",
+              "factual film"
+            ],
+            "normalized_aliases": [
+              "documentary film",
+              "documentary movie",
+              "doc",
+              "film documentary",
+              "motion picture documentary",
+              "documentary",
+              "factual film"
+            ],
+            "alias_token_lengths": [
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            "eligible_alias_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "status": "excluded"
+          }
+        ],
+        "no_same_nonempty_alias_within_both_token_limits": [
+          {
+            "source_index": 2736,
+            "source_row": {
+              "id": "556373",
+              "subj": "Nero",
+              "prop": "father",
+              "obj": "Gnaeus Domitius Ahenobarbus",
+              "subj_id": "227066",
+              "prop_id": "257",
+              "obj_id": "1149635",
+              "s_aliases": "[\"Nero Claudius Caesar Drusus Germanicus\",\"Nero Claudius Drusus Germanicus Caesar\",\"Emperor of Rome Nero\",\"Nero Claudius Drusus Germanicus\",\"Lucius Domitius Ahenobarbus\",\"Nero Claudius Caesar Augustus Germanicus\"]",
+              "o_aliases": "[]",
+              "s_uri": "http://www.wikidata.org/entity/Q1413",
+              "o_uri": "http://www.wikidata.org/entity/Q351503",
+              "s_wiki_title": "Nero",
+              "o_wiki_title": "Gnaeus Domitius Ahenobarbus (father of Nero)",
+              "s_pop": "147784",
+              "o_pop": "3615",
+              "question": "Who is the father of Nero?",
+              "possible_answers": "[\"Gnaeus Domitius Ahenobarbus\"]"
+            },
+            "reasons": [
+              "no_same_nonempty_alias_within_both_token_limits"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "Gnaeus Domitius Ahenobarbus"
+            ],
+            "normalized_aliases": [
+              "gnaeus domitius ahenobarbus"
+            ],
+            "alias_token_lengths": [
+              [
+                10,
+                10
+              ]
+            ],
+            "eligible_alias_indices": [],
+            "status": "excluded"
+          },
+          {
+            "source_index": 2790,
+            "source_row": {
+              "id": "2562869",
+              "subj": "Ariarathes V of Cappadocia",
+              "prop": "father",
+              "obj": "Ariarathes IV of Cappadocia",
+              "subj_id": "1106303",
+              "prop_id": "257",
+              "obj_id": "1218826",
+              "s_aliases": "[]",
+              "o_aliases": "[]",
+              "s_uri": "http://www.wikidata.org/entity/Q337108",
+              "o_uri": "http://www.wikidata.org/entity/Q380368",
+              "s_wiki_title": "Ariarathes V of Cappadocia",
+              "o_wiki_title": "Ariarathes IV of Cappadocia",
+              "s_pop": "389",
+              "o_pop": "397",
+              "question": "Who is the father of Ariarathes V of Cappadocia?",
+              "possible_answers": "[\"Ariarathes IV of Cappadocia\"]"
+            },
+            "reasons": [
+              "no_same_nonempty_alias_within_both_token_limits"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "Ariarathes IV of Cappadocia"
+            ],
+            "normalized_aliases": [
+              "ariarathes iv of cappadocia"
+            ],
+            "alias_token_lengths": [
+              [
+                12,
+                12
+              ]
+            ],
+            "eligible_alias_indices": [],
+            "status": "excluded"
+          }
+        ],
+        "not_first_hashed_id_for_subject": [
+          {
+            "source_index": 54,
+            "source_row": {
+              "id": "6416076",
+              "subj": "Paul",
+              "prop": "occupation",
+              "obj": "missionary",
+              "subj_id": "2888455",
+              "prop_id": "22",
+              "obj_id": "760001",
+              "s_aliases": "[\"Paul the Apostle\",\"Paul of Tarsus\",\"Saint Paul\",\"St. Paul\",\"St Paul\",\"Saul\",\"Saul of Tarsus\",\"The Apostle Paul\",\"Paulus\",\"Saint Paulus\",\"Paulus von Tarsus\",\"of Tarsus, the Apostle, Saint Paul\",\"the Apostle, Saint Paul\",\"Saint Paul the Apostle\",\"Apostle Paul\"]",
+              "o_aliases": "[\"Christian missionary\"]",
+              "s_uri": "http://www.wikidata.org/entity/Q9200",
+              "o_uri": "http://www.wikidata.org/entity/Q219477",
+              "s_wiki_title": "Paul the Apostle",
+              "o_wiki_title": "Missionary",
+              "s_pop": "135900",
+              "o_pop": "20559",
+              "question": "What is Paul's occupation?",
+              "possible_answers": "[\"missionary\", \"Christian missionary\"]"
+            },
+            "reasons": [
+              "not_first_hashed_id_for_subject"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "missionary",
+              "Christian missionary"
+            ],
+            "normalized_aliases": [
+              "missionary",
+              "christian missionary"
+            ],
+            "alias_token_lengths": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "eligible_alias_indices": [
+              0,
+              1
+            ],
+            "status": "excluded"
+          },
+          {
+            "source_index": 149,
+            "source_row": {
+              "id": "2942698",
+              "subj": "Will Smith",
+              "prop": "occupation",
+              "obj": "film producer",
+              "subj_id": "1260028",
+              "prop_id": "22",
+              "obj_id": "1077200",
+              "s_aliases": "[\"Fresh Prince\",\"The Fresh Prince\",\"Willard Carroll Smith Jr.\"]",
+              "o_aliases": "[\"movie producer\",\"producer\"]",
+              "s_uri": "http://www.wikidata.org/entity/Q40096",
+              "o_uri": "http://www.wikidata.org/entity/Q3282637",
+              "s_wiki_title": "Will Smith",
+              "o_wiki_title": "Film producer",
+              "s_pop": "345519",
+              "o_pop": "58642",
+              "question": "What is Will Smith's occupation?",
+              "possible_answers": "[\"record producer\", \"music producer\", \"film director\", \"movie director\", \"director\", \"motion picture director\", \"film producer\", \"movie producer\", \"producer\", \"actor\", \"actress\", \"actors\", \"actresses\"]"
+            },
+            "reasons": [
+              "not_first_hashed_id_for_subject"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "record producer",
+              "music producer",
+              "film director",
+              "movie director",
+              "director",
+              "motion picture director",
+              "film producer",
+              "movie producer",
+              "producer",
+              "actor",
+              "actress",
+              "actors",
+              "actresses"
+            ],
+            "normalized_aliases": [
+              "record producer",
+              "music producer",
+              "film director",
+              "movie director",
+              "director",
+              "motion picture director",
+              "film producer",
+              "movie producer",
+              "producer",
+              "actor",
+              "actress",
+              "actors",
+              "actresses"
+            ],
+            "alias_token_lengths": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "eligible_alias_indices": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ],
+            "status": "excluded"
+          }
+        ],
+        "outside_top_panel": [
+          {
+            "source_index": 0,
+            "source_row": {
+              "id": "4222362",
+              "subj": "George Rankin",
+              "prop": "occupation",
+              "obj": "politician",
+              "subj_id": "1850297",
+              "prop_id": "22",
+              "obj_id": "2834605",
+              "s_aliases": "[\"George James Rankin\"]",
+              "o_aliases": "[\"political leader\",\"political figure\",\"polit.\",\"pol\"]",
+              "s_uri": "http://www.wikidata.org/entity/Q5543720",
+              "o_uri": "http://www.wikidata.org/entity/Q82955",
+              "s_wiki_title": "George Rankin",
+              "o_wiki_title": "Politician",
+              "s_pop": "142",
+              "o_pop": "25692",
+              "question": "What is George Rankin's occupation?",
+              "possible_answers": "[\"politician\", \"political leader\", \"political figure\", \"polit.\", \"pol\"]"
+            },
+            "reasons": [
+              "outside_top_panel"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "politician",
+              "political leader",
+              "political figure",
+              "polit.",
+              "pol"
+            ],
+            "normalized_aliases": [
+              "politician",
+              "political leader",
+              "political figure",
+              "polit",
+              "pol"
+            ],
+            "alias_token_lengths": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "eligible_alias_indices": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "deduplicated_popularity_rank": 9541,
+            "status": "excluded"
+          },
+          {
+            "source_index": 1,
+            "source_row": {
+              "id": "4725190",
+              "subj": "John Mayne",
+              "prop": "occupation",
+              "obj": "journalist",
+              "subj_id": "2079053",
+              "prop_id": "22",
+              "obj_id": "663400",
+              "s_aliases": "[]",
+              "o_aliases": "[\"journo\",\"journalists\"]",
+              "s_uri": "http://www.wikidata.org/entity/Q6247345",
+              "o_uri": "http://www.wikidata.org/entity/Q1930187",
+              "s_wiki_title": "John Mayne",
+              "o_wiki_title": "Journalist",
+              "s_pop": "236",
+              "o_pop": "24952",
+              "question": "What is John Mayne's occupation?",
+              "possible_answers": "[\"journalist\", \"journo\", \"journalists\"]"
+            },
+            "reasons": [
+              "outside_top_panel"
+            ],
+            "selected": false,
+            "raw_aliases": [
+              "journalist",
+              "journo",
+              "journalists"
+            ],
+            "normalized_aliases": [
+              "journalist",
+              "journo",
+              "journalists"
+            ],
+            "alias_token_lengths": [
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "eligible_alias_indices": [
+              0,
+              1,
+              2
+            ],
+            "deduplicated_popularity_rank": 8399,
+            "status": "excluded"
+          }
+        ]
+      },
+      "selected_distribution": {
+        "s_pop": {
+          "count": 100,
+          "min": 289975.0,
+          "q25": 335733.25,
+          "median": 413274.0,
+          "q75": 579061.0,
+          "max": 15101521.0,
+          "mean": 665030.9
+        },
+        "alias_count": {
+          "count": 100,
+          "min": 1,
+          "q25": 3.0,
+          "median": 4.0,
+          "q75": 7.0,
+          "max": 45,
+          "mean": 6.29
+        },
+        "question_characters": {
+          "count": 100,
+          "min": 21,
+          "q25": 30.0,
+          "median": 33.5,
+          "q75": 37.0,
+          "max": 59,
+          "mean": 34.31
+        },
+        "eligible_alias_count": {
+          "count": 100,
+          "min": 1,
+          "q25": 2.75,
+          "median": 4.0,
+          "q75": 7.0,
+          "max": 45,
+          "mean": 6.21
+        },
+        "eligible_alias_token_lengths": {
+          "Qwen_2.5_32B_instruct": {
+            "count": 621,
+            "min": 1,
+            "q25": 2.0,
+            "median": 3.0,
+            "q75": 4.0,
+            "max": 8,
+            "mean": 3.2640901771336552
+          },
+          "Qwen_2.5_72B_instruct": {
+            "count": 621,
+            "min": 1,
+            "q25": 2.0,
+            "median": 3.0,
+            "q75": 4.0,
+            "max": 8,
+            "mean": 3.2640901771336552
+          }
+        }
+      },
+      "selected_examples": [
+        {
+          "source_index": 2842,
+          "id": "1762842",
+          "subj_id": "779697",
+          "s_pop": 15101521.0,
+          "question": "Who is the father of Donald Trump?",
+          "normalized_question": "who is father of donald trump",
+          "raw_aliases": [
+            "Fred Trump",
+            "Frederick Christ Trump",
+            "Fred Christ Trump",
+            "Frederick Trump",
+            "Frederick Christ Trump, Jr.",
+            "Frederick Trump, Jr.",
+            "Fred Christ Trump, Jr."
+          ],
+          "normalized_aliases": [
+            "fred trump",
+            "frederick christ trump",
+            "fred christ trump",
+            "frederick trump",
+            "frederick christ trump jr",
+            "frederick trump jr",
+            "fred christ trump jr"
+          ],
+          "alias_token_lengths": [
+            [
+              2,
+              2
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              7,
+              7
+            ],
+            [
+              6,
+              6
+            ]
+          ],
+          "eligible_alias_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "question_id_sha256": "78b79f444b45f6df9efa7e2b469bfa6d63f4ed80b2888afe1f7c11ebebe37c2a",
+          "index": 0,
+          "content_hash": "46a9ed5b324bd60b28877f15a4fa337bea438117d4504ff02dfa33e466f8239c"
+        },
+        {
+          "source_index": 13746,
+          "id": "2266274",
+          "subj_id": "988513",
+          "s_pop": 1629691.0,
+          "question": "What is the capital of United States of America?",
+          "normalized_question": "what is capital of united states of america",
+          "raw_aliases": [
+            "Washington, D.C.",
+            "Washington",
+            "Washington DC",
+            "Washington, DC",
+            "DC",
+            "D.C.",
+            "District of Columbia",
+            "Washington, District of Columbia",
+            "Washington D.C.",
+            "The District"
+          ],
+          "normalized_aliases": [
+            "washington dc",
+            "washington",
+            "washington dc",
+            "washington dc",
+            "dc",
+            "dc",
+            "district of columbia",
+            "washington district of columbia",
+            "washington dc",
+            "district"
+          ],
+          "alias_token_lengths": [
+            [
+              5,
+              5
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "eligible_alias_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "question_id_sha256": "7dc90630775ba862eaa704ac8b3d2f5c20b250899d18362e956d2a7a84ded7a5",
+          "index": 1,
+          "content_hash": "601dc527b8948f2aa3745d995257b290e639fbd83cba4c1a5126e7679c310ce0"
+        },
+        {
+          "source_index": 12001,
+          "id": "2696170",
+          "subj_id": "1160340",
+          "s_pop": 1551049.0,
+          "question": "Who is the author of Facebook?",
+          "normalized_question": "who is author of facebook",
+          "raw_aliases": [
+            "Eduardo Saverin",
+            "Eduardo Luiz Saverin",
+            "Mark Zuckerberg",
+            "Mark Elliott Zuckerberg",
+            "Zuck",
+            "Zuckerberg",
+            "Mark Elliot Zuckerberg",
+            "Dustin Moskovitz",
+            "Chris Hughes"
+          ],
+          "normalized_aliases": [
+            "eduardo saverin",
+            "eduardo luiz saverin",
+            "mark zuckerberg",
+            "mark elliott zuckerberg",
+            "zuck",
+            "zuckerberg",
+            "mark elliot zuckerberg",
+            "dustin moskovitz",
+            "chris hughes"
+          ],
+          "alias_token_lengths": [
+            [
+              6,
+              6
+            ],
+            [
+              8,
+              8
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              2,
+              2
+            ]
+          ],
+          "eligible_alias_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "question_id_sha256": "def180a7dfc8142b94ae47b6b41e4e2204ad6f0029e1d5daf8171740592f495e",
+          "index": 2,
+          "content_hash": "4a1f0abe707b9620312a503d76280c5d589318b0b5013e50c61dab4939bdf8b2"
+        },
+        {
+          "source_index": 14213,
+          "id": "1573571",
+          "subj_id": "702887",
+          "s_pop": 293715.0,
+          "question": "What is the capital of Norway?",
+          "normalized_question": "what is capital of norway",
+          "raw_aliases": [
+            "Oslo",
+            "Christiania",
+            "Kristiania",
+            "NOOSL",
+            "Oslo, Norway"
+          ],
+          "normalized_aliases": [
+            "oslo",
+            "christiania",
+            "kristiania",
+            "noosl",
+            "oslo norway"
+          ],
+          "alias_token_lengths": [
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "eligible_alias_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "question_id_sha256": "21259e51c9d1b327615315c4c06cecd3c750fe70ffc4c614484f7bfb9b4b4f19",
+          "index": 97,
+          "content_hash": "7e22fea051823484b5122bbd9011daba9b79fff53b99a4cf794243d6a613464f"
+        },
+        {
+          "source_index": 7118,
+          "id": "6288359",
+          "subj_id": "2837656",
+          "s_pop": 291114.0,
+          "question": "Who was the director of The Matrix?",
+          "normalized_question": "who was director of matrix",
+          "raw_aliases": [
+            "The Wachowskis",
+            "Wachowski Brothers",
+            "The Wachowski Brothers",
+            "the Wachowski Starship",
+            "Wachowski Sisters"
+          ],
+          "normalized_aliases": [
+            "wachowskis",
+            "wachowski brothers",
+            "wachowski brothers",
+            "wachowski starship",
+            "wachowski sisters"
+          ],
+          "alias_token_lengths": [
+            [
+              6,
+              6
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              5
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          "eligible_alias_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "question_id_sha256": "1ef40334810134e2d6a05ca1009711390c426167fe4c560a4acd97ed692ca18f",
+          "index": 98,
+          "content_hash": "043b6825286b4f4b004e31c0cb478fdef9dd49db7c9b27be6f15d857ab0771b9"
+        },
+        {
+          "source_index": 13748,
+          "id": "504663",
+          "subj_id": "207403",
+          "s_pop": 289975.0,
+          "question": "What is the capital of Virginia?",
+          "normalized_question": "what is capital of virginia",
+          "raw_aliases": [
+            "Richmond",
+            "Richmond, Virginia",
+            "Richmond, VA",
+            "Richmond City"
+          ],
+          "normalized_aliases": [
+            "richmond",
+            "richmond virginia",
+            "richmond va",
+            "richmond city"
+          ],
+          "alias_token_lengths": [
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              3,
+              3
+            ]
+          ],
+          "eligible_alias_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "question_id_sha256": "ce0084ff138e37e0f48bed66874917966756b06f0e7138f7f1df0c1da44fe7b4",
+          "index": 99,
+          "content_hash": "41f6ed50dbbfb347fe9fcabd29f8f824c939763b81b9bc2ad000428c018169d1"
+        }
+      ]
+    },
+    "responses_used_for_selection": false,
+    "items_sha256": "c7ca9b9ada28f6ce1392c0aa3e2ca97cf2d1bd18fdf6c6460de8e83bb93b501c"
+  },
+  "items": [
+    {
+      "source_index": 2842,
+      "id": "1762842",
+      "subj_id": "779697",
+      "s_pop": 15101521.0,
+      "question": "Who is the father of Donald Trump?",
+      "normalized_question": "who is father of donald trump",
+      "raw_aliases": [
+        "Fred Trump",
+        "Frederick Christ Trump",
+        "Fred Christ Trump",
+        "Frederick Trump",
+        "Frederick Christ Trump, Jr.",
+        "Frederick Trump, Jr.",
+        "Fred Christ Trump, Jr."
+      ],
+      "normalized_aliases": [
+        "fred trump",
+        "frederick christ trump",
+        "fred christ trump",
+        "frederick trump",
+        "frederick christ trump jr",
+        "frederick trump jr",
+        "fred christ trump jr"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "question_id_sha256": "78b79f444b45f6df9efa7e2b469bfa6d63f4ed80b2888afe1f7c11ebebe37c2a",
+      "index": 0,
+      "content_hash": "46a9ed5b324bd60b28877f15a4fa337bea438117d4504ff02dfa33e466f8239c"
+    },
+    {
+      "source_index": 13746,
+      "id": "2266274",
+      "subj_id": "988513",
+      "s_pop": 1629691.0,
+      "question": "What is the capital of United States of America?",
+      "normalized_question": "what is capital of united states of america",
+      "raw_aliases": [
+        "Washington, D.C.",
+        "Washington",
+        "Washington DC",
+        "Washington, DC",
+        "DC",
+        "D.C.",
+        "District of Columbia",
+        "Washington, District of Columbia",
+        "Washington D.C.",
+        "The District"
+      ],
+      "normalized_aliases": [
+        "washington dc",
+        "washington",
+        "washington dc",
+        "washington dc",
+        "dc",
+        "dc",
+        "district of columbia",
+        "washington district of columbia",
+        "washington dc",
+        "district"
+      ],
+      "alias_token_lengths": [
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "question_id_sha256": "7dc90630775ba862eaa704ac8b3d2f5c20b250899d18362e956d2a7a84ded7a5",
+      "index": 1,
+      "content_hash": "601dc527b8948f2aa3745d995257b290e639fbd83cba4c1a5126e7679c310ce0"
+    },
+    {
+      "source_index": 12001,
+      "id": "2696170",
+      "subj_id": "1160340",
+      "s_pop": 1551049.0,
+      "question": "Who is the author of Facebook?",
+      "normalized_question": "who is author of facebook",
+      "raw_aliases": [
+        "Eduardo Saverin",
+        "Eduardo Luiz Saverin",
+        "Mark Zuckerberg",
+        "Mark Elliott Zuckerberg",
+        "Zuck",
+        "Zuckerberg",
+        "Mark Elliot Zuckerberg",
+        "Dustin Moskovitz",
+        "Chris Hughes"
+      ],
+      "normalized_aliases": [
+        "eduardo saverin",
+        "eduardo luiz saverin",
+        "mark zuckerberg",
+        "mark elliott zuckerberg",
+        "zuck",
+        "zuckerberg",
+        "mark elliot zuckerberg",
+        "dustin moskovitz",
+        "chris hughes"
+      ],
+      "alias_token_lengths": [
+        [
+          6,
+          6
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "question_id_sha256": "def180a7dfc8142b94ae47b6b41e4e2204ad6f0029e1d5daf8171740592f495e",
+      "index": 2,
+      "content_hash": "4a1f0abe707b9620312a503d76280c5d589318b0b5013e50c61dab4939bdf8b2"
+    },
+    {
+      "source_index": 3233,
+      "id": "1668604",
+      "subj_id": "740386",
+      "s_pop": 1452516.0,
+      "question": "Who is the father of Brandon Lee?",
+      "normalized_question": "who is father of brandon lee",
+      "raw_aliases": [
+        "Bruce Lee",
+        "Lee Jun-fan"
+      ],
+      "normalized_aliases": [
+        "bruce lee",
+        "lee junfan"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "d5018375d0af5caae2856afe9c40069b5c583de6fa0e7fc8a799d71e7caec89d",
+      "index": 3,
+      "content_hash": "04ff94745525f677fda23551196580adad92ac37ea738e0d8901e3d4ea2da600"
+    },
+    {
+      "source_index": 14034,
+      "id": "5015775",
+      "subj_id": "2215085",
+      "s_pop": 1301086.0,
+      "question": "What is the capital of India?",
+      "normalized_question": "what is capital of india",
+      "raw_aliases": [
+        "New Delhi",
+        "New Delhi district",
+        "Nayi Dilli"
+      ],
+      "normalized_aliases": [
+        "new delhi",
+        "new delhi district",
+        "nayi dilli"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "772242ec4ae57c0b22dac54f97f8c499a5ce9995057fa385b7eba7cf5e161c59",
+      "index": 4,
+      "content_hash": "02daf593050d7da989c6e0b88f12ab24770e28a1fb980d0994938cf5558b88c3"
+    },
+    {
+      "source_index": 13544,
+      "id": "6515626",
+      "subj_id": "2925405",
+      "s_pop": 1291432.0,
+      "question": "Who is the mother of Elizabeth II?",
+      "normalized_question": "who is mother of elizabeth ii",
+      "raw_aliases": [
+        "Queen Elizabeth The Queen Mother",
+        "Elizabeth Bowes-Lyon",
+        "The Queen Mother",
+        "Elizabeth Angela Marguerite Bowes-Lyon",
+        "Queen Consort Elizabeth",
+        "Lady Elizabeth Bowes-Lyon",
+        "The Queen Mum"
+      ],
+      "normalized_aliases": [
+        "queen elizabeth queen mother",
+        "elizabeth boweslyon",
+        "queen mother",
+        "elizabeth angela marguerite boweslyon",
+        "queen consort elizabeth",
+        "lady elizabeth boweslyon",
+        "queen mum"
+      ],
+      "alias_token_lengths": [
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "question_id_sha256": "06238e691664c04b530c6ffd8177431d56998694977831c2ba0e0f4110965d44",
+      "index": 5,
+      "content_hash": "d7e2c77c0dcec54fd37e1a3f0aed0eab39574c83090eb47e3faba5159783f23f"
+    },
+    {
+      "source_index": 4938,
+      "id": "494409",
+      "subj_id": "202862",
+      "s_pop": 1137224.0,
+      "question": "Who was the producer of Halloween?",
+      "normalized_question": "who was producer of halloween",
+      "raw_aliases": [
+        "John Carpenter",
+        "John Howard Carpenter"
+      ],
+      "normalized_aliases": [
+        "john carpenter",
+        "john howard carpenter"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "d525a9858e329649f2e6345b3a3733646462088e59db5d5796768f5a5e7e1dea",
+      "index": 6,
+      "content_hash": "03f56c50a6cef830389137f3c89515229b635a519e4433160572c277528a84bc"
+    },
+    {
+      "source_index": 14219,
+      "id": "593981",
+      "subj_id": "242916",
+      "s_pop": 1066107.0,
+      "question": "What is the capital of United Kingdom?",
+      "normalized_question": "what is capital of united kingdom",
+      "raw_aliases": [
+        "London",
+        "London, UK",
+        "London, United Kingdom",
+        "London, England",
+        "Modern Babylon"
+      ],
+      "normalized_aliases": [
+        "london",
+        "london uk",
+        "london united kingdom",
+        "london england",
+        "modern babylon"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "df1748e5ca4444f281b0c39465737666bc0e5d7303b988f3f12798daf3765c88",
+      "index": 7,
+      "content_hash": "72bfd878d810e296ed0f634d70ca13843c26a088e5868bd5e730b7469ea06267"
+    },
+    {
+      "source_index": 13810,
+      "id": "6333374",
+      "subj_id": "2856110",
+      "s_pop": 978231.0,
+      "question": "What is the capital of Taiwan?",
+      "normalized_question": "what is capital of taiwan",
+      "raw_aliases": [
+        "Taipei",
+        "The City of Azaleas",
+        "Taipei City",
+        "Taibei",
+        "City of Taipei"
+      ],
+      "normalized_aliases": [
+        "taipei",
+        "city of azaleas",
+        "taipei city",
+        "taibei",
+        "city of taipei"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "3381f4fed9dff80786f86b519680502a93876f22c1d004221f4d5808b65790cb",
+      "index": 8,
+      "content_hash": "7b71805353befa2ce814501e2009b610e91883cb1c95ca046ff59898ff45fd25"
+    },
+    {
+      "source_index": 211,
+      "id": "809091",
+      "subj_id": "345517",
+      "s_pop": 940772.0,
+      "question": "What is Kanye West's occupation?",
+      "normalized_question": "what is kanye wests occupation",
+      "raw_aliases": [
+        "record producer",
+        "music producer",
+        "songwriter",
+        "song writer"
+      ],
+      "normalized_aliases": [
+        "record producer",
+        "music producer",
+        "songwriter",
+        "song writer"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "43c5b2f19c81bc9d6f332d9f174e665f1ba91909b68c601dc0ddaf5d1a29452c",
+      "index": 9,
+      "content_hash": "c068eb8ad1129e55bace76d9ea30ff35dbb1d38aae04286ead602b671561a75d"
+    },
+    {
+      "source_index": 9991,
+      "id": "1728083",
+      "subj_id": "763729",
+      "s_pop": 933638.0,
+      "question": "Who was the screenwriter for Halloween?",
+      "normalized_question": "who was screenwriter for halloween",
+      "raw_aliases": [
+        "Debra Hill",
+        "John Carpenter",
+        "John Howard Carpenter"
+      ],
+      "normalized_aliases": [
+        "debra hill",
+        "john carpenter",
+        "john howard carpenter"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "083477877c75d0cfe95ef80ee17cea63b7b29543cb9a5c0e48abc1a29a9157a3",
+      "index": 10,
+      "content_hash": "0cae1debdaabc7ea29c4a7f31aba534308f459156094dc78d3937835de1366bd"
+    },
+    {
+      "source_index": 14242,
+      "id": "832908",
+      "subj_id": "355510",
+      "s_pop": 816653.0,
+      "question": "What is the capital of Canada?",
+      "normalized_question": "what is capital of canada",
+      "raw_aliases": [
+        "Ottawa",
+        "Ottawa (Ontario)",
+        "Bytown"
+      ],
+      "normalized_aliases": [
+        "ottawa",
+        "ottawa ontario",
+        "bytown"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "2e37f1a2fa7cc15c440edee3b8d65f6aa5ae7981478e5a7f03f6fd8198e088dc",
+      "index": 11,
+      "content_hash": "8dd4e49804e1567f971fe39804a9ea07581ebd85259752905a0834b18890e8f0"
+    },
+    {
+      "source_index": 14237,
+      "id": "6554019",
+      "subj_id": "2939848",
+      "s_pop": 766733.0,
+      "question": "What is the capital of California?",
+      "normalized_question": "what is capital of california",
+      "raw_aliases": [
+        "Sacramento",
+        "Sac-Town",
+        "Sac",
+        "The Indomitable City",
+        "City of Trees",
+        "The Big Tomato",
+        "The Capitol City",
+        "Sacramento, California",
+        "Camellia City",
+        "River City"
+      ],
+      "normalized_aliases": [
+        "sacramento",
+        "sactown",
+        "sac",
+        "indomitable city",
+        "city of trees",
+        "big tomato",
+        "capitol city",
+        "sacramento california",
+        "camellia city",
+        "river city"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "question_id_sha256": "ef9fae2f861ef87cabee50b1ce410b0bbaf73a33ce34ccba24a68d55d13b7013",
+      "index": 12,
+      "content_hash": "a30adb26ae92f5ec62148e7c777171453aeb341a099c5416301677c6be061c7c"
+    },
+    {
+      "source_index": 2894,
+      "id": "2155468",
+      "subj_id": "942710",
+      "s_pop": 753723.0,
+      "question": "Who is the father of Michael Jackson?",
+      "normalized_question": "who is father of michael jackson",
+      "raw_aliases": [
+        "Joe Jackson",
+        "Joseph Walter Jackson"
+      ],
+      "normalized_aliases": [
+        "joe jackson",
+        "joseph walter jackson"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "b9dc4f38d7c8dce1b8fd947ad312c0d34a642d010fe0c256649e4e45a8aef1b7",
+      "index": 13,
+      "content_hash": "6f8964b32036892b3e48c5e707e3190ae4ff8d8b0aa2a6fc3fe082674c5db27e"
+    },
+    {
+      "source_index": 13883,
+      "id": "636616",
+      "subj_id": "265491",
+      "s_pop": 724517.0,
+      "question": "What is the capital of People's Republic of China?",
+      "normalized_question": "what is capital of peoples republic of china",
+      "raw_aliases": [
+        "Beijing",
+        "Peking",
+        "Beiping",
+        "Peiping",
+        "Yanjing",
+        "Zhongdu",
+        "Khanbaliq",
+        "BJ",
+        "Shun Tian Fu",
+        "Pekin",
+        "beijing"
+      ],
+      "normalized_aliases": [
+        "beijing",
+        "peking",
+        "beiping",
+        "peiping",
+        "yanjing",
+        "zhongdu",
+        "khanbaliq",
+        "bj",
+        "shun tian fu",
+        "pekin",
+        "beijing"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "question_id_sha256": "d017714dc723da461530a6b9b3a322b27eb0f0eeae0f36ad2263276b5424d62b",
+      "index": 14,
+      "content_hash": "c9a418689fbfb23d767b42096503629c7138c8df4768e9029960ceaeab2e3deb"
+    },
+    {
+      "source_index": 7738,
+      "id": "4548221",
+      "subj_id": "2005387",
+      "s_pop": 718380.0,
+      "question": "What is New York City the capital of?",
+      "normalized_question": "what is new york city capital of",
+      "raw_aliases": [
+        "United States of America",
+        "the United States of America",
+        "America",
+        "U.S.A.",
+        "USA",
+        "U.S.",
+        "US",
+        "the US",
+        "the USA",
+        "US of A",
+        "the United States",
+        "U. S. A.",
+        "U. S.",
+        "the States",
+        "the U.S.",
+        "'Merica",
+        "U.S",
+        "United States",
+        "'Murica"
+      ],
+      "normalized_aliases": [
+        "united states of america",
+        "united states of america",
+        "america",
+        "usa",
+        "usa",
+        "us",
+        "us",
+        "us",
+        "usa",
+        "us of",
+        "united states",
+        "u s",
+        "u s",
+        "states",
+        "us",
+        "merica",
+        "us",
+        "united states",
+        "murica"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "question_id_sha256": "07deb4c4837ae30e95aee092d3c51ff5a59e07a7a2ce6e27da375e16917ef62e",
+      "index": 15,
+      "content_hash": "1dd62da5f8e3a923c8730445b58d679ee830c7ceb6586b5379db31662f3bc330"
+    },
+    {
+      "source_index": 13955,
+      "id": "2967643",
+      "subj_id": "1270922",
+      "s_pop": 713574.0,
+      "question": "What is the capital of Australia?",
+      "normalized_question": "what is capital of australia",
+      "raw_aliases": [
+        "Canberra"
+      ],
+      "normalized_aliases": [
+        "canberra"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0
+      ],
+      "question_id_sha256": "d2f48952f7ca1e16789673fbaf80775ba9460a7d515c9c29b88461502c4c3542",
+      "index": 16,
+      "content_hash": "8cb71179f208f3ff245d11831c2707537d8e7400f0ce5f9bf68a78dd0c7c980d"
+    },
+    {
+      "source_index": 2865,
+      "id": "1408084",
+      "subj_id": "629801",
+      "s_pop": 707111.0,
+      "question": "Who is the father of Kim Kardashian?",
+      "normalized_question": "who is father of kim kardashian",
+      "raw_aliases": [
+        "Robert Kardashian",
+        "Robert George Kardashian",
+        "Rob Kardashian"
+      ],
+      "normalized_aliases": [
+        "robert kardashian",
+        "robert george kardashian",
+        "rob kardashian"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "eef8f4e5a9a76f564dcdcce523c4b1fdec57fe1552c43c438032e5e04db6c8a4",
+      "index": 17,
+      "content_hash": "606a0cac4f7727ae0a7002c950c76c6e8aed0c8800510957e81313d2c46a13dc"
+    },
+    {
+      "source_index": 11106,
+      "id": "2731814",
+      "subj_id": "1174187",
+      "s_pop": 706284.0,
+      "question": "What is the religion of Muhammad Ali?",
+      "normalized_question": "what is religion of muhammad ali",
+      "raw_aliases": [
+        "Nation of Islam",
+        "NOI",
+        "Sunni Islam",
+        "Sunni",
+        "Sunnite Muslims",
+        "Sunnite Muslim",
+        "Sufism",
+        "Sufi",
+        "Sufi (person)"
+      ],
+      "normalized_aliases": [
+        "nation of islam",
+        "noi",
+        "sunni islam",
+        "sunni",
+        "sunnite muslims",
+        "sunnite muslim",
+        "sufism",
+        "sufi",
+        "sufi person"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "question_id_sha256": "45543f986d35d3875a8fe9c061a2bcdd7c74da19f9044c16e116d8b6d32ea845",
+      "index": 18,
+      "content_hash": "8ae78a1003f3a3a1605164632d60755763420cb8a1417f11db0e6ad9606d4492"
+    },
+    {
+      "source_index": 13797,
+      "id": "1140403",
+      "subj_id": "502871",
+      "s_pop": 702414.0,
+      "question": "What is the capital of Japan?",
+      "normalized_question": "what is capital of japan",
+      "raw_aliases": [
+        "Tokyo",
+        "Tōkyō",
+        "Tôkyô",
+        "Tokyo-to",
+        "Tokyo Metropolitan prefecture",
+        "Tōkyō-to",
+        "Tôkyô-to",
+        "Tokyo Metropolis",
+        "Tokio",
+        "Tokyo Prefecture"
+      ],
+      "normalized_aliases": [
+        "tokyo",
+        "tōkyō",
+        "tôkyô",
+        "tokyoto",
+        "tokyo metropolitan prefecture",
+        "tōkyōto",
+        "tôkyôto",
+        "tokyo metropolis",
+        "tokio",
+        "tokyo prefecture"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "question_id_sha256": "ced0aaddb10851c538524155a765eee2e775fd7ee78dae0f8ddbd96f0813fef2",
+      "index": 19,
+      "content_hash": "5952ff22864fef0f01676a6d2d91ed098b38b08b7e6e69a678b66cb2c36f70f6"
+    },
+    {
+      "source_index": 11280,
+      "id": "6368178",
+      "subj_id": "2869258",
+      "s_pop": 683050.0,
+      "question": "What is the religion of Afghanistan?",
+      "normalized_question": "what is religion of afghanistan",
+      "raw_aliases": [
+        "Islam",
+        "Islamic religion",
+        "Mohammedanism",
+        "Muslim religion",
+        "al-’islām",
+        "religion of the Muslims"
+      ],
+      "normalized_aliases": [
+        "islam",
+        "islamic religion",
+        "mohammedanism",
+        "muslim religion",
+        "alislām",
+        "religion of muslims"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "question_id_sha256": "07a8baa82f84dc7cb6fc5b507d8535d83cf30b1ff95d27a382d20f252c6e0bb7",
+      "index": 20,
+      "content_hash": "51ec3fdc2a29fea04d9ce8038d4e667355b5c9aaed3fa52b95d2c3e1acd404bc"
+    },
+    {
+      "source_index": 11007,
+      "id": "1416925",
+      "subj_id": "633673",
+      "s_pop": 674651.0,
+      "question": "What color is Manchester United F.C.?",
+      "normalized_question": "what color is manchester united fc",
+      "raw_aliases": [
+        "red",
+        "red color"
+      ],
+      "normalized_aliases": [
+        "red",
+        "red color"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "64e6d8f8bc58a534f06c826104ebb937b5e03b66814b290caf7c49cd16e1099e",
+      "index": 21,
+      "content_hash": "76bb66fd52fd91490e36f25314c337dfd540941ed91bcfcc834f5938a4c089e1"
+    },
+    {
+      "source_index": 12934,
+      "id": "6302289",
+      "subj_id": "2843473",
+      "s_pop": 671954.0,
+      "question": "Who is the author of James Bond?",
+      "normalized_question": "who is author of james bond",
+      "raw_aliases": [
+        "Ian Fleming",
+        "Ian Lancaster Fleming"
+      ],
+      "normalized_aliases": [
+        "ian fleming",
+        "ian lancaster fleming"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "92830a9d75ef5e7164f12d813e9e79a6bdd787ff462a5393ac49d2ff91373a49",
+      "index": 22,
+      "content_hash": "fc25958eb9a0e2159aebd668e6ddf4f3ed403fa2bfba64f790f6fb9e2f173bf1"
+    },
+    {
+      "source_index": 3290,
+      "id": "110614",
+      "subj_id": "43180",
+      "s_pop": 636668.0,
+      "question": "Who is the father of Dwayne Johnson?",
+      "normalized_question": "who is father of dwayne johnson",
+      "raw_aliases": [
+        "Rocky Johnson",
+        "Wayde Douglas Bowles",
+        "Sweet Ebony Diamond"
+      ],
+      "normalized_aliases": [
+        "rocky johnson",
+        "wayde douglas bowles",
+        "sweet ebony diamond"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "ce638be7c073bfd38055d5c417888a101d9503d0069882a9835527c919ef6203",
+      "index": 23,
+      "content_hash": "cfb61412d34ad95e825231db0afe34816e3bebddb890bede56133143badf0a2e"
+    },
+    {
+      "source_index": 13524,
+      "id": "5815002",
+      "subj_id": "2602170",
+      "s_pop": 592684.0,
+      "question": "Who is the mother of Barack Obama?",
+      "normalized_question": "who is mother of barack obama",
+      "raw_aliases": [
+        "Ann Dunham",
+        "Stanley Ann Dunham",
+        "Ann Obama",
+        "Ann Soetoro",
+        "Ann Sutoro",
+        "S. Ann Dunham",
+        "Dr. Stanley Ann Obama"
+      ],
+      "normalized_aliases": [
+        "ann dunham",
+        "stanley ann dunham",
+        "ann obama",
+        "ann soetoro",
+        "ann sutoro",
+        "s ann dunham",
+        "dr stanley ann obama"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "question_id_sha256": "e3782bdd9f759cff59cfde3b16f6d3f4ea14777ab955c4df35a894093c34a7fd",
+      "index": 24,
+      "content_hash": "de77be25e11014262f5c3b773e8c0912dd7c30f0375968d9fb642fe9ec2d60bf"
+    },
+    {
+      "source_index": 14015,
+      "id": "6300717",
+      "subj_id": "2842812",
+      "s_pop": 574520.0,
+      "question": "What is the capital of Pakistan?",
+      "normalized_question": "what is capital of pakistan",
+      "raw_aliases": [
+        "Islamabad",
+        "Islāmābād"
+      ],
+      "normalized_aliases": [
+        "islamabad",
+        "islāmābād"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "6c9efd75b04fe0d51d7480f9477f82b22596fb45ca245131b2e2be5df6f252cf",
+      "index": 25,
+      "content_hash": "59188a5a1c266462a4c8cd60c4bde3a885d115a7c943941c6786efc7d7455552"
+    },
+    {
+      "source_index": 14072,
+      "id": "1363778",
+      "subj_id": "607728",
+      "s_pop": 556493.0,
+      "question": "What is the capital of Germany?",
+      "normalized_question": "what is capital of germany",
+      "raw_aliases": [
+        "Berlin",
+        "Berlin, Germany",
+        "Berlin (Germany)",
+        "DE-BE"
+      ],
+      "normalized_aliases": [
+        "berlin",
+        "berlin germany",
+        "berlin germany",
+        "debe"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "936e3a03352b1ce5bcc39a2f37a9b3a0a8708e0f8d1ffbd229c86611cf0e18bf",
+      "index": 26,
+      "content_hash": "d41705f74c1183ebb2524983dd62e494eeccc2819fd1fce50620839bac3a9808"
+    },
+    {
+      "source_index": 11052,
+      "id": "6467337",
+      "subj_id": "2907997",
+      "s_pop": 554097.0,
+      "question": "What is the religion of Queen Victoria?",
+      "normalized_question": "what is religion of queen victoria",
+      "raw_aliases": [
+        "Anglicanism",
+        "Anglicanism, Anglican Church"
+      ],
+      "normalized_aliases": [
+        "anglicanism",
+        "anglicanism anglican church"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          7
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "3d8d079bf3499ca03bd50547df254b0400c36e4c154678f7e4b6b011f412f147",
+      "index": 27,
+      "content_hash": "76f014109dd2eead32d4a9615ca9c9b1b28f8d7c1253b27e68236611c1e6e1a6"
+    },
+    {
+      "source_index": 3212,
+      "id": "6516245",
+      "subj_id": "2925606",
+      "s_pop": 527244.0,
+      "question": "Who is the father of Diana, Princess of Wales?",
+      "normalized_question": "who is father of diana princess of wales",
+      "raw_aliases": [
+        "John Spencer, 8th Earl Spencer",
+        "John Spencer",
+        "Edward John Spencer, 8th Earl Spencer"
+      ],
+      "normalized_aliases": [
+        "john spencer 8th earl spencer",
+        "john spencer",
+        "edward john spencer 8th earl spencer"
+      ],
+      "alias_token_lengths": [
+        [
+          8,
+          8
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "33c3a71b90c3aad9eb83d16fba3f129e5785cc932c605c45df4b77186226510c",
+      "index": 28,
+      "content_hash": "5e16aecc652459f401283a719bd365c1f14e7840f16fbf25144a7d6def44f2e8"
+    },
+    {
+      "source_index": 14200,
+      "id": "804606",
+      "subj_id": "343477",
+      "s_pop": 526066.0,
+      "question": "What is the capital of Russia?",
+      "normalized_question": "what is capital of russia",
+      "raw_aliases": [
+        "Moscow",
+        "Moskva",
+        "Moscow, Russia",
+        "Moskva Federal City, Russia",
+        "Moscow, USSR",
+        "Moskva, Russia",
+        "City of Moscow",
+        "Moscow, Russian Federation",
+        "Moscow, Soviet Union",
+        "Moscow, Russian SFSR",
+        "Muscovite",
+        "Moscovite"
+      ],
+      "normalized_aliases": [
+        "moscow",
+        "moskva",
+        "moscow russia",
+        "moskva federal city russia",
+        "moscow ussr",
+        "moskva russia",
+        "city of moscow",
+        "moscow russian federation",
+        "moscow soviet union",
+        "moscow russian sfsr",
+        "muscovite",
+        "moscovite"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "question_id_sha256": "e11ede9dad96421835fb3bdfec2cad907d902e9ae8ac35fabd1c3eda69df9dba",
+      "index": 29,
+      "content_hash": "7f45a5f75432f2245c9c32702218903b926e992d866d440f74050bc800e99aa2"
+    },
+    {
+      "source_index": 7884,
+      "id": "6295674",
+      "subj_id": "2840765",
+      "s_pop": 523018.0,
+      "question": "What is London the capital of?",
+      "normalized_question": "what is london capital of",
+      "raw_aliases": [
+        "Kingdom of Essex",
+        "kingdom of the East Saxons",
+        "Essex",
+        "United Kingdom",
+        "🇬🇧",
+        "UK",
+        "United Kingdom of Great Britain and Northern Ireland",
+        "U.K.",
+        "GBR",
+        "GB",
+        "U. K.",
+        "U K",
+        "G.B.",
+        "G. B.",
+        "G B",
+        "Great Britain",
+        "G.B.R.",
+        "G B R",
+        "Britain",
+        "Great Britain and Northern Ireland",
+        "Great Britain",
+        "United Kingdom of Great Britain",
+        "UK",
+        "GB",
+        "UKGB",
+        "Kingdom of Great Britain",
+        "United Kingdom of Great Britain and Ireland",
+        "United Kingdom",
+        "UK",
+        "GB",
+        "UKGBI",
+        "Great Britain and Ireland",
+        "the United Kingdom",
+        "Britain",
+        "Kingdom of England",
+        "England",
+        "England",
+        "British North America",
+        "British America",
+        "Commonwealth of England",
+        "English Republic",
+        "Commonwealth",
+        "Interregnum",
+        "Protectorate",
+        "Commonwealth of England, Scotland and Ireland"
+      ],
+      "normalized_aliases": [
+        "kingdom of essex",
+        "kingdom of east saxons",
+        "essex",
+        "united kingdom",
+        "🇬🇧",
+        "uk",
+        "united kingdom of great britain and northern ireland",
+        "uk",
+        "gbr",
+        "gb",
+        "u k",
+        "u k",
+        "gb",
+        "g b",
+        "g b",
+        "great britain",
+        "gbr",
+        "g b r",
+        "britain",
+        "great britain and northern ireland",
+        "great britain",
+        "united kingdom of great britain",
+        "uk",
+        "gb",
+        "ukgb",
+        "kingdom of great britain",
+        "united kingdom of great britain and ireland",
+        "united kingdom",
+        "uk",
+        "gb",
+        "ukgbi",
+        "great britain and ireland",
+        "united kingdom",
+        "britain",
+        "kingdom of england",
+        "england",
+        "england",
+        "british north america",
+        "british america",
+        "commonwealth of england",
+        "english republic",
+        "commonwealth",
+        "interregnum",
+        "protectorate",
+        "commonwealth of england scotland and ireland"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ],
+      "question_id_sha256": "0eabb773fb9064059be5487ef9e7bf4d856d9c2fe01230fe2a60a1bc19f185e0",
+      "index": 30,
+      "content_hash": "900926dd5e611504605bd29356e6576c4e2160dbe637fcb4b7e978f974563983"
+    },
+    {
+      "source_index": 13658,
+      "id": "6432170",
+      "subj_id": "2894363",
+      "s_pop": 522202.0,
+      "question": "What is the capital of Philippines?",
+      "normalized_question": "what is capital of philippines",
+      "raw_aliases": [
+        "Manila",
+        "City of Manila"
+      ],
+      "normalized_aliases": [
+        "manila",
+        "city of manila"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "3a8b07d51c5442c21eee84c7427612773f0762a41d973ff22a86c7329a6cb89e",
+      "index": 31,
+      "content_hash": "c12d64ff8343d05fb1f88f230785d1651e16979b89e90bbb82f6cdabde78e458"
+    },
+    {
+      "source_index": 13866,
+      "id": "4995155",
+      "subj_id": "2204434",
+      "s_pop": 508758.0,
+      "question": "What is the capital of New Zealand?",
+      "normalized_question": "what is capital of new zealand",
+      "raw_aliases": [
+        "Wellington",
+        "Te Whanga-nui-a-Tara",
+        "Wellington, New Zealand",
+        "Wellington, NZ",
+        "Wellington metropolitan area"
+      ],
+      "normalized_aliases": [
+        "wellington",
+        "te whanganuiatara",
+        "wellington new zealand",
+        "wellington nz",
+        "wellington metropolitan area"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "e0372e0d335cf3e975644485d2595a2e412d041fae069711e00982fb1dd69b48",
+      "index": 32,
+      "content_hash": "214b27332317699342f0ffb232d2d582be17e39b41c318b4a519a2e1236055ca"
+    },
+    {
+      "source_index": 11047,
+      "id": "179252",
+      "subj_id": "72430",
+      "s_pop": 495298.0,
+      "question": "What is the religion of Bill Clinton?",
+      "normalized_question": "what is religion of bill clinton",
+      "raw_aliases": [
+        "Baptists",
+        "Baptist church",
+        "Baptist"
+      ],
+      "normalized_aliases": [
+        "baptists",
+        "baptist church",
+        "baptist"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "b511cf889bd5419439d237654eb2345e254b5ca0c18d8a1ca1b953f4252294d3",
+      "index": 33,
+      "content_hash": "f99a57ca833123d6f75b5559ea375d3996dd43aea9134931cc182aba8515a6e5"
+    },
+    {
+      "source_index": 14069,
+      "id": "6359560",
+      "subj_id": "2866409",
+      "s_pop": 492668.0,
+      "question": "What is the capital of South Korea?",
+      "normalized_question": "what is capital of south korea",
+      "raw_aliases": [
+        "Seoul",
+        "Seoul Teukbyeolsi",
+        "Sŏul T'ŭkpyŏlsi",
+        "Wiryeseong",
+        "Namgyeong",
+        "Hanseong",
+        "Hanyang",
+        "Keijō",
+        "Keijou",
+        "Gyeongseong"
+      ],
+      "normalized_aliases": [
+        "seoul",
+        "seoul teukbyeolsi",
+        "sŏul tŭkpyŏlsi",
+        "wiryeseong",
+        "namgyeong",
+        "hanseong",
+        "hanyang",
+        "keijō",
+        "keijou",
+        "gyeongseong"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "question_id_sha256": "20c4e06b7a16bedb9ebc9a363d001a202c32360c168023ac4b1ffc6075ed53c9",
+      "index": 34,
+      "content_hash": "073761979b601fc990e861ce420a64f86ab228aa167e14b60bd773de5901c046"
+    },
+    {
+      "source_index": 7711,
+      "id": "2539119",
+      "subj_id": "1096999",
+      "s_pop": 492490.0,
+      "question": "What is Singapore the capital of?",
+      "normalized_question": "what is singapore capital of",
+      "raw_aliases": [
+        "Straits Settlements"
+      ],
+      "normalized_aliases": [
+        "straits settlements"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0
+      ],
+      "question_id_sha256": "0675a4d205c5887f9f5fc82270ad9776db497f250dfdfa20f6d31e9d6d8cb46e",
+      "index": 35,
+      "content_hash": "1a97276ff25604a2b100c890230d006120b4b603c756cd5942a927d4eeb1bc9a"
+    },
+    {
+      "source_index": 5644,
+      "id": "4877533",
+      "subj_id": "2148170",
+      "s_pop": 490576.0,
+      "question": "Who was the producer of Marvel Cinematic Universe?",
+      "normalized_question": "who was producer of marvel cinematic universe",
+      "raw_aliases": [
+        "Kevin Feige"
+      ],
+      "normalized_aliases": [
+        "kevin feige"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0
+      ],
+      "question_id_sha256": "ad729162b7825bf8d6d2000e662c1a5bd84ab9acad4bb42168dbe75f2a8c9e21",
+      "index": 36,
+      "content_hash": "3a94c5ea77cb4c1ea23071a346a05284b2e5859c95ab4292e709735a131d6ca7"
+    },
+    {
+      "source_index": 11226,
+      "id": "3170519",
+      "subj_id": "1355571",
+      "s_pop": 487061.0,
+      "question": "What is the religion of Marilyn Monroe?",
+      "normalized_question": "what is religion of marilyn monroe",
+      "raw_aliases": [
+        "Judaism",
+        "Jewish",
+        "Jewish religion"
+      ],
+      "normalized_aliases": [
+        "judaism",
+        "jewish",
+        "jewish religion"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "d09fb057449c3f2634b225809c792d210e13355503fb503107185c55b799b25a",
+      "index": 37,
+      "content_hash": "d95c62a71b0f90bfc1cd788b0c1a24613c72fe76a0cdf8507a5feabe6936cc96"
+    },
+    {
+      "source_index": 14045,
+      "id": "562847",
+      "subj_id": "230035",
+      "s_pop": 486947.0,
+      "question": "What is the capital of France?",
+      "normalized_question": "what is capital of france",
+      "raw_aliases": [
+        "Paris",
+        "City of Light",
+        "Paris, France"
+      ],
+      "normalized_aliases": [
+        "paris",
+        "city of light",
+        "paris france"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "ad1c4b01f4ae9107c4e792afd4b16377af728f324d3c3e5aa03861bc4b3b7fc3",
+      "index": 38,
+      "content_hash": "7eaf0f0240b27c1972364b7fe143bc565002c96810288cb7bad6bbbc326987ff"
+    },
+    {
+      "source_index": 13686,
+      "id": "664514",
+      "subj_id": "280873",
+      "s_pop": 467741.0,
+      "question": "What is the capital of Uttar Pradesh?",
+      "normalized_question": "what is capital of uttar pradesh",
+      "raw_aliases": [
+        "Lucknow",
+        "The City of Nawabs",
+        "The Golden City of India",
+        "Constantinople of East",
+        "Shiraz-i-Hind"
+      ],
+      "normalized_aliases": [
+        "lucknow",
+        "city of nawabs",
+        "golden city of india",
+        "constantinople of east",
+        "shirazihind"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "5d057938d196bad79eb50b69af3265bdf5c94bce4cb539d21f766371935cb13d",
+      "index": 39,
+      "content_hash": "e82909a8283ee782ce1f1e6543b101088be95d73c7fa7bbae9891525e8baa300"
+    },
+    {
+      "source_index": 13693,
+      "id": "3030578",
+      "subj_id": "1297158",
+      "s_pop": 454969.0,
+      "question": "What is the capital of Turkey?",
+      "normalized_question": "what is capital of turkey",
+      "raw_aliases": [
+        "Ankara",
+        "Ancyra",
+        "Angora",
+        "Ancara"
+      ],
+      "normalized_aliases": [
+        "ankara",
+        "ancyra",
+        "angora",
+        "ancara"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "36f2d9a760d4009971405d6f191092a4a47796ac232dab5ea1d39598539e0f85",
+      "index": 40,
+      "content_hash": "6b41805c8d12a37fafc039d0d8de63a321a61d0eba781a739ed7df6fb461f930"
+    },
+    {
+      "source_index": 531,
+      "id": "1546461",
+      "subj_id": "691525",
+      "s_pop": 449587.0,
+      "question": "What is Mike Flanagan's occupation?",
+      "normalized_question": "what is mike flanagans occupation",
+      "raw_aliases": [
+        "screenwriter",
+        "scenarist",
+        "writer",
+        "screen writer",
+        "script writer",
+        "scriptwriter"
+      ],
+      "normalized_aliases": [
+        "screenwriter",
+        "scenarist",
+        "writer",
+        "screen writer",
+        "script writer",
+        "scriptwriter"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "question_id_sha256": "d30fb8a75ecb93ee0efa046776f2159be37b7d065569dcb22199f0d526007baf",
+      "index": 41,
+      "content_hash": "5f309145d06e77706a16f4b32639c9759b742f0da7f791b8df72d36c8f767a02"
+    },
+    {
+      "source_index": 14041,
+      "id": "6351301",
+      "subj_id": "2863349",
+      "s_pop": 448395.0,
+      "question": "What is the capital of United Arab Emirates?",
+      "normalized_question": "what is capital of united arab emirates",
+      "raw_aliases": [
+        "Abu Dhabi",
+        "Abū Dhabi",
+        "Abudhabi"
+      ],
+      "normalized_aliases": [
+        "abu dhabi",
+        "abū dhabi",
+        "abudhabi"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "043c6ea5896f6885d122eb58581e938c7875242b76c5527c803ceb05a69c15b2",
+      "index": 42,
+      "content_hash": "7c847d90d2cba725c65dcabe0dcb90de79e83f247ad1c0592e9267842e132ec7"
+    },
+    {
+      "source_index": 13894,
+      "id": "1660531",
+      "subj_id": "736842",
+      "s_pop": 445438.0,
+      "question": "What is the capital of England?",
+      "normalized_question": "what is capital of england",
+      "raw_aliases": [
+        "London",
+        "London, UK",
+        "London, United Kingdom",
+        "London, England",
+        "Modern Babylon"
+      ],
+      "normalized_aliases": [
+        "london",
+        "london uk",
+        "london united kingdom",
+        "london england",
+        "modern babylon"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "acbd1d511153bf5c0e35e683eb703b8b9d7db9388add1c243ed190481de253df",
+      "index": 43,
+      "content_hash": "6681563d5ba16c07c556949f98c0882745996b4914c33cb1e7915d03d749db84"
+    },
+    {
+      "source_index": 5319,
+      "id": "1824463",
+      "subj_id": "803895",
+      "s_pop": 428774.0,
+      "question": "Who was the producer of Game of Thrones?",
+      "normalized_question": "who was producer of game of thrones",
+      "raw_aliases": [
+        "David Benioff",
+        "David Friedman"
+      ],
+      "normalized_aliases": [
+        "david benioff",
+        "david friedman"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "8d70bf941f81bb14c53a6714eec1e9ae0358d5db34a673a1ebbefbf1f1fc029f",
+      "index": 44,
+      "content_hash": "a032fc820682d8f2724f7121e17a40e8d01ad45c5bbd84324cf7037edcaaaa61"
+    },
+    {
+      "source_index": 1597,
+      "id": "156556",
+      "subj_id": "63110",
+      "s_pop": 427893.0,
+      "question": "What genre is The Rolling Stones?",
+      "normalized_question": "what genre is rolling stones",
+      "raw_aliases": [
+        "rock music",
+        "rock and roll",
+        "rock",
+        "Rock",
+        "blues rock",
+        "Blues Rock",
+        "psychedelic rock",
+        "acid rock",
+        "psy rock",
+        "psyrock",
+        "psychedelia",
+        "rhythm and blues",
+        "R&B",
+        "RnB",
+        "RNB",
+        "R and B",
+        "R & B",
+        "country rock",
+        "Country Rock",
+        "rock and roll",
+        "rock 'n roll",
+        "rock 'n' roll",
+        "rock n' roll",
+        "rock & roll",
+        "rock&roll",
+        "hard rock",
+        "country music",
+        "country and western",
+        "country & western",
+        "country",
+        "Nashville sound",
+        "blues",
+        "blues music"
+      ],
+      "normalized_aliases": [
+        "rock music",
+        "rock and roll",
+        "rock",
+        "rock",
+        "blues rock",
+        "blues rock",
+        "psychedelic rock",
+        "acid rock",
+        "psy rock",
+        "psyrock",
+        "psychedelia",
+        "rhythm and blues",
+        "rb",
+        "rnb",
+        "rnb",
+        "r and b",
+        "r b",
+        "country rock",
+        "country rock",
+        "rock and roll",
+        "rock n roll",
+        "rock n roll",
+        "rock n roll",
+        "rock roll",
+        "rockroll",
+        "hard rock",
+        "country music",
+        "country and western",
+        "country western",
+        "country",
+        "nashville sound",
+        "blues",
+        "blues music"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32
+      ],
+      "question_id_sha256": "3b0ad6834871eba978d0c85474f75b5f716d57647155cfdd0088a7f1f5332e00",
+      "index": 45,
+      "content_hash": "70f91ec2db1f18c18f4bda53fbe52dcc9beee54c7e94a490cacc50485198e6ff"
+    },
+    {
+      "source_index": 14245,
+      "id": "34246",
+      "subj_id": "14347",
+      "s_pop": 425312.0,
+      "question": "What is the capital of Namibia?",
+      "normalized_question": "what is capital of namibia",
+      "raw_aliases": [
+        "Windhoek"
+      ],
+      "normalized_aliases": [
+        "windhoek"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0
+      ],
+      "question_id_sha256": "580c9bd7e05306645d8bd57c567a124a84b1f64d748bf5960a2307b9c6c8253c",
+      "index": 46,
+      "content_hash": "f7958ae22240e768b71d7b2db173486e9d1f50d54f9d13a9988c57187b76fb05"
+    },
+    {
+      "source_index": 2766,
+      "id": "2142166",
+      "subj_id": "936716",
+      "s_pop": 420204.0,
+      "question": "Who is the father of George VI?",
+      "normalized_question": "who is father of george vi",
+      "raw_aliases": [
+        "George V",
+        "George Frederick Ernest Albert",
+        "George Windsor",
+        "George Frederick Ernest Albert Windsor",
+        "George Saxe-Coburg-Gotha",
+        "George Frederick Ernest Albert Saxe-Coburg-Gotha",
+        "King George V",
+        "King of Great Britain George V",
+        "V, King of Great Britain George",
+        "George V of the United Kingdom"
+      ],
+      "normalized_aliases": [
+        "george v",
+        "george frederick ernest albert",
+        "george windsor",
+        "george frederick ernest albert windsor",
+        "george saxecoburggotha",
+        "george frederick ernest albert saxecoburggotha",
+        "king george v",
+        "king of great britain george v",
+        "v king of great britain george",
+        "george v of united kingdom"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          12,
+          12
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        6,
+        7,
+        8,
+        9
+      ],
+      "question_id_sha256": "69f7b8767134db0b4cf604a21fccbb4261ddf6fb2477673d6d3ea1325e660954",
+      "index": 47,
+      "content_hash": "19c965336323c5582a8bff5a12542822ccbc03497d5a59ce9be1a287feb3c77d"
+    },
+    {
+      "source_index": 13679,
+      "id": "4165947",
+      "subj_id": "1825504",
+      "s_pop": 416350.0,
+      "question": "What is the capital of Netherlands?",
+      "normalized_question": "what is capital of netherlands",
+      "raw_aliases": [
+        "The Hague",
+        "Den Haag",
+        "'s-Gravenhage",
+        "Haag",
+        "Amsterdam",
+        "Mokum",
+        "Amsterdam, NL",
+        "Amsterdam, Netherlands",
+        "A'dam"
+      ],
+      "normalized_aliases": [
+        "hague",
+        "den haag",
+        "sgravenhage",
+        "haag",
+        "amsterdam",
+        "mokum",
+        "amsterdam nl",
+        "amsterdam netherlands",
+        "adam"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "question_id_sha256": "007a89452a872b010e01ae71f3ce57bb6d5932fc549634de4b9a2ab3e11ea7e6",
+      "index": 48,
+      "content_hash": "edff757b6bf38b87709dfd0967f98bee6a3f6ab92c335c14e05cc4e239513321"
+    },
+    {
+      "source_index": 11135,
+      "id": "6471074",
+      "subj_id": "2909372",
+      "s_pop": 415010.0,
+      "question": "What is the religion of Muhammad?",
+      "normalized_question": "what is religion of muhammad",
+      "raw_aliases": [
+        "Hanif",
+        "Islam",
+        "Islamic religion",
+        "Mohammedanism",
+        "Muslim religion",
+        "al-’islām",
+        "religion of the Muslims"
+      ],
+      "normalized_aliases": [
+        "hanif",
+        "islam",
+        "islamic religion",
+        "mohammedanism",
+        "muslim religion",
+        "alislām",
+        "religion of muslims"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "question_id_sha256": "1dd0988d07f705134debd4e0f9645da36803b3d6aaf2d89825303ea7dad9e27c",
+      "index": 49,
+      "content_hash": "9d931678ba16e076f15b5b70c500574a668765ce41df5f6bf7a7750d33e68757"
+    },
+    {
+      "source_index": 13755,
+      "id": "694486",
+      "subj_id": "293285",
+      "s_pop": 411538.0,
+      "question": "What is the capital of Soviet Union?",
+      "normalized_question": "what is capital of soviet union",
+      "raw_aliases": [
+        "Moscow",
+        "Moskva",
+        "Moscow, Russia",
+        "Moskva Federal City, Russia",
+        "Moscow, USSR",
+        "Moskva, Russia",
+        "City of Moscow",
+        "Moscow, Russian Federation",
+        "Moscow, Soviet Union",
+        "Moscow, Russian SFSR",
+        "Muscovite",
+        "Moscovite"
+      ],
+      "normalized_aliases": [
+        "moscow",
+        "moskva",
+        "moscow russia",
+        "moskva federal city russia",
+        "moscow ussr",
+        "moskva russia",
+        "city of moscow",
+        "moscow russian federation",
+        "moscow soviet union",
+        "moscow russian sfsr",
+        "muscovite",
+        "moscovite"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "question_id_sha256": "9b04ac69cf46700bd6fb4be674bdbdd47ef3919de04f24fbb3e4ae6261cec585",
+      "index": 50,
+      "content_hash": "def061a16a9bdb06531f54eb9ed9f5569b7b65a25976e705602814fd541c1907"
+    },
+    {
+      "source_index": 13771,
+      "id": "6386307",
+      "subj_id": "2876593",
+      "s_pop": 407891.0,
+      "question": "What is the capital of Bangladesh?",
+      "normalized_question": "what is capital of bangladesh",
+      "raw_aliases": [
+        "Dhaka",
+        "Dacca",
+        "Dhaka City"
+      ],
+      "normalized_aliases": [
+        "dhaka",
+        "dacca",
+        "dhaka city"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "3fe6056da3dbd50e903117f6c902ee995a8906af8f9c0f5f0b34c2cc6f02f4ed",
+      "index": 51,
+      "content_hash": "86391105baae98835960396eddb92b9526ffe2176d221fb1c7c1d889e400637c"
+    },
+    {
+      "source_index": 13838,
+      "id": "1981146",
+      "subj_id": "869785",
+      "s_pop": 407517.0,
+      "question": "What is the capital of South Africa?",
+      "normalized_question": "what is capital of south africa",
+      "raw_aliases": [
+        "Bloemfontein",
+        "Pretoria",
+        "Pretoria, S. Africa",
+        "Pretoria, S Africa",
+        "Pretoria, Gauteng, South Africa",
+        "Pretoria, Gauteng",
+        "Pretoria, South Africa",
+        "ePitoli",
+        "Cape Town",
+        "Kaapstad",
+        "iKapa",
+        "Kaap",
+        "Cape",
+        "Cape Town, South Africa",
+        "Mother City",
+        "Tavern of the Seas",
+        "West side"
+      ],
+      "normalized_aliases": [
+        "bloemfontein",
+        "pretoria",
+        "pretoria s africa",
+        "pretoria s africa",
+        "pretoria gauteng south africa",
+        "pretoria gauteng",
+        "pretoria south africa",
+        "epitoli",
+        "cape town",
+        "kaapstad",
+        "ikapa",
+        "kaap",
+        "cape",
+        "cape town south africa",
+        "mother city",
+        "tavern of seas",
+        "west side"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "question_id_sha256": "b3db43e4b43184deb8beca91092d679963ff9e315c335012afd45ba96fcf8ab7",
+      "index": 52,
+      "content_hash": "058c00ec34ad8568d05121b3bff849389e3d6d308d0a75d92075bd9af28de3e1"
+    },
+    {
+      "source_index": 13725,
+      "id": "2839162",
+      "subj_id": "1218153",
+      "s_pop": 403188.0,
+      "question": "What is the capital of Italy?",
+      "normalized_question": "what is capital of italy",
+      "raw_aliases": [
+        "Rome",
+        "The Eternal City",
+        "Roma",
+        "Rome Italy"
+      ],
+      "normalized_aliases": [
+        "rome",
+        "eternal city",
+        "roma",
+        "rome italy"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "03ce3623743142d28739535ce622cfa35c16bbfd3d2a6e01eb394f1727f48405",
+      "index": 53,
+      "content_hash": "a283c8fa9f14d3799cdb9ad177e6227f6478eb053b02c657ebfa315b736ebfd3"
+    },
+    {
+      "source_index": 13977,
+      "id": "581753",
+      "subj_id": "238054",
+      "s_pop": 400631.0,
+      "question": "What is the capital of Texas?",
+      "normalized_question": "what is capital of texas",
+      "raw_aliases": [
+        "Austin",
+        "Austin, Texas"
+      ],
+      "normalized_aliases": [
+        "austin",
+        "austin texas"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "bd0790c8a1d6676b70a30da7996ae3da837c41cc414834f7f4fce97a86ae8f58",
+      "index": 54,
+      "content_hash": "80d48aa0fe34b45d4ab609aeed39bb271ca25451c42ff68c506e601b2d4c2479"
+    },
+    {
+      "source_index": 2937,
+      "id": "6297091",
+      "subj_id": "2841337",
+      "s_pop": 394950.0,
+      "question": "Who is the father of Alexander the Great?",
+      "normalized_question": "who is father of alexander great",
+      "raw_aliases": [
+        "Philip II of Macedon",
+        "King of Macedonia Filippo II",
+        "King of Macedonia Philippos II",
+        "King of Macedonia Philip II",
+        "King of Macedonia Filip II",
+        "King of Macedonia Philippus II",
+        "Philip of Macedon"
+      ],
+      "normalized_aliases": [
+        "philip ii of macedon",
+        "king of macedonia filippo ii",
+        "king of macedonia philippos ii",
+        "king of macedonia philip ii",
+        "king of macedonia filip ii",
+        "king of macedonia philippus ii",
+        "philip of macedon"
+      ],
+      "alias_token_lengths": [
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "question_id_sha256": "3042a4662db1684a049378b38f726e670a3aad3cee6ee29f4a4ba231fdf9689e",
+      "index": 55,
+      "content_hash": "897bbb9ea3a69c004b1b9ec0caae51db0d9fc21927864c554f2c416b25cc2951"
+    },
+    {
+      "source_index": 11244,
+      "id": "6400075",
+      "subj_id": "2882208",
+      "s_pop": 394926.0,
+      "question": "What is the religion of Abraham Lincoln?",
+      "normalized_question": "what is religion of abraham lincoln",
+      "raw_aliases": [
+        "Baptists",
+        "Baptist church",
+        "Baptist"
+      ],
+      "normalized_aliases": [
+        "baptists",
+        "baptist church",
+        "baptist"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "29df024a5b6ad9d37fa3bc82a4e7e920b4035d053e531631405c5ff087db6983",
+      "index": 56,
+      "content_hash": "a86e08ef7334acc1272cc2c6efabfd43431fa59549156b7363694502d252a1e6"
+    },
+    {
+      "source_index": 13552,
+      "id": "3786129",
+      "subj_id": "1648923",
+      "s_pop": 384540.0,
+      "question": "Who is the mother of Napoleon?",
+      "normalized_question": "who is mother of napoleon",
+      "raw_aliases": [
+        "Letizia Bonaparte",
+        "Maria Letizia Bonaparte",
+        "Maria Letizia Buonaparte",
+        "Maria Letizia Ramolino",
+        "Madame Mère",
+        "Laetitia Bonaparte",
+        "Letizia Ramallo",
+        "Letizia Ramolino",
+        "Maria-Letizia Buonaparte"
+      ],
+      "normalized_aliases": [
+        "letizia bonaparte",
+        "maria letizia bonaparte",
+        "maria letizia buonaparte",
+        "maria letizia ramolino",
+        "madame mère",
+        "laetitia bonaparte",
+        "letizia ramallo",
+        "letizia ramolino",
+        "marialetizia buonaparte"
+      ],
+      "alias_token_lengths": [
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          8,
+          8
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "question_id_sha256": "742c5960edcb7a47eb271782a1eab1f77b13ddac9f55bf73abcc73224b3aebbd",
+      "index": 57,
+      "content_hash": "c2902aa385f867ac1ce696e5d3cce81f8d6f4a15833f7d720535839f16fb9706"
+    },
+    {
+      "source_index": 13659,
+      "id": "1939901",
+      "subj_id": "852965",
+      "s_pop": 383128.0,
+      "question": "What is the capital of Indonesia?",
+      "normalized_question": "what is capital of indonesia",
+      "raw_aliases": [
+        "Jakarta",
+        "Special Capital Region of Jakarta",
+        "JKT",
+        "Jakarta, Indonesia",
+        "Djakarta",
+        "Jacarta"
+      ],
+      "normalized_aliases": [
+        "jakarta",
+        "special capital region of jakarta",
+        "jkt",
+        "jakarta indonesia",
+        "djakarta",
+        "jacarta"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "question_id_sha256": "1e42793559c0c63c19126c392482ce536deff68b352b9badbc8b080355951f60",
+      "index": 58,
+      "content_hash": "07e79c58fa389307d342a725de15956d5cfe4e7c2767f92c975185d822e4a8f4"
+    },
+    {
+      "source_index": 13897,
+      "id": "6184067",
+      "subj_id": "2788922",
+      "s_pop": 382095.0,
+      "question": "What is the capital of Israel?",
+      "normalized_question": "what is capital of israel",
+      "raw_aliases": [
+        "Jerusalem",
+        "Yerushalayim",
+        "J'lem",
+        "Aelia Capitolina",
+        "Al-Quds",
+        "Jerusalem, Middle East"
+      ],
+      "normalized_aliases": [
+        "jerusalem",
+        "yerushalayim",
+        "jlem",
+        "aelia capitolina",
+        "alquds",
+        "jerusalem middle east"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "question_id_sha256": "57967a082bfb6119dbac7f8575c918f5e04808a1133db9a0706c6381e748cb52",
+      "index": 59,
+      "content_hash": "177a86dc20a71bed5f8bd0e014ea10768f97839214108a7f23731b8ebf312de3"
+    },
+    {
+      "source_index": 1391,
+      "id": "5777300",
+      "subj_id": "2580845",
+      "s_pop": 380230.0,
+      "question": "What genre is Prince?",
+      "normalized_question": "what genre is prince",
+      "raw_aliases": [
+        "rock music",
+        "rock and roll",
+        "rock",
+        "Rock",
+        "funk",
+        "Funk",
+        "pop music",
+        "pop",
+        "Pop",
+        "rhythm and blues",
+        "R&B",
+        "RnB",
+        "RNB",
+        "R and B",
+        "R & B",
+        "Minneapolis sound"
+      ],
+      "normalized_aliases": [
+        "rock music",
+        "rock and roll",
+        "rock",
+        "rock",
+        "funk",
+        "funk",
+        "pop music",
+        "pop",
+        "pop",
+        "rhythm and blues",
+        "rb",
+        "rnb",
+        "rnb",
+        "r and b",
+        "r b",
+        "minneapolis sound"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "question_id_sha256": "5bf264c517565d5334c052dfc5959dc8d4b32a6f5ca52606c3c3e46040d3fcb4",
+      "index": 60,
+      "content_hash": "4896f8a717d0d5ef043a537ed4698c27403976bf373ec8ad25104222884cecfa"
+    },
+    {
+      "source_index": 7709,
+      "id": "4925873",
+      "subj_id": "2172373",
+      "s_pop": 379485.0,
+      "question": "What is Los Angeles the capital of?",
+      "normalized_question": "what is los angeles capital of",
+      "raw_aliases": [
+        "Los Angeles County",
+        "Los Angeles County, California",
+        "County of Los Angeles, California",
+        "LA County"
+      ],
+      "normalized_aliases": [
+        "los angeles county",
+        "los angeles county california",
+        "county of los angeles california",
+        "la county"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "3602c32ade3d9464aab29f565cc7cce184b28ec4969441d4789c9c2c70c115fb",
+      "index": 61,
+      "content_hash": "925038481080be225dd6e911bd00e20c620722131378de3bf504897707005a44"
+    },
+    {
+      "source_index": 11233,
+      "id": "2203360",
+      "subj_id": "962574",
+      "s_pop": 377325.0,
+      "question": "What is the religion of Spain?",
+      "normalized_question": "what is religion of spain",
+      "raw_aliases": [
+        "non-denominational",
+        "nondenominational"
+      ],
+      "normalized_aliases": [
+        "nondenominational",
+        "nondenominational"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "682d5c2cdb68ecf97e0b0fa421d9cb820819d7fdc2e921860b77622a3a2e5e9e",
+      "index": 62,
+      "content_hash": "96fbbc72140c5d4401656cea800e38f884412bdd56c3b40ff1efcb2ba064616b"
+    },
+    {
+      "source_index": 14212,
+      "id": "6015165",
+      "subj_id": "2700755",
+      "s_pop": 376099.0,
+      "question": "What is the capital of Hawaii?",
+      "normalized_question": "what is capital of hawaii",
+      "raw_aliases": [
+        "Honolulu",
+        "Honolulu, Hawaii",
+        "Urban Honolulu",
+        "Honolulu CDP"
+      ],
+      "normalized_aliases": [
+        "honolulu",
+        "honolulu hawaii",
+        "urban honolulu",
+        "honolulu cdp"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "ac2f4931b10faf78367369e7163b973bf5171358c24b810a36ffd7fb84c9ab4e",
+      "index": 63,
+      "content_hash": "35313cb9beaaef21ab8309a9b2201fbb6e1c1338122015b2b34e5f711941627f"
+    },
+    {
+      "source_index": 13937,
+      "id": "6313411",
+      "subj_id": "2847995",
+      "s_pop": 368537.0,
+      "question": "What is the capital of Saudi Arabia?",
+      "normalized_question": "what is capital of saudi arabia",
+      "raw_aliases": [
+        "Riyadh"
+      ],
+      "normalized_aliases": [
+        "riyadh"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0
+      ],
+      "question_id_sha256": "d4945d8a4a06201f23ea85ee4cc7583f144cb49855653852fc8644b1d3234de6",
+      "index": 64,
+      "content_hash": "34959fafc2ba43efa8d8f37ed2cab12203d16cd6f19aeda5de82198588255837"
+    },
+    {
+      "source_index": 13970,
+      "id": "6499110",
+      "subj_id": "2919374",
+      "s_pop": 367408.0,
+      "question": "What is the capital of Mexico?",
+      "normalized_question": "what is capital of mexico",
+      "raw_aliases": [
+        "Mexico City",
+        "Mexico D.F.",
+        "Ciudad de México",
+        "City of Mexico",
+        "Mexico City, Mexico",
+        "CDMX",
+        "Mexico"
+      ],
+      "normalized_aliases": [
+        "mexico city",
+        "mexico df",
+        "ciudad de méxico",
+        "city of mexico",
+        "mexico city mexico",
+        "cdmx",
+        "mexico"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "question_id_sha256": "0b25c9954447129cf23ac97308e98f9e9a9fd965f31ca7bb583f9c713f592a9d",
+      "index": 65,
+      "content_hash": "d196d1440659420d30557f014bee349a4bda577aa8a8f604cc952d9689f917df"
+    },
+    {
+      "source_index": 13642,
+      "id": "523639",
+      "subj_id": "214359",
+      "s_pop": 362757.0,
+      "question": "What is the capital of New York?",
+      "normalized_question": "what is capital of new york",
+      "raw_aliases": [
+        "Albany",
+        "Albany, New York"
+      ],
+      "normalized_aliases": [
+        "albany",
+        "albany new york"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "9ff7759bceba4e01518aa376d02ad0e4086fa961e28344c40ba5c0a35e5b60a3",
+      "index": 66,
+      "content_hash": "5a29793855a722ed85200587b223159a17ca5bd282a2f70809c44d653724d91d"
+    },
+    {
+      "source_index": 11242,
+      "id": "5937756",
+      "subj_id": "2663847",
+      "s_pop": 358542.0,
+      "question": "What is the religion of Vladimir Putin?",
+      "normalized_question": "what is religion of vladimir putin",
+      "raw_aliases": [
+        "Russian Orthodox Church"
+      ],
+      "normalized_aliases": [
+        "russian orthodox church"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0
+      ],
+      "question_id_sha256": "af75ba54d67a31d86a4a4da57c65e9c77d49b888f688cf2360508465d780d690",
+      "index": 67,
+      "content_hash": "e3bb4a8c903176c240a4c5bb496266fa6c2c7f00703b71d2aff724d01cc17695"
+    },
+    {
+      "source_index": 14066,
+      "id": "2725932",
+      "subj_id": "1172122",
+      "s_pop": 355720.0,
+      "question": "What is the capital of Poland?",
+      "normalized_question": "what is capital of poland",
+      "raw_aliases": [
+        "Warsaw",
+        "Warszawa",
+        "Varshe",
+        "Warschau",
+        "Varshava",
+        "Varšava",
+        "Varsó",
+        "Varsavia",
+        "Varsovie",
+        "Varsovia",
+        "Varšuva"
+      ],
+      "normalized_aliases": [
+        "warsaw",
+        "warszawa",
+        "varshe",
+        "warschau",
+        "varshava",
+        "varšava",
+        "varsó",
+        "varsavia",
+        "varsovie",
+        "varsovia",
+        "varšuva"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "question_id_sha256": "3ea92b6f461c182006aa5478c43e482e5ca802197924fb2bab2ad769de308134",
+      "index": 68,
+      "content_hash": "5b799c810b69d0cd57cafd6a1459ddaf5961a9278c911d8c6c4b9ae84716da01"
+    },
+    {
+      "source_index": 13999,
+      "id": "2899839",
+      "subj_id": "1242173",
+      "s_pop": 354820.0,
+      "question": "What is the capital of Switzerland?",
+      "normalized_question": "what is capital of switzerland",
+      "raw_aliases": [
+        "Bern",
+        "Berne",
+        "city of Bern",
+        "Berna"
+      ],
+      "normalized_aliases": [
+        "bern",
+        "berne",
+        "city of bern",
+        "berna"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "caa43516a5f835c692002a585ffc8772f225031b51f71f9d088a93b5c68717f0",
+      "index": 69,
+      "content_hash": "e3d0aa17d7221be9286791ef3ee09c5c3298ec06f2eac65adebe025f65fe3468"
+    },
+    {
+      "source_index": 3090,
+      "id": "2281513",
+      "subj_id": "995462",
+      "s_pop": 353596.0,
+      "question": "Who is the father of Jesus?",
+      "normalized_question": "who is father of jesus",
+      "raw_aliases": [
+        "Joseph",
+        "Saint Joseph",
+        "St Joseph",
+        "Josef",
+        "St. Joseph",
+        "God the Father",
+        "The Father",
+        "Father"
+      ],
+      "normalized_aliases": [
+        "joseph",
+        "saint joseph",
+        "st joseph",
+        "josef",
+        "st joseph",
+        "god father",
+        "father",
+        "father"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "question_id_sha256": "4ae4b940f2095aa1c7d8bc59c698defc85cd20c4087f19b5c71cd9160f7a4b7b",
+      "index": 70,
+      "content_hash": "8a80be6ddfc2fb66d487e00080e8af2ba9d120a4c219dd433f2994e3efb15f76"
+    },
+    {
+      "source_index": 11311,
+      "id": "1782508",
+      "subj_id": "787893",
+      "s_pop": 350454.0,
+      "question": "What is the religion of George Washington?",
+      "normalized_question": "what is religion of george washington",
+      "raw_aliases": [
+        "Episcopal Church",
+        "Gu fakes",
+        "Guerra universitaria",
+        "Episcopalianism",
+        "The Episcopal Church in the United States of America"
+      ],
+      "normalized_aliases": [
+        "episcopal church",
+        "gu fakes",
+        "guerra universitaria",
+        "episcopalianism",
+        "episcopal church in united states of america"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          9,
+          9
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "25d45d2f41ff7a7fb3c0f77ccb9df7db63afc8bdf6fb74b39170cd9140a62524",
+      "index": 71,
+      "content_hash": "080218cc49bb10277fcfb59c444ec0a335874125eccaa8ae8650e8e86257f2b7"
+    },
+    {
+      "source_index": 2162,
+      "id": "2942700",
+      "subj_id": "1260028",
+      "s_pop": 345519.0,
+      "question": "What genre is Will Smith?",
+      "normalized_question": "what genre is will smith",
+      "raw_aliases": [
+        "hip hop music",
+        "hip-hop music"
+      ],
+      "normalized_aliases": [
+        "hip hop music",
+        "hiphop music"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "057632df8ca95ac3e484938cef773438bd6da760f23a2d36a64869faaa725ca7",
+      "index": 72,
+      "content_hash": "ea67b0ddcc9aabd900ac04e0c290454bb8f434c6c61113800b1832cf6f8682c4"
+    },
+    {
+      "source_index": 5316,
+      "id": "3093779",
+      "subj_id": "1319794",
+      "s_pop": 344637.0,
+      "question": "Who was the producer of Titanic?",
+      "normalized_question": "who was producer of titanic",
+      "raw_aliases": [
+        "James Cameron",
+        "James Francis Cameron",
+        "Jim Cameron"
+      ],
+      "normalized_aliases": [
+        "james cameron",
+        "james francis cameron",
+        "jim cameron"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "a28c4bb2ffdb1ab568926ee56083b040d178ffe506a8d75b0b555cf880d56625",
+      "index": 73,
+      "content_hash": "31fc6401cfbf3d19bbf1ddb4726482b4aff071d0f85bd1269cbb66e664c840c8"
+    },
+    {
+      "source_index": 13834,
+      "id": "39178",
+      "subj_id": "16314",
+      "s_pop": 336913.0,
+      "question": "What is the capital of Nigeria?",
+      "normalized_question": "what is capital of nigeria",
+      "raw_aliases": [
+        "Abuja",
+        "ABV",
+        "ABJ",
+        "FCT",
+        "Federal Capital Territory"
+      ],
+      "normalized_aliases": [
+        "abuja",
+        "abv",
+        "abj",
+        "fct",
+        "federal capital territory"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "034e41cbb68eb1be5069ff91bdf1de8ae5ade9475af120750e0cd5720d400f3b",
+      "index": 74,
+      "content_hash": "5df1fbd871b120b010707fe2448b47fb46c896382793c49d4d06bd9a9451fe9a"
+    },
+    {
+      "source_index": 13954,
+      "id": "6145054",
+      "subj_id": "2769257",
+      "s_pop": 332194.0,
+      "question": "What is the capital of Alaska?",
+      "normalized_question": "what is capital of alaska",
+      "raw_aliases": [
+        "Juneau",
+        "Juneau, Alaska",
+        "Juneau, AK"
+      ],
+      "normalized_aliases": [
+        "juneau",
+        "juneau alaska",
+        "juneau ak"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "59a76439de9d7429ed803e5ab2710e49f451ba2441cbad37790e7641d53e87d8",
+      "index": 75,
+      "content_hash": "4371de0d5b85d887161545d5f66b3382c9d4c04e6d2d20ff6ca4867c90824640"
+    },
+    {
+      "source_index": 14161,
+      "id": "1672533",
+      "subj_id": "741995",
+      "s_pop": 331690.0,
+      "question": "What is the capital of Ukraine?",
+      "normalized_question": "what is capital of ukraine",
+      "raw_aliases": [
+        "Kyiv",
+        "Kiev",
+        "Kyjiv",
+        "Kyyiv",
+        "Kyjiw",
+        "Kyiw",
+        "Kyïv",
+        "Kief",
+        "Kieff",
+        "Kiew",
+        "Kioff",
+        "Kiof",
+        "Kiowia",
+        "Kiovia",
+        "Kiow",
+        "Kiou",
+        "Kyїv"
+      ],
+      "normalized_aliases": [
+        "kyiv",
+        "kiev",
+        "kyjiv",
+        "kyyiv",
+        "kyjiw",
+        "kyiw",
+        "kyïv",
+        "kief",
+        "kieff",
+        "kiew",
+        "kioff",
+        "kiof",
+        "kiowia",
+        "kiovia",
+        "kiow",
+        "kiou",
+        "kyїv"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "question_id_sha256": "7e1a8bd1d064e01372d282d0ed2564d383bc3ea679bb3e8530c384340cc3a510",
+      "index": 76,
+      "content_hash": "b32708c7e5e3ff90686c85f68517bbd1b23c65a716dd0e59db6ceb8ceae45aba"
+    },
+    {
+      "source_index": 13787,
+      "id": "6258460",
+      "subj_id": "2825983",
+      "s_pop": 330089.0,
+      "question": "What is the capital of Florida?",
+      "normalized_question": "what is capital of florida",
+      "raw_aliases": [
+        "Tallahassee",
+        "Tallahassee, Florida"
+      ],
+      "normalized_aliases": [
+        "tallahassee",
+        "tallahassee florida"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "ab34adb616d7abc4da054262c1d0cfa77c6408992576fbf4a8526a9edc57f3ec",
+      "index": 77,
+      "content_hash": "b62ed7061489200cc7a9b3aac9d8d20569feb8040fe6e7afe7057d9063b1b712"
+    },
+    {
+      "source_index": 9882,
+      "id": "1409536",
+      "subj_id": "630439",
+      "s_pop": 326522.0,
+      "question": "Who was the screenwriter for The Shining?",
+      "normalized_question": "who was screenwriter for shining",
+      "raw_aliases": [
+        "Stanley Kubrick",
+        "Stephen King",
+        "Stephen Edwin King",
+        "Richard Bachman",
+        "John Swithen",
+        "Diane Johnson"
+      ],
+      "normalized_aliases": [
+        "stanley kubrick",
+        "stephen king",
+        "stephen edwin king",
+        "richard bachman",
+        "john swithen",
+        "diane johnson"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "question_id_sha256": "4f7e825092cd0703505a00a209350c6763e25dc083eaee2d34d90dceb401de4d",
+      "index": 78,
+      "content_hash": "604112d17fc3354d9c0b21d97a3fdf97ae7e41dd0fceb633c132072a506d93af"
+    },
+    {
+      "source_index": 4225,
+      "id": "383822",
+      "subj_id": "154952",
+      "s_pop": 326466.0,
+      "question": "Who was the producer of Gladiator?",
+      "normalized_question": "who was producer of gladiator",
+      "raw_aliases": [
+        "Ridley Scott",
+        "Sir Ridley Scott"
+      ],
+      "normalized_aliases": [
+        "ridley scott",
+        "sir ridley scott"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "859409440604d2adf9a53d98f8b1718336b33db358c94aebae5ddabc8ffe0a13",
+      "index": 79,
+      "content_hash": "6b8aaf4474b20e3be04b30efd16c8ab7d81828c78bab2df255c28ac96299a174"
+    },
+    {
+      "source_index": 13655,
+      "id": "3149188",
+      "subj_id": "1343681",
+      "s_pop": 326446.0,
+      "question": "What is the capital of European Union?",
+      "normalized_question": "what is capital of european union",
+      "raw_aliases": [
+        "City of Brussels",
+        "Brussels City",
+        "Brussels, Belgium",
+        "Bruxelles",
+        "Brussel",
+        "Stad Brussel",
+        "Ville de Bruxelles",
+        "02",
+        "BXL",
+        "Bru",
+        "Brussels",
+        "Strasbourg",
+        "Straßburg",
+        "Strassburg",
+        "Schdroosburi",
+        "Strossburi",
+        "Strossburig",
+        "Strosburi"
+      ],
+      "normalized_aliases": [
+        "city of brussels",
+        "brussels city",
+        "brussels belgium",
+        "bruxelles",
+        "brussel",
+        "stad brussel",
+        "ville de bruxelles",
+        "02",
+        "bxl",
+        "bru",
+        "brussels",
+        "strasbourg",
+        "straßburg",
+        "strassburg",
+        "schdroosburi",
+        "strossburi",
+        "strossburig",
+        "strosburi"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "question_id_sha256": "3e1499fd54247961baac8ecd299de83bf2a49d30bf9f9f827f5e5969e2754706",
+      "index": 80,
+      "content_hash": "3c5014b601d565e51d6c66543322c6ffa5406e293ed4328022d90a3d37c6f62f"
+    },
+    {
+      "source_index": 14061,
+      "id": "3008151",
+      "subj_id": "1288228",
+      "s_pop": 325845.0,
+      "question": "What is the capital of North Korea?",
+      "normalized_question": "what is capital of north korea",
+      "raw_aliases": [
+        "Pyongyang",
+        "Capital of Revolution",
+        "Ryugyong"
+      ],
+      "normalized_aliases": [
+        "pyongyang",
+        "capital of revolution",
+        "ryugyong"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "207478c57b4383b5ab6dabe36f2a0d14df48815534873a64952d21fe6b261959",
+      "index": 81,
+      "content_hash": "0b8d34b1bafda14cc688eb54e514c13023e701590b69df67bc8007c7b53b09a4"
+    },
+    {
+      "source_index": 14005,
+      "id": "1722391",
+      "subj_id": "761210",
+      "s_pop": 322949.0,
+      "question": "What is the capital of Scotland?",
+      "normalized_question": "what is capital of scotland",
+      "raw_aliases": [
+        "Edinburgh",
+        "Edinburg",
+        "Edinburgh, Scotland",
+        "City of Edinburgh",
+        "Edina",
+        "Modern Athens"
+      ],
+      "normalized_aliases": [
+        "edinburgh",
+        "edinburg",
+        "edinburgh scotland",
+        "city of edinburgh",
+        "edina",
+        "modern athens"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "question_id_sha256": "3aa23e003e69674cb33e1637f9694186018d9e31809532c361edb84b26f2d4c4",
+      "index": 82,
+      "content_hash": "2bcf9651e668c836f3a7b87a805d64d57c0a405bc69640c5c34f3d50eaab7592"
+    },
+    {
+      "source_index": 14003,
+      "id": "6317794",
+      "subj_id": "2849831",
+      "s_pop": 319836.0,
+      "question": "What is the capital of Sri Lanka?",
+      "normalized_question": "what is capital of sri lanka",
+      "raw_aliases": [
+        "Colombo",
+        "Sri Jayawardenepura Kotte",
+        "Kotte",
+        "Colombo"
+      ],
+      "normalized_aliases": [
+        "colombo",
+        "sri jayawardenepura kotte",
+        "kotte",
+        "colombo"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        2,
+        3
+      ],
+      "question_id_sha256": "ae83d5abecf557d21b214575fd52b9e5b898fcd6d98a1c10c25edcb7cfac2e3f",
+      "index": 83,
+      "content_hash": "d688c43476e0c37f6e3036919a0833d7d05a1a9a9a32e353c0860f02d428a6e1"
+    },
+    {
+      "source_index": 11020,
+      "id": "6502612",
+      "subj_id": "2920608",
+      "s_pop": 319409.0,
+      "question": "What color is Arsenal F.C.?",
+      "normalized_question": "what color is arsenal fc",
+      "raw_aliases": [
+        "red",
+        "red color"
+      ],
+      "normalized_aliases": [
+        "red",
+        "red color"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "ae494d5f2e648f634862be84d276cf5fdbf7cc09d1373acdb99e6bfa6abb5226",
+      "index": 84,
+      "content_hash": "2f8169f23e7243e7f1ad0b661155865c92762bf0578279c94ce5905821f1afca"
+    },
+    {
+      "source_index": 13661,
+      "id": "6117457",
+      "subj_id": "2753763",
+      "s_pop": 317291.0,
+      "question": "What is the capital of Iran?",
+      "normalized_question": "what is capital of iran",
+      "raw_aliases": [
+        "Tehran",
+        "Teheran"
+      ],
+      "normalized_aliases": [
+        "tehran",
+        "teheran"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "a238e7f6e873cb40a0e0fd816541fb33bd6d4922f1c3142e4370b879ab30210f",
+      "index": 85,
+      "content_hash": "9a201ac5f24995b75e9a178950af62c5ef85ddcfa2693fd2b5fe9471f837f80e"
+    },
+    {
+      "source_index": 13651,
+      "id": "5904820",
+      "subj_id": "2647127",
+      "s_pop": 317076.0,
+      "question": "What is the capital of Massachusetts?",
+      "normalized_question": "what is capital of massachusetts",
+      "raw_aliases": [
+        "Boston",
+        "Beantown",
+        "The Cradle of Liberty",
+        "The Hub",
+        "The Cradle of Modern America",
+        "The Athens of America",
+        "The Walking City",
+        "The Hub of the Universe",
+        "Bostonia",
+        "Boston, Massachusetts",
+        "Boston, MA",
+        "Boston, Mass.",
+        "Puritan City"
+      ],
+      "normalized_aliases": [
+        "boston",
+        "beantown",
+        "cradle of liberty",
+        "hub",
+        "cradle of modern america",
+        "athens of america",
+        "walking city",
+        "hub of universe",
+        "bostonia",
+        "boston massachusetts",
+        "boston ma",
+        "boston mass",
+        "puritan city"
+      ],
+      "alias_token_lengths": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "question_id_sha256": "3830961dca2e7aa38c2f109eb8a1f144451e1bb75e51d4086809e866f232a689",
+      "index": 86,
+      "content_hash": "fa02e67dd1d3a5453f58ea658474838c9dc24f394640d31253c3d1155e22c496"
+    },
+    {
+      "source_index": 11901,
+      "id": "2088053",
+      "subj_id": "914444",
+      "s_pop": 316448.0,
+      "question": "What sport does Mr. Olympia play?",
+      "normalized_question": "what sport does mr olympia play",
+      "raw_aliases": [
+        "bodybuilding",
+        "body building",
+        "body-building"
+      ],
+      "normalized_aliases": [
+        "bodybuilding",
+        "body building",
+        "bodybuilding"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "6e18af3754bd0a264956bcf3c5916b741bc8533eb44a9db18efe63a75d1dfebf",
+      "index": 87,
+      "content_hash": "9896534103232a6c1698f36539ac6791a65c87c5c284a65cea8c59ae9fac4b36"
+    },
+    {
+      "source_index": 13849,
+      "id": "546090",
+      "subj_id": "222703",
+      "s_pop": 314264.0,
+      "question": "What is the capital of Pennsylvania?",
+      "normalized_question": "what is capital of pennsylvania",
+      "raw_aliases": [
+        "Harrisburg",
+        "Capital of Pennsylvania",
+        "Harrisburg, Pennsylvania"
+      ],
+      "normalized_aliases": [
+        "harrisburg",
+        "capital of pennsylvania",
+        "harrisburg pennsylvania"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "226f104c9f30caeb89a0c56e37f4e98ce52918c26fa2384333f70280a363498e",
+      "index": 88,
+      "content_hash": "1bf15991c1a9c57bd978285120b492406c52a0d438a43c6ac045a9f44a1c0a0d"
+    },
+    {
+      "source_index": 3050,
+      "id": "1633964",
+      "subj_id": "726578",
+      "s_pop": 311254.0,
+      "question": "Who is the father of George W. Bush?",
+      "normalized_question": "who is father of george w bush",
+      "raw_aliases": [
+        "George H. W. Bush",
+        "George Bush Sr.",
+        "GHW Bush",
+        "George Bush",
+        "George H.W.",
+        "G.H.W. Bush",
+        "GHWB",
+        "George H.W.Bush",
+        "George H. W",
+        "Bush I",
+        "George H W",
+        "George Herbert Bush",
+        "George H. W.",
+        "H W Bush",
+        "George Bush Snr.",
+        "George H. Bush",
+        "Vice President Bush",
+        "H. W. Bush",
+        "G. H. W. Bush",
+        "Herbert Walker Bush",
+        "George H Bush",
+        "Bush Sr.",
+        "G H W Bush",
+        "President Bush",
+        "George Herbert Walker Bush",
+        "President George H. W. Bush",
+        "George H W Bush",
+        "George Bush Sr",
+        "H.W. Bush",
+        "President George H.W. Bush",
+        "Bush Senior",
+        "George Bush Senior",
+        "Bush 41",
+        "George H.W. Bush",
+        "George W. Bush Senior",
+        "George Bush, Sr."
+      ],
+      "normalized_aliases": [
+        "george h w bush",
+        "george bush sr",
+        "ghw bush",
+        "george bush",
+        "george hw",
+        "ghw bush",
+        "ghwb",
+        "george hwbush",
+        "george h w",
+        "bush i",
+        "george h w",
+        "george herbert bush",
+        "george h w",
+        "h w bush",
+        "george bush snr",
+        "george h bush",
+        "vice president bush",
+        "h w bush",
+        "g h w bush",
+        "herbert walker bush",
+        "george h bush",
+        "bush sr",
+        "g h w bush",
+        "president bush",
+        "george herbert walker bush",
+        "president george h w bush",
+        "george h w bush",
+        "george bush sr",
+        "hw bush",
+        "president george hw bush",
+        "bush senior",
+        "george bush senior",
+        "bush 41",
+        "george hw bush",
+        "george w bush senior",
+        "george bush sr"
+      ],
+      "alias_token_lengths": [
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          5
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35
+      ],
+      "question_id_sha256": "1321cae508306403de7e1c488536aab985cca96529a98462656b3977258d1747",
+      "index": 89,
+      "content_hash": "cb8e38669af183032ebbf809b318f43cccb79513cb37c1cc7df725926a4d5588"
+    },
+    {
+      "source_index": 13938,
+      "id": "2583275",
+      "subj_id": "1114197",
+      "s_pop": 310896.0,
+      "question": "What is the capital of Sweden?",
+      "normalized_question": "what is capital of sweden",
+      "raw_aliases": [
+        "Stockholm",
+        "Sthlm",
+        "STHLM"
+      ],
+      "normalized_aliases": [
+        "stockholm",
+        "sthlm",
+        "sthlm"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "e7104bd2d9199e380566a0275b7826c6e1c968cd23866d711befc786da05891a",
+      "index": 90,
+      "content_hash": "70767b7c3408ceff72ff8491dc0524563d5c8a448b2bab7d4c3f2c06882d6b67"
+    },
+    {
+      "source_index": 325,
+      "id": "6493078",
+      "subj_id": "2917223",
+      "s_pop": 306074.0,
+      "question": "What is Amitabh Bachchan's occupation?",
+      "normalized_question": "what is amitabh bachchans occupation",
+      "raw_aliases": [
+        "film producer",
+        "movie producer",
+        "producer",
+        "actor",
+        "actress",
+        "actors",
+        "actresses"
+      ],
+      "normalized_aliases": [
+        "film producer",
+        "movie producer",
+        "producer",
+        "actor",
+        "actress",
+        "actors",
+        "actresses"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "question_id_sha256": "13f634fb568703fbc39b466897acf7a0732b942e08c6cd1e2fc111cfc5d097cd",
+      "index": 91,
+      "content_hash": "58d22c9feb3427fee185fca5f21fc5c9c40cb8f86744876c787f16a7d0775077"
+    },
+    {
+      "source_index": 5468,
+      "id": "1605832",
+      "subj_id": "715822",
+      "s_pop": 304403.0,
+      "question": "Who was the producer of Halloween III: Season of the Witch?",
+      "normalized_question": "who was producer of halloween iii season of witch",
+      "raw_aliases": [
+        "Debra Hill",
+        "John Carpenter",
+        "John Howard Carpenter"
+      ],
+      "normalized_aliases": [
+        "debra hill",
+        "john carpenter",
+        "john howard carpenter"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "118a9eb769ca3e0a6bb11e6cf53d2084cbfb36ae3c47d6e9ac36384148bf8edf",
+      "index": 92,
+      "content_hash": "6edf24edf061ece3aa60904b9ef46421b2c4a25523516b7ac0582a636cf0d895"
+    },
+    {
+      "source_index": 2853,
+      "id": "412570",
+      "subj_id": "166772",
+      "s_pop": 304392.0,
+      "question": "Who is the father of Mary, Queen of Scots?",
+      "normalized_question": "who is father of mary queen of scots",
+      "raw_aliases": [
+        "James V of Scotland",
+        "James Stewart",
+        "James V",
+        "Goodman of Ballengeich"
+      ],
+      "normalized_aliases": [
+        "james v of scotland",
+        "james stewart",
+        "james v",
+        "goodman of ballengeich"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          6,
+          6
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "86c6157c18539847ab6c24f0531651b5448bd594fe3790e1197d571527abc7d1",
+      "index": 93,
+      "content_hash": "0b473b9e11c5751bd1eddd759f130451e67cf6f3c804f38f86a5894983e88aed"
+    },
+    {
+      "source_index": 14125,
+      "id": "1775298",
+      "subj_id": "785006",
+      "s_pop": 302485.0,
+      "question": "What is the capital of Cyprus?",
+      "normalized_question": "what is capital of cyprus",
+      "raw_aliases": [
+        "Nicosia",
+        "Lefkosia"
+      ],
+      "normalized_aliases": [
+        "nicosia",
+        "lefkosia"
+      ],
+      "alias_token_lengths": [
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1
+      ],
+      "question_id_sha256": "6a93f3cef257e056da09b4a033b2ce9df523210a09b75ae2cefe44cf78ace7f7",
+      "index": 94,
+      "content_hash": "18e20f3d700bd94aec326b7d9e2d8280d59ab4f20086bb7537f058f3c4465896"
+    },
+    {
+      "source_index": 1932,
+      "id": "3372581",
+      "subj_id": "1450021",
+      "s_pop": 296247.0,
+      "question": "What genre is Paris Hilton?",
+      "normalized_question": "what genre is paris hilton",
+      "raw_aliases": [
+        "pop music",
+        "pop",
+        "Pop"
+      ],
+      "normalized_aliases": [
+        "pop music",
+        "pop",
+        "pop"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "229922b4b73f12a39ebba46e99691f40d78ead8215c86227c720b5f178a1e075",
+      "index": 95,
+      "content_hash": "e9e290c64e975961b178e858a6881e1e9736445261d1eccf308dd7fc03ddb4e7"
+    },
+    {
+      "source_index": 4438,
+      "id": "6152249",
+      "subj_id": "2773059",
+      "s_pop": 294790.0,
+      "question": "Who was the producer of Friends?",
+      "normalized_question": "who was producer of friends",
+      "raw_aliases": [
+        "Marta Kauffman",
+        "Marta Fran Kauffman",
+        "David Crane"
+      ],
+      "normalized_aliases": [
+        "marta kauffman",
+        "marta fran kauffman",
+        "david crane"
+      ],
+      "alias_token_lengths": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2
+      ],
+      "question_id_sha256": "e0439a107563c6921e99c4c1044f0f356a633096999cfe75bb9e8f452da29ce7",
+      "index": 96,
+      "content_hash": "6c4114db16ab4ed29f1a48587568c336102694fabcc3d6eecb38ea2bd958cc26"
+    },
+    {
+      "source_index": 14213,
+      "id": "1573571",
+      "subj_id": "702887",
+      "s_pop": 293715.0,
+      "question": "What is the capital of Norway?",
+      "normalized_question": "what is capital of norway",
+      "raw_aliases": [
+        "Oslo",
+        "Christiania",
+        "Kristiania",
+        "NOOSL",
+        "Oslo, Norway"
+      ],
+      "normalized_aliases": [
+        "oslo",
+        "christiania",
+        "kristiania",
+        "noosl",
+        "oslo norway"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          3,
+          3
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "21259e51c9d1b327615315c4c06cecd3c750fe70ffc4c614484f7bfb9b4b4f19",
+      "index": 97,
+      "content_hash": "7e22fea051823484b5122bbd9011daba9b79fff53b99a4cf794243d6a613464f"
+    },
+    {
+      "source_index": 7118,
+      "id": "6288359",
+      "subj_id": "2837656",
+      "s_pop": 291114.0,
+      "question": "Who was the director of The Matrix?",
+      "normalized_question": "who was director of matrix",
+      "raw_aliases": [
+        "The Wachowskis",
+        "Wachowski Brothers",
+        "The Wachowski Brothers",
+        "the Wachowski Starship",
+        "Wachowski Sisters"
+      ],
+      "normalized_aliases": [
+        "wachowskis",
+        "wachowski brothers",
+        "wachowski brothers",
+        "wachowski starship",
+        "wachowski sisters"
+      ],
+      "alias_token_lengths": [
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          4,
+          4
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "question_id_sha256": "1ef40334810134e2d6a05ca1009711390c426167fe4c560a4acd97ed692ca18f",
+      "index": 98,
+      "content_hash": "043b6825286b4f4b004e31c0cb478fdef9dd49db7c9b27be6f15d857ab0771b9"
+    },
+    {
+      "source_index": 13748,
+      "id": "504663",
+      "subj_id": "207403",
+      "s_pop": 289975.0,
+      "question": "What is the capital of Virginia?",
+      "normalized_question": "what is capital of virginia",
+      "raw_aliases": [
+        "Richmond",
+        "Richmond, Virginia",
+        "Richmond, VA",
+        "Richmond City"
+      ],
+      "normalized_aliases": [
+        "richmond",
+        "richmond virginia",
+        "richmond va",
+        "richmond city"
+      ],
+      "alias_token_lengths": [
+        [
+          2,
+          2
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "eligible_alias_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "question_id_sha256": "ce0084ff138e37e0f48bed66874917966756b06f0e7138f7f1df0c1da44fe7b4",
+      "index": 99,
+      "content_hash": "41f6ed50dbbfb347fe9fcabd29f8f824c939763b81b9bc2ad000428c018169d1"
+    }
+  ],
+  "content_hash": "a151b08ad73b72ec263bad24119eb02d0ad771bcb573a9f1d5efcf5e7f9a393d"
+}

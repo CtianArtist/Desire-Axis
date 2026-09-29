@@ -1,0 +1,285 @@
+{
+  "license": "MIT",
+  "records": [
+    {
+      "path": "analysis_spec.json",
+      "source_path": "experiments/experiment-10-g34cbe/analysis_spec.json",
+      "source_sha256": "37401ebbb761e34380ce4e7f2bfdbb1f58972a1683465f8e7ead9af39127113c",
+      "sha256": "37401ebbb761e34380ce4e7f2bfdbb1f58972a1683465f8e7ead9af39127113c",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/additions_corrections_v1.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/additions_corrections_v1.json",
+      "source_sha256": "c25f8876eeca4b658774ca2cffba7f8fb80d42d47e3a48a001c426e86fb9ba79",
+      "sha256": "c25f8876eeca4b658774ca2cffba7f8fb80d42d47e3a48a001c426e86fb9ba79",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/false_claim_draft_v1.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/false_claim_draft_v1.json",
+      "source_sha256": "82bf60dc9e31dc9e698d74e9ba9e5f56350d23699c9867e995dbcd0586085200",
+      "sha256": "82bf60dc9e31dc9e698d74e9ba9e5f56350d23699c9867e995dbcd0586085200",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/frozen_additions_v1.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/frozen_additions_v1.json",
+      "source_sha256": "d0f18abbc4cf962748a280fd0996ca683c26e503c74119725ca19ab890f4fa5b",
+      "sha256": "d0f18abbc4cf962748a280fd0996ca683c26e503c74119725ca19ab890f4fa5b",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/frozen_scenarios.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/frozen_scenarios.json",
+      "source_sha256": "14abf078fa4bb30128969cac1913a527bc162ca06294da010254b850ab036500",
+      "sha256": "14abf078fa4bb30128969cac1913a527bc162ca06294da010254b850ab036500",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/harmful_request_draft_v1.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/harmful_request_draft_v1.json",
+      "source_sha256": "1df7e2edbb34fe17fa25216f75452fea6b91bae50f5a091928a0aa9aa87d57d5",
+      "sha256": "1df7e2edbb34fe17fa25216f75452fea6b91bae50f5a091928a0aa9aa87d57d5",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/reference/author_protocol.py",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/reference/author_protocol.py",
+      "source_sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+      "sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/reference/b2_protocol.py",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/reference/b2_protocol.py",
+      "source_sha256": "e85ebf2b4065885756d62f5bd20d88e23d499ffb18c160bd80a586a6bec22ca5",
+      "sha256": "e85ebf2b4065885756d62f5bd20d88e23d499ffb18c160bd80a586a6bec22ca5",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/reference/runtime.py",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/reference/runtime.py",
+      "source_sha256": "d04343e51578c279f54c0ac9e1775f305340b121eb0f196d481f29f591d8baf0",
+      "sha256": "c9baf86e1f0fdc9af8875e1182ff847cafc6aca1e1652e123340b5df3e889a5b",
+      "modification": "portable logging or locator-only metadata; scientific code/values retained"
+    },
+    {
+      "path": "inputs/reference/scenarios.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/reference/scenarios.json",
+      "source_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+      "sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/stimulus_manifest_v1.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/stimulus_manifest_v1.json",
+      "source_sha256": "3a030b70979d22e45012cea3ca68f306ac8c0214ec40056ac3eacc4e470e6427",
+      "sha256": "3a030b70979d22e45012cea3ca68f306ac8c0214ec40056ac3eacc4e470e6427",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/vector_pins.json",
+      "source_path": "experiments/experiment-10-g34cbe/inputs/vector_pins.json",
+      "source_sha256": "1f35e58515ac4e5844bd0525c7401efa6ce2b67b6223fc246fab445aba5c3798",
+      "sha256": "0061d4a0f23a2865db7e6bb8544ae4382d2309da81297098e1253015e52b409c",
+      "modification": "portable logging or locator-only metadata; scientific code/values retained"
+    },
+    {
+      "path": "src/build_protocol.py",
+      "source_path": "experiments/experiment-10-g34cbe/src/build_protocol.py",
+      "source_sha256": "12d99f7379520f9cefd52052d20bf1326f45b627f3d1415ea2bef545a8122c70",
+      "sha256": "12d99f7379520f9cefd52052d20bf1326f45b627f3d1415ea2bef545a8122c70",
+      "modification": "none"
+    },
+    {
+      "path": "src/run_profile.py",
+      "source_path": "experiments/experiment-10-g34cbe/src/run_profile.py",
+      "source_sha256": "4a6134574b9bb8c0e6e242b46d2e10775a388b838ec61e99c93df1f8c2e92e27",
+      "sha256": "4a6134574b9bb8c0e6e242b46d2e10775a388b838ec61e99c93df1f8c2e92e27",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/__init__.py",
+      "source_path": "pain_choice_profile/__init__.py",
+      "source_sha256": "078214116687df8d7011d99bf52bc36c5bd9b9c79ed9a37a05b3a739579df08b",
+      "sha256": "078214116687df8d7011d99bf52bc36c5bd9b9c79ed9a37a05b3a739579df08b",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/analyze.py",
+      "source_path": "pain_choice_profile/analyze.py",
+      "source_sha256": "89909f5661a9eb02db19573cc84abe8253db2143f7819bd96a7da7140bace5c7",
+      "sha256": "886c63788dc1accd970e36110a508b2833db414b6bc810796210e57312a17b3f",
+      "modification": "portable logging or locator-only metadata; scientific code/values retained"
+    },
+    {
+      "path": "pain_choice_profile/audit.py",
+      "source_path": "pain_choice_profile/audit.py",
+      "source_sha256": "66a473a70078e93a7a9aef1fa7933f684f08816c6e8444c3ea080d4eea476d21",
+      "sha256": "66a473a70078e93a7a9aef1fa7933f684f08816c6e8444c3ea080d4eea476d21",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/design.py",
+      "source_path": "pain_choice_profile/design.py",
+      "source_sha256": "cd421a4109991200a86f9c693dc565d48c6d5ff4a96f7f17ee9ba733060731c2",
+      "sha256": "cd421a4109991200a86f9c693dc565d48c6d5ff4a96f7f17ee9ba733060731c2",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/endpoints.py",
+      "source_path": "pain_choice_profile/endpoints.py",
+      "source_sha256": "6613db9bed643b187c3e2bcef7e481bc427dbb01b1942653735a65aa6412bc62",
+      "sha256": "6613db9bed643b187c3e2bcef7e481bc427dbb01b1942653735a65aa6412bc62",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/execution_audit.py",
+      "source_path": "pain_choice_profile/execution_audit.py",
+      "source_sha256": "4a06032417ad34bd0d735288a73fd78ce828af844390bcfef2e46ebe8a11cb77",
+      "sha256": "4a06032417ad34bd0d735288a73fd78ce828af844390bcfef2e46ebe8a11cb77",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/profiles.py",
+      "source_path": "pain_choice_profile/profiles.py",
+      "source_sha256": "0fc37cf0768d4a3ac6671ed642e9dc4f4a08fd13e987732cd9bdf54fc991b58e",
+      "sha256": "0fc37cf0768d4a3ac6671ed642e9dc4f4a08fd13e987732cd9bdf54fc991b58e",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/runtime.py",
+      "source_path": "pain_choice_profile/runtime.py",
+      "source_sha256": "cae381dd5c942d9bd4eaad7aef55a36c82d063fa4f53ec33686c9991c584516f",
+      "sha256": "cae381dd5c942d9bd4eaad7aef55a36c82d063fa4f53ec33686c9991c584516f",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/statistics.py",
+      "source_path": "pain_choice_profile/statistics.py",
+      "source_sha256": "f03248680ea543e0ed540d0a928f9fbaf6d7ba51eedfe2818991a1bcbecf8f13",
+      "sha256": "f03248680ea543e0ed540d0a928f9fbaf6d7ba51eedfe2818991a1bcbecf8f13",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/verify_results.py",
+      "source_path": "pain_choice_profile/verify_results.py",
+      "source_sha256": "99512a8fb3cf21f03e55bf6a1e29ca572ad71ded05bb463c5e9abd80079e7957",
+      "sha256": "99512a8fb3cf21f03e55bf6a1e29ca572ad71ded05bb463c5e9abd80079e7957",
+      "modification": "none"
+    },
+    {
+      "path": "pain_axis_b/__init__.py",
+      "source_path": "pain_axis_b/__init__.py",
+      "source_sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "modification": "none"
+    },
+    {
+      "path": "pain_axis_b/runtime.py",
+      "source_path": "pain_axis_b/runtime.py",
+      "source_sha256": "d04343e51578c279f54c0ac9e1775f305340b121eb0f196d481f29f591d8baf0",
+      "sha256": "c9baf86e1f0fdc9af8875e1182ff847cafc6aca1e1652e123340b5df3e889a5b",
+      "modification": "portable logging or locator-only metadata; scientific code/values retained"
+    },
+    {
+      "path": "pain_axis_b/diagnostics.py",
+      "source_path": "pain_axis_b/diagnostics.py",
+      "source_sha256": "4154e6f0067e63474442cb27259cfc261cec2b9cdc78c49984b7a77f97c80aaf",
+      "sha256": "4154e6f0067e63474442cb27259cfc261cec2b9cdc78c49984b7a77f97c80aaf",
+      "modification": "none"
+    },
+    {
+      "path": "pain_axis_b/verify_vectors.py",
+      "source_path": "pain_axis_b/verify_vectors.py",
+      "source_sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "modification": "none"
+    },
+    {
+      "path": "tables/associations.csv",
+      "source_path": "results/report_support_v1/associations.csv",
+      "source_sha256": "cefb7d99a00c7e8d8a0f17adc7dd4406d0fda2b6e6dce106154027bb60be27ab",
+      "sha256": "cefb7d99a00c7e8d8a0f17adc7dd4406d0fda2b6e6dce106154027bb60be27ab",
+      "modification": "none"
+    },
+    {
+      "path": "tables/contrasts.csv",
+      "source_path": "results/report_support_v1/contrasts.csv",
+      "source_sha256": "5ef6b3d6e28d3768361f407b980701e68e56c6958ffcc0dbcb75f248c3ee1b07",
+      "sha256": "5ef6b3d6e28d3768361f407b980701e68e56c6958ffcc0dbcb75f248c3ee1b07",
+      "modification": "none"
+    },
+    {
+      "path": "tables/curve_contrasts.csv",
+      "source_path": "results/report_support_v1/curve_contrasts.csv",
+      "source_sha256": "68d0d22076c727a35dd2b718a0612d01749c25b8882f02fb1371b2d5409b8bff",
+      "sha256": "68d0d22076c727a35dd2b718a0612d01749c25b8882f02fb1371b2d5409b8bff",
+      "modification": "none"
+    },
+    {
+      "path": "tables/dose_metrics.csv",
+      "source_path": "results/report_support_v1/dose_metrics.csv",
+      "source_sha256": "3e9a3729941e146c0cce176e4160511576dc29681e97222145122fde01660386",
+      "sha256": "3e9a3729941e146c0cce176e4160511576dc29681e97222145122fde01660386",
+      "modification": "none"
+    },
+    {
+      "path": "tables/greedy_rates.csv",
+      "source_path": "results/report_support_v1/greedy_rates.csv",
+      "source_sha256": "8d55cf32cdc51fb446b9c41328f4c7fd51cae12b579f983625c51961a755ceea",
+      "sha256": "8d55cf32cdc51fb446b9c41328f4c7fd51cae12b579f983625c51961a755ceea",
+      "modification": "none"
+    },
+    {
+      "path": "tables/later_choices_descriptive.csv",
+      "source_path": "results/report_support_v1/later_choices_descriptive.csv",
+      "source_sha256": "054bceede9a65fd7daa84cdc58db25df8162623646133745467f71dbb4bf8082",
+      "sha256": "054bceede9a65fd7daa84cdc58db25df8162623646133745467f71dbb4bf8082",
+      "modification": "none"
+    },
+    {
+      "path": "tables/profile_distances.csv",
+      "source_path": "results/report_support_v1/profile_distances.csv",
+      "source_sha256": "6f715ca2b0b58db10e6bc0196f17e57d95383e1e12fe5cd9e9478be087101ff2",
+      "sha256": "6f715ca2b0b58db10e6bc0196f17e57d95383e1e12fe5cd9e9478be087101ff2",
+      "modification": "none"
+    },
+    {
+      "path": "tables/profiles.csv",
+      "source_path": "results/report_support_v1/profiles.csv",
+      "source_sha256": "ae85b3f4eb457eae737d0addc0aa7757d3592826d2dc18b4c0e20a9352c419fd",
+      "sha256": "ae85b3f4eb457eae737d0addc0aa7757d3592826d2dc18b4c0e20a9352c419fd",
+      "modification": "none"
+    },
+    {
+      "path": "tables/rates.csv",
+      "source_path": "results/report_support_v1/rates.csv",
+      "source_sha256": "2c1bd7614017dfdbc611f345b975effc53b0e0d9fa2dd869b6c37e040ec30b35",
+      "sha256": "2c1bd7614017dfdbc611f345b975effc53b0e0d9fa2dd869b6c37e040ec30b35",
+      "modification": "none"
+    },
+    {
+      "path": "tables/rule_by_pair.csv",
+      "source_path": "results/report_support_v1/rule_by_pair.csv",
+      "source_sha256": "fd4a1264984a7cfa1ae28b467b8b7c9b971f307c164defa1c55c2249e00e6a2e",
+      "sha256": "fd4a1264984a7cfa1ae28b467b8b7c9b971f307c164defa1c55c2249e00e6a2e",
+      "modification": "none"
+    },
+    {
+      "path": "tables/profile_rescaling.json",
+      "source_path": "results/report_support_v1/profile_rescaling.json",
+      "source_sha256": "337ce36e9f945554e6f2d0f74fa553892c54439396f286c363d64eb49fb40602",
+      "sha256": "337ce36e9f945554e6f2d0f74fa553892c54439396f286c363d64eb49fb40602",
+      "modification": "none"
+    },
+    {
+      "path": "tables/profile_identifiability.json",
+      "source_path": "results/report_support_v1/profile_identifiability.json",
+      "source_sha256": "5dfb7012afc1b73da2d3328e28efb45fba1412d80c34e863fba8b258170a16be",
+      "sha256": "5dfb7012afc1b73da2d3328e28efb45fba1412d80c34e863fba8b258170a16be",
+      "modification": "none"
+    }
+  ]
+}

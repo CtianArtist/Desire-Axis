@@ -1,0 +1,4452 @@
+{
+  "Gemma_2_27B_base": {
+    "model": "Gemma_2_27B_base",
+    "layer": "35",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_2_27B_instruct": {
+    "model": "Gemma_2_27B_instruct",
+    "layer": "37",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          4608
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_2_2B_base": {
+    "model": "Gemma_2_2B_base",
+    "layer": "23",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_2_2B_instruct": {
+    "model": "Gemma_2_2B_instruct",
+    "layer": "25",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          2304
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_2_9B_base": {
+    "model": "Gemma_2_9B_base",
+    "layer": "40",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_2_9B_instruct": {
+    "model": "Gemma_2_9B_instruct",
+    "layer": "37",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_3_27B_base": {
+    "model": "Gemma_3_27B_base",
+    "layer": "56",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_3_27B_instruct": {
+    "model": "Gemma_3_27B_instruct",
+    "layer": "59",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Llama_3.1_70B_base": {
+    "model": "Llama_3.1_70B_base",
+    "layer": "70",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Llama_3.1_70B_instruct": {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": "48",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Llama_3.1_8B_base": {
+    "model": "Llama_3.1_8B_base",
+    "layer": "28",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Llama_3.1_8B_instruct": {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": "28",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Llama_3.3_70B_instruct": {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": "47",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Mistral_7B_base": {
+    "model": "Mistral_7B_base",
+    "layer": "26",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Mistral_7B_instruct": {
+    "model": "Mistral_7B_instruct",
+    "layer": "27",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Mistral_Small_24B_base": {
+    "model": "Mistral_Small_24B_base",
+    "layer": "32",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Phi_4": {
+    "model": "Phi_4",
+    "layer": "20",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_2.5_32B_base": {
+    "model": "Qwen_2.5_32B_base",
+    "layer": "60",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_2.5_32B_instruct": {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": "61",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_2.5_72B_base": {
+    "model": "Qwen_2.5_72B_base",
+    "layer": "78",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_2.5_72B_instruct": {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": "76",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          8192
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_2.5_7B_base": {
+    "model": "Qwen_2.5_7B_base",
+    "layer": "24",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_2.5_7B_instruct": {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": "24",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          3584
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_3_14B_base": {
+    "model": "Qwen_3_14B_base",
+    "layer": "31",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5120
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Qwen_3_8B_base": {
+    "model": "Qwen_3_8B_base",
+    "layer": "34",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          4096
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  }
+}

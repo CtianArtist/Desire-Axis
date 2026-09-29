@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "stopping_rule": "abs matched equal-model S1-S2 mean difference <= 0.01",
+  "anchor": {
+    "direction_a": "S1_pain",
+    "direction_b": "S2_pain",
+    "n_models": 23,
+    "observed": 0.6041723722996919,
+    "reference": 0.6041695652173913,
+    "delta": 2.8070823006043355e-06,
+    "flag_gt_003": false,
+    "involves_neutral_pool": false,
+    "models": "Gemma_2_27B_base|Gemma_2_27B_instruct|Gemma_2_2B_base|Gemma_2_2B_instruct|Gemma_2_9B_base|Gemma_2_9B_instruct|Llama_3.1_70B_base|Llama_3.1_70B_instruct|Llama_3.1_8B_base|Llama_3.1_8B_instruct|Llama_3.3_70B_instruct|Mistral_7B_base|Mistral_7B_instruct|Mistral_Small_24B_base|Phi_4|Qwen_2.5_32B_base|Qwen_2.5_32B_instruct|Qwen_2.5_72B_base|Qwen_2.5_72B_instruct|Qwen_2.5_7B_base|Qwen_2.5_7B_instruct|Qwen_3_14B_base|Qwen_3_8B_base"
+  },
+  "usable_models": [
+    "Gemma_2_27B_base",
+    "Gemma_2_27B_instruct",
+    "Gemma_2_2B_base",
+    "Gemma_2_2B_instruct",
+    "Gemma_2_9B_base",
+    "Gemma_2_9B_instruct",
+    "Llama_3.1_70B_base",
+    "Llama_3.1_70B_instruct",
+    "Llama_3.1_8B_base",
+    "Llama_3.1_8B_instruct",
+    "Llama_3.3_70B_instruct",
+    "Mistral_7B_base",
+    "Mistral_7B_instruct",
+    "Mistral_Small_24B_base",
+    "Phi_4",
+    "Qwen_2.5_32B_base",
+    "Qwen_2.5_32B_instruct",
+    "Qwen_2.5_72B_base",
+    "Qwen_2.5_72B_instruct",
+    "Qwen_2.5_7B_base",
+    "Qwen_2.5_7B_instruct",
+    "Qwen_3_14B_base",
+    "Qwen_3_8B_base"
+  ],
+  "failed_files": 2,
+  "n_discrepancies_gt_003": 15,
+  "all_flagged_involve_neutral": true,
+  "missing": [
+    "ControlSupplement_1P",
+    "Numb_1P",
+    "SD_sadness_1P"
+  ],
+  "seconds": 26.957761569
+}

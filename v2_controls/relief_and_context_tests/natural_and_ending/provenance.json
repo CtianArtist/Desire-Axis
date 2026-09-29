@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "source_commit": "ae6e35c7a85905d586897c2a956bd651dce5aedd",
+  "author_commit": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+  "files": [
+    {
+      "path": "pain_axis_b/__init__.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "pain_axis_b/__init__.py",
+      "original_sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "bytes": 158,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "pain_axis_b/grid.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "pain_axis_b/grid.py",
+      "original_sha256": "bb25ae4dc907aa28c3bd7583a7fc5ff6dadca017b11bc8294b2e8923641ba556",
+      "sha256": "bb25ae4dc907aa28c3bd7583a7fc5ff6dadca017b11bc8294b2e8923641ba556",
+      "bytes": 7044,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "pain_axis_b/natural_inputs.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "pain_axis_b/natural_inputs.py",
+      "original_sha256": "8f4be4e5f22c6de5b556a772eed0934bbc8a08f65efc5195e2ef1ba92921fc51",
+      "sha256": "8f4be4e5f22c6de5b556a772eed0934bbc8a08f65efc5195e2ef1ba92921fc51",
+      "bytes": 6203,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "pain_axis_b/runtime.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "pain_axis_b/runtime.py",
+      "original_sha256": "318d0b60c63a486981c3bc5a0f21f08a90e12228e7a3a4b8de255166baebb9d2",
+      "sha256": "60b793180df1a603c04c58f74519da0b84b868ab784a8b025140748300ae2e76",
+      "bytes": 13476,
+      "license": "MIT",
+      "change": "telemetry import redirected to local logging only"
+    },
+    {
+      "path": "pain_axis_b/verify_vectors.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "pain_axis_b/verify_vectors.py",
+      "original_sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "bytes": 4811,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "portable_progress.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "ca44ff956cc98f559292f1f70ae951fd83d95fcb5cf09202916c739371de4639",
+      "bytes": 176,
+      "license": "MIT",
+      "change": "new portability/documentation file"
+    },
+    {
+      "path": "LICENSE",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "upstream/LICENSE",
+      "original_sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "bytes": 1071,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "requirements.txt",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+      "bytes": 80,
+      "license": "see README",
+      "change": "new portability/documentation file"
+    },
+    {
+      "path": "requirements-analysis.txt",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "18594d2c584337ab07c9d8ce86826e9bb3339a0ef72611fb213c659f89972d77",
+      "bytes": 13,
+      "license": "see README",
+      "change": "new portability/documentation file"
+    },
+    {
+      "path": "src/analyze_natural.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/src/analyze_natural.py",
+      "original_sha256": "cfceebeee4e2345e288bb2eba1066b28ff5a8e204e6fe1133aa8644fb06afdc7",
+      "sha256": "cfceebeee4e2345e288bb2eba1066b28ff5a8e204e6fe1133aa8644fb06afdc7",
+      "bytes": 37684,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "src/audit_natural.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/src/audit_natural.py",
+      "original_sha256": "207012b3313606c40f7bfbe887e3ad5ee0b984694c14eaa0e7773bceabe441e4",
+      "sha256": "207012b3313606c40f7bfbe887e3ad5ee0b984694c14eaa0e7773bceabe441e4",
+      "bytes": 8650,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "src/qualify_intervals.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/src/qualify_intervals.py",
+      "original_sha256": "3ba4b96c5fdfeab6fe9c0fbe820285e2612e5e893dfad30e9442c01614bc2272",
+      "sha256": "3ba4b96c5fdfeab6fe9c0fbe820285e2612e5e893dfad30e9442c01614bc2272",
+      "bytes": 2767,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "inputs/conversations.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/inputs/conversations.json",
+      "original_sha256": "901ea558faf34c69caff59321775723e20bebf49a77d20070f6b85a0368a3291",
+      "sha256": "901ea558faf34c69caff59321775723e20bebf49a77d20070f6b85a0368a3291",
+      "bytes": 114910,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "inputs/released_protocol.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/inputs/released_protocol.py",
+      "original_sha256": "8fd7c15171bede930c708384d51d18ebbdf0fb0f26f1768864efb425ead64ed4",
+      "sha256": "8fd7c15171bede930c708384d51d18ebbdf0fb0f26f1768864efb425ead64ed4",
+      "bytes": 40609,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_specification.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/results/analysis_specification.json",
+      "original_sha256": "d9c514a6d8183582c6e800605b6c8348756c97b1d26df8dccc0b6c1a4712336c",
+      "sha256": "d9c514a6d8183582c6e800605b6c8348756c97b1d26df8dccc0b6c1a4712336c",
+      "bytes": 3062,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "tests/test_interval_labels.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/tests/test_interval_labels.py",
+      "original_sha256": "b8fd62f32cfb95ead6b8b69e2dddf99c48cb634b5919b51aaed3782c60f998f3",
+      "sha256": "b8fd62f32cfb95ead6b8b69e2dddf99c48cb634b5919b51aaed3782c60f998f3",
+      "bytes": 1278,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "tests/test_natural_inputs.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/tests/test_natural_inputs.py",
+      "original_sha256": "8e0780046f72fb737ff41f14f27718fe7fd5fbb70c4604c876f05f781fd00118",
+      "sha256": "8e0780046f72fb737ff41f14f27718fe7fd5fbb70c4604c876f05f781fd00118",
+      "bytes": 10550,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "src/run_natural.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/src/run_natural.py",
+      "original_sha256": "53d0d6b03ad8c87fd5ddb14145be9ec19fd754e999edcf0a51c470c839f721ca",
+      "sha256": "c453256309b22b0db97e493287b36c65880defd0a0c47f8afec7b249e2163c96",
+      "bytes": 46670,
+      "license": "MIT",
+      "change": "telemetry import redirected only",
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "inputs/frozen/summary.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/results/preparation_v1/summary.json",
+      "original_sha256": "329fa5d2cadb6daaf987da6d8e5f737bcdea9f237cb2f93b411f62e118d1d505",
+      "sha256": "329fa5d2cadb6daaf987da6d8e5f737bcdea9f237cb2f93b411f62e118d1d505",
+      "bytes": 3764,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "inputs/frozen/grid.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/results/preparation_v1/grid.json",
+      "original_sha256": "5e450ddb2ab61276a28fd7429d627c5bbf99c6280debc84ab820b8172463afa7",
+      "sha256": "5e450ddb2ab61276a28fd7429d627c5bbf99c6280debc84ab820b8172463afa7",
+      "bytes": 1825869,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "inputs/frozen/representative_prompts.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/results/preparation_v1/representative_prompts.json",
+      "original_sha256": "d0adecccb3428ca56773bbf73a822dae5851179ad189aa2cd289e009c66efd0c",
+      "sha256": "d0adecccb3428ca56773bbf73a822dae5851179ad189aa2cd289e009c66efd0c",
+      "bytes": 59898,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "inputs/frozen/context_manifest.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/results/preparation_v1/context_manifest.json",
+      "original_sha256": "9c49624c327b6f05e3cdadc1ac42e02fc9fb1924ea77603fa93b65f92d07f9a3",
+      "sha256": "9c49624c327b6f05e3cdadc1ac42e02fc9fb1924ea77603fa93b65f92d07f9a3",
+      "bytes": 101740,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v2/rates.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v2/rates.json",
+      "original_sha256": "293248b999a99004184e7ccfe04d4e778af6a3e780d267146407d5d7316a6f0b",
+      "sha256": "293248b999a99004184e7ccfe04d4e778af6a3e780d267146407d5d7316a6f0b",
+      "bytes": 512493,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v2/contrasts.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v2/contrasts.json",
+      "original_sha256": "200acc24d2e9fc419d00b8db981ada2c48656d05bf56dcd9a6830055601ae4b3",
+      "sha256": "200acc24d2e9fc419d00b8db981ada2c48656d05bf56dcd9a6830055601ae4b3",
+      "bytes": 143100,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v2/rates.csv",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v2/rates.csv",
+      "original_sha256": "abd28451eef2d3b1f2c3e86e2eaa047778bcee28e945b0447b6ee2a7f5a839aa",
+      "sha256": "abd28451eef2d3b1f2c3e86e2eaa047778bcee28e945b0447b6ee2a7f5a839aa",
+      "bytes": 93854,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v2/contrasts.csv",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v2/contrasts.csv",
+      "original_sha256": "49f01941aa752ca2bf8ef6d58f53ba9b720d25adce332feed1e4ba4c1aa335dd",
+      "sha256": "49f01941aa752ca2bf8ef6d58f53ba9b720d25adce332feed1e4ba4c1aa335dd",
+      "bytes": 47815,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v2/correction_receipt.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v2/correction_receipt.json",
+      "original_sha256": "14e391c5cbb3f99305aa0ea7139f9cd70f8e1d8bc01983fdfc8654df1a44fc70",
+      "sha256": "14e391c5cbb3f99305aa0ea7139f9cd70f8e1d8bc01983fdfc8654df1a44fc70",
+      "bytes": 939,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/projection_fits.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v1/projection_fits.json",
+      "original_sha256": "2b12158e1292327404f5a48dea2728eca1920c74327f2e142b391ca1b3e3ce44",
+      "sha256": "2b12158e1292327404f5a48dea2728eca1920c74327f2e142b391ca1b3e3ce44",
+      "bytes": 8599,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/trajectories.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v1/trajectories.json",
+      "original_sha256": "140327a13457e969a0f0dfffca7b34ebf5b5ea29e089f498dfd3c64a10ad6633",
+      "sha256": "140327a13457e969a0f0dfffca7b34ebf5b5ea29e089f498dfd3c64a10ad6633",
+      "bytes": 426777,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/metrics.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v1/metrics.json",
+      "original_sha256": "e2d0d4d5909e6c9fce486f0a5a1364df4d957db52dbe47021dfa4472e5e97548",
+      "sha256": "e2d0d4d5909e6c9fce486f0a5a1364df4d957db52dbe47021dfa4472e5e97548",
+      "bytes": 1305,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/analysis_config.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v1/analysis_config.json",
+      "original_sha256": "d82b3d0f3a2ca110ab2c1ddd384aedbf2f019ead549ccec75f50c41f0cccb21c",
+      "sha256": "d82b3d0f3a2ca110ab2c1ddd384aedbf2f019ead549ccec75f50c41f0cccb21c",
+      "bytes": 1594,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "config.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/results/production_specification.json",
+      "original_sha256": "6c42c1b228e988143292bb69024b87cc0b9c8290f757db8612c7eb9d307dd585",
+      "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+      "bytes": 2074,
+      "license": "see README",
+      "change": "private attachment locations replaced with null; scientific configuration unchanged"
+    },
+    {
+      "path": "results/original_analysis_v1/rates.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v1/rates.json",
+      "original_sha256": "dd67f8cbc53c715b0d7088ec97c53d2b0fddbd5627dcf25f4058d46b65e85099",
+      "sha256": "dd67f8cbc53c715b0d7088ec97c53d2b0fddbd5627dcf25f4058d46b65e85099",
+      "bytes": 312600,
+      "license": "see README",
+      "change": "byte-identical correction input; not authoritative inferential table"
+    },
+    {
+      "path": "results/original_analysis_v1/contrasts.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "report_support_v1.tar.gz!results/analysis_v1/contrasts.json",
+      "original_sha256": "a524b3399d8fed211f5c84a2b78cb27490f17de05a49f59c5df2c871b8e2f795",
+      "sha256": "a524b3399d8fed211f5c84a2b78cb27490f17de05a49f59c5df2c871b8e2f795",
+      "bytes": 120316,
+      "license": "see README",
+      "change": "byte-identical correction input; not authoritative inferential table"
+    },
+    {
+      "path": "README.md",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "77ee536c49d14b7fe8bd563d833480e46aa12efb40b8bb02a9fbdb24366a5f19",
+      "bytes": 4516,
+      "license": "see README",
+      "change": "new portable entrypoint, documentation or asset declaration",
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "assets.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "2e5a1421fa5d1273b16712c972b68d14c2f93edffda56a39312e05195ce36bbe",
+      "bytes": 637,
+      "license": "see README",
+      "change": "new portable entrypoint, documentation or asset declaration",
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "inference.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "dc61ddce7ea6f260634ca835eed35e1de1bb200e9a15ea24f1f8c888abfa276b",
+      "bytes": 2486,
+      "license": "MIT",
+      "change": "new portable entrypoint, documentation or asset declaration"
+    },
+    {
+      "path": "reproduce.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "2908baf3303d009200f8639242d37211675c1951da45b8ee2ae574e1a2a67758",
+      "bytes": 2657,
+      "license": "MIT",
+      "change": "new portable entrypoint, documentation or asset declaration"
+    },
+    {
+      "path": "src/prepare_inputs.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": "experiments/experiment-8-r7e0ka/src/prepare_inputs.py",
+      "original_sha256": "ee02050e7b497f6233ec8f82e093218e7ef41c93ad801f3fb46b9ba3bc3b16a8",
+      "sha256": "ee02050e7b497f6233ec8f82e093218e7ef41c93ad801f3fb46b9ba3bc3b16a8",
+      "bytes": 8594,
+      "license": "MIT",
+      "change": "byte-identical preparation dependency for original tests"
+    },
+    {
+      "path": "validation.json",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "af405449b24c89f8e83c35d7d7f3f95e80c794e40217fb06960a60d2148de9ff",
+      "bytes": 1768,
+      "license": "MIT",
+      "change": "new CPU packaging verification receipt; full inference not run"
+    },
+    {
+      "path": "tests/test_reproduce_wrapper.py",
+      "source_study": "natural_and_ending",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "license": "MIT",
+      "change": "new regression test for portable replay glue; no resampling",
+      "sha256": "9f88d6b7aed92060f28be2cb8145fcef306ae5bcc80fc2aa13e131bf0028c0cf",
+      "bytes": 1509
+    }
+  ],
+  "source_release": {
+    "filename": "release_v1.tar.gz",
+    "sha256": "7f7d2e4527bc32938949f3b51c759ef5a032b1201c14d3f2baf4e0b2f75a5bb0",
+    "bytes": 201802,
+    "original_readme_sha256": "864e702e7e01fe6f65aaddd2592f734a4d1df448bd228694b6deeb8383b600fe",
+    "archive_member_original_hash_matches": 20
+  },
+  "manifest_scope": "Every payload file other than this self-referential manifest; generated files have null original_sha256.",
+  "corrected_table_archive": {
+    "filename": "report_support_v1.tar.gz",
+    "bytes": 311440,
+    "sha256": "bd48223ec7744b4d0ee3eb5ec06c24fc74b25705471b48ddf1cf4074497afdab",
+    "authoritative_members": [
+      "results/analysis_v2/rates.json",
+      "results/analysis_v2/contrasts.json"
+    ]
+  }
+}

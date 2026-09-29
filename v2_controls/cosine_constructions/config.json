@@ -1,0 +1,79 @@
+{
+  "section": "3.3",
+  "python": "3.12",
+  "packages": {
+    "torch": "2.11.0",
+    "numpy": "2.3.4",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.9.0"
+  },
+  "seed": 42,
+  "blas_threads": 4,
+  "denoise_variance": 0.5,
+  "input_archive": "pain_axis_layer_slices-20260920T033111Z-1-001.zip",
+  "constructions": [
+    "paper_available",
+    "common_neutral",
+    "common_controls"
+  ],
+  "directions": [
+    "S1_pain",
+    "S2_pain",
+    "Fear",
+    "NegEmotion",
+    "NegWorld",
+    "BodySens",
+    "Arousal",
+    "Random",
+    "Numb",
+    "Sadness"
+  ],
+  "usable_models": [
+    "Gemma_2_27B_base",
+    "Gemma_2_27B_instruct",
+    "Gemma_2_2B_base",
+    "Gemma_2_2B_instruct",
+    "Gemma_2_9B_base",
+    "Gemma_2_9B_instruct",
+    "Llama_3.1_70B_base",
+    "Llama_3.1_70B_instruct",
+    "Llama_3.1_8B_base",
+    "Llama_3.1_8B_instruct",
+    "Llama_3.3_70B_instruct",
+    "Mistral_7B_base",
+    "Mistral_7B_instruct",
+    "Mistral_Small_24B_base",
+    "Phi_4",
+    "Qwen_2.5_32B_base",
+    "Qwen_2.5_32B_instruct",
+    "Qwen_2.5_72B_base",
+    "Qwen_2.5_72B_instruct",
+    "Qwen_2.5_7B_base",
+    "Qwen_2.5_7B_instruct",
+    "Qwen_3_14B_base",
+    "Qwen_3_8B_base"
+  ],
+  "exclusions": [
+    {
+      "model": "Gemma_3_27B_base",
+      "reason": "Positive infinity in source FP16 rows; centering produces NaN and unchanged author PCA fails."
+    },
+    {
+      "model": "Gemma_3_27B_instruct",
+      "reason": "Positive infinity in source FP16 rows; centering produces NaN and unchanged author PCA fails."
+    }
+  ],
+  "missing_sets": [
+    "ControlSupplement_1P",
+    "Numb_1P",
+    "SD_sadness_1P"
+  ],
+  "reproduction_anchor_tolerance": 0.01,
+  "reference_discrepancy_flag": 0.03,
+  "aggregation": "Equal-model mean per finite cell; no imputation; across-model minimum/median/maximum are descriptive, not confidence intervals.",
+  "input_dtype": "torch.float16",
+  "compute_dtype": "float32",
+  "expected_input_models": 25,
+  "expected_usable_models": 23,
+  "expected_matrices": 69
+}

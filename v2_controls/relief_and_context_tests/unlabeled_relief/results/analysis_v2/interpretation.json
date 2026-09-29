@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "measurement_assessment": "partial_signal",
+  "instrument": "verified_complete",
+  "R1_preferential_remaining_pain_removal": false,
+  "R1_random_practical_null_established": false,
+  "R2_full_pattern_supported": false,
+  "R2_positive_dose_interaction": true,
+  "R2_pain_dose_change_by_position": [
+    {
+      "estimate_id": 2635,
+      "table": "r2_contrasts",
+      "mode": "sampled",
+      "target_position": 0,
+      "contrast": "pain_high_minus_low",
+      "metric": "reducing_presses",
+      "estimate": 3.242574257425743,
+      "n_scenarios": 101,
+      "numerator": 327.5,
+      "denominator": 101.0,
+      "ci_low": 2.628712871287129,
+      "ci_high": 3.871287128712871,
+      "finite_replicates": 10000,
+      "status": "estimable",
+      "components": {
+        "pain_1.5": 1,
+        "pain_1.0": -1
+      },
+      "support_index": 14
+    },
+    {
+      "estimate_id": 2775,
+      "table": "r2_contrasts",
+      "mode": "sampled",
+      "target_position": 1,
+      "contrast": "pain_high_minus_low",
+      "metric": "reducing_presses",
+      "estimate": -1.4851485148514851,
+      "n_scenarios": 101,
+      "numerator": -150.0,
+      "denominator": 101.0,
+      "ci_low": -2.103960396039604,
+      "ci_high": -0.8811881188118812,
+      "finite_replicates": 10000,
+      "status": "estimable",
+      "components": {
+        "pain_1.5": 1,
+        "pain_1.0": -1
+      },
+      "support_index": 98
+    }
+  ],
+  "interpretation": "No selective pain removal in these fixed tasks; positive average dose interaction is strongly position-dependent and does not satisfy the full titration rule.",
+  "limits": [
+    "R1 supports contain 1\u201321 initial scenarios per condition/position, selected by first-choice behavior.",
+    "R1 pain/sadness first-position support has one scenario; its zero-width interval is not evidence of precision.",
+    "R1 pain/fear first-position support has four scenarios, all with the same difference; its zero-width interval is likewise not strong precision evidence.",
+    "R1 intervals omit draws with no matched support: finite replicate counts are retained in every table.",
+    "The random/random practical-null comparison remains inconclusive and changes sign across positions.",
+    "Initial-scenario bootstrap is conditional on the fixed corpus; adjacent trials share later concatenated source text.",
+    "Intervals are pointwise, not simultaneous; no subjective experience, learning or generalized incapacity is established."
+  ]
+}

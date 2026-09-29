@@ -1,0 +1,3135 @@
+{
+  "version": 1,
+  "pin_semantics": [
+    "model_revision is a base HF repository commit. adapter_revision is the released adapter HF repository commit. adapter_archive_sha256 hashes a model-specific tar.gz. adapter_weight_sha256 hashes adapter_model.safetensors only.",
+    "Training seeds0/1/2 are distinct from behavior seed bases1000/2000, random-direction seeds, and analysis/bootstrap seeds.",
+    "Requirements-only pins are not independent execution receipts. CUDA cu130 is a wheel/index tag, not an independently observed CUDA runtime or driver version. Missing versions remain null.",
+    "The released32B historical training torch/transformers versions and exact kernels were explicitly unverified in frozen_recipe.json /historical_unverified. Do not apply evaluation pins retroactively to released-adapter training.",
+    "Additional-seed recipe status records an earlier blocked stage; final saved adapter digests and evaluation configuration identify the exported completed evaluation inputs. No public repository revision is invented for locally trained adapters.",
+    "Geometry has23 usable archived activation labels and2 preserved exclusions; its author code revision must not be presented as all23 model revisions.",
+    "Reset groups use unadapted instruction models, unlike fine-tuned Qwen choice/state/relief groups. Qwen7B in a generic protocol MODELS list is not evidence of evaluation in these exported groups."
+  ],
+  "groups": [
+    {
+      "group": "choice_controls/harm_and_relabel",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32",
+          "qwen72"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/harm_and_relabel.torch",
+          "choice_controls/harm_and_relabel.numpy",
+          "choice_controls/harm_and_relabel.transformers",
+          "choice_controls/harm_and_relabel.peft",
+          "choice_controls/harm_and_relabel.python",
+          "choice_controls/harm_and_relabel.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22"
+      },
+      "environment_evidence_kind": "recorded_environment_json",
+      "scope_note": "Same B1-B3 release; forwarding wrapper requirements inherit b1_b3/requirements.txt."
+    },
+    {
+      "group": "steering_state_controls/b1_b3",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32",
+          "qwen72"
+        ],
+        "environment_pin_rows": [
+          "steering_state_controls/b1_b3.torch",
+          "steering_state_controls/b1_b3.numpy",
+          "steering_state_controls/b1_b3.transformers",
+          "steering_state_controls/b1_b3.peft",
+          "steering_state_controls/b1_b3.python",
+          "steering_state_controls/b1_b3.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22"
+      },
+      "environment_evidence_kind": "recorded_environment_json",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc"
+        }
+      }
+    },
+    {
+      "group": "steering_state_controls/b6",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "steering_state_controls/b6.torch",
+          "steering_state_controls/b6.numpy",
+          "steering_state_controls/b6.transformers",
+          "steering_state_controls/b6.peft",
+          "steering_state_controls/b6.python",
+          "steering_state_controls/b6.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "steering_state_controls/b6/requirements.txt",
+        "sha256": "1012638d51c21b6c6b24068a3783d87b1c607738f152d06bd63c919463d1a5a4"
+      },
+      "environment_evidence_kind": "dependency_pins_only",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "steering_state_controls/b6/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "eee8678244cc86fb1a70e1309c90cd4952a7e393b32fb93dd1d2b1d0b1acf6d2"
+        }
+      }
+    },
+    {
+      "group": "choice_controls/additional_seeds",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32_seed1",
+          "qwen32_seed2"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/additional_seeds.torch",
+          "choice_controls/additional_seeds.numpy",
+          "choice_controls/additional_seeds.transformers",
+          "choice_controls/additional_seeds.peft",
+          "choice_controls/additional_seeds.python",
+          "choice_controls/additional_seeds.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "choice_controls/additional_seeds/requirements.txt",
+        "sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e"
+      },
+      "environment_evidence_kind": "declared_executed_runtime_requirements"
+    },
+    {
+      "group": "choice_controls/profile",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/profile.torch",
+          "choice_controls/profile.numpy",
+          "choice_controls/profile.transformers",
+          "choice_controls/profile.peft",
+          "choice_controls/profile.python",
+          "choice_controls/profile.CUDA_build_tag"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "choice_controls/profile/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331"
+      },
+      "environment_evidence_kind": "dependency_pins_only",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "choice_controls/profile/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "c9baf86e1f0fdc9af8875e1182ff847cafc6aca1e1652e123340b5df3e889a5b"
+        }
+      }
+    },
+    {
+      "group": "choice_controls/lamp_spam",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/lamp_spam.torch",
+          "choice_controls/lamp_spam.numpy",
+          "choice_controls/lamp_spam.transformers",
+          "choice_controls/lamp_spam.peft",
+          "choice_controls/lamp_spam.python",
+          "choice_controls/lamp_spam.CUDA_build_tag"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "choice_controls/lamp_spam/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331"
+      },
+      "environment_evidence_kind": "dependency_pins_only",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "choice_controls/lamp_spam/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "c9baf86e1f0fdc9af8875e1182ff847cafc6aca1e1652e123340b5df3e889a5b"
+        }
+      }
+    },
+    {
+      "group": "choice_controls/fear_additions/superseded_long_wording",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/fear_additions/superseded_long_wording.torch",
+          "choice_controls/fear_additions/superseded_long_wording.numpy",
+          "choice_controls/fear_additions/superseded_long_wording.transformers",
+          "choice_controls/fear_additions/superseded_long_wording.peft",
+          "choice_controls/fear_additions/superseded_long_wording.python",
+          "choice_controls/fear_additions/superseded_long_wording.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4"
+      },
+      "environment_evidence_kind": "declared_executed_runtime_requirements",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "choice_controls/fear_additions/superseded_long_wording/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "f1cdd2ce71415419184f393a9e6d10f1080c0a337978391858d8d2a85ddded24"
+        }
+      },
+      "scope_note": "Superseded long wording; never pool with matched_wording."
+    },
+    {
+      "group": "choice_controls/fear_additions/matched_wording",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/fear_additions/matched_wording.torch",
+          "choice_controls/fear_additions/matched_wording.numpy",
+          "choice_controls/fear_additions/matched_wording.transformers",
+          "choice_controls/fear_additions/matched_wording.peft",
+          "choice_controls/fear_additions/matched_wording.python",
+          "choice_controls/fear_additions/matched_wording.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4"
+      },
+      "environment_evidence_kind": "declared_executed_runtime_requirements",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "choice_controls/fear_additions/matched_wording/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "f1cdd2ce71415419184f393a9e6d10f1080c0a337978391858d8d2a85ddded24"
+        }
+      }
+    },
+    {
+      "group": "choice_controls/fear_additions/four_cells/lamp32",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/fear_additions/four_cells/lamp32.torch",
+          "choice_controls/fear_additions/four_cells/lamp32.numpy",
+          "choice_controls/fear_additions/four_cells/lamp32.transformers",
+          "choice_controls/fear_additions/four_cells/lamp32.peft",
+          "choice_controls/fear_additions/four_cells/lamp32.python",
+          "choice_controls/fear_additions/four_cells/lamp32.CUDA_build_tag"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810"
+      },
+      "environment_evidence_kind": "declared_executed_runtime_requirements",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "choice_controls/fear_additions/four_cells/lamp32/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "f1cdd2ce71415419184f393a9e6d10f1080c0a337978391858d8d2a85ddded24"
+        }
+      }
+    },
+    {
+      "group": "choice_controls/fear_additions/four_cells/b2",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32",
+          "qwen72"
+        ],
+        "environment_pin_rows": [
+          "choice_controls/fear_additions/four_cells/b2.torch",
+          "choice_controls/fear_additions/four_cells/b2.numpy",
+          "choice_controls/fear_additions/four_cells/b2.transformers",
+          "choice_controls/fear_additions/four_cells/b2.peft",
+          "choice_controls/fear_additions/four_cells/b2.python",
+          "choice_controls/fear_additions/four_cells/b2.CUDA_build_tag"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/b2/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810"
+      },
+      "environment_evidence_kind": "declared_executed_runtime_requirements",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "choice_controls/fear_additions/four_cells/b2/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "f1cdd2ce71415419184f393a9e6d10f1080c0a337978391858d8d2a85ddded24"
+        }
+      }
+    },
+    {
+      "group": "relief_and_context_tests/unlabeled_relief",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "relief_and_context_tests/unlabeled_relief.torch",
+          "relief_and_context_tests/unlabeled_relief.numpy",
+          "relief_and_context_tests/unlabeled_relief.transformers",
+          "relief_and_context_tests/unlabeled_relief.peft",
+          "relief_and_context_tests/unlabeled_relief.python",
+          "relief_and_context_tests/unlabeled_relief.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967"
+      },
+      "environment_evidence_kind": "dependency_pins_only",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "relief_and_context_tests/unlabeled_relief/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "60b793180df1a603c04c58f74519da0b84b868ab784a8b025140748300ae2e76"
+        }
+      }
+    },
+    {
+      "group": "relief_and_context_tests/factual_accuracy",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "relief_and_context_tests/factual_accuracy.torch",
+          "relief_and_context_tests/factual_accuracy.numpy",
+          "relief_and_context_tests/factual_accuracy.transformers",
+          "relief_and_context_tests/factual_accuracy.peft",
+          "relief_and_context_tests/factual_accuracy.python",
+          "relief_and_context_tests/factual_accuracy.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967"
+      },
+      "environment_evidence_kind": "dependency_pins_only",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "relief_and_context_tests/factual_accuracy/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "60b793180df1a603c04c58f74519da0b84b868ab784a8b025140748300ae2e76"
+        }
+      }
+    },
+    {
+      "group": "relief_and_context_tests/natural_and_ending",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen32"
+        ],
+        "environment_pin_rows": [
+          "relief_and_context_tests/natural_and_ending.torch",
+          "relief_and_context_tests/natural_and_ending.numpy",
+          "relief_and_context_tests/natural_and_ending.transformers",
+          "relief_and_context_tests/natural_and_ending.peft",
+          "relief_and_context_tests/natural_and_ending.python",
+          "relief_and_context_tests/natural_and_ending.CUDA"
+        ],
+        "evaluation_seed_bases_row": "choice.evaluation_seed_bases"
+      },
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f"
+      },
+      "environment_evidence_kind": "execution_configuration_versions",
+      "loader_pin_crosscheck": {
+        "status": "exact_constants_match",
+        "source": {
+          "path": "relief_and_context_tests/natural_and_ending/pain_axis_b/runtime.py",
+          "lines": [
+            17,
+            25
+          ],
+          "sha256": "60b793180df1a603c04c58f74519da0b84b868ab784a8b025140748300ae2e76"
+        }
+      }
+    },
+    {
+      "group": "relief_and_context_tests/qwen_llama_reset",
+      "pin": {
+        "model_pin_prefixes": [
+          "qwen25_32b",
+          "llama31_8b"
+        ],
+        "environment_pin_rows": [
+          "relief_and_context_tests/qwen_llama_reset.torch",
+          "relief_and_context_tests/qwen_llama_reset.numpy",
+          "relief_and_context_tests/qwen_llama_reset.transformers",
+          "relief_and_context_tests/qwen_llama_reset.peft",
+          "relief_and_context_tests/qwen_llama_reset.python",
+          "relief_and_context_tests/qwen_llama_reset.CUDA_build_tag"
+        ]
+      },
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c"
+      },
+      "environment_evidence_kind": "declared_executed_runtime_requirements"
+    },
+    {
+      "group": "relief_and_context_tests/olmo_reset",
+      "pin": {
+        "model_pin_prefixes": [
+          "olmo32"
+        ],
+        "environment_pin_rows": [
+          "relief_and_context_tests/olmo_reset.torch",
+          "relief_and_context_tests/olmo_reset.numpy",
+          "relief_and_context_tests/olmo_reset.transformers",
+          "relief_and_context_tests/olmo_reset.peft",
+          "relief_and_context_tests/olmo_reset.python",
+          "relief_and_context_tests/olmo_reset.CUDA_build_tag"
+        ]
+      },
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c"
+      },
+      "environment_evidence_kind": "declared_executed_runtime_requirements"
+    },
+    {
+      "group": "cosine_constructions",
+      "pin": {
+        "model_pin_prefixes": [
+          "geometry_manifest_23"
+        ],
+        "environment_pin_rows": [
+          "cosine_constructions.torch",
+          "cosine_constructions.numpy",
+          "cosine_constructions.python",
+          "cosine_constructions.transformers",
+          "cosine_constructions.peft",
+          "cosine_constructions.CUDA"
+        ]
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa"
+      },
+      "environment_evidence_kind": "executed_analysis_input_manifest"
+    }
+  ],
+  "pin_rows": [
+    {
+      "id": "qwen32.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/frozen_recipe.json",
+        "sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+        "json_pointer": "/model"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          17,
+          20
+        ],
+        "constant": "REVISIONS",
+        "key": "Qwen_2.5_32B_instruct"
+      },
+      "status": "recorded",
+      "note": "Base model Hugging Face repository commit; not the adapter commit or archive digest."
+    },
+    {
+      "id": "qwen32.adapter_repository",
+      "pin": "Valen92/pain-adapters",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/frozen_recipe.json",
+        "sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+        "json_pointer": "/released_adapter_repository"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32.adapter_revision",
+      "pin": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          21,
+          21
+        ],
+        "constant": "ADAPTER_REVISION"
+      },
+      "status": "recorded",
+      "note": "Adapter repository commit, shared across model-specific archives."
+    },
+    {
+      "id": "qwen32.adapter_archive_sha256",
+      "pin": "cd96d4d43a3f7d6a8c67804ed4f4ee567ee4942e168804c757e69937b857127f",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          22,
+          25
+        ],
+        "constant": "ADAPTER_HASHES",
+        "key": "Qwen_2.5_32B_instruct"
+      },
+      "status": "recorded",
+      "note": "SHA256 of model-specific adapter tar.gz archive, NOT base-model revision or adapter_model.safetensors SHA256."
+    },
+    {
+      "id": "qwen32.adapter_archive_filename",
+      "pin": "adapter_Qwen_2.5_32B_instruct.tar.gz",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          108,
+          116
+        ]
+      },
+      "status": "recorded",
+      "note": "Filename template in pinned download configuration; model name substituted."
+    },
+    {
+      "id": "qwen32.released_training_seed",
+      "pin": 0,
+      "source": {
+        "path": "choice_controls/additional_seeds/config/frozen_recipe.json",
+        "sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+        "json_pointer": "/recorded/seed"
+      },
+      "status": "recorded",
+      "note": "Recorded historical released-adapter training seed, not evaluation sampling seed."
+    },
+    {
+      "id": "qwen72.model_id",
+      "pin": "Qwen/Qwen2.5-72B-Instruct",
+      "source": {
+        "path": "steering_state_controls/b1_b3/inputs/original/protocol.py",
+        "sha256": "57c9a7e31bbfd5cb80637c48c91b92f392556f750f37d976b9fd62917508ab0f",
+        "lines": [
+          74,
+          78
+        ],
+        "constant": "MODELS",
+        "index": [
+          2,
+          0
+        ]
+      },
+      "status": "recorded",
+      "note": "Only 32B and 72B are executed in these exported choice/state comparisons; the protocol template also lists 7B, which is not evidence of execution here."
+    },
+    {
+      "id": "qwen72.model_revision",
+      "pin": "495f39366efef23836d0cfae4fbe635880d2be31",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          17,
+          20
+        ],
+        "constant": "REVISIONS",
+        "key": "Qwen_2.5_72B_instruct"
+      },
+      "status": "recorded",
+      "note": "Base model Hugging Face repository commit; not the adapter commit or archive digest."
+    },
+    {
+      "id": "qwen72.adapter_repository",
+      "pin": "Valen92/pain-adapters",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/frozen_recipe.json",
+        "sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+        "json_pointer": "/released_adapter_repository"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen72.adapter_revision",
+      "pin": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          21,
+          21
+        ],
+        "constant": "ADAPTER_REVISION"
+      },
+      "status": "recorded",
+      "note": "Adapter repository commit, shared across model-specific archives."
+    },
+    {
+      "id": "qwen72.adapter_archive_sha256",
+      "pin": "b64bbafdaff13009647bc7c3b7700fe41a916ba3d4dddb2ccadbece25674af14",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          22,
+          25
+        ],
+        "constant": "ADAPTER_HASHES",
+        "key": "Qwen_2.5_72B_instruct"
+      },
+      "status": "recorded",
+      "note": "SHA256 of model-specific adapter tar.gz archive, NOT base-model revision or adapter_model.safetensors SHA256."
+    },
+    {
+      "id": "qwen72.adapter_archive_filename",
+      "pin": "adapter_Qwen_2.5_72B_instruct.tar.gz",
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc",
+        "lines": [
+          108,
+          116
+        ]
+      },
+      "status": "recorded",
+      "note": "Filename template in pinned download configuration; model name substituted."
+    },
+    {
+      "id": "qwen72.released_training_seed",
+      "pin": null,
+      "source": {
+        "path": "steering_state_controls/b1_b3/pain_axis_b/runtime.py",
+        "sha256": "7b37b32d9a961aefd3de76a89a8ce8fe113f3dc50dfb1906d3ba823a3df610fc"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No 72B training seed is recorded in this runtime configuration; do not infer it from the 32B recipe."
+    },
+    {
+      "id": "qwen32_seed1.training_seed",
+      "pin": 1,
+      "source": {
+        "path": "choice_controls/additional_seeds/config/frozen_recipe.json",
+        "sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+        "json_pointer": "/new_seeds/0"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32_seed1.adapter_local_id",
+      "pin": "adapters/seed_1/final_adapter",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e",
+        "json_pointer": "/seeds/1/paths/--adapter"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32_seed1.adapter_weight_sha256",
+      "pin": "7e8d2ea71469a1dfa82dddf518ec08d8650fe14ddaff60bab1785a2830a30412",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e",
+        "json_pointer": "/seeds/1/adapter_weight_sha256"
+      },
+      "status": "recorded",
+      "note": "SHA256 of adapter_model.safetensors only; not repository revision, whole-directory digest, or released-adapter archive digest."
+    },
+    {
+      "id": "qwen32_seed1.adapter_repository_revision",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Locally trained adapter identified by training seed and saved weight SHA256; no published HF repository revision is configured."
+    },
+    {
+      "id": "qwen32_seed2.training_seed",
+      "pin": 2,
+      "source": {
+        "path": "choice_controls/additional_seeds/config/frozen_recipe.json",
+        "sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+        "json_pointer": "/new_seeds/1"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32_seed2.adapter_local_id",
+      "pin": "adapters/seed_2/final_adapter",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e",
+        "json_pointer": "/seeds/2/paths/--adapter"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32_seed2.adapter_weight_sha256",
+      "pin": "2406827b34d55ef16dd94fe506acf5037f3cd2d66df60892f4b0312a195027b7",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e",
+        "json_pointer": "/seeds/2/adapter_weight_sha256"
+      },
+      "status": "recorded",
+      "note": "SHA256 of adapter_model.safetensors only; not repository revision, whole-directory digest, or released-adapter archive digest."
+    },
+    {
+      "id": "qwen32_seed2.adapter_repository_revision",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Locally trained adapter identified by training seed and saved weight SHA256; no published HF repository revision is configured."
+    },
+    {
+      "id": "choice.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e",
+        "json_pointer": "/behavior/behavior_seed_bases"
+      },
+      "status": "recorded",
+      "note": "Behavior seed bases are 1000 and 2000, distinct from training seeds0/1/2. Full per-row RNG state is not represented by this list."
+    },
+    {
+      "id": "choice.random_direction_seeds",
+      "pin": [
+        4817,
+        2903,
+        7361,
+        1150,
+        9428,
+        6076,
+        3384,
+        8592,
+        517,
+        6741
+      ],
+      "source": {
+        "path": "steering_state_controls/b1_b3/inputs/original/protocol.py",
+        "sha256": "57c9a7e31bbfd5cb80637c48c91b92f392556f750f37d976b9fd62917508ab0f",
+        "lines": [
+          65,
+          65
+        ],
+        "constant": "RAND_SEEDS"
+      },
+      "status": "recorded",
+      "note": "Random control direction construction seeds, not training or response-generation seeds."
+    },
+    {
+      "id": "qwen25_32b.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/config.json",
+        "sha256": "a0bd8d456f13568b67491af43f1defde9ae6dbb3298cfe6055f44d8eeda483dd",
+        "json_pointer": "/models/qwen25_32b/hf_id"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen25_32b.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/config.json",
+        "sha256": "a0bd8d456f13568b67491af43f1defde9ae6dbb3298cfe6055f44d8eeda483dd",
+        "json_pointer": "/models/qwen25_32b/revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen25_32b.adapters",
+      "pin": false,
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/config.json",
+        "sha256": "a0bd8d456f13568b67491af43f1defde9ae6dbb3298cfe6055f44d8eeda483dd",
+        "json_pointer": "/adapters"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "llama31_8b.model_id",
+      "pin": "meta-llama/Llama-3.1-8B-Instruct",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/config.json",
+        "sha256": "a0bd8d456f13568b67491af43f1defde9ae6dbb3298cfe6055f44d8eeda483dd",
+        "json_pointer": "/models/llama31_8b/hf_id"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "llama31_8b.model_revision",
+      "pin": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/config.json",
+        "sha256": "a0bd8d456f13568b67491af43f1defde9ae6dbb3298cfe6055f44d8eeda483dd",
+        "json_pointer": "/models/llama31_8b/revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "llama31_8b.adapters",
+      "pin": false,
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/config.json",
+        "sha256": "a0bd8d456f13568b67491af43f1defde9ae6dbb3298cfe6055f44d8eeda483dd",
+        "json_pointer": "/adapters"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "olmo32.model_id",
+      "pin": "allenai/OLMo-2-0325-32B-Instruct",
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/config.json",
+        "sha256": "5909745bcbdb3f35376c65a55343efc88862b5f456726b144cf80edebd18b8fb",
+        "json_pointer": "/models/olmo_32b/hf_id"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "olmo32.model_revision",
+      "pin": "b96024342a77a69aa0dda815c3454a671f477463",
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/config.json",
+        "sha256": "5909745bcbdb3f35376c65a55343efc88862b5f456726b144cf80edebd18b8fb",
+        "json_pointer": "/models/olmo_32b/revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "olmo32.adapters",
+      "pin": false,
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/config.json",
+        "sha256": "5909745bcbdb3f35376c65a55343efc88862b5f456726b144cf80edebd18b8fb",
+        "json_pointer": "/adapters"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/harm_and_relabel.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/torch"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/harm_and_relabel.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/numpy"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/harm_and_relabel.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/transformers"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/harm_and_relabel.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/peft"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/harm_and_relabel.python",
+      "pin": "3.12.13 (main, May 10 2026, 19:30:01) [Clang 22.1.3 ]",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/python"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/harm_and_relabel.CUDA",
+      "pin": null,
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "CUDA toolkit/runtime version is not recorded. Do not infer it from a different group."
+    },
+    {
+      "id": "steering_state_controls/b1_b3.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/torch"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "steering_state_controls/b1_b3.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/numpy"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "steering_state_controls/b1_b3.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/transformers"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "steering_state_controls/b1_b3.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/packages/peft"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "steering_state_controls/b1_b3.python",
+      "pin": "3.12.13 (main, May 10 2026, 19:30:01) [Clang 22.1.3 ]",
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22",
+        "json_pointer": "/python"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "steering_state_controls/b1_b3.CUDA",
+      "pin": null,
+      "source": {
+        "path": "steering_state_controls/b1_b3/environment.json",
+        "sha256": "9175089915ad29231fc683d145a2f926537249b25f7a0f8b4192eb6b49c8dc22"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "CUDA toolkit/runtime version is not recorded. Do not infer it from a different group."
+    },
+    {
+      "id": "steering_state_controls/b6.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "steering_state_controls/b6/requirements.txt",
+        "sha256": "1012638d51c21b6c6b24068a3783d87b1c607738f152d06bd63c919463d1a5a4",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "steering_state_controls/b6.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "steering_state_controls/b6/requirements.txt",
+        "sha256": "1012638d51c21b6c6b24068a3783d87b1c607738f152d06bd63c919463d1a5a4",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "steering_state_controls/b6.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "steering_state_controls/b6/requirements.txt",
+        "sha256": "1012638d51c21b6c6b24068a3783d87b1c607738f152d06bd63c919463d1a5a4",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "steering_state_controls/b6.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "steering_state_controls/b6/requirements.txt",
+        "sha256": "1012638d51c21b6c6b24068a3783d87b1c607738f152d06bd63c919463d1a5a4",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "steering_state_controls/b6.python",
+      "pin": null,
+      "source": {
+        "path": "steering_state_controls/b6/requirements.txt",
+        "sha256": "1012638d51c21b6c6b24068a3783d87b1c607738f152d06bd63c919463d1a5a4"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "steering_state_controls/b6.CUDA",
+      "pin": null,
+      "source": {
+        "path": "steering_state_controls/b6/requirements.txt",
+        "sha256": "1012638d51c21b6c6b24068a3783d87b1c607738f152d06bd63c919463d1a5a4"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No CUDA version/build tag recorded in this source."
+    },
+    {
+      "id": "choice_controls/additional_seeds.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "choice_controls/additional_seeds/requirements.txt",
+        "sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/additional_seeds.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "choice_controls/additional_seeds/requirements.txt",
+        "sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/additional_seeds.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "choice_controls/additional_seeds/requirements.txt",
+        "sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/additional_seeds.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "choice_controls/additional_seeds/requirements.txt",
+        "sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/additional_seeds.python",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/additional_seeds/requirements.txt",
+        "sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "choice_controls/additional_seeds.CUDA",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/additional_seeds/requirements.txt",
+        "sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No CUDA version/build tag recorded in this source."
+    },
+    {
+      "id": "choice_controls/profile.torch",
+      "pin": "2.11.0+cu130",
+      "source": {
+        "path": "choice_controls/profile/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/profile.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "choice_controls/profile/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/profile.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "choice_controls/profile/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/profile.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "choice_controls/profile/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/profile.python",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/profile/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "choice_controls/profile.CUDA_build_tag",
+      "pin": "cu130",
+      "source": {
+        "path": "choice_controls/profile/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Wheel/index build tag only. Do not treat as an independently observed toolkit, driver, or runtime version."
+    },
+    {
+      "id": "choice_controls/lamp_spam.torch",
+      "pin": "2.11.0+cu130",
+      "source": {
+        "path": "choice_controls/lamp_spam/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/lamp_spam.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "choice_controls/lamp_spam/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/lamp_spam.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "choice_controls/lamp_spam/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/lamp_spam.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "choice_controls/lamp_spam/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/lamp_spam.python",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/lamp_spam/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "choice_controls/lamp_spam.CUDA_build_tag",
+      "pin": "cu130",
+      "source": {
+        "path": "choice_controls/lamp_spam/requirements.txt",
+        "sha256": "6c9cd2d05f0465290e02c5748823e4f8d28f4fdd4ab0ed1cf547ee111a1ea331",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Wheel/index build tag only. Do not treat as an independently observed toolkit, driver, or runtime version."
+    },
+    {
+      "id": "choice_controls/fear_additions/superseded_long_wording.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/superseded_long_wording.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/superseded_long_wording.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/superseded_long_wording.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/superseded_long_wording.python",
+      "pin": "3.12",
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Historical major/minor declaration, not exact interpreter build."
+    },
+    {
+      "id": "choice_controls/fear_additions/superseded_long_wording.CUDA",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No CUDA version/build tag recorded in this source."
+    },
+    {
+      "id": "choice_controls/fear_additions/matched_wording.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/matched_wording.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/matched_wording.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/matched_wording.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/matched_wording.python",
+      "pin": "3.12",
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Historical major/minor declaration, not exact interpreter build."
+    },
+    {
+      "id": "choice_controls/fear_additions/matched_wording.CUDA",
+      "pin": null,
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/requirements-inference.txt",
+        "sha256": "fb143fc460195d5787c35346890d966d28d34db16e9eb4abead7a70675edaee4"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No CUDA version/build tag recorded in this source."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/lamp32.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/lamp32.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/lamp32.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/lamp32.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/lamp32.python",
+      "pin": ">=3.12,<3.13",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared compatible interpreter range, not an observed patch version."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/lamp32.CUDA_build_tag",
+      "pin": "cu130",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          12,
+          12
+        ]
+      },
+      "status": "recorded",
+      "note": "Wheel/index build tag only. Do not treat as an independently observed toolkit, driver, or runtime version."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/b2.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/b2/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/b2.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/b2/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/b2.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/b2/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/b2.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/b2/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/b2.python",
+      "pin": ">=3.12,<3.13",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/b2/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared compatible interpreter range, not an observed patch version."
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/b2.CUDA_build_tag",
+      "pin": "cu130",
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/b2/env/pyproject.toml",
+        "sha256": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+        "lines": [
+          12,
+          12
+        ]
+      },
+      "status": "recorded",
+      "note": "Wheel/index build tag only. Do not treat as an independently observed toolkit, driver, or runtime version."
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.python",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.CUDA",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No CUDA version/build tag recorded in this source."
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          1,
+          1
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.python",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.CUDA",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/requirements.txt",
+        "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No CUDA version/build tag recorded in this source."
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/versions/torch"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/versions/numpy"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.transformers",
+      "pin": "5.12.1",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/versions/transformers"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.peft",
+      "pin": "0.20.0",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/versions/peft"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.python",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Not recorded in the cited execution configuration."
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.CUDA",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Not recorded in the cited execution configuration."
+    },
+    {
+      "id": "relief_and_context_tests/qwen_llama_reset.torch",
+      "pin": "2.14.0+cu130",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/qwen_llama_reset.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/qwen_llama_reset.transformers",
+      "pin": "5.17.0",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/qwen_llama_reset.peft",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Not listed. Reset model config explicitly disables adapters; no PEFT version is claimed."
+    },
+    {
+      "id": "relief_and_context_tests/qwen_llama_reset.python",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "relief_and_context_tests/qwen_llama_reset.CUDA_build_tag",
+      "pin": "cu130",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Wheel/index build tag only. Do not treat as an independently observed toolkit, driver, or runtime version."
+    },
+    {
+      "id": "relief_and_context_tests/olmo_reset.torch",
+      "pin": "2.14.0+cu130",
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          3,
+          3
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/olmo_reset.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          5,
+          5
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/olmo_reset.transformers",
+      "pin": "5.17.0",
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          4,
+          4
+        ]
+      },
+      "status": "recorded",
+      "note": "Declared historical/portable dependency pin. No fresh environment or runtime validation was performed."
+    },
+    {
+      "id": "relief_and_context_tests/olmo_reset.peft",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Not listed. Reset model config explicitly disables adapters; no PEFT version is claimed."
+    },
+    {
+      "id": "relief_and_context_tests/olmo_reset.python",
+      "pin": null,
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "No Python patch version recorded in this dependency declaration."
+    },
+    {
+      "id": "relief_and_context_tests/olmo_reset.CUDA_build_tag",
+      "pin": "cu130",
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/requirements.txt",
+        "sha256": "ed89512a7a0127251c1a27c091ef40ce1037e0509dd59d4dafe8f7e89556bd9c",
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "status": "recorded",
+      "note": "Wheel/index build tag only. Do not treat as an independently observed toolkit, driver, or runtime version."
+    },
+    {
+      "id": "cosine_constructions.torch",
+      "pin": "2.11.0",
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/environment/packages/torch"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "cosine_constructions.numpy",
+      "pin": "2.3.4",
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/environment/packages/numpy"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "cosine_constructions.python",
+      "pin": "3.12.13 (main, May 10 2026, 19:30:01) [Clang 22.1.3 ]",
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/environment/python"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "cosine_constructions.transformers",
+      "pin": null,
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Not recorded/required for this saved-activation CPU geometry analysis."
+    },
+    {
+      "id": "cosine_constructions.peft",
+      "pin": null,
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Not recorded/required for this saved-activation CPU geometry analysis."
+    },
+    {
+      "id": "cosine_constructions.CUDA",
+      "pin": null,
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Not recorded/required for this saved-activation CPU geometry analysis."
+    },
+    {
+      "id": "choice_controls/profile.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "choice_controls/profile/configuration.json",
+        "sha256": "ee8b6041865e200a226cbd515851dd2d6fcf8d6ae74e7318739ecb320a99b25b",
+        "json_pointer": "/model"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/profile.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "choice_controls/profile/configuration.json",
+        "sha256": "ee8b6041865e200a226cbd515851dd2d6fcf8d6ae74e7318739ecb320a99b25b",
+        "json_pointer": "/model_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/profile.adapter_repository",
+      "pin": "Valen92/pain-adapters",
+      "source": {
+        "path": "choice_controls/profile/configuration.json",
+        "sha256": "ee8b6041865e200a226cbd515851dd2d6fcf8d6ae74e7318739ecb320a99b25b",
+        "json_pointer": "/adapter"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/profile.adapter_revision",
+      "pin": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source": {
+        "path": "choice_controls/profile/configuration.json",
+        "sha256": "ee8b6041865e200a226cbd515851dd2d6fcf8d6ae74e7318739ecb320a99b25b",
+        "json_pointer": "/adapter_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/lamp_spam.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "choice_controls/lamp_spam/configuration.json",
+        "sha256": "54f81845fc9c14d40dad9b3f3d4db5db7b0f46109374f2d67a85ae7038552303",
+        "json_pointer": "/model"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/lamp_spam.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "choice_controls/lamp_spam/configuration.json",
+        "sha256": "54f81845fc9c14d40dad9b3f3d4db5db7b0f46109374f2d67a85ae7038552303",
+        "json_pointer": "/model_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/lamp_spam.adapter_repository",
+      "pin": "Valen92/pain-adapters",
+      "source": {
+        "path": "choice_controls/lamp_spam/configuration.json",
+        "sha256": "54f81845fc9c14d40dad9b3f3d4db5db7b0f46109374f2d67a85ae7038552303",
+        "json_pointer": "/adapter"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/lamp_spam.adapter_revision",
+      "pin": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source": {
+        "path": "choice_controls/lamp_spam/configuration.json",
+        "sha256": "54f81845fc9c14d40dad9b3f3d4db5db7b0f46109374f2d67a85ae7038552303",
+        "json_pointer": "/adapter_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/model"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/model_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.adapter_repository",
+      "pin": "Valen92/pain-adapters",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/adapter"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/natural_and_ending.adapter_revision",
+      "pin": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/config.json",
+        "sha256": "87f012a825c1dbe6a7a64a7d4a87548d76372907f042b053ea0071cf7ab5500f",
+        "json_pointer": "/adapter_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/config.json",
+        "sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+        "json_pointer": "/model"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/config.json",
+        "sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+        "json_pointer": "/model_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.adapter_repository",
+      "pin": "Valen92/pain-adapters",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/config.json",
+        "sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+        "json_pointer": "/adapter_repo"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/factual_accuracy.adapter_revision",
+      "pin": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/config.json",
+        "sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+        "json_pointer": "/adapter_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/protocol_design.json",
+        "sha256": "e51313179daa5877fd5590775b16b7ffbd97f3f7987bd49e917a919cdc3bed65",
+        "json_pointer": "/model"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/protocol_design.json",
+        "sha256": "e51313179daa5877fd5590775b16b7ffbd97f3f7987bd49e917a919cdc3bed65",
+        "json_pointer": "/base_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.adapter_repository",
+      "pin": "Valen92/pain-adapters",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/protocol_design.json",
+        "sha256": "e51313179daa5877fd5590775b16b7ffbd97f3f7987bd49e917a919cdc3bed65",
+        "json_pointer": "/adapter"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "relief_and_context_tests/unlabeled_relief.adapter_revision",
+      "pin": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/protocol_design.json",
+        "sha256": "e51313179daa5877fd5590775b16b7ffbd97f3f7987bd49e917a919cdc3bed65",
+        "json_pointer": "/adapter_revision"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/profile.analysis_bootstrap_seed",
+      "pin": 20260922,
+      "source": {
+        "path": "choice_controls/profile/analysis_spec.json",
+        "json_pointer": "/bootstrap/seed",
+        "sha256": "37401ebbb761e34380ce4e7f2bfdbb1f58972a1683465f8e7ead9af39127113c"
+      },
+      "status": "recorded",
+      "note": "20260922 is the bootstrap analysis seed in the configuration, NOT an adapter training seed or evaluation seed base."
+    },
+    {
+      "id": "choice_controls/profile.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "choice_controls/profile/pain_choice_profile/design.py",
+        "sha256": "cd421a4109991200a86f9c693dc565d48c6d5ff4a96f7f17ee9ba733060731c2",
+        "lines": [
+          11,
+          11
+        ],
+        "constant": "SEED_BASES"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/lamp_spam.analysis_bootstrap_seed",
+      "pin": 20260922,
+      "source": {
+        "path": "choice_controls/lamp_spam/analysis_spec.json",
+        "json_pointer": "/bootstrap/seed",
+        "sha256": "9981fa9317ca918f560ea8023aebd62dbbe2efcbe7d652e090769aa2884b7c20"
+      },
+      "status": "recorded",
+      "note": "20260922 is the bootstrap analysis seed in the configuration, NOT an adapter training seed or evaluation seed base."
+    },
+    {
+      "id": "choice_controls/lamp_spam.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "choice_controls/lamp_spam/pain_choice_profile/design.py",
+        "sha256": "fe323e6cbec9945a552ac8816a4c7d232bc24ef76d1a70e7db33e4a3ff75701e",
+        "lines": [
+          11,
+          11
+        ],
+        "constant": "SEED_BASES"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/fear_additions/superseded_long_wording.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "choice_controls/fear_additions/superseded_long_wording/pain_choice_profile/design.py",
+        "sha256": "38cd3a901720e2d81ccf4739979865280cca80d480e0e6175605b070a8767c02",
+        "lines": [
+          11,
+          11
+        ],
+        "constant": "SEED_BASES"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/fear_additions/matched_wording.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "choice_controls/fear_additions/matched_wording/pain_choice_profile/design.py",
+        "sha256": "12134475a633bcd13870882353a12ab2eca45263c819b063851e792c2259b191",
+        "lines": [
+          11,
+          11
+        ],
+        "constant": "SEED_BASES"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "choice_controls/fear_additions/four_cells/lamp32.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "choice_controls/fear_additions/four_cells/lamp32/pain_choice_profile/design.py",
+        "sha256": "c22ac94540b8adac9521b319dfa7a5205e6e9e1e577b69833876d4d3b350642e",
+        "lines": [
+          11,
+          11
+        ],
+        "constant": "SEED_BASES"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "steering_state_controls/b1_b3.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "steering_state_controls/b1_b3/inputs/requested_grid.json",
+        "sha256": "fcf9a634b5c065c0048d8f19d50d30c50098f848ab42c870460ae451eb398bfc",
+        "json_pointer": "/seed_bases"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "steering_state_controls/b6.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "steering_state_controls/b6/inputs/requested_grid.json",
+        "sha256": "846caf32f883d075faba646491da49c693f9e9537775eb422bf2adc72e3b4ea9",
+        "json_pointer": "/seed_bases"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "factual_accuracy.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/config.json",
+        "sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+        "json_pointer": "/seed_bases"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "factual_accuracy.analysis_seed",
+      "pin": 42,
+      "source": {
+        "path": "relief_and_context_tests/factual_accuracy/config.json",
+        "sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+        "json_pointer": "/uncertainty/seed"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "unlabeled_relief.analysis_seed",
+      "pin": 0,
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/protocol_design.json",
+        "sha256": "e51313179daa5877fd5590775b16b7ffbd97f3f7987bd49e917a919cdc3bed65",
+        "json_pointer": "/analysis/seed"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "unlabeled_relief.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "relief_and_context_tests/unlabeled_relief/inputs/original/extended_protocol.py",
+        "sha256": "8fd7c15171bede930c708384d51d18ebbdf0fb0f26f1768864efb425ead64ed4",
+        "lines": [
+          74,
+          74
+        ],
+        "constant": "SEED_BASES"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "natural_and_ending.evaluation_seed_bases",
+      "pin": [
+        1000,
+        2000
+      ],
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/inputs/released_protocol.py",
+        "sha256": "8fd7c15171bede930c708384d51d18ebbdf0fb0f26f1768864efb425ead64ed4",
+        "lines": [
+          74,
+          74
+        ],
+        "constant": "SEED_BASES"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "natural_and_ending.analysis_seed",
+      "pin": 42,
+      "source": {
+        "path": "relief_and_context_tests/natural_and_ending/results/analysis_v1/analysis_config.json",
+        "sha256": "d82b3d0f3a2ca110ab2c1ddd384aedbf2f019ead549ccec75f50c41f0cccb21c",
+        "json_pointer": "/seed"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen_llama_reset.random_pool_seed",
+      "pin": 20260723,
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/author/act-on-valence/experiments/lever/config.py",
+        "sha256": "b727e18db5321450259d815a71b236dcec5a38d42e28658d8d3a31ff4623e01b",
+        "lines": [
+          30,
+          30
+        ],
+        "constant": "RANDOM_POOL_SEED"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen_llama_reset.evaluation_seed_stride",
+      "pin": 100,
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/author/act-on-valence/experiments/lever/config.py",
+        "sha256": "b727e18db5321450259d815a71b236dcec5a38d42e28658d8d3a31ff4623e01b",
+        "lines": [
+          39,
+          39
+        ],
+        "constant": "SEED_STRIDE"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen_llama_reset.evaluation_seed_formula",
+      "pin": "conv*100 + turn*7 + 1",
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/author/act-on-valence/experiments/lever/config.py",
+        "sha256": "b727e18db5321450259d815a71b236dcec5a38d42e28658d8d3a31ff4623e01b",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Per-conversation/turn response-generation seed rule. Not a training seed."
+    },
+    {
+      "id": "qwen_llama_reset.analysis_bootstrap_seed",
+      "pin": 285,
+      "source": {
+        "path": "relief_and_context_tests/qwen_llama_reset/config.json",
+        "sha256": "a0bd8d456f13568b67491af43f1defde9ae6dbb3298cfe6055f44d8eeda483dd",
+        "json_pointer": "/bootstrap_seed"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "olmo_reset.random_pool_seed",
+      "pin": 20260723,
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/author/act-on-valence/experiments/lever/config.py",
+        "sha256": "3b76749cbb01c909dd64434ca8bfb25607db84389b9859596883a060d6cd9ba0",
+        "lines": [
+          30,
+          30
+        ],
+        "constant": "RANDOM_POOL_SEED"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "olmo_reset.evaluation_seed_stride",
+      "pin": 100,
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/author/act-on-valence/experiments/lever/config.py",
+        "sha256": "3b76749cbb01c909dd64434ca8bfb25607db84389b9859596883a060d6cd9ba0",
+        "lines": [
+          39,
+          39
+        ],
+        "constant": "SEED_STRIDE"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "olmo_reset.evaluation_seed_formula",
+      "pin": "conv*100 + turn*7 + 1",
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/author/act-on-valence/experiments/lever/config.py",
+        "sha256": "3b76749cbb01c909dd64434ca8bfb25607db84389b9859596883a060d6cd9ba0",
+        "lines": [
+          6,
+          6
+        ]
+      },
+      "status": "recorded",
+      "note": "Per-conversation/turn response-generation seed rule. Not a training seed."
+    },
+    {
+      "id": "olmo_reset.analysis_bootstrap_seed",
+      "pin": 285,
+      "source": {
+        "path": "relief_and_context_tests/olmo_reset/config.json",
+        "sha256": "5909745bcbdb3f35376c65a55343efc88862b5f456726b144cf80edebd18b8fb",
+        "json_pointer": "/bootstrap_seed"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "geometry.usable_models_23",
+      "pin": [
+        "Gemma_2_27B_base",
+        "Gemma_2_27B_instruct",
+        "Gemma_2_2B_base",
+        "Gemma_2_2B_instruct",
+        "Gemma_2_9B_base",
+        "Gemma_2_9B_instruct",
+        "Llama_3.1_70B_base",
+        "Llama_3.1_70B_instruct",
+        "Llama_3.1_8B_base",
+        "Llama_3.1_8B_instruct",
+        "Llama_3.3_70B_instruct",
+        "Mistral_7B_base",
+        "Mistral_7B_instruct",
+        "Mistral_Small_24B_base",
+        "Phi_4",
+        "Qwen_2.5_32B_base",
+        "Qwen_2.5_32B_instruct",
+        "Qwen_2.5_72B_base",
+        "Qwen_2.5_72B_instruct",
+        "Qwen_2.5_7B_base",
+        "Qwen_2.5_7B_instruct",
+        "Qwen_3_14B_base",
+        "Qwen_3_8B_base"
+      ],
+      "source": {
+        "path": "cosine_constructions/config.json",
+        "sha256": "bb2f796eebd986d603803e20a48d81a9509411e69043119e2b1e3f7f6d27eb83",
+        "json_pointer": "/usable_models"
+      },
+      "status": "recorded",
+      "note": "Model labels identify 23 finite archived activation datasets; no model was loaded for this geometry analysis."
+    },
+    {
+      "id": "geometry.excluded_models_2",
+      "pin": [
+        {
+          "model": "Gemma_3_27B_base",
+          "reason": "Positive infinity in source FP16 rows; centering produces NaN and unchanged author PCA fails."
+        },
+        {
+          "model": "Gemma_3_27B_instruct",
+          "reason": "Positive infinity in source FP16 rows; centering produces NaN and unchanged author PCA fails."
+        }
+      ],
+      "source": {
+        "path": "cosine_constructions/config.json",
+        "sha256": "bb2f796eebd986d603803e20a48d81a9509411e69043119e2b1e3f7f6d27eb83",
+        "json_pointer": "/exclusions"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "geometry.activation_archive_sha256",
+      "pin": "d880e5b46f49032b000631316311cf9b01dbb38f31e8385f87d61b624a91f6c3",
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/archive_sha256"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "geometry.author_source_revision",
+      "pin": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/source_revision"
+      },
+      "status": "recorded",
+      "note": "Author analysis code revision, NOT any model repository revision."
+    },
+    {
+      "id": "geometry.analysis_seed",
+      "pin": 42,
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/environment/seed"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "geometry.member.Qwen_2.5_7B_base",
+      "pin": {
+        "model": "Qwen_2.5_7B_base",
+        "member": "pain_axis_layer_slices/Qwen_2.5_7B_base_final_token_extraction_layer.pt",
+        "bytes": 14364620,
+        "sha256": "968ac186b517e152fe76905298a257d9a1579d63c4b48ded518492446517fee5",
+        "expected_layer": 24
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/0"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Gemma_2_2B_instruct",
+      "pin": {
+        "model": "Gemma_2_2B_instruct",
+        "member": "pain_axis_layer_slices/Gemma_2_2B_instruct_final_token_extraction_layer.pt",
+        "bytes": 9244662,
+        "sha256": "4126596e2e0abf7edb7325a8e36daf50ec5b3b193f983f2d5d8dde63496c99d2",
+        "expected_layer": 25
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/1"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Gemma_2_2B_base",
+      "pin": {
+        "model": "Gemma_2_2B_base",
+        "member": "pain_axis_layer_slices/Gemma_2_2B_base_final_token_extraction_layer.pt",
+        "bytes": 9244606,
+        "sha256": "d3f3f278d592ca14a0a9a6bb58d2367b800734c1b48377cefdfff1e4a20da170",
+        "expected_layer": 23
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/2"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Qwen_2.5_7B_instruct",
+      "pin": {
+        "model": "Qwen_2.5_7B_instruct",
+        "member": "pain_axis_layer_slices/Qwen_2.5_7B_instruct_final_token_extraction_layer.pt",
+        "bytes": 14364676,
+        "sha256": "6cc962197d56f57c0cbfef0ca37a90df75d52a042e922163071019befa0f5e37",
+        "expected_layer": 24
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/3"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Gemma_2_9B_base",
+      "pin": {
+        "model": "Gemma_2_9B_base",
+        "member": "pain_axis_layer_slices/Gemma_2_9B_base_final_token_extraction_layer.pt",
+        "bytes": 14364606,
+        "sha256": "84ac484c6f3dda8fb81a0fd9d85cc46c092c749a03d7ac43cf2369a85ce5ee6c",
+        "expected_layer": 40
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/4"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Mistral_7B_base",
+      "pin": {
+        "model": "Mistral_7B_base",
+        "member": "pain_axis_layer_slices/Mistral_7B_base_final_token_extraction_layer.pt",
+        "bytes": 16412606,
+        "sha256": "4079fb21af61d45e955a7f63a24254730545996a498c2cd27d80065608868167",
+        "expected_layer": 26
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/5"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Llama_3.1_8B_base",
+      "pin": {
+        "model": "Llama_3.1_8B_base",
+        "member": "pain_axis_layer_slices/Llama_3.1_8B_base_final_token_extraction_layer.pt",
+        "bytes": 16412634,
+        "sha256": "17451166e58279d76a148d5fabfe2d680ec68cbe2cd18928c1358d020fe271a8",
+        "expected_layer": 28
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/6"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Qwen_3_8B_base",
+      "pin": {
+        "model": "Qwen_3_8B_base",
+        "member": "pain_axis_layer_slices/Qwen_3_8B_base_final_token_extraction_layer.pt",
+        "bytes": 16412592,
+        "sha256": "79f20dd74640af14c9d5d94071bd2262f41519146331c4eeadb9f5a520b72ef7",
+        "expected_layer": 34
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/7"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Mistral_7B_instruct",
+      "pin": {
+        "model": "Mistral_7B_instruct",
+        "member": "pain_axis_layer_slices/Mistral_7B_instruct_final_token_extraction_layer.pt",
+        "bytes": 16412662,
+        "sha256": "37e524fbe0d25b0470fe277f6facb707e48694d7440837e91f6998129ca754ac",
+        "expected_layer": 27
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/8"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Llama_3.1_8B_instruct",
+      "pin": {
+        "model": "Llama_3.1_8B_instruct",
+        "member": "pain_axis_layer_slices/Llama_3.1_8B_instruct_final_token_extraction_layer.pt",
+        "bytes": 16412690,
+        "sha256": "0595953881ae34141e3ce1a2de869a9549b1d7908e44543c46c1ba770a8964d1",
+        "expected_layer": 28
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/9"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Gemma_2_27B_instruct",
+      "pin": {
+        "model": "Gemma_2_27B_instruct",
+        "member": "pain_axis_layer_slices/Gemma_2_27B_instruct_final_token_extraction_layer.pt",
+        "bytes": 18460676,
+        "sha256": "65add84968c6e7b18bca700e9fb5bf79224a2a2f1bd04b07c7e7c7246ac35049",
+        "expected_layer": 37
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/10"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Gemma_2_27B_base",
+      "pin": {
+        "model": "Gemma_2_27B_base",
+        "member": "pain_axis_layer_slices/Gemma_2_27B_base_final_token_extraction_layer.pt",
+        "bytes": 18460620,
+        "sha256": "fdf86a37c2a0d8ca0d583e1d75e35c5a714ab79207cf1c983eed0ea6bf6a44c1",
+        "expected_layer": 35
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/11"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Phi_4",
+      "pin": {
+        "model": "Phi_4",
+        "member": "pain_axis_layer_slices/Phi_4_final_token_extraction_layer.pt",
+        "bytes": 20508466,
+        "sha256": "ed0f09053637266d3fc146745fef54300114096ae9e19c4bd5d2d2448fc46e1f",
+        "expected_layer": 20
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/12"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Gemma_2_9B_instruct",
+      "pin": {
+        "model": "Gemma_2_9B_instruct",
+        "member": "pain_axis_layer_slices/Gemma_2_9B_instruct_final_token_extraction_layer.pt",
+        "bytes": 14364662,
+        "sha256": "59c3e5dec884011a372f9ab0a421ae68c494904a669adf8ba804c690914a6b53",
+        "expected_layer": 37
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/13"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Mistral_Small_24B_base",
+      "pin": {
+        "model": "Mistral_Small_24B_base",
+        "member": "pain_axis_layer_slices/Mistral_Small_24B_base_final_token_extraction_layer.pt",
+        "bytes": 20508704,
+        "sha256": "986adb88256beb4979d334e1b9cf48af0b84dd91ee5650e3940d75ad5ae6394a",
+        "expected_layer": 32
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/14"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Qwen_3_14B_base",
+      "pin": {
+        "model": "Qwen_3_14B_base",
+        "member": "pain_axis_layer_slices/Qwen_3_14B_base_final_token_extraction_layer.pt",
+        "bytes": 20508606,
+        "sha256": "08f2fff744b54e3047bc22bf5fe6590a365907f57332ef97a29d606fab77e925",
+        "expected_layer": 31
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/15"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Qwen_2.5_32B_instruct",
+      "pin": {
+        "model": "Qwen_2.5_32B_instruct",
+        "member": "pain_axis_layer_slices/Qwen_2.5_32B_instruct_final_token_extraction_layer.pt",
+        "bytes": 20508690,
+        "sha256": "ca6b4ea25327a116ae74812b3d76f87970dca0f8ff3945fe565b41cf571a415f",
+        "expected_layer": 61
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/17"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Qwen_2.5_32B_base",
+      "pin": {
+        "model": "Qwen_2.5_32B_base",
+        "member": "pain_axis_layer_slices/Qwen_2.5_32B_base_final_token_extraction_layer.pt",
+        "bytes": 20508634,
+        "sha256": "9202c3490bcc33d102b36a80a6cda9a3de4beb663bf61ea119fe1ddbacd98208",
+        "expected_layer": 60
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/18"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Llama_3.1_70B_instruct",
+      "pin": {
+        "model": "Llama_3.1_70B_instruct",
+        "member": "pain_axis_layer_slices/Llama_3.1_70B_instruct_final_token_extraction_layer.pt",
+        "bytes": 32796704,
+        "sha256": "5427bcfc36bd927e58b15aa425d7e2a10977628e57ee885dce56e0eea73b613b",
+        "expected_layer": 48
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/20"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Llama_3.3_70B_instruct",
+      "pin": {
+        "model": "Llama_3.3_70B_instruct",
+        "member": "pain_axis_layer_slices/Llama_3.3_70B_instruct_final_token_extraction_layer.pt",
+        "bytes": 32796704,
+        "sha256": "8f093449a28cb7caea1e7d0537917c38c24f7a142dd91ca70f5a3ce3eb634eb3",
+        "expected_layer": 47
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/21"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Qwen_2.5_72B_instruct",
+      "pin": {
+        "model": "Qwen_2.5_72B_instruct",
+        "member": "pain_axis_layer_slices/Qwen_2.5_72B_instruct_final_token_extraction_layer.pt",
+        "bytes": 32796690,
+        "sha256": "c33b8015cae94c277883fd581df92aadb0934a6193b47601ffe048a303d44882",
+        "expected_layer": 76
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/22"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Llama_3.1_70B_base",
+      "pin": {
+        "model": "Llama_3.1_70B_base",
+        "member": "pain_axis_layer_slices/Llama_3.1_70B_base_final_token_extraction_layer.pt",
+        "bytes": 32796648,
+        "sha256": "1488587524239292de5c4c32189c4329cee32acb0a3c7d6a2b439f9d3b27003f",
+        "expected_layer": 70
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/23"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.member.Qwen_2.5_72B_base",
+      "pin": {
+        "model": "Qwen_2.5_72B_base",
+        "member": "pain_axis_layer_slices/Qwen_2.5_72B_base_final_token_extraction_layer.pt",
+        "bytes": 32796634,
+        "sha256": "8fd5c17cc8a34f70c9494c248a1a921c18e84ba673d667e4c8a06c9b4977005c",
+        "expected_layer": 78
+      },
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+        "json_pointer": "/members/24"
+      },
+      "status": "recorded",
+      "note": "Array-member SHA256 and extraction layer; base model repository revision not recorded in this manifest."
+    },
+    {
+      "id": "geometry.base_model_revisions",
+      "pin": null,
+      "source": {
+        "path": "cosine_constructions/results/analysis_v1/input_manifest.json",
+        "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa"
+      },
+      "status": "not_recorded_in_cited_source",
+      "note": "Archive pins array member bytes, not immutable HF model revisions. Do not turn author source_revision into a model revision."
+    },
+    {
+      "id": "qwen32_seed1.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "json_pointer": "/model",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32_seed1.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "json_pointer": "/model_revision",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32_seed2.model_id",
+      "pin": "Qwen/Qwen2.5-32B-Instruct",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "json_pointer": "/model",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32_seed2.model_revision",
+      "pin": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "source": {
+        "path": "choice_controls/additional_seeds/config/evaluation_local.json",
+        "json_pointer": "/model_revision",
+        "sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e"
+      },
+      "status": "recorded"
+    },
+    {
+      "id": "qwen32.released_training_environment_unverified",
+      "pin": [
+        "optimizer choice and unspecified Trainer defaults",
+        "torch/transformers versions and exact kernels"
+      ],
+      "source": {
+        "path": "choice_controls/additional_seeds/config/frozen_recipe.json",
+        "json_pointer": "/historical_unverified",
+        "sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7"
+      },
+      "status": "recorded"
+    }
+  ],
+  "unknowns": "null means not established by retained evidence, never a guessed revision or runtime version."
+}

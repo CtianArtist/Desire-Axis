@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "publication_status": "pending",
+  "assets": [
+    {
+      "name": "extraction-layer first-person activation slices",
+      "filename": "pain_axis_layer_slices-20260920T033111Z-1-001.zip",
+      "url": null,
+      "status": "pending",
+      "bytes": 421518920,
+      "sha256": "d880e5b46f49032b000631316311cf9b01dbb38f31e8385f87d61b624a91f6c3",
+      "required_for": "Full numerical reconstruction from original arrays; frozen-table verification does not require this asset.",
+      "member_count": 25,
+      "uncompressed_member_bytes": 504524088,
+      "members_manifest": "results/analysis_v1/input_manifest.json"
+    }
+  ],
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

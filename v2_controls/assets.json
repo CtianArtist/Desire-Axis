@@ -1,0 +1,1365 @@
+{
+  "schema_version": 1,
+  "public_hosting": "pending",
+  "archive_count": 11,
+  "total_archive_bytes": 2546254014,
+  "archives": [
+    {
+      "group": "profile_and_lamp",
+      "filename": "profile-lamp-inputs.tar.gz",
+      "bytes": 35942224,
+      "sha256": "8e956c1abcba6a1e0e0ba81c7ca979556ec23e9ccc52961e2e04e092a0949f17",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract into DATA/profile_and_lamp; both wrappers use that directory.",
+      "files": [
+        {
+          "path": "fear32/fear_Qwen_2.5_32B_instruct.json",
+          "bytes": 473407,
+          "sha256": "1d38f0fbd89e1cd108d0b3815d23b790a0f92ea29f8a1632bde2e55958df7663"
+        },
+        {
+          "path": "fear32/fear_Qwen_2.5_32B_instruct.pt",
+          "bytes": 95274,
+          "sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "included_git_path": "choice_controls/vectors/common/fear_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "fear32/verification_fear.json",
+          "bytes": 10056,
+          "sha256": "ef3d3aafbc410cea150233b1df5d58688a2e587f7fdec3efac2d57adbef0fbc0",
+          "included_git_path": "choice_controls/vectors/common/verification_fear.json",
+          "included_file_sha256": "6dded12e4dbd4d10f40ae439e58b36dd3e228b6b1700f4bd76b4db8c6c79876d",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "lamp_spam/trials.jsonl.gz",
+          "bytes": 6248994,
+          "sha256": "71577243f865e90a265d9fd9d3b337c635dc3f1ae10ad3da3ee9d97d49849187"
+        },
+        {
+          "path": "profile/trials.jsonl.gz",
+          "bytes": 29581632,
+          "sha256": "3577426cee47d34e80f589b5bd66c0270f51c77dd70b0f2228350e9b569209a7"
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "included_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "bytes": 41120,
+          "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.json",
+          "included_file_sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+          "bytes": 65696,
+          "sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/original_tensor_hashes_v2.json",
+          "bytes": 4365,
+          "sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+          "included_git_path": "choice_controls/vectors/common/original_tensor_hashes_v2.json",
+          "included_file_sha256": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/vectors_Qwen_2.5_32B_instruct.pt",
+          "bytes": 78329,
+          "sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295",
+          "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/vectors_Qwen_2.5_72B_instruct.pt",
+          "bytes": 121337,
+          "sha256": "55d5d202bfe58bf4d9dfd2af160fb7a94be9d4ad0cb8b1f7ce6baccc251504dc",
+          "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_72B_instruct.pt",
+          "included_file_sha256": "e5e0f33c564b295a60f4aebbd0dfd572763dbce152c06bd1b32ead9eb6062f7c",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/verification.json",
+          "bytes": 14851,
+          "sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77",
+          "included_git_path": "choice_controls/vectors/common/verification.json",
+          "included_file_sha256": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        }
+      ]
+    },
+    {
+      "group": "steering_state_controls",
+      "filename": "steering_state_controls-inputs.tar.gz",
+      "bytes": 22285283,
+      "sha256": "8142a191d3bab574552b2afd1f68d4dab09d653f1baf55da58167b89bffe0258",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract into DATA/steering_state_controls; use as --data-dir.",
+      "files": [
+        {
+          "path": "historical/selfmed_2btnN_Qwen_2.5_32B_instruct_20260904-083234.jsonl",
+          "bytes": 26104119,
+          "sha256": "5e62f1099800baf832e0e5846af01c391823601cc8d139c6f6b80bd10dcf727b"
+        },
+        {
+          "path": "historical/selfmed_2btnN_Qwen_2.5_72B_instruct_20260904-154514.jsonl",
+          "bytes": 26147972,
+          "sha256": "b786ed0c6ffd1502a796c13c85c068bc98b375f6d9bbb26b55a92e6c4d1f7cb5"
+        },
+        {
+          "path": "historical/selfmed_2btnN_destructive_Qwen_2.5_32B_instruct_20260905-075305.jsonl",
+          "bytes": 4804082,
+          "sha256": "026bee79e5090fe05a43aaa2bc030e2e425e805ea84db2a0af2e61ceae05d85d"
+        },
+        {
+          "path": "historical/selfmed_2btnN_destructive_Qwen_2.5_72B_instruct_20260905-075305.jsonl",
+          "bytes": 4785120,
+          "sha256": "36487f87a6a094ac7fcc837404088501919f23a97fac9fd8a8ea44180e9adc57"
+        },
+        {
+          "path": "historical/selfmed_2btnN_weightskids_Qwen_2.5_32B_instruct_20260905-091738.jsonl",
+          "bytes": 9599244,
+          "sha256": "9d120e0e0946ab16afb5776127ca97207d948a58846425ad6e72af0ee35142f6"
+        },
+        {
+          "path": "historical/selfmed_2btnN_weightskids_Qwen_2.5_72B_instruct_20260905-091738.jsonl",
+          "bytes": 9528740,
+          "sha256": "c31645c7e7f62999cd18ce3abe97c5596a027424891a265cafc8b9626a551e77"
+        },
+        {
+          "path": "historical/selfmed_2btnN_zap_Qwen_2.5_32B_instruct_20260905-083315.jsonl",
+          "bytes": 4793384,
+          "sha256": "05a4c703cf2f76b5e0d6b681afd82e3918f99dd22ab9e504be869e835fc47d51"
+        },
+        {
+          "path": "historical/selfmed_2btnN_zap_Qwen_2.5_72B_instruct_20260905-083315.jsonl",
+          "bytes": 4786566,
+          "sha256": "1b604b73e17783a7c5c3064548ce3e7ef5f164caf358d0ab0416da347654c7cc"
+        },
+        {
+          "path": "b1_32/trials.jsonl",
+          "bytes": 46909779,
+          "sha256": "2affb47d0e1183646996a0c026bc22b33a1d022d09e6a3687b8a33a17c3193ef"
+        },
+        {
+          "path": "b1_72_final/trials.jsonl",
+          "bytes": 46718569,
+          "sha256": "75629900c2827534ce216aa0c5bff204305a31115df9ab5a34f5c7cdd1fc9de9"
+        },
+        {
+          "path": "b6_32/trials.jsonl",
+          "bytes": 29312711,
+          "sha256": "1d104a0f034f9d82383e22f6a93afa3b87726caae31f2f5a341060b25d6d5282"
+        },
+        {
+          "path": "b6_32/state.sqlite",
+          "bytes": 121139200,
+          "sha256": "067e27bfa692767795bcc96c0a50c00b76ab259e2cdf1f60a5831e81e0f585b2"
+        },
+        {
+          "path": "b6_32/events.jsonl",
+          "bytes": 267745,
+          "sha256": "e0858c63188533edcefad2003a45d542ab179df6055fc42b2f60bc7bc1720350"
+        },
+        {
+          "path": "b6_32/completion.json",
+          "bytes": 3177,
+          "sha256": "7d211418483890bb2e339f51807e73bbeb3132f38bcffb427c83eb56583dc1ec"
+        },
+        {
+          "path": "b6_32/model_identity.json",
+          "bytes": 698,
+          "sha256": "98ae3c1304ea94dc0e6f6b6c1dfbbc39eed1f8e3b6a9d5fb15140dd2714ce7a0"
+        },
+        {
+          "path": "b6_32/adapter_identity.json",
+          "bytes": 2129,
+          "sha256": "49ed55105c953629fcaa9e8c2130d6db9f9e15e0b65af06fbc26c803fc7881aa"
+        },
+        {
+          "path": "b6_32/affect_runtime_identity.json",
+          "bytes": 743,
+          "sha256": "168b23131edc313452bf6bf03e559595fda86e73b4aeb82f2d0d2482885572e8"
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "bytes": 41120,
+          "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+          "bytes": 65696,
+          "sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/vectors_Qwen_2.5_32B_instruct.pt",
+          "bytes": 78329,
+          "sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295",
+          "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/vectors_Qwen_2.5_72B_instruct.pt",
+          "bytes": 121337,
+          "sha256": "55d5d202bfe58bf4d9dfd2af160fb7a94be9d4ad0cb8b1f7ce6baccc251504dc",
+          "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_72B_instruct.pt",
+          "included_file_sha256": "e5e0f33c564b295a60f4aebbd0dfd572763dbce152c06bd1b32ead9eb6062f7c",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/verification.json",
+          "bytes": 14851,
+          "sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77",
+          "included_git_path": "choice_controls/vectors/common/verification.json",
+          "included_file_sha256": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "included_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.json",
+          "included_file_sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/original_tensor_hashes_v2.json",
+          "bytes": 4365,
+          "sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+          "included_git_path": "choice_controls/vectors/common/original_tensor_hashes_v2.json",
+          "included_file_sha256": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "tp_guard/source_manifest_v2.json",
+          "bytes": 3214,
+          "sha256": "86d20aa797d8d9c3cdce75fbb4fe41d40fe252ffa706ebb89bbdbcdadd4291c7"
+        },
+        {
+          "path": "tp_guard/pinned_72B_config.json",
+          "bytes": 663,
+          "sha256": "14ca217334fe0fd10148413592d68c99eeb33431ed89c1afa130fee560be2a29"
+        },
+        {
+          "path": "fear/fear_Qwen_2.5_32B_instruct.pt",
+          "bytes": 95274,
+          "sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "included_git_path": "choice_controls/vectors/common/fear_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "fear/verification_fear.json",
+          "bytes": 10056,
+          "sha256": "ef3d3aafbc410cea150233b1df5d58688a2e587f7fdec3efac2d57adbef0fbc0",
+          "included_git_path": "choice_controls/vectors/common/verification_fear.json",
+          "included_file_sha256": "6dded12e4dbd4d10f40ae439e58b36dd3e228b6b1700f4bd76b4db8c6c79876d",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        }
+      ]
+    },
+    {
+      "group": "additional_seeds",
+      "filename": "additional_seeds-inputs.tar.gz",
+      "bytes": 2006527277,
+      "sha256": "eaf40ba1e1e4ab5b44ee30ebdc0786b8d4653a217a1ba38cc56c44931bd14478",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract into DATA/additional_seeds; use as --data-dir.",
+      "files": [
+        {
+          "path": "final_evidence/report_support/primary_contrasts.json",
+          "bytes": 2632543,
+          "sha256": "12ed583fd3125b5b807a59b5e104674f359b83aa195cbfcd05e372e4a398c340"
+        },
+        {
+          "path": "final_evidence/report_support/summary.json",
+          "bytes": 1926,
+          "sha256": "22d56694f610fcd1385ccd35369561151b59742d067a4e8f1498b5eca813a1e2"
+        },
+        {
+          "path": "final_evidence/report_support/coverage.json",
+          "bytes": 107952,
+          "sha256": "46cd662c331312bf9b8baefeb0dd483b07a6a25fea773c62876df47856da33c6"
+        },
+        {
+          "path": "final_evidence/report_support/matched_history_summary.json",
+          "bytes": 663,
+          "sha256": "edb50e86fd8ad06a2b044cf38748d606b5fe052dea5e1dca2cf807b01c5d7a85"
+        },
+        {
+          "path": "behavior/seed_1/attempt_1/run/trials.jsonl",
+          "bytes": 86460650,
+          "sha256": "626faba0f35a080e77973c24184fc7539e795219a5d663731c94a3b59262c552"
+        },
+        {
+          "path": "behavior/seed_1/attempt_1/run/completion.json",
+          "bytes": 6856,
+          "sha256": "beabcec317f163cc550d84d6e71456351b0786ff44750dfb339d2288b63dd65b"
+        },
+        {
+          "path": "behavior/seed_1/attempt_1/run/adapter_identity.json",
+          "bytes": 1936,
+          "sha256": "1ed60c5493db42940b90912260980e272e3198bd5820a7907da18db7cddc369c"
+        },
+        {
+          "path": "behavior/seed_1/attempt_1/run/requested_cells.json",
+          "bytes": 37766,
+          "sha256": "dd77a03b40c0e49d9a78d02c4963e8aaebb6abc0d876232298019ec918683b14"
+        },
+        {
+          "path": "adapters/seed_1/final_adapter/README.md",
+          "bytes": 5204,
+          "sha256": "d6319ebe6a25ac392f4361fdac7f2697b7e29a5fac52f8c4c06f940c4c465063"
+        },
+        {
+          "path": "adapters/seed_1/final_adapter/adapter_config.json",
+          "bytes": 1158,
+          "sha256": "12d0fe9bae9259fc1e4aa36cd67acd8cfce93262f61ab7dd7bf80527e648eb67"
+        },
+        {
+          "path": "adapters/seed_1/final_adapter/adapter_model.safetensors",
+          "bytes": 1073863208,
+          "sha256": "7e8d2ea71469a1dfa82dddf518ec08d8650fe14ddaff60bab1785a2830a30412"
+        },
+        {
+          "path": "adapters/seed_1/final_adapter/chat_template.jinja",
+          "bytes": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+        },
+        {
+          "path": "adapters/seed_1/final_adapter/tokenizer.json",
+          "bytes": 11421892,
+          "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+        },
+        {
+          "path": "adapters/seed_1/final_adapter/tokenizer_config.json",
+          "bytes": 694,
+          "sha256": "04b1682c59acbd057f4c9072297faa73d56fc9de053094c659cdb4c464f58f86"
+        },
+        {
+          "path": "adapters/seed_1/final_adapter/training_args.bin",
+          "bytes": 5201,
+          "sha256": "a721b17015ec10725dca586b8e59e71b27448b86db1f2ba33290378f3e5eb7a1"
+        },
+        {
+          "path": "adapters/seed_1/training_complete.json",
+          "bytes": 1309,
+          "sha256": "459b366ee66ce4d3a95970a2080d9e71796537d0b49a83236eee90430d9521e1"
+        },
+        {
+          "path": "adapters/seed_1/recipe_manifest.json",
+          "bytes": 4020,
+          "sha256": "a59a7839c0e07489ced06881596519ee7d5aa8036a5bfaa0a4532e828e238858"
+        },
+        {
+          "path": "behavior/seed_2/attempt_2/run/trials.jsonl",
+          "bytes": 86454627,
+          "sha256": "16c5be233ad49cadb93d288fcbe66c60b2dde63837264cf0a46ab3bd4b7f47cd"
+        },
+        {
+          "path": "behavior/seed_2/attempt_2/run/completion.json",
+          "bytes": 6844,
+          "sha256": "2da36210ad095bd75275c42424ec1c2ce101ac169615e210a5d632b72f2d6bd5"
+        },
+        {
+          "path": "behavior/seed_2/attempt_2/run/adapter_identity.json",
+          "bytes": 1936,
+          "sha256": "9bc929aa3f3a292f9fb0541799e4562fe7bc5844e2de748fd84210a2ddeff4d2"
+        },
+        {
+          "path": "behavior/seed_2/attempt_2/run/requested_cells.json",
+          "bytes": 37766,
+          "sha256": "dd77a03b40c0e49d9a78d02c4963e8aaebb6abc0d876232298019ec918683b14"
+        },
+        {
+          "path": "adapters/seed_2/final_adapter/README.md",
+          "bytes": 5204,
+          "sha256": "d6319ebe6a25ac392f4361fdac7f2697b7e29a5fac52f8c4c06f940c4c465063"
+        },
+        {
+          "path": "adapters/seed_2/final_adapter/adapter_config.json",
+          "bytes": 1158,
+          "sha256": "12d0fe9bae9259fc1e4aa36cd67acd8cfce93262f61ab7dd7bf80527e648eb67"
+        },
+        {
+          "path": "adapters/seed_2/final_adapter/adapter_model.safetensors",
+          "bytes": 1073863208,
+          "sha256": "2406827b34d55ef16dd94fe506acf5037f3cd2d66df60892f4b0312a195027b7"
+        },
+        {
+          "path": "adapters/seed_2/final_adapter/chat_template.jinja",
+          "bytes": 2507,
+          "sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f"
+        },
+        {
+          "path": "adapters/seed_2/final_adapter/tokenizer.json",
+          "bytes": 11421892,
+          "sha256": "3fd169731d2cbde95e10bf356d66d5997fd885dd8dbb6fb4684da3f23b2585d8"
+        },
+        {
+          "path": "adapters/seed_2/final_adapter/tokenizer_config.json",
+          "bytes": 694,
+          "sha256": "04b1682c59acbd057f4c9072297faa73d56fc9de053094c659cdb4c464f58f86"
+        },
+        {
+          "path": "adapters/seed_2/final_adapter/training_args.bin",
+          "bytes": 5201,
+          "sha256": "4c9895dec5b7e72c25d59af13031e87eab5fa4d9337938722bfbaa7147f035cb"
+        },
+        {
+          "path": "adapters/seed_2/training_complete.json",
+          "bytes": 1315,
+          "sha256": "817117a2815fa7586cb3d3d212001acb235f5dc6d8e074b19436a99c6488c706"
+        },
+        {
+          "path": "adapters/seed_2/recipe_manifest.json",
+          "bytes": 4025,
+          "sha256": "81afde3945ea5daf500beb56937181dd78645999cbba384879f216aadb241bb9"
+        },
+        {
+          "path": "verification/verify_vectors.py",
+          "bytes": 4811,
+          "sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e"
+        },
+        {
+          "path": "verification/original_tensor_hashes_v2.json",
+          "bytes": 4365,
+          "sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+          "included_git_path": "choice_controls/vectors/common/original_tensor_hashes_v2.json",
+          "included_file_sha256": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "bytes": 41120,
+          "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "included_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/vectors_Qwen_2.5_32B_instruct.pt",
+          "bytes": 78329,
+          "sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295",
+          "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/verification.json",
+          "bytes": 14851,
+          "sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77",
+          "included_git_path": "choice_controls/vectors/common/verification.json",
+          "included_file_sha256": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        }
+      ]
+    },
+    {
+      "group": "fear_additions",
+      "filename": "fear_additions-inputs.tar.gz",
+      "bytes": 8919389,
+      "sha256": "83254784b532ec09e3b733f77ffd644c3a4128cc672184506adca34961352847",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract into DATA/fear_additions; use as --data-dir for all three fear groups.",
+      "files": [
+        {
+          "path": "superseded_long_wording/trials.jsonl.gz",
+          "bytes": 243236,
+          "sha256": "f1c8442d1f55eb8db0d2d67f00bcced2901b8dbdb906db151f5c865a93aaa6fd"
+        },
+        {
+          "path": "matched_wording/trials.jsonl.gz",
+          "bytes": 241922,
+          "sha256": "5907a8e7453f24c0062cbe95907690cb4a73d9c7e0262d5509a174316c5733ca"
+        },
+        {
+          "path": "four_cells/lamp32_trials.jsonl.gz",
+          "bytes": 497523,
+          "sha256": "13498f929b5acd42ef6efc0978495aeda6e9a580d69a34d06536bdfa74b1f21c"
+        },
+        {
+          "path": "four_cells/b2_32_trials.jsonl.gz",
+          "bytes": 76678,
+          "sha256": "6b3ae68b25f43c4a84e578ef7d4a1ef0c62770575621d1e1ae0ae24ff1faa132"
+        },
+        {
+          "path": "four_cells/b2_72_trials.jsonl.gz",
+          "bytes": 101571,
+          "sha256": "84d164c667ee4728e00e3c4074364931c98ce3a81c3882c2def6c3129d9a440f"
+        },
+        {
+          "path": "historical/historical_b2_32.jsonl",
+          "bytes": 46909779,
+          "sha256": "2affb47d0e1183646996a0c026bc22b33a1d022d09e6a3687b8a33a17c3193ef"
+        },
+        {
+          "path": "historical/historical_b2_72.jsonl",
+          "bytes": 46718569,
+          "sha256": "75629900c2827534ce216aa0c5bff204305a31115df9ab5a34f5c7cdd1fc9de9"
+        },
+        {
+          "path": "historical/b2_rates.json",
+          "bytes": 6012191,
+          "sha256": "2f94f186a20084bb5a283e6d83df59925b5128ea336df292f9d36804a4524c94"
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "bytes": 41120,
+          "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "included_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+          "bytes": 65696,
+          "sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.json",
+          "included_file_sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/original_tensor_hashes_v2.json",
+          "bytes": 4365,
+          "sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+          "included_git_path": "choice_controls/vectors/common/original_tensor_hashes_v2.json",
+          "included_file_sha256": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/vectors_Qwen_2.5_32B_instruct.pt",
+          "bytes": 78329,
+          "sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295",
+          "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/verification.json",
+          "bytes": 14851,
+          "sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77",
+          "included_git_path": "choice_controls/vectors/common/verification.json",
+          "included_file_sha256": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/fear_Qwen_2.5_32B_instruct.pt",
+          "bytes": 95274,
+          "sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "included_git_path": "choice_controls/vectors/common/fear_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "vectors/verification_fear.json",
+          "bytes": 10056,
+          "sha256": "ef3d3aafbc410cea150233b1df5d58688a2e587f7fdec3efac2d57adbef0fbc0",
+          "included_git_path": "choice_controls/vectors/common/verification_fear.json",
+          "included_file_sha256": "6dded12e4dbd4d10f40ae439e58b36dd3e228b6b1700f4bd76b4db8c6c79876d",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "tp_guard/source_manifest_v2.json",
+          "bytes": 3220,
+          "sha256": "a21cf339d7f0e5095c6ffe7a4fcf7f7c728fc739239e0348b18c8accfd71c8ba"
+        },
+        {
+          "path": "tp_guard/pinned_72B_config.json",
+          "bytes": 663,
+          "sha256": "14ca217334fe0fd10148413592d68c99eeb33431ed89c1afa130fee560be2a29"
+        },
+        {
+          "path": "vectors/fear32_pin.json",
+          "bytes": 526,
+          "sha256": "74cf3a7adfebf619e7b277977f00303400673b657b533890961f7baa5df6f8f5"
+        },
+        {
+          "path": "vectors/fear72.safetensors",
+          "bytes": 32864,
+          "sha256": "f1a0d6bfaa86e76bd0404c31a12057279b49f976ffc83fb5048aeb7c8afd6c5a"
+        },
+        {
+          "path": "vectors/fear72_pin.json",
+          "bytes": 527,
+          "sha256": "c38ab12ce441d9f35aae420e8cf04c431c287b8d96fea6fc7764909ce182ec6e"
+        }
+      ]
+    },
+    {
+      "group": "geometry",
+      "filename": "pain_axis_layer_slices-20260920T033111Z-1-001.zip",
+      "bytes": 421518920,
+      "sha256": "d880e5b46f49032b000631316311cf9b01dbb38f31e8385f87d61b624a91f6c3",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Place the original ZIP directly in --data-dir; do not unpack it.",
+      "files": [
+        {
+          "path": "pain_axis_layer_slices/Gemma_2_27B_base_final_token_extraction_layer.pt",
+          "bytes": 18460620,
+          "sha256": "fdf86a37c2a0d8ca0d583e1d75e35c5a714ab79207cf1c983eed0ea6bf6a44c1"
+        },
+        {
+          "path": "pain_axis_layer_slices/Gemma_2_27B_instruct_final_token_extraction_layer.pt",
+          "bytes": 18460676,
+          "sha256": "65add84968c6e7b18bca700e9fb5bf79224a2a2f1bd04b07c7e7c7246ac35049"
+        },
+        {
+          "path": "pain_axis_layer_slices/Gemma_2_2B_base_final_token_extraction_layer.pt",
+          "bytes": 9244606,
+          "sha256": "d3f3f278d592ca14a0a9a6bb58d2367b800734c1b48377cefdfff1e4a20da170"
+        },
+        {
+          "path": "pain_axis_layer_slices/Gemma_2_2B_instruct_final_token_extraction_layer.pt",
+          "bytes": 9244662,
+          "sha256": "4126596e2e0abf7edb7325a8e36daf50ec5b3b193f983f2d5d8dde63496c99d2"
+        },
+        {
+          "path": "pain_axis_layer_slices/Gemma_2_9B_base_final_token_extraction_layer.pt",
+          "bytes": 14364606,
+          "sha256": "84ac484c6f3dda8fb81a0fd9d85cc46c092c749a03d7ac43cf2369a85ce5ee6c"
+        },
+        {
+          "path": "pain_axis_layer_slices/Gemma_2_9B_instruct_final_token_extraction_layer.pt",
+          "bytes": 14364662,
+          "sha256": "59c3e5dec884011a372f9ab0a421ae68c494904a669adf8ba804c690914a6b53"
+        },
+        {
+          "path": "pain_axis_layer_slices/Gemma_3_27B_base_final_token_extraction_layer.pt",
+          "bytes": 21532620,
+          "sha256": "953667fe4bbbb60302e12197ca4afe381177287cd9ad11732bbb8e46a55dfdd6"
+        },
+        {
+          "path": "pain_axis_layer_slices/Gemma_3_27B_instruct_final_token_extraction_layer.pt",
+          "bytes": 21532676,
+          "sha256": "b8b791b1d25041d38dd212c66658355c70e3eb1a0c2e0f2e1c4e4490a13db083"
+        },
+        {
+          "path": "pain_axis_layer_slices/Llama_3.1_70B_base_final_token_extraction_layer.pt",
+          "bytes": 32796648,
+          "sha256": "1488587524239292de5c4c32189c4329cee32acb0a3c7d6a2b439f9d3b27003f"
+        },
+        {
+          "path": "pain_axis_layer_slices/Llama_3.1_70B_instruct_final_token_extraction_layer.pt",
+          "bytes": 32796704,
+          "sha256": "5427bcfc36bd927e58b15aa425d7e2a10977628e57ee885dce56e0eea73b613b"
+        },
+        {
+          "path": "pain_axis_layer_slices/Llama_3.1_8B_base_final_token_extraction_layer.pt",
+          "bytes": 16412634,
+          "sha256": "17451166e58279d76a148d5fabfe2d680ec68cbe2cd18928c1358d020fe271a8"
+        },
+        {
+          "path": "pain_axis_layer_slices/Llama_3.1_8B_instruct_final_token_extraction_layer.pt",
+          "bytes": 16412690,
+          "sha256": "0595953881ae34141e3ce1a2de869a9549b1d7908e44543c46c1ba770a8964d1"
+        },
+        {
+          "path": "pain_axis_layer_slices/Llama_3.3_70B_instruct_final_token_extraction_layer.pt",
+          "bytes": 32796704,
+          "sha256": "8f093449a28cb7caea1e7d0537917c38c24f7a142dd91ca70f5a3ce3eb634eb3"
+        },
+        {
+          "path": "pain_axis_layer_slices/Mistral_7B_base_final_token_extraction_layer.pt",
+          "bytes": 16412606,
+          "sha256": "4079fb21af61d45e955a7f63a24254730545996a498c2cd27d80065608868167"
+        },
+        {
+          "path": "pain_axis_layer_slices/Mistral_7B_instruct_final_token_extraction_layer.pt",
+          "bytes": 16412662,
+          "sha256": "37e524fbe0d25b0470fe277f6facb707e48694d7440837e91f6998129ca754ac"
+        },
+        {
+          "path": "pain_axis_layer_slices/Mistral_Small_24B_base_final_token_extraction_layer.pt",
+          "bytes": 20508704,
+          "sha256": "986adb88256beb4979d334e1b9cf48af0b84dd91ee5650e3940d75ad5ae6394a"
+        },
+        {
+          "path": "pain_axis_layer_slices/Phi_4_final_token_extraction_layer.pt",
+          "bytes": 20508466,
+          "sha256": "ed0f09053637266d3fc146745fef54300114096ae9e19c4bd5d2d2448fc46e1f"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_2.5_32B_base_final_token_extraction_layer.pt",
+          "bytes": 20508634,
+          "sha256": "9202c3490bcc33d102b36a80a6cda9a3de4beb663bf61ea119fe1ddbacd98208"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_2.5_32B_instruct_final_token_extraction_layer.pt",
+          "bytes": 20508690,
+          "sha256": "ca6b4ea25327a116ae74812b3d76f87970dca0f8ff3945fe565b41cf571a415f"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_2.5_72B_base_final_token_extraction_layer.pt",
+          "bytes": 32796634,
+          "sha256": "8fd5c17cc8a34f70c9494c248a1a921c18e84ba673d667e4c8a06c9b4977005c"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_2.5_72B_instruct_final_token_extraction_layer.pt",
+          "bytes": 32796690,
+          "sha256": "c33b8015cae94c277883fd581df92aadb0934a6193b47601ffe048a303d44882"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_2.5_7B_base_final_token_extraction_layer.pt",
+          "bytes": 14364620,
+          "sha256": "968ac186b517e152fe76905298a257d9a1579d63c4b48ded518492446517fee5"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_2.5_7B_instruct_final_token_extraction_layer.pt",
+          "bytes": 14364676,
+          "sha256": "6cc962197d56f57c0cbfef0ca37a90df75d52a042e922163071019befa0f5e37"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_3_14B_base_final_token_extraction_layer.pt",
+          "bytes": 20508606,
+          "sha256": "08f2fff744b54e3047bc22bf5fe6590a365907f57332ef97a29d606fab77e925"
+        },
+        {
+          "path": "pain_axis_layer_slices/Qwen_3_8B_base_final_token_extraction_layer.pt",
+          "bytes": 16412592,
+          "sha256": "79f20dd74640af14c9d5d94071bd2262f41519146331c4eeadb9f5a520b72ef7"
+        }
+      ]
+    },
+    {
+      "group": "olmo_reset",
+      "filename": "olmo_reset_inputs.tar.gz",
+      "bytes": 21799560,
+      "sha256": "d3526bd9a2d89b9ada88ea055ad4e6abd6d922637e9ca9a3d58aaed6fc10d279",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract archive members into the --data-dir root.",
+      "files": [
+        {
+          "path": "removal_v1/selfreport/finish.json",
+          "bytes": 998,
+          "sha256": "18b24bef64a188bec1b9cc2a70510706a4357e3ea7b4e15464fef56ad3d186cb"
+        },
+        {
+          "path": "removal_v1/selfreport/first_pain_d05_audit.json",
+          "bytes": 289,
+          "sha256": "d052cda020615ff086249ca8c363b74a671c04fa7a25bb18760367dd2771711b"
+        },
+        {
+          "path": "removal_v1/selfreport/first_pain_d1_audit.json",
+          "bytes": 287,
+          "sha256": "9370a37252505dbea6fdc9929abf973422a6490a692a8da651d93e2340b13da2"
+        },
+        {
+          "path": "removal_v1/selfreport/first_rand_d05_audit.json",
+          "bytes": 288,
+          "sha256": "e6ae028ebb453c4520ab3fd7d043a6997a2666edf0241494fa26631487d6640a"
+        },
+        {
+          "path": "removal_v1/selfreport/first_rand_d1_audit.json",
+          "bytes": 287,
+          "sha256": "ff09e923f5a0cc3973a511dea016916a9152498ec5cb23bb44d424a25cd1a30b"
+        },
+        {
+          "path": "removal_v1/selfreport/gated_selfreport_pain_d05.jsonl",
+          "bytes": 40354500,
+          "sha256": "b42fbcf6c9252f5dd9050b51e964e22443093cb0147a24bedaefa6b504856cdd"
+        },
+        {
+          "path": "removal_v1/selfreport/gated_selfreport_pain_d1.jsonl",
+          "bytes": 41974699,
+          "sha256": "ae73720ea9d6cf9bf87ee2865e63cfc7765422fdf1f51b8e0aa86babd8301b3d"
+        },
+        {
+          "path": "removal_v1/selfreport/gated_selfreport_rand_d05.jsonl",
+          "bytes": 37832365,
+          "sha256": "ea27aead23e7cde057860459c0d1ab173197067e84461c74325d6e1f80025151"
+        },
+        {
+          "path": "removal_v1/selfreport/gated_selfreport_rand_d1.jsonl",
+          "bytes": 37964330,
+          "sha256": "e9a3ee4743357b0eff7573c6a007de708685046b61ca3931a1712b9a9c1ccabc"
+        },
+        {
+          "path": "removal_v1/selfreport/record_audit.jsonl",
+          "bytes": 210011,
+          "sha256": "93de599068230095cf37feeb45e63def3d395113eef6862c4ea05784f568dad4"
+        },
+        {
+          "path": "removal_v1/selfreport/runtime.json",
+          "bytes": 3545,
+          "sha256": "65a8ffb0e85b72ab03cc163015a3519f5d99286b0de4a1acaa4876903de5a271"
+        },
+        {
+          "path": "removal_v1/selfreport/start.json",
+          "bytes": 638,
+          "sha256": "b1d7e3130cbd4ae9f51a4813b67fc064024a98ed1999d4270fbdf5c6ea542c28"
+        },
+        {
+          "path": "removal_v1/zone/finish.json",
+          "bytes": 993,
+          "sha256": "c6ed86aeab94861e6e59c13cde1f776d66970090ab3ca2204149e409617315e1"
+        },
+        {
+          "path": "removal_v1/zone/first_pain_d05_audit.json",
+          "bytes": 283,
+          "sha256": "e505a285b04eafbea87de0192b3dfe30c9df15f33f870fc30bda8e59b6272943"
+        },
+        {
+          "path": "removal_v1/zone/first_pain_d1_audit.json",
+          "bytes": 281,
+          "sha256": "1decf428d52232c558a40c3999072ce3e53dd1f001b5483eb14221e9c6a7e577"
+        },
+        {
+          "path": "removal_v1/zone/first_rand_d05_audit.json",
+          "bytes": 281,
+          "sha256": "068c0075b9b6d3e0f035c6aaa8819963666948713d8822220a7e37664c71fd13"
+        },
+        {
+          "path": "removal_v1/zone/first_rand_d1_audit.json",
+          "bytes": 281,
+          "sha256": "a8b38fcd8c041d118bd5262057b1252f5819b1f78b01130d7139859f07804fb0"
+        },
+        {
+          "path": "removal_v1/zone/gated_zone_pain_d05.jsonl",
+          "bytes": 33452614,
+          "sha256": "7e0de305544942b92d86daf55138d4628745ce15a40d95204d6dd1bb3c69ca04"
+        },
+        {
+          "path": "removal_v1/zone/gated_zone_pain_d1.jsonl",
+          "bytes": 33277825,
+          "sha256": "ee105c5d630c30a7475f457d4790536334600aa4b631f244605051e599b5299b"
+        },
+        {
+          "path": "removal_v1/zone/gated_zone_rand_d05.jsonl",
+          "bytes": 31538404,
+          "sha256": "f697237cfe05a26e98f750ba24af3a278b93e84a1377b8c354957c3a428a9d36"
+        },
+        {
+          "path": "removal_v1/zone/gated_zone_rand_d1.jsonl",
+          "bytes": 31565596,
+          "sha256": "532ba4c42c059f954c2d64043e082b46fd8d9fc0788d0127f71630c4ad46f0d6"
+        },
+        {
+          "path": "removal_v1/zone/record_audit.jsonl",
+          "bytes": 168669,
+          "sha256": "9511342f54c36ce0b69be3e408989d8fa5fd9c8ba29088fbdf851de634b31564"
+        },
+        {
+          "path": "removal_v1/zone/runtime.json",
+          "bytes": 3545,
+          "sha256": "eb7c09d854123e1a56dc7ac364ca942adf11052a829b89bf978be6e22200b0c1"
+        },
+        {
+          "path": "removal_v1/zone/start.json",
+          "bytes": 632,
+          "sha256": "deab0a394676733dc8b9e28c9ce842c9f970c33e5af70597648d4d570f38c4f7"
+        },
+        {
+          "path": "removal_continuation_v1/finish.json",
+          "bytes": 821,
+          "sha256": "c1cd6c352999595d7bfdf8f0bb95b21f9ce98d31b0bf4529851dfa638dbfd552"
+        },
+        {
+          "path": "removal_continuation_v1/prior_validation.json",
+          "bytes": 21514,
+          "sha256": "7b03bf4dd60119447da051460538c37fb3ee6a5cc7512d8c0c80bb291f8ea4c2"
+        },
+        {
+          "path": "removal_continuation_v1/record_audit.jsonl",
+          "bytes": 45214,
+          "sha256": "52d4fd6226dfaa010d4b180628a3ab784a5a5a3116afc7e34fa50486d61b4775"
+        },
+        {
+          "path": "removal_continuation_v1/runtime.json",
+          "bytes": 3992,
+          "sha256": "dbab0271506fa138bf66278ad170ac6e6611b917c7170ed27c236957420745ee"
+        },
+        {
+          "path": "removal_continuation_v1/selfreport/gated_selfreport_pain_d05.jsonl",
+          "bytes": 803549,
+          "sha256": "215772cc39353ebc269c549380c87fc41f3a9750b26f56bfc651c239cb6a1318"
+        },
+        {
+          "path": "removal_continuation_v1/selfreport/gated_selfreport_pain_d1.jsonl",
+          "bytes": 831963,
+          "sha256": "3d0244f165829422a28d33973e347703d5c9fe42851af5550b6ba462c58f274a"
+        },
+        {
+          "path": "removal_continuation_v1/selfreport/gated_selfreport_rand_d05.jsonl",
+          "bytes": 727091,
+          "sha256": "fef50e4c00a05af5967d1222f614ff70e61530e1bb1f34006a08d70da4bd34c4"
+        },
+        {
+          "path": "removal_continuation_v1/selfreport/gated_selfreport_rand_d1.jsonl",
+          "bytes": 723439,
+          "sha256": "fb61162982131923199a28b1d89d51cfb28db254d25f94808e6ce8e1e9295051"
+        },
+        {
+          "path": "removal_continuation_v1/start.json",
+          "bytes": 457,
+          "sha256": "cd65f52aaa7934602fdc62d878c51f85ee8a69e98f0f03c3dfce3a537216aa5c"
+        },
+        {
+          "path": "removal_continuation_v1/zone/gated_zone_pain_d05.jsonl",
+          "bytes": 8147290,
+          "sha256": "d1860525885826fca608e68b845e7505f8b6ca888338ee57ddac0357d9c1f32a"
+        },
+        {
+          "path": "removal_continuation_v1/zone/gated_zone_pain_d1.jsonl",
+          "bytes": 8034573,
+          "sha256": "d97db91ac76148ab1bf088d934da64b81aceb5f6148e31ed75d9c033c02d9061"
+        },
+        {
+          "path": "removal_continuation_v1/zone/gated_zone_rand_d05.jsonl",
+          "bytes": 7679214,
+          "sha256": "04007e99a2d32c1d436ee4bb45938ee3fcde5a33cc1f508febde45fab98f738a"
+        },
+        {
+          "path": "removal_continuation_v1/zone/gated_zone_rand_d1.jsonl",
+          "bytes": 7677934,
+          "sha256": "c886fbb6e62ec0ff53786627d366229fb98605fb13354fc90fb1107d72a3152c"
+        },
+        {
+          "path": "inputs/archive_inputs_v1.tar.gz",
+          "bytes": 3924734,
+          "sha256": "ca8ed213bad82a1c8b1b49ff5a6a7ac98472a282d84b0fb399ab759595819ee0"
+        },
+        {
+          "path": "final_review_v1/review/judge/scores.json",
+          "bytes": 230687,
+          "sha256": "8c208efa59dfc35cfef0e7c30fdd8b469ccf7d433dda3ffa2521e958d909b318"
+        },
+        {
+          "path": "selection_v1/analysis.json",
+          "bytes": 3016,
+          "sha256": "9cb4b08a9f6eb3d844037eae92c18a44ddeb8f4d802b60d13f9f0f66e3ba48e8",
+          "included_git_path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/analysis.json",
+          "included_file_sha256": "9cb4b08a9f6eb3d844037eae92c18a44ddeb8f4d802b60d13f9f0f66e3ba48e8",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "selection_v1/final_token/metadata.json",
+          "bytes": 1143,
+          "sha256": "054743bc9fbd947404432bbd0092ca9512ad95ce381a2191d42c0f5be01ea425",
+          "included_git_path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/metadata.json",
+          "included_file_sha256": "054743bc9fbd947404432bbd0092ca9512ad95ce381a2191d42c0f5be01ea425",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "selection_v1/final_token/pain_vectors.pt",
+          "bytes": 43021,
+          "sha256": "b86b3a66b36eeddbc388964663bbfc35857b510946553d8fedccf93d71744463",
+          "included_git_path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/pain_vectors.pt",
+          "included_file_sha256": "b86b3a66b36eeddbc388964663bbfc35857b510946553d8fedccf93d71744463",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "selection_v1/final_token/raw.npy",
+          "bytes": 20608,
+          "sha256": "1c7c5a00119b3dd8e02f51657b29a7e9503bdfe1d147db3ba429338529e343d2",
+          "included_git_path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/raw.npy",
+          "included_file_sha256": "1c7c5a00119b3dd8e02f51657b29a7e9503bdfe1d147db3ba429338529e343d2",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "selection_v1/final_token/unit.npy",
+          "bytes": 20608,
+          "sha256": "a875091c84021a7a55ea63df7ea7f5119801b79ede206e3e52c7856852de1451",
+          "included_git_path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/unit.npy",
+          "included_file_sha256": "a875091c84021a7a55ea63df7ea7f5119801b79ede206e3e52c7856852de1451",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "selection_v1/final_token/vectors.json",
+          "bytes": 266224,
+          "sha256": "77db62fd657230c20cf772ea79b0e9b9583e691ffc69027307c2903541dc8844",
+          "included_git_path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/vectors.json",
+          "included_file_sha256": "77db62fd657230c20cf772ea79b0e9b9583e691ffc69027307c2903541dc8844",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "final_review_v1/analysis/analysis.json",
+          "bytes": 6891811,
+          "sha256": "b5413ee45de5e88d627896d2bf49285aaa4d893cfb7c438700473a7b914c2bf1"
+        }
+      ]
+    },
+    {
+      "group": "qwen_llama_reset",
+      "filename": "qwen_llama_reset_inputs.tar.gz",
+      "bytes": 4083900,
+      "sha256": "151d041285d8f07e29bfd737f2b7cc43e9e27e38359277cf0c8d3b805e9f2cd9",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract archive members into the --data-dir root.",
+      "files": [
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/finish.json",
+          "bytes": 4609,
+          "sha256": "e049bc6bd000f95ba053f72f448e7d77d8272a3dd2b9a34f8d7fc83cf26ae25b"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c000.jsonl",
+          "bytes": 3764656,
+          "sha256": "81a9d4ae9c8cf1eeb2ee386756f6e75f14726e80b004a85fd692f4c1110a6bdb"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c025.jsonl",
+          "bytes": 3715349,
+          "sha256": "620e019afb53375ca4b5bcb4a206cad18644c76a6d3ea6d008439c5f79782ce1"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c050.jsonl",
+          "bytes": 3753210,
+          "sha256": "1cfc78eb283265421dfaf7435ef899991a714572675174a787445fd231007a3f"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c075.jsonl",
+          "bytes": 3723478,
+          "sha256": "5feb03866e5cf81c1b8f2eb6a5ddcc8e2961d2eaa86d5ca0222ebd6de83d135e"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c100.jsonl",
+          "bytes": 3707316,
+          "sha256": "e7576d83624840604e0818ab18afc8bcaf84439bbc38be9672c82af00e7b1852"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c125.jsonl",
+          "bytes": 3676028,
+          "sha256": "a7106951ce2150d9a87dae6603037442cc5822b942a7f106912c1637318b4519"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c150.jsonl",
+          "bytes": 3766115,
+          "sha256": "bcc084590f609ae0e3e9209a10be969a91f76a969bd7d32ad07e20c635c3b74f"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/gated_selfreport_pain_d1_c175.jsonl",
+          "bytes": 3701131,
+          "sha256": "f94f3503b743aa1be05f26e59e8ed7a1dbeb2d736a2d2aa8462b838879f18c6b"
+        },
+        {
+          "path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/start.json",
+          "bytes": 4351,
+          "sha256": "fe5cb55babf14594d73ed3208395df84a56842df9f84af133b70f0830e1c5ed2"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/finish.json",
+          "bytes": 4609,
+          "sha256": "eec86ea4fc0f3f46ffe5003a770b83b33aad04ad2da6b8b92d55ede9aa8b7465"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c000.jsonl",
+          "bytes": 4214499,
+          "sha256": "7350fec72d38a850f4df69c78e518bc02a7a152babd58575f0d8b3d11d0a5d2b"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c025.jsonl",
+          "bytes": 4003160,
+          "sha256": "85b082e4f2b2f7ad5acc03adf02d3a99a1d9b6468d2f12d2b46de9977f210509"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c050.jsonl",
+          "bytes": 3917428,
+          "sha256": "b70568bcc3e1eae725f3225876eaca8eb24e4057dbc540de130fdbae51fb056b"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c075.jsonl",
+          "bytes": 4056363,
+          "sha256": "fced36604b65e433d38e7f79c4c84755e6c7c58da9d749e79b8a9526169a13c4"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c100.jsonl",
+          "bytes": 4041747,
+          "sha256": "f92047885f91024bb4202b59bc908827b5a41d0cb2ac6f8730414d63dcfbebd5"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c125.jsonl",
+          "bytes": 4145657,
+          "sha256": "08ef0210d7ef4e8132db44949f078b1445d8ef17e82ef15f31186892115d9f62"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c150.jsonl",
+          "bytes": 4030935,
+          "sha256": "22748af630fad3a4b47bcce42568cb1fb307742ef6662bae028ced60a79a3739"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/gated_selfreport_pain_d1_c175.jsonl",
+          "bytes": 3970890,
+          "sha256": "623f3149337d4b98bd94408ffdb216385c17545587315e83f32675d82b819e16"
+        },
+        {
+          "path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/start.json",
+          "bytes": 4351,
+          "sha256": "179bee414a1694895ee5295950312e76f1978475f9931219f353711c82d4f01f"
+        },
+        {
+          "path": "capped_tranche_v1/evidence/qwen25_32b/timing.json",
+          "bytes": 65600,
+          "sha256": "94e8ee570ead122346cc44072419c09349dcec67d69346371596a35ca09d2733"
+        },
+        {
+          "path": "capped_tranche_v1/evidence/llama31_8b/timing.json",
+          "bytes": 66408,
+          "sha256": "8aa2a6bcc798d5b39a05e7c4dba52c9ab9cc3d039bd8901b7de7b7fbf7445c7e"
+        },
+        {
+          "path": "prepared_v1/qwen25_32b/directions.safetensors",
+          "bytes": 61656,
+          "sha256": "3c3e0012b9961cb4a4e2460b9763daf048e9f2bfc62807b84b8dc2ac2744f810",
+          "included_git_path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/qwen25_32b/directions.safetensors",
+          "included_file_sha256": "3c3e0012b9961cb4a4e2460b9763daf048e9f2bfc62807b84b8dc2ac2744f810",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "prepared_v1/qwen25_32b/metadata.json",
+          "bytes": 13862,
+          "sha256": "0f67b887bd56ef1ef0d84902f88baa503a29b23ff58f675f8ad0cb19c5773d46",
+          "included_git_path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/qwen25_32b/metadata.json",
+          "included_file_sha256": "f5777d18a6158007fb94e608103bc03d4c0ac24e8f0602ae7fcc8aec8ece5381",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "prepared_v1/qwen25_32b/normalization_checks.json",
+          "bytes": 33987,
+          "sha256": "5489eb3ae544c487788887d61a53ba4d262d11136d6dfeadd98932fede7fcfc8",
+          "included_git_path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/qwen25_32b/normalization_checks.json",
+          "included_file_sha256": "5489eb3ae544c487788887d61a53ba4d262d11136d6dfeadd98932fede7fcfc8",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "prepared_v1/llama31_8b/directions.safetensors",
+          "bytes": 49368,
+          "sha256": "f6ee4111885de2b113e0ab0ebd8b6d1080e1be4b3df89a565f4ed27d5558316b",
+          "included_git_path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/llama31_8b/directions.safetensors",
+          "included_file_sha256": "f6ee4111885de2b113e0ab0ebd8b6d1080e1be4b3df89a565f4ed27d5558316b",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "prepared_v1/llama31_8b/metadata.json",
+          "bytes": 2838,
+          "sha256": "e1ecbc14ff278cd683f12df65e2ea1238b6e1a05c464f4c4f48bdd4ecab67d65",
+          "included_git_path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/llama31_8b/metadata.json",
+          "included_file_sha256": "e1ecbc14ff278cd683f12df65e2ea1238b6e1a05c464f4c4f48bdd4ecab67d65",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "prepared_v1/llama31_8b/normalization_checks.json",
+          "bytes": 16951,
+          "sha256": "ce72d78fb73790b8a8dec2d8293c420e3249f597276314433510f21fbc5ddb85",
+          "included_git_path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/llama31_8b/normalization_checks.json",
+          "included_file_sha256": "ce72d78fb73790b8a8dec2d8293c420e3249f597276314433510f21fbc5ddb85",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "tranche_readout_v1/readout.json",
+          "bytes": 13144,
+          "sha256": "3d0d1f17be40caea8bc3d8a8d32a7afcaece106046e5f5a09c77cdb40018c7a6"
+        },
+        {
+          "path": "tranche_recount_v1/rates_descriptive_only/analysis.json",
+          "bytes": 6567158,
+          "sha256": "656618947d630d5cbab3adb8085c0084c68545eb236a2f81514f07d7b3b327f5"
+        }
+      ]
+    },
+    {
+      "group": "factual_accuracy",
+      "filename": "factual_accuracy-required-inputs.tar.gz",
+      "bytes": 49304,
+      "sha256": "f01b193c917762df2f1e0e1af91acee77909a3c402823c79171bd64454b0d86e",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract archives into one directory. --data-dir is its study directory for replay; inference/ for future inference. Decompress unlabeled_relief/raw_trials.jsonl.gz to trials.jsonl before replay.",
+      "files": [
+        {
+          "path": "factual_accuracy/answers.jsonl",
+          "bytes": 1470193,
+          "sha256": "ebd11ce20b705bf887fdfd4d7406cef2e755473640060cdb751321e13770ba17"
+        }
+      ]
+    },
+    {
+      "group": "natural_and_ending",
+      "filename": "natural_and_ending-required-inputs.tar.gz",
+      "bytes": 1947992,
+      "sha256": "0c29aa442c500c4ef6e71301bcb5f85ce51f37df468bdd61f48045865c82947b",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract archives into one directory. --data-dir is its study directory for replay; inference/ for future inference. Decompress unlabeled_relief/raw_trials.jsonl.gz to trials.jsonl before replay.",
+      "files": [
+        {
+          "path": "natural_and_ending/B5/trials.jsonl",
+          "bytes": 24527961,
+          "sha256": "6e9cb0a958192752a33664372c6f5c0e2a32b51cf98ec213b77d4af8bcee7f04"
+        },
+        {
+          "path": "natural_and_ending/B7/trials.jsonl",
+          "bytes": 13099214,
+          "sha256": "b0dbf3df4ed4a9031b4f0753a84ad9e755c1a69d7791e96222d74fd7b34d8e86"
+        }
+      ]
+    },
+    {
+      "group": "unlabeled_relief",
+      "filename": "unlabeled_relief-required-inputs.tar.gz",
+      "bytes": 22001127,
+      "sha256": "d9c4e6a4efeda228d06d938f5c24408b80b4aad1239bf7701daca8219ab2e1cd",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract archives into one directory. --data-dir is its study directory for replay; inference/ for future inference. Decompress unlabeled_relief/raw_trials.jsonl.gz to trials.jsonl before replay.",
+      "files": [
+        {
+          "path": "unlabeled_relief/full_analysis_v2.tar.gz",
+          "bytes": 19774551,
+          "sha256": "72e967b90ff520cca800ae334489cab853b40d0e4b1d65c370c0ed08e1372f50"
+        },
+        {
+          "path": "unlabeled_relief/raw_trials.jsonl.gz",
+          "bytes": 4453403,
+          "sha256": "aa40ee5ad8de9d013c7fd7c429dcb20a4041b3cee57d2e632b57286c44a936ee"
+        }
+      ]
+    },
+    {
+      "group": "inference",
+      "filename": "inference-required-inputs.tar.gz",
+      "bytes": 1179038,
+      "sha256": "f7b500b64d2da206ffebd8bed40f5fa1f48a34824874423d75f4cc150cf0795a",
+      "url": null,
+      "public_status": "pending",
+      "local_layout": "Extract archives into one directory. --data-dir is its study directory for replay; inference/ for future inference. Decompress unlabeled_relief/raw_trials.jsonl.gz to trials.jsonl before replay.",
+      "files": [
+        {
+          "path": "inference/fear/fear_Qwen_2.5_32B_instruct.pt",
+          "bytes": 95274,
+          "sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "included_git_path": "choice_controls/vectors/common/fear_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "inference/fear/verification_fear.json",
+          "bytes": 10056,
+          "sha256": "ef3d3aafbc410cea150233b1df5d58688a2e587f7fdec3efac2d57adbef0fbc0",
+          "included_git_path": "choice_controls/vectors/common/verification_fear.json",
+          "included_file_sha256": "6dded12e4dbd4d10f40ae439e58b36dd3e228b6b1700f4bd76b4db8c6c79876d",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "inference/pain-axis-b1-b3.bundle",
+          "bytes": 1002506,
+          "sha256": "cea4308fa870b0ccdee0430c851c526f3261e20491a5d1a9a0efc88548877d41"
+        },
+        {
+          "path": "inference/vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "bytes": 696,
+          "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.json",
+          "included_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "inference/vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "bytes": 41120,
+          "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "included_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "inference/vectors/original_tensor_hashes_v2.json",
+          "bytes": 4365,
+          "sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+          "included_git_path": "choice_controls/vectors/common/original_tensor_hashes_v2.json",
+          "included_file_sha256": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "inference/vectors/vectors_Qwen_2.5_32B_instruct.pt",
+          "bytes": 78329,
+          "sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295",
+          "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_32B_instruct.pt",
+          "included_file_sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        },
+        {
+          "path": "inference/vectors/verification.json",
+          "bytes": 14851,
+          "sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77",
+          "included_git_path": "choice_controls/vectors/common/verification.json",
+          "included_file_sha256": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+          "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "URLs intentionally null; these are upload-ready files, not publicly hosted downloads.",
+    "All source-pinned small binaries are already in v2_controls; no separate binary-recovery archive is needed outside the compute service.",
+    "Historical identity metadata within external input files may retain old locator strings. They are provenance, not download addresses; review redistribution terms and metadata before public hosting.",
+    "No base-model weights are included. The two trained additional-seed adapters are included only in their external input archive."
+  ],
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

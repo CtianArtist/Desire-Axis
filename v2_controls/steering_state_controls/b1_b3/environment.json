@@ -1,0 +1,9 @@
+{
+  "packages": {
+    "numpy": "2.3.4",
+    "peft": "0.20.0",
+    "torch": "2.11.0",
+    "transformers": "5.12.1"
+  },
+  "python": "3.12.13 (main, May 10 2026, 19:30:01) [Clang 22.1.3 ]"
+}

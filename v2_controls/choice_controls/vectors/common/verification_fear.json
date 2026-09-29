@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "model": "Qwen_2.5_32B_instruct",
+  "expected_layer": 61,
+  "expected_width": 5120,
+  "sources": {
+    "neutral_zip": {
+      "path": "provenance-only/pain_axis_layer_slices-20260920T033111Z-1-001.zip",
+      "bytes": 421518920,
+      "sha256": "d880e5b46f49032b000631316311cf9b01dbb38f31e8385f87d61b624a91f6c3"
+    },
+    "controls": {
+      "path": "provenance-only/controls.py",
+      "bytes": 6984,
+      "sha256": "d74b5235090f9a66b84456d23e99640a905e0f19295fa91b2a0eacf2f938e793"
+    },
+    "frozen_prepare_vectors": {
+      "path": "provenance-only/prepare_vectors.py",
+      "bytes": 19508,
+      "sha256": "7b8f6cc9115fabe9f5e1a36c9e578854d16ba839c3bc2883778a5dab874cbe00"
+    },
+    "frozen_verify_vectors": {
+      "path": "provenance-only/verify_vectors.py",
+      "bytes": 4811,
+      "sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e"
+    },
+    "prepare_fear": {
+      "path": "provenance-only/prepare_fear.py",
+      "bytes": 14682,
+      "sha256": "bfa02c7db60a799f31984f4a4d53f828f9cd726d99fd70bf045e3386c324f57a"
+    },
+    "original_tensor_hashes": {
+      "path": "provenance-only/original_tensor_hashes_v2.json",
+      "bytes": 4365,
+      "sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8"
+    },
+    "original_S2": {
+      "path": "provenance-only/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+      "bytes": 41120,
+      "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b"
+    },
+    "original_S2_metadata": {
+      "path": "provenance-only/Qwen_2.5_32B_instruct_pain_vectors.json",
+      "bytes": 696,
+      "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71"
+    },
+    "sadness_pt": {
+      "path": "provenance-only/vectors_Qwen_2.5_32B_instruct.pt",
+      "bytes": 78329,
+      "sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295"
+    },
+    "sadness_verification": {
+      "path": "provenance-only/verification.json",
+      "bytes": 14851,
+      "sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77"
+    },
+    "neutral_member": {
+      "member": "pain_axis_layer_slices/Qwen_2.5_32B_instruct_final_token_extraction_layer.pt",
+      "bytes": 20508690,
+      "sha256": "ca6b4ea25327a116ae74812b3d76f87970dca0f8ff3945fe565b41cf571a415f"
+    }
+  },
+  "checks": {
+    "sadness_identity": {
+      "model_binding": "explicit_metadata",
+      "model_fields": {
+        "model": "Qwen_2.5_32B_instruct"
+      },
+      "layer_fields": {
+        "layer": 61
+      },
+      "model_check": true,
+      "layer_check": true
+    },
+    "sadness_file_hash_verified": true,
+    "controls_file_hash_verified": true,
+    "neutral_identity": {
+      "model_binding": "explicit_metadata",
+      "model_fields": {
+        "model": "Qwen_2.5_32B_instruct"
+      },
+      "layer_fields": {
+        "layer": 61
+      },
+      "model_check": true,
+      "layer_check": true
+    },
+    "width_finite_nonzero": true,
+    "fp32_then_bf16": true,
+    "reused_vectors_unchanged": true,
+    "exact_output_reload": true
+  },
+  "original_vector_verification": {
+    "version": 1,
+    "status": "passed",
+    "model": "Qwen_2.5_32B_instruct",
+    "candidate_path": "provenance-only/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+    "candidate_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+    "candidate_file_bytes": 41120,
+    "original_source_ref": "upstream/results/3.2_pain_vectors/pain_vectors/Qwen_2.5_32B_instruct/pain_vectors.pt",
+    "original_file_sha256": "94cff10bb9d68375ba84454978b35cfcef1a71691db9f4a64aff2a0976d4f09a",
+    "layer": 61,
+    "layer_type": "plain Python int",
+    "tensors": {
+      "s2_pain_vector": {
+        "dtype": "float32",
+        "shape": [
+          5120
+        ],
+        "bytes": 20480,
+        "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+        "matches_original_bytes": true
+      },
+      "s1_pain_vector": {
+        "dtype": "float32",
+        "shape": [
+          5120
+        ],
+        "bytes": 20480,
+        "sha256": "c922a0730a3709bd0dd80d2658459c391178b67760ff1524cb8c88ea6441dc2f",
+        "matches_original_bytes": true
+      }
+    },
+    "loader": "safetensors",
+    "conversion_performed": false,
+    "vector_values_modified": false,
+    "metadata_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71"
+  },
+  "reused_tensor_hashes": {
+    "s2_pain_vector": {
+      "dtype": "torch.float32",
+      "shape": [
+        5120
+      ],
+      "bytes": 20480,
+      "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b"
+    },
+    "sadness_vector_matched_fp32": {
+      "dtype": "torch.float32",
+      "shape": [
+        5120
+      ],
+      "bytes": 20480,
+      "sha256": "ed002aaedc1dc68968ec66e23fee648d7f87a63a985004d9b83ec0cd62962758"
+    }
+  },
+  "row_counts": {
+    "S1_1P": {
+      "all_rows": 200,
+      "categories": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      },
+      "category_B_rows": 20,
+      "category_D_rows": 20
+    },
+    "S2_1P": {
+      "all_rows": 200,
+      "categories": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      },
+      "category_B_rows": 20,
+      "category_D_rows": 20
+    }
+  },
+  "fear_rows": 40,
+  "neutral_rows": 40,
+  "nonfinite_counts": {
+    "S1_1P": {
+      "B": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      },
+      "D": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      }
+    },
+    "S2_1P": {
+      "B": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      },
+      "D": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      }
+    }
+  },
+  "activation_raw_tensor_hashes": {
+    "S1_1P": {
+      "dtype": "torch.float16",
+      "shape": [
+        200,
+        5120
+      ],
+      "bytes": 2048000,
+      "sha256": "41ecaf3039e41b3c0857b0fb891f7a46c9530167aa9bbad299159c5094d392c6"
+    },
+    "S2_1P": {
+      "dtype": "torch.float16",
+      "shape": [
+        200,
+        5120
+      ],
+      "bytes": 2048000,
+      "sha256": "95415ddfe1e80d717804a739dcd04ba0a300b04bffd7a8cbd3e16932db27844b"
+    }
+  },
+  "row_policy": {
+    "datasets": [
+      "S1_1P",
+      "S2_1P"
+    ],
+    "fear_category": "B",
+    "neutral_category": "D",
+    "selection": "all_available_rows",
+    "duplicated_rows": 0,
+    "third_person_rows_used": 0,
+    "supplement_rows_used": 0
+  },
+  "ControlSupplement": {
+    "present": false,
+    "datasets": [],
+    "included": false,
+    "status": "absent"
+  },
+  "excluded_datasets": [
+    "Arousal_1P",
+    "Arousal_3P",
+    "Random_1P",
+    "Random_3P",
+    "S1_3P",
+    "S2_3P",
+    "S3_1P",
+    "S3_3P"
+  ],
+  "pca_count": 3,
+  "denoise_variance": 0.5,
+  "neutral_mean_nonfinite": {
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0
+  },
+  "mean_difference_nonfinite_before_cleaning": {
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0
+  },
+  "unscaled_norm_fp32": 200.91744995117188,
+  "saved_S2_norm_fp32": 143.83343505859375,
+  "matched_norm_fp32": 143.83343505859375,
+  "bf16_norm": 144.0,
+  "bf16_values_norm_accumulated_fp32": 143.8417205810547,
+  "normalization": "rv / rv.norm() * saved_S2.float().norm(); all operands FP32, then BF16",
+  "outputs": {
+    "pt": {
+      "path": "provenance-only/fear_Qwen_2.5_32B_instruct.pt",
+      "bytes": 95274,
+      "sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e"
+    },
+    "json": {
+      "path": "provenance-only/fear_Qwen_2.5_32B_instruct.json",
+      "bytes": 473407,
+      "sha256": "1d38f0fbd89e1cd108d0b3815d23b790a0f92ea29f8a1632bde2e55958df7663"
+    }
+  },
+  "output_tensor_hashes": {
+    "fear_vector_unscaled_fp32": {
+      "dtype": "torch.float32",
+      "shape": [
+        5120
+      ],
+      "bytes": 20480,
+      "sha256": "1b8a91cc660cbe3c28d777bfe54d5e7737ce1fa53add0a2ffac134e538d04833"
+    },
+    "fear_vector_matched_fp32": {
+      "dtype": "torch.float32",
+      "shape": [
+        5120
+      ],
+      "bytes": 20480,
+      "sha256": "297cc009dc1e9e527bea1cb0dfbc43de2c5f0a63e66bd64d04bf7f9d6a47825d"
+    },
+    "fear_vector_bf16": {
+      "dtype": "torch.bfloat16",
+      "shape": [
+        5120
+      ],
+      "bytes": 10240,
+      "sha256": "4ce24f12993b3124aef95f14a713e9c6e753d3feffa61ccd05040c9c43d4e4d9"
+    },
+    "s2_pain_vector": {
+      "dtype": "torch.float32",
+      "shape": [
+        5120
+      ],
+      "bytes": 20480,
+      "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b"
+    },
+    "sadness_vector_matched_fp32": {
+      "dtype": "torch.float32",
+      "shape": [
+        5120
+      ],
+      "bytes": 20480,
+      "sha256": "ed002aaedc1dc68968ec66e23fee648d7f87a63a985004d9b83ec0cd62962758"
+    }
+  }
+}

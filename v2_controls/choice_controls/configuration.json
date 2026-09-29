@@ -1,0 +1,14 @@
+{
+  "groups": [
+    "harm_and_relabel",
+    "additional_seeds",
+    "profile",
+    "lamp_spam",
+    "fear_additions",
+    "vectors"
+  ],
+  "no_inference_training_or_judging": true,
+  "fear_current": "matched_wording plus four_cells",
+  "fear_superseded": "superseded_long_wording; never pooled",
+  "protocol_distinction": "B2 working removal and long wording; profile/lamp always-on"
+}

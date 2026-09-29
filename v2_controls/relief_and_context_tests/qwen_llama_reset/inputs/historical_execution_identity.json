@@ -1,0 +1,17 @@
+{
+  "template_date": [
+    2026,
+    9,
+    22
+  ],
+  "source_sha256": {
+    "experiments/experiment-9-v569gb/src/removal.py": "bfafbe5ec1daf3d0342071e8c21a04531463a15dd67d353f9c5c368224d0ed41",
+    "pain_port/common.py": "db3270b343203c0e01eec886cc0e27d86bba350b9b9e36c722848e2e58fe5a37",
+    "author/act-on-valence/experiments/lever/config.py": "b727e18db5321450259d815a71b236dcec5a38d42e28658d8d3a31ff4623e01b",
+    "author/act-on-valence/experiments/lever/harness.py": "273aebdf2de44f80771674c8997641ce41d57dcaf006912e1f77f38db0dfd243",
+    "author/act-on-valence/src/act_on_valence/steering.py": "a247ae3204c6420e395df00aca363352175d5189d65fa606f2d2344a49de40ab",
+    "author/act-on-valence/src/act_on_valence/self_injection.py": "60c40caf40f0774f961280f816c022a4e1bce449679d7e295e42eff1c0bd7767",
+    "author/act-on-valence/src/act_on_valence/audit/replay.py": "18a6499bfffc3e775bcb893c5da8f2d7ef328de02ef6d381b3e15e145fe3f5fd",
+    "author/act-on-valence/experiments/fixed_text_design/avoid_prompt/interview.py": "7eee2f922919c467bf5ef8620d3f4b72061271a9e7a488effe0799535b4cc915"
+  }
+}

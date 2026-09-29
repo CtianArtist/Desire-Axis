@@ -1,0 +1,418 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "models": {
+    "Qwen_2.5_32B_instruct": {
+      "status": "passed",
+      "model": "Qwen_2.5_32B_instruct",
+      "expected_layer": 61,
+      "expected_width": 5120,
+      "sources": {
+        "sadness": {
+          "path": "provenance-only/Qwen_2.5_32B_instruct_sadness_final_token_extraction_layer.pt",
+          "bytes": 4100554,
+          "sha256": "8fba6db4eab8fb1e9d912d2e04c4b1d59103f27bf6d1e84673814f352f6133a4",
+          "pin_verified": true
+        },
+        "pain": {
+          "path": "provenance-only/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+          "bytes": 41120,
+          "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+          "author_reserialization_verification": {
+            "version": 1,
+            "status": "passed",
+            "model": "Qwen_2.5_32B_instruct",
+            "candidate_path": "provenance-only/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+            "candidate_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+            "candidate_file_bytes": 41120,
+            "original_source_ref": "upstream/results/3.2_pain_vectors/pain_vectors/Qwen_2.5_32B_instruct/pain_vectors.pt",
+            "original_file_sha256": "94cff10bb9d68375ba84454978b35cfcef1a71691db9f4a64aff2a0976d4f09a",
+            "layer": 61,
+            "layer_type": "plain Python int",
+            "tensors": {
+              "s2_pain_vector": {
+                "dtype": "float32",
+                "shape": [
+                  5120
+                ],
+                "bytes": 20480,
+                "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+                "matches_original_bytes": true
+              },
+              "s1_pain_vector": {
+                "dtype": "float32",
+                "shape": [
+                  5120
+                ],
+                "bytes": 20480,
+                "sha256": "c922a0730a3709bd0dd80d2658459c391178b67760ff1524cb8c88ea6441dc2f",
+                "matches_original_bytes": true
+              }
+            },
+            "loader": "safetensors",
+            "conversion_performed": false,
+            "vector_values_modified": false,
+            "metadata_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71"
+          }
+        },
+        "neutral_member": {
+          "member": "pain_axis_layer_slices/Qwen_2.5_32B_instruct_final_token_extraction_layer.pt",
+          "bytes": 20508690,
+          "sha256": "ca6b4ea25327a116ae74812b3d76f87970dca0f8ff3945fe565b41cf571a415f"
+        }
+      },
+      "checks": {
+        "sadness": {
+          "model_binding": "explicit_metadata",
+          "model_fields": {
+            "model": "Qwen_2.5_32B_instruct"
+          },
+          "layer_fields": {
+            "layer": 61
+          },
+          "model_check": true,
+          "layer_check": true
+        },
+        "pain": {
+          "model_binding": "explicit_metadata",
+          "model_fields": {
+            "model": "Qwen_2.5_32B_instruct"
+          },
+          "layer_fields": {
+            "layer": 61
+          },
+          "model_check": true,
+          "layer_check": true
+        },
+        "neutral": {
+          "model_binding": "explicit_metadata",
+          "model_fields": {
+            "model": "Qwen_2.5_32B_instruct"
+          },
+          "layer_fields": {
+            "layer": 61
+          },
+          "model_check": true,
+          "layer_check": true
+        },
+        "width_check": true,
+        "sadness_row_count_check": true
+      },
+      "sadness_rows": {
+        "SD_sadness_1P": 100,
+        "SD_sadness_3P": 100
+      },
+      "row_policy": {
+        "selected_dataset": "SD_sadness_1P",
+        "selection": "all_available_rows",
+        "first_person_rows_used": 100,
+        "duplicated_rows": 0,
+        "third_person_rows_used": 0
+      },
+      "sadness_source_dtypes": {
+        "SD_sadness_1P": "torch.float32",
+        "SD_sadness_3P": "torch.float32"
+      },
+      "construction_dtype": "float32, matching author recipe; final steering conversion bfloat16",
+      "neutral_row_counts": {
+        "S1_1P": {
+          "all_rows": 200,
+          "category_D_rows": 20
+        },
+        "S2_1P": {
+          "all_rows": 200,
+          "category_D_rows": 20
+        }
+      },
+      "ControlSupplement_1P": {
+        "present": false,
+        "included": false,
+        "status": "absent",
+        "reason": "Authorized neutral pool is category D of S1_1P and S2_1P only"
+      },
+      "sadness_used": "SD_sadness_1P only; SD_sadness_3P validated but not used",
+      "nonfinite_counts": {
+        "SD_sadness_1P": {
+          "nan": 0,
+          "posinf": 0,
+          "neginf": 0
+        },
+        "SD_sadness_3P": {
+          "nan": 0,
+          "posinf": 0,
+          "neginf": 0
+        },
+        "neutral": {
+          "S1_1P": {
+            "nan": 0,
+            "posinf": 0,
+            "neginf": 0
+          },
+          "S2_1P": {
+            "nan": 0,
+            "posinf": 0,
+            "neginf": 0
+          }
+        },
+        "saved_S2": {
+          "nan": 0,
+          "posinf": 0,
+          "neginf": 0
+        }
+      },
+      "pca_count": 3,
+      "denoise_variance": 0.5,
+      "neutral_mean_nonfinite": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      },
+      "mean_difference_nonfinite_before_cleaning": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      },
+      "unscaled_norm_fp32": 262.87005615234375,
+      "saved_S2_norm_fp32": 143.83343505859375,
+      "matched_norm_fp32": 143.83343505859375,
+      "bf16_norm": 144.0,
+      "bf16_values_norm_accumulated_fp32": 143.83840942382812,
+      "normalization": "rv / rv.norm() * saved_S2.float().norm(); all operands FP32, then BF16",
+      "output": {
+        "path": "provenance-only/vectors_Qwen_2.5_32B_instruct.pt",
+        "bytes": 77533,
+        "sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f"
+      }
+    },
+    "Qwen_2.5_72B_instruct": {
+      "status": "passed",
+      "model": "Qwen_2.5_72B_instruct",
+      "expected_layer": 76,
+      "expected_width": 8192,
+      "sources": {
+        "sadness": {
+          "path": "provenance-only/Qwen_2.5_72B_instruct_sadness_final_token_extraction_layer.pt",
+          "bytes": 6558154,
+          "sha256": "88710229dfd14c73bc4991287044e30d0e8e500fa3be911940aba5d8b4098af4",
+          "pin_verified": true
+        },
+        "pain": {
+          "path": "provenance-only/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+          "bytes": 65696,
+          "sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+          "author_reserialization_verification": {
+            "version": 1,
+            "status": "passed",
+            "model": "Qwen_2.5_72B_instruct",
+            "candidate_path": "provenance-only/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+            "candidate_file_sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+            "candidate_file_bytes": 65696,
+            "original_source_ref": "upstream/results/3.2_pain_vectors/pain_vectors/Qwen_2.5_72B_instruct/pain_vectors.pt",
+            "original_file_sha256": "5faafe3d5d10bdf319c962ce4977d4eef453c70ab2398e28141264330153c0c2",
+            "layer": 76,
+            "layer_type": "plain Python int",
+            "tensors": {
+              "s2_pain_vector": {
+                "dtype": "float32",
+                "shape": [
+                  8192
+                ],
+                "bytes": 32768,
+                "sha256": "6c322358c25cf9fe5890f4fac70fd7442f844b21b488d79214f636fb3365f19e",
+                "matches_original_bytes": true
+              },
+              "s1_pain_vector": {
+                "dtype": "float32",
+                "shape": [
+                  8192
+                ],
+                "bytes": 32768,
+                "sha256": "a91fc3dc556b5abb069076a5ff0c5257ff2b8ec948bda4cc17ebba5a504b1c19",
+                "matches_original_bytes": true
+              }
+            },
+            "loader": "safetensors",
+            "conversion_performed": false,
+            "vector_values_modified": false,
+            "metadata_file_sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891"
+          }
+        },
+        "neutral_member": {
+          "member": "pain_axis_layer_slices/Qwen_2.5_72B_instruct_final_token_extraction_layer.pt",
+          "bytes": 32796690,
+          "sha256": "c33b8015cae94c277883fd581df92aadb0934a6193b47601ffe048a303d44882"
+        }
+      },
+      "checks": {
+        "sadness": {
+          "model_binding": "explicit_metadata",
+          "model_fields": {
+            "model": "Qwen_2.5_72B_instruct"
+          },
+          "layer_fields": {
+            "layer": 76
+          },
+          "model_check": true,
+          "layer_check": true
+        },
+        "pain": {
+          "model_binding": "explicit_metadata",
+          "model_fields": {
+            "model": "Qwen_2.5_72B_instruct"
+          },
+          "layer_fields": {
+            "layer": 76
+          },
+          "model_check": true,
+          "layer_check": true
+        },
+        "neutral": {
+          "model_binding": "explicit_metadata",
+          "model_fields": {
+            "model": "Qwen_2.5_72B_instruct"
+          },
+          "layer_fields": {
+            "layer": 76
+          },
+          "model_check": true,
+          "layer_check": true
+        },
+        "width_check": true,
+        "sadness_row_count_check": true
+      },
+      "sadness_rows": {
+        "SD_sadness_1P": 100,
+        "SD_sadness_3P": 100
+      },
+      "row_policy": {
+        "selected_dataset": "SD_sadness_1P",
+        "selection": "all_available_rows",
+        "first_person_rows_used": 100,
+        "duplicated_rows": 0,
+        "third_person_rows_used": 0
+      },
+      "sadness_source_dtypes": {
+        "SD_sadness_1P": "torch.float32",
+        "SD_sadness_3P": "torch.float32"
+      },
+      "construction_dtype": "float32, matching author recipe; final steering conversion bfloat16",
+      "neutral_row_counts": {
+        "S1_1P": {
+          "all_rows": 200,
+          "category_D_rows": 20
+        },
+        "S2_1P": {
+          "all_rows": 200,
+          "category_D_rows": 20
+        }
+      },
+      "ControlSupplement_1P": {
+        "present": false,
+        "included": false,
+        "status": "absent",
+        "reason": "Authorized neutral pool is category D of S1_1P and S2_1P only"
+      },
+      "sadness_used": "SD_sadness_1P only; SD_sadness_3P validated but not used",
+      "nonfinite_counts": {
+        "SD_sadness_1P": {
+          "nan": 0,
+          "posinf": 0,
+          "neginf": 0
+        },
+        "SD_sadness_3P": {
+          "nan": 0,
+          "posinf": 0,
+          "neginf": 0
+        },
+        "neutral": {
+          "S1_1P": {
+            "nan": 0,
+            "posinf": 0,
+            "neginf": 0
+          },
+          "S2_1P": {
+            "nan": 0,
+            "posinf": 0,
+            "neginf": 0
+          }
+        },
+        "saved_S2": {
+          "nan": 0,
+          "posinf": 0,
+          "neginf": 0
+        }
+      },
+      "pca_count": 5,
+      "denoise_variance": 0.5,
+      "neutral_mean_nonfinite": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      },
+      "mean_difference_nonfinite_before_cleaning": {
+        "nan": 0,
+        "posinf": 0,
+        "neginf": 0
+      },
+      "unscaled_norm_fp32": 267.5566101074219,
+      "saved_S2_norm_fp32": 135.8349609375,
+      "matched_norm_fp32": 135.83494567871094,
+      "bf16_norm": 136.0,
+      "bf16_values_norm_accumulated_fp32": 135.8331756591797,
+      "normalization": "rv / rv.norm() * saved_S2.float().norm(); all operands FP32, then BF16",
+      "output": {
+        "path": "provenance-only/vectors_Qwen_2.5_72B_instruct.pt",
+        "bytes": 120541,
+        "sha256": "e5e0f33c564b295a60f4aebbd0dfd572763dbce152c06bd1b32ead9eb6062f7c"
+      }
+    }
+  },
+  "neutral_scope": "category D from S1_1P and S2_1P only",
+  "sources": {
+    "controls": {
+      "path": "provenance-only/controls.py",
+      "bytes": 6984,
+      "sha256": "d74b5235090f9a66b84456d23e99640a905e0f19295fa91b2a0eacf2f938e793",
+      "pin_verified": true
+    },
+    "neutral_zip": {
+      "path": "provenance-only/pain_axis_layer_slices-20260920T033111Z-1-001.zip",
+      "bytes": 421518920,
+      "sha256": "d880e5b46f49032b000631316311cf9b01dbb38f31e8385f87d61b624a91f6c3"
+    },
+    "source_manifest": {
+      "path": "provenance-only/input_hashes.json",
+      "bytes": 1638,
+      "sha256": "36e6d447064b0629a8c3c1cf95a14bdc464df870ae425fed71f560edff608558"
+    },
+    "sadness_policy": {
+      "path": "provenance-only/sadness_policy.json",
+      "bytes": 923,
+      "sha256": "083021654ff45ffcee936a23e950446e7dab133041377a9b769bb737f186596b"
+    }
+  },
+  "authorized_row_policy": {
+    "version": 1,
+    "authorization": "explicit researcher decision",
+    "selected_dataset": "SD_sadness_1P",
+    "row_selection": "all_available_rows",
+    "duplicate_rows": false,
+    "required_exact_row_count": null,
+    "require_nonempty": true,
+    "third_person_role": "validate supplied schema and report count; do not use for construction",
+    "preserve_source_bytes_and_dtype_provenance": true,
+    "construction": "unchanged author neutral denoising recipe followed by original S2 norm matching in FP32 and then BF16 conversion",
+    "observed_input_rows": {
+      "Qwen_2.5_32B_instruct": {
+        "SD_sadness_1P": 100,
+        "SD_sadness_3P": 100
+      },
+      "Qwen_2.5_72B_instruct": {
+        "SD_sadness_1P": 100,
+        "SD_sadness_3P": 100
+      }
+    },
+    "observed_count_evidence": "results/restricted_load_diagnostics.json; static saved tensor shape metadata",
+    "pain_vector_loading": "unchanged restricted-loader boundary; compatible author exports still required"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "pooled_cells": 65,
+  "position_rows": 130,
+  "helping_rows": 39,
+  "source_bound_rows_verified": 234,
+  "rounded_annotations_checked": 65,
+  "annotation_discrepancies": [],
+  "denominator_notes": {
+    "harmful_request": 164,
+    "sycophancy": 120,
+    "72B_sadness_valid": 325,
+    "72B_fear_valid": 346
+  },
+  "helping_fear_dose1": {
+    "target": 306,
+    "attempts": 404,
+    "rate": 0.7574257425742574
+  },
+  "limitations": [
+    "Source intervals copied, not recomputed; row-level source hashes checked.",
+    "Handoff denominators166/122 conflict with authoritative sampled164/120; no greedy trials included.",
+    "Four-cell private locator columns omitted; all retained fields verified unchanged at assembly.",
+    "Effective scenario counts for new B2 fear intervals are absent from the source comparison table; blank rather than inferred."
+  ]
+}

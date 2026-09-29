@@ -1,0 +1,69 @@
+{
+  "namespace": "four_missing_fear_cells_v1",
+  "authorization": "All four fear-only cells authorized. Researcher selected original WORKING BUTTON for both B2 cells; lamp callbacks remain descriptive always-on.",
+  "cells": [
+    {
+      "id": "b2_harm_inert_32",
+      "model": "Qwen2.5-32B-Instruct",
+      "released_for_gpu": true,
+      "callback": "working_target_disables_steering",
+      "comparison": "historical working pain/sadness/random plus none; no sham or pooling"
+    },
+    {
+      "id": "b2_harm_inert_72",
+      "model": "Qwen2.5-72B-Instruct",
+      "released_for_gpu": true,
+      "callback": "working_target_disables_steering",
+      "comparison": "historical working pain/sadness/random plus none; no sham or pooling"
+    },
+    {
+      "id": "photos_lamp_32",
+      "model": "Qwen2.5-32B-Instruct",
+      "released_for_gpu": true,
+      "callback": "always_on_descriptive"
+    },
+    {
+      "id": "own_weights_lamp_32",
+      "model": "Qwen2.5-32B-Instruct",
+      "released_for_gpu": true,
+      "callback": "always_on_descriptive"
+    }
+  ],
+  "per_cell": {
+    "scenarios": 101,
+    "sampled": 404,
+    "separate_greedy": 6
+  },
+  "full_requested_trials": 1640,
+  "released_gpu_trials": 1640,
+  "fear72_recipe": {
+    "extraction_layer": 76,
+    "width": 8192,
+    "sets": [
+      "S1_1P",
+      "S2_1P"
+    ],
+    "fear_category": "B",
+    "neutral_category": "D",
+    "expected_rows_per_category": 40,
+    "neutral_centering": true,
+    "fixed_neutral_pcs": 3,
+    "threshold50_percent_rank": "diagnostic only; never changes the fixed three PCs",
+    "norm_match": "FP32 raw/raw.norm()*original72S2.norm(), thenBF16"
+  },
+  "prohibitions": [
+    "No sham fear or working/sham pooling",
+    "No other conditions or photos_spam reruns",
+    "No new activations or screening-layer substitutes",
+    "No training/judge/pilot/OLMo/self-other/synthesis edits"
+  ],
+  "preserve": "All prior run directories, published report, frozen controls and supersededfear provenance unchanged; new outputs only in this namespace.",
+  "fear72_generation_prerequisite": "Construct and independently verify fixed-three-PC72fear first.",
+  "batch_protocol": {
+    "32B_initial": 384,
+    "72B_initial": 192,
+    "72B_recovery": "unchanged historical fresh-process halving rules",
+    "correction": "Shared nominal384 generalized the32B setting incorrectly; match actual historical72B initial192. No384comparison authorized.",
+    "cross_run_limit": "Matching initial cap does not ensure identical batch grouping or bitwise historical trajectories."
+  }
+}

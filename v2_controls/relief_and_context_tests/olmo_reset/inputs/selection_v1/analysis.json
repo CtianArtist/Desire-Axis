@@ -1,0 +1,66 @@
+{
+  "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+  "revision": "b96024342a77a69aa0dda815c3454a671f477463",
+  "width": 5120,
+  "n_layers": 64,
+  "best_layers": {
+    "final_token": 57,
+    "mean": 47
+  },
+  "primary": "final_token",
+  "refits": {
+    "final_token": {
+      "layer": 57,
+      "raw_norm": 12.331622123718262,
+      "n_fit": 200,
+      "fit_dataset": "S2_1P",
+      "fitted_auc": 0.9958999999999999,
+      "auc_role": "in-sample fitted AUC; not independent held-out"
+    },
+    "mean": {
+      "layer": 47,
+      "raw_norm": 5.096612930297852,
+      "n_fit": 200,
+      "fit_dataset": "S2_1P",
+      "fitted_auc": 0.9961,
+      "auc_role": "in-sample fitted AUC; not independent held-out"
+    }
+  },
+  "n_folds": 5,
+  "random_seed": 42,
+  "denoise_variance": 0.5,
+  "selection": "per-pool mean all-control CV AUC across S2_1P/S2_3P; pandas idxmax",
+  "auc_caveat": "Selection CV and fitted AUC are never independent held-out performance.",
+  "neutral_diagnostic": "Fit on neutral D only; evaluate against B,C1,C2,D,E, not neutral-only.",
+  "activation_revision_verified": true,
+  "activation_prompt_hashes_verified": {
+    "S2_1P": true,
+    "S2_3P": true
+  },
+  "provenance_limit": "Absent revision/prompt hashes cannot be independently verified from source-layout activations.",
+  "source_sha256": "f65a55877163f403e694bece8242c1f80248a1173047b74e9008c64242937f7e",
+  "dataset_sha256": "2c3712b4b096889c896625835752a9f350beedb9cd84243bac613b9c5e4ce525",
+  "activations_sha256": "0df8fb14b3b56ac7b96d7a479653644de9c89a07611ae7acb639fc314b3f05e7",
+  "artifact_sha256": {
+    "layer_curves.csv": "af1896eb0610daac2373f3ceb216c1dcdd6d86c56f44874b5ce5ea696098187d",
+    "rows.json": "a1f7ebc6105a8cee72751dfcf12e7f7aadd50467aa95c564d5a904955b9ddc3a",
+    "folds.json": "471bcf26ebe44bee936faedf7e0ef1a3253d24c63d8c63b2ec4eb1a5ed2eed99",
+    "fold_aucs.json": "c9af927e3eda9acb83d5b328dab4c76f8e6d6e20371db24b9ee8c1a7c51a94ee",
+    "final_token/pain_vectors.pt": "b86b3a66b36eeddbc388964663bbfc35857b510946553d8fedccf93d71744463",
+    "final_token/raw.npy": "1c7c5a00119b3dd8e02f51657b29a7e9503bdfe1d147db3ba429338529e343d2",
+    "final_token/unit.npy": "a875091c84021a7a55ea63df7ea7f5119801b79ede206e3e52c7856852de1451",
+    "final_token/vectors.json": "77db62fd657230c20cf772ea79b0e9b9583e691ffc69027307c2903541dc8844",
+    "final_token/metadata.json": "054743bc9fbd947404432bbd0092ca9512ad95ce381a2191d42c0f5be01ea425",
+    "mean/pain_vectors.pt": "eaa0785d00e23dec0cdf893b9d230d391f51f96599a346a1e307c3020782c444",
+    "mean/raw.npy": "064478c9bf3bf8d0d4ccc94784cb725133a4fdd8821592d97522ea14ad956ea2",
+    "mean/unit.npy": "7c66ebe91ca1576a0bfd0361d76067bc14998702714b26f7d65fd789ae2a54be",
+    "mean/vectors.json": "d05cbeb51c2a8e0feac3d068055cbe5371b14e0fb9bcb7426e6edf7253fb97d4",
+    "mean/metadata.json": "eeed5ef3e63fbe23bc7ccde418f9bf1fcae3b1d0ab1cd7264b21945de655cabe"
+  },
+  "versions": {
+    "numpy": "2.3.4",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.1",
+    "torch": "2.14.0+cu130"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "author_files_checked": 12,
+  "author_byte_matches": 12,
+  "scientific_function_ast_checks": [
+    {
+      "file": "src/removal.py",
+      "unchanged_functions": 16,
+      "adapted_functions": [
+        "execution_identity"
+      ]
+    },
+    {
+      "file": "src/analyze_olmo.py",
+      "unchanged_functions": 30,
+      "adapted_functions": [
+        "source_ref"
+      ]
+    },
+    {
+      "file": "src/olmo_capture.py",
+      "unchanged_functions": 4,
+      "adapted_functions": []
+    },
+    {
+      "file": "src/archive_audit.py",
+      "unchanged_functions": 10,
+      "adapted_functions": []
+    },
+    {
+      "file": "src/olmo_run.py",
+      "unchanged_functions": 3,
+      "adapted_functions": []
+    }
+  ],
+  "compile": "passed",
+  "table_replay": "passed",
+  "future_inference": "dry-run only",
+  "resampling": "not run",
+  "model_and_judge_calls": 0,
+  "git_commands": 0
+}

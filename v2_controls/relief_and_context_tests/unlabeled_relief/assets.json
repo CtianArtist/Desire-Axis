@@ -1,0 +1,30 @@
+{
+  "publication_status": "pending",
+  "assets": [
+    {
+      "name": "vectors/",
+      "public_url": null,
+      "status": "pending",
+      "purpose": "original verified 32B inference vectors and identity JSONs"
+    },
+    {
+      "name": "raw_trials.jsonl.gz",
+      "bytes": 4453403,
+      "public_url": null,
+      "status": "pending",
+      "unpack_as": "trials.jsonl"
+    },
+    {
+      "name": "full_analysis_v2.tar.gz",
+      "bytes": 19774551,
+      "public_url": null,
+      "status": "pending"
+    },
+    {
+      "name": "fear/",
+      "public_url": null,
+      "status": "pending"
+    }
+  ],
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

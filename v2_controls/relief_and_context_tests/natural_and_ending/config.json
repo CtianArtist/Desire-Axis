@@ -1,0 +1,59 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "model_revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+  "adapter": "Valen92/pain-adapters",
+  "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+  "adapter_merged": false,
+  "base_precision": "bfloat16",
+  "adapter_precision": "float32 per original PEFT loader",
+  "backend": "sdpa",
+  "image": "job-core",
+  "image_digest": "sha256:7009435f9ebc4683c2b554084a81d4f958fcceb17a8e7c455c2d4859bfdd80a4",
+  "versions": {
+    "torch": "2.11.0",
+    "transformers": "5.12.1",
+    "peft": "0.20.0",
+    "numpy": "2.3.4"
+  },
+  "gpu_type": "h100",
+  "gpu_count": 1,
+  "max_runtime_seconds": 14400,
+  "runtime_self_stop_hours": 3.8,
+  "phase_order": [
+    "B5",
+    "B7"
+  ],
+  "trials": 4592,
+  "contexts": 140,
+  "injection_layer": 38,
+  "coefficient": 1.0,
+  "B5_coefficient": 0.0,
+  "monitor_layer": 61,
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "max_answer_tokens": 8,
+  "batch_rows": 384,
+  "fallback": "original recursive halving with row RNG restoration on OOM",
+  "fresh_cache_per_choice": true,
+  "length_sort": "stable ascending current message character count, as source",
+  "input_artifacts": [
+    null
+  ],
+  "shared_load": true,
+  "no_extra_model_pilot": true,
+  "runtime_validation": "reuse exact loader/image/source; added input/mask/end checks on first required forwards",
+  "warm_throughput": null,
+  "memory_headroom": null,
+  "analysis_specification": "results/analysis_specification.json",
+  "scientific_scope": "B5/B7 32B only; no72B attempt",
+  "credentials": [
+    "HF_TOKEN"
+  ],
+  "source_files": {
+    "inputs/released_protocol.py": "8fd7c15171bede930c708384d51d18ebbdf0fb0f26f1768864efb425ead64ed4",
+    "inputs/conversations.json": "901ea558faf34c69caff59321775723e20bebf49a77d20070f6b85a0368a3291",
+    "src/build_protocol.py": "b7094f63fc37580642b1d1960391c9e967bd657f6f03917ac0eb5e4ecbccd3d7",
+    "src/run_natural.py": "53d0d6b03ad8c87fd5ddb14145be9ec19fd754e999edcf0a51c470c839f721ca",
+    "src/launch_job.py": "10ef098976ad1df085cf3d99dffa03ba8d9271f1d325cfdc8900e59c8819a762"
+  }
+}

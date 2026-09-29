@@ -1,0 +1,56 @@
+[
+  {
+    "local_path": "capped_tranche_v1/removal/qwen25_32b/layer32/shard0of1/",
+    "purpose": "200 retained pain-only Qwen conversations",
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "capped_tranche_v1/removal/llama31_8b/layer16/shard0of1/",
+    "purpose": "200 retained pain-only Llama conversations",
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "capped_tranche_v1/evidence/qwen25_32b/timing.json",
+    "purpose": "Original recount timing input",
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "capped_tranche_v1/evidence/llama31_8b/timing.json",
+    "purpose": "Original recount timing input",
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "prepared_v1/qwen25_32b/",
+    "purpose": "Small hash-bound direction tensors and metadata; future inference/recount validation",
+    "url": null,
+    "status": "included_in_git",
+    "included_relative_path": "inputs/prepared_v1/qwen25_32b/",
+    "note": "Use this included input for future inference; historical archive copies remain for original-run provenance. Tensor hashes unchanged."
+  },
+  {
+    "local_path": "prepared_v1/llama31_8b/",
+    "purpose": "Small hash-bound direction tensors and metadata; future inference/recount validation",
+    "url": null,
+    "status": "included_in_git",
+    "included_relative_path": "inputs/prepared_v1/llama31_8b/",
+    "note": "Use this included input for future inference; historical archive copies remain for original-run provenance. Tensor hashes unchanged."
+  },
+  {
+    "local_path": "tranche_readout_v1/readout.json",
+    "purpose": "Authoritative compact 400-conversation table replay",
+    "bytes": 13144,
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "tranche_recount_v1/rates_descriptive_only/analysis.json",
+    "purpose": "Full saved undefined/comparator rows and original trajectories",
+    "bytes": 6567158,
+    "url": null,
+    "status": "pending_publication"
+  }
+]

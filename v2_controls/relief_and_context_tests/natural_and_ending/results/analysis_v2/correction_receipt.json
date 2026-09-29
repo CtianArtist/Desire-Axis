@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "correction": "Zero-width empirical percentile intervals are retained as bootstrap quantiles, but their inferential bounds are null and status is degenerate_inferentially_uninformative.",
+  "counts_and_nondegenerate_intervals_unchanged": true,
+  "new_model_calls": 0,
+  "new_fits_or_resampling": 0,
+  "new_inferential_bounds": false,
+  "tables": [
+    {
+      "table": "rates",
+      "rows": 384,
+      "degenerate_intervals_marked": 344,
+      "source_sha256": "dd67f8cbc53c715b0d7088ec97c53d2b0fddbd5627dcf25f4058d46b65e85099",
+      "output_sha256": "293248b999a99004184e7ccfe04d4e778af6a3e780d267146407d5d7316a6f0b"
+    },
+    {
+      "table": "contrasts",
+      "rows": 102,
+      "degenerate_intervals_marked": 36,
+      "source_sha256": "a524b3399d8fed211f5c84a2b78cb27490f17de05a49f59c5df2c871b8e2f795",
+      "output_sha256": "200acc24d2e9fc419d00b8db981ada2c48656d05bf56dcd9a6830055601ae4b3"
+    }
+  ]
+}

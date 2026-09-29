@@ -1,0 +1,63 @@
+{
+  "profile": {
+    "path": "source_tables/profile_rates.csv",
+    "identity": "Profile analysis_v1 sampled rates",
+    "original_sha256": "2c1bd7614017dfdbc611f345b975effc53b0e0d9fa2dd869b6c37e040ec30b35",
+    "sha256": "2c1bd7614017dfdbc611f345b975effc53b0e0d9fa2dd869b6c37e040ec30b35",
+    "bytes": 206620,
+    "removed_locator_columns": [],
+    "sanitization_verification": {}
+  },
+  "lamp": {
+    "path": "source_tables/lamp_rates.csv",
+    "identity": "Lamp analysis_run_v2 sampled rates",
+    "original_sha256": "062c49d6d5e1f66a820ad5a195a540425128a83b3fc55e41b6089e3d53e85d3f",
+    "sha256": "062c49d6d5e1f66a820ad5a195a540425128a83b3fc55e41b6089e3d53e85d3f",
+    "bytes": 59988,
+    "removed_locator_columns": [],
+    "sanitization_verification": {}
+  },
+  "b2": {
+    "path": "source_tables/b2_rates.json",
+    "identity": "B2 report_support_v2; original first_target working/control selection",
+    "original_sha256": "580ab93dfd5893c87d1b8194d85ef63e7f3c49bd1826477a6f4f4c6829d8ff9b",
+    "sha256": "580ab93dfd5893c87d1b8194d85ef63e7f3c49bd1826477a6f4f4c6829d8ff9b",
+    "bytes": 15729,
+    "removed_locator_columns": [],
+    "sanitization_verification": {}
+  },
+  "spam_fear": {
+    "path": "source_tables/spam_fear_rates.csv",
+    "identity": "Fear photos/spam matched-short-wording v2",
+    "original_sha256": "8c061ffa0edc9c5d4c39cbcbb50dd34126b08faf0503c21d1814fd930961b02d",
+    "sha256": "8c061ffa0edc9c5d4c39cbcbb50dd34126b08faf0503c21d1814fd930961b02d",
+    "bytes": 2388,
+    "removed_locator_columns": [],
+    "sanitization_verification": {}
+  },
+  "four_cell": {
+    "path": "source_tables/four_cell_rates.csv",
+    "identity": "Four missing fear cells v1; final sampled position comparisons",
+    "original_sha256": "da249c8b34ec2feaa1e502c213376989a535085cf92cf17c2c8c2bdbac9e107a",
+    "sha256": "876d520b0be7f4c9d66469eb444c6471cd84e807292946f70ede1aae4b18fced",
+    "bytes": 30687,
+    "removed_locator_columns": [
+      "source",
+      "pins"
+    ],
+    "sanitization_verification": {
+      "retained_fields_exactly_equal": true,
+      "rows_verified": 60,
+      "retained_projection_sha256": "62105f5eb20dbfc1b79402671c4c891f7942c35585515111e5c8a45a0f36e49c"
+    }
+  },
+  "four_summary": {
+    "path": "source_tables/four_cell_summary.json",
+    "identity": "Four missing fear cells v1; final summary",
+    "original_sha256": "fb4fbc0e88661bbd4c70db972c713d5878dbc1bca5d0940470fc5b32078af5df",
+    "sha256": "fb4fbc0e88661bbd4c70db972c713d5878dbc1bca5d0940470fc5b32078af5df",
+    "bytes": 4289,
+    "removed_locator_columns": [],
+    "sanitization_verification": {}
+  }
+}

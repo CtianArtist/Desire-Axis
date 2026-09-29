@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "model": "Qwen_2.5_32B_instruct",
+  "layer": 61,
+  "width": 5120,
+  "s2_norm_fp32": 143.83343505859375,
+  "files": {
+    "Qwen_2.5_32B_instruct_pain_vectors.safetensors": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+    "Qwen_2.5_32B_instruct_pain_vectors.json": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+    "original_tensor_hashes_v2.json": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+    "vectors_Qwen_2.5_32B_instruct.pt": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+    "verification.json": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+    "fear_Qwen_2.5_32B_instruct.pt": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e"
+  },
+  "fp32_tensor_sha256": {
+    "s2_pain_vector": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+    "sadness_vector_matched_fp32": "ed002aaedc1dc68968ec66e23fee648d7f87a63a985004d9b83ec0cd62962758",
+    "fear_vector_matched_fp32": "297cc009dc1e9e527bea1cb0dfbc43de2c5f0a63e66bd64d04bf7f9d6a47825d"
+  },
+  "sources": [
+    "vectors/verification.json",
+    "fear32/verification_fear.json"
+  ],
+  "policy": "Reuse saved FP32 matched keys, assert exact identity, then original BF16 conversion. No re-extraction, recomputation or unscaled control substitution.",
+  "portable_metadata_policy": "Metadata-locator sanitization only; all original tensor hashes unchanged. Original input pins remain in vector_pins.json; mapping in choice_controls/vectors/included_manifest.json."
+}

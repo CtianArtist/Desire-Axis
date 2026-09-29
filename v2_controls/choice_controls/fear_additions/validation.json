@@ -1,0 +1,149 @@
+{
+  "status": "passed",
+  "checks": {
+    "unittest": "7 passed; all five inference dry-runs, source checks, in-memory compile, help, table hashes, denominators, pending assets",
+    "original_estimator_help": "all three passed with apy; includes both dynamically loaded estimator dependencies",
+    "private_locator_scan": "passed for every delivered source/config/table/doc",
+    "no_large_raw_or_state": "no .pt, .sqlite, .jsonl, or activation pools included",
+    "source_files_checked": 108,
+    "table_identity": [
+      {
+        "file": "superseded_long_wording/tables/fear_rates.csv",
+        "original_sha256": "795059d100a36b12911f54eecbba2e7d1b59272889f9265d3ffcac3ade35ab0f",
+        "copied_sha256": "795059d100a36b12911f54eecbba2e7d1b59272889f9265d3ffcac3ade35ab0f",
+        "byte_identical": true,
+        "rows": 9,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "superseded_long_wording/tables/comparison_rows.csv",
+        "original_sha256": "bbf212e565ccced9c04aaf02aff40d76707d732763a8400febde8ed52c360da7",
+        "copied_sha256": "bbf212e565ccced9c04aaf02aff40d76707d732763a8400febde8ed52c360da7",
+        "byte_identical": true,
+        "rows": 15,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "superseded_long_wording/tables/greedy.csv",
+        "original_sha256": "f9ba08febc7d2c42720d3f5fe4b8705df6d1ab27a0fd6a4fc5e36dfb43e3099b",
+        "copied_sha256": "f9ba08febc7d2c42720d3f5fe4b8705df6d1ab27a0fd6a4fc5e36dfb43e3099b",
+        "byte_identical": true,
+        "rows": 3,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "superseded_long_wording/tables/independent_counts.csv",
+        "original_sha256": "10daa403f7fae97a8ebe2d2b60ca2721a634884bda2e415c6e92b0eaf8b2143d",
+        "copied_sha256": "10daa403f7fae97a8ebe2d2b60ca2721a634884bda2e415c6e92b0eaf8b2143d",
+        "byte_identical": true,
+        "rows": 6,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "matched_wording/tables/fear_rates.csv",
+        "original_sha256": "8c061ffa0edc9c5d4c39cbcbb50dd34126b08faf0503c21d1814fd930961b02d",
+        "copied_sha256": "8c061ffa0edc9c5d4c39cbcbb50dd34126b08faf0503c21d1814fd930961b02d",
+        "byte_identical": true,
+        "rows": 9,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "matched_wording/tables/comparison_rows.csv",
+        "original_sha256": "dff6804d61b99f3aeeeb80121d02b4fd102a1b0f32facb21dc6f9dd9af555e06",
+        "copied_sha256": "dff6804d61b99f3aeeeb80121d02b4fd102a1b0f32facb21dc6f9dd9af555e06",
+        "byte_identical": true,
+        "rows": 15,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "matched_wording/tables/greedy.csv",
+        "original_sha256": "b85eaa4d39ed0b4664d95b6510d9a5fb31cea7409c1bd0f0cdf7c8e1f2be1f8f",
+        "copied_sha256": "b85eaa4d39ed0b4664d95b6510d9a5fb31cea7409c1bd0f0cdf7c8e1f2be1f8f",
+        "byte_identical": true,
+        "rows": 3,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "matched_wording/tables/independent_counts.csv",
+        "original_sha256": "d4a8f81a7a3415facdb7b488490394a187790c89eb5f845aba38895137b2e241",
+        "copied_sha256": "d4a8f81a7a3415facdb7b488490394a187790c89eb5f845aba38895137b2e241",
+        "byte_identical": true,
+        "rows": 6,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "four_cells/tables/four-slot-comparison.csv",
+        "original_sha256": "deb6d24471a80eb3490672b61da141b2fd4277ac1fcb2871b74e3eda324ab563",
+        "copied_sha256": "9e480a7ee4bbdb381d9bfdac21bff7b2cba09f82ba686e944eba54a6aeddfbf3",
+        "byte_identical": false,
+        "rows": 20,
+        "changed_columns": [
+          "source"
+        ],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "four_cells/tables/position-comparisons.csv",
+        "original_sha256": "da249c8b34ec2feaa1e502c213376989a535085cf92cf17c2c8c2bdbac9e107a",
+        "copied_sha256": "f0c392977fc21b1dff01d7265f9ec1c8ea189f08710395145d51b8195840c889",
+        "byte_identical": false,
+        "rows": 60,
+        "changed_columns": [
+          "source"
+        ],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "four_cells/tables/greedy-firstchoice.csv",
+        "original_sha256": "f23a0a2afc22b18f330b2610f40d8f1eeef4aff4269da3db7cc801d96245a0c5",
+        "copied_sha256": "f23a0a2afc22b18f330b2610f40d8f1eeef4aff4269da3db7cc801d96245a0c5",
+        "byte_identical": true,
+        "rows": 12,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "four_cells/tables/originals/lamp_rates.selected.original_bytes.csv",
+        "original_sha256": "b7482fe113c7be83e4038183d38675974f818090c579e8a4b2633f9446f7ac04",
+        "copied_sha256": "b7482fe113c7be83e4038183d38675974f818090c579e8a4b2633f9446f7ac04",
+        "byte_identical": true,
+        "rows": 24,
+        "changed_columns": [],
+        "non_locator_cells_exact": true,
+        "status": "passed"
+      },
+      {
+        "file": "four_cells/tables/originals/b2_rates.selected.original_bytes.json",
+        "original_sha256": "580ab93dfd5893c87d1b8194d85ef63e7f3c49bd1826477a6f4f4c6829d8ff9b",
+        "copied_sha256": "580ab93dfd5893c87d1b8194d85ef63e7f3c49bd1826477a6f4f4c6829d8ff9b",
+        "byte_identical": true,
+        "status": "passed"
+      }
+    ]
+  },
+  "not_run": [
+    "Full raw estimator replay: parent will stage exact saved assets and run on CPU compute.",
+    "Model inference and target CUDA environment: deliberately not run."
+  ],
+  "original_estimator_packages": "numpy==2.3.4; scipy==1.16.3 required for replay",
+  "git_actions": "none; no staging or commits performed by this writer"
+}

@@ -1,0 +1,10 @@
+# Historical runtime; Python 3.12; CUDA-compatible torch wheel required.
+torch==2.11.0
+transformers==5.12.1
+peft==0.20.0
+numpy==2.3.4
+scipy==1.16.3
+safetensors==0.6.2
+huggingface-hub==1.16.1
+nvidia-ml-py==13.580.82
+accelerate==1.15.0

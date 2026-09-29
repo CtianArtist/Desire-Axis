@@ -1,0 +1,7 @@
+# Executed CUDA runtime (lock uses torch base distribution version).
+--extra-index-url https://download.pytorch.org/whl/cu130
+torch==2.14.0+cu130
+transformers==5.17.0
+numpy==2.3.4
+tokenizers==0.23.2
+safetensors==0.8.0

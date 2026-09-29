@@ -1,0 +1,8052 @@
+[
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "layer": 35,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "layer": 37,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 4608,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "layer": 23,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "layer": 25,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 2304,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "layer": 40,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "layer": 37,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "layer": 70,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "layer": 48,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "layer": 28,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "layer": 28,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "layer": 47,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_base",
+    "layer": 26,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "layer": 27,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "layer": 32,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Phi_4",
+    "layer": 20,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "layer": 60,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "layer": 61,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "layer": 78,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "layer": 76,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 8192,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "layer": 24,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "layer": 24,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 3584,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "layer": 31,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 5120,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "S1_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "S1_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "6b6155b9284c98bca4c671dd585dcb684e0426c1cbfe2a82282b12d25b1fceae",
+    "examples": {
+      "categories": [
+        "A1",
+        "A2"
+      ],
+      "sets": [
+        1,
+        1
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "S2_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "S2_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "S3_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "S3_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "A1": 20,
+      "A2": 20,
+      "A3": 20,
+      "A4": 20,
+      "A5": 20,
+      "B": 20,
+      "C1": 20,
+      "C2": 20,
+      "D": 20,
+      "E": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "797d37eece969d10e8bc5ed9d4505f7da44c03f66b71db9a5fd148a699b3d89a",
+    "examples": {
+      "categories": [
+        "A1",
+        "A1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "Random_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "Random_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "N1": 20,
+      "N2": 20,
+      "N3": 20,
+      "N4": 20,
+      "N5": 20,
+      "N6": 20,
+      "N7": 20,
+      "N8": 20,
+      "N9": 20,
+      "N10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c714352c7455d7d8821a8f27a0cde15151ed0e9083f1c3bd75789ed9067f809f",
+    "examples": {
+      "categories": [
+        "N1",
+        "N1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "Arousal_1P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": true,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "layer": 34,
+    "set": "Arousal_3P",
+    "rows": 200,
+    "width": 4096,
+    "dtype": "torch.float16",
+    "category_counts": {
+      "P1": 20,
+      "P2": 20,
+      "P3": 20,
+      "P4": 20,
+      "P5": 20,
+      "P6": 20,
+      "P7": 20,
+      "P8": 20,
+      "P9": 20,
+      "P10": 20
+    },
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0,
+    "used": false,
+    "metadata_sha256": "c962ba3e778b53bd8650f48bf54323872f1a27bb7292f782fc5cadd733c548be",
+    "examples": {
+      "categories": [
+        "P1",
+        "P1"
+      ],
+      "sets": [
+        1,
+        2
+      ]
+    }
+  }
+]

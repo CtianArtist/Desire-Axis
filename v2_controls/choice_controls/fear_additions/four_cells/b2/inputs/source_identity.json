@@ -1,0 +1,13 @@
+{
+  "pain_axis_b/recovery.py": "4109f3fbac23609515544a8a3bdf31a4c5212c514e827422f793cd815b4ac0c6",
+  "pain_axis_b/process_watchdog.py": "f986542e145a0e14b2c7f56b115c124e7b2099f66d6a74c99fbadd4b417acc46",
+  "pain_axis_b/tp_guard.py": "8c40cc26ae5d7333f2648fcf0d4f44de1453c28733a8292b4b8c2e64a51ad651",
+  "pain_axis_b/runtime.py": "f1cdd2ce71415419184f393a9e6d10f1080c0a337978391858d8d2a85ddded24",
+  "pain_axis_b/__init__.py": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+  "pain_axis_b/diagnostics.py": "4154e6f0067e63474442cb27259cfc261cec2b9cdc78c49984b7a77f97c80aaf",
+  "src/rank_entrypoint.py": "7e9dbca9194e4931699f9b08ab8975f88cfc38e4b24c47e890930a9b2e8c6eea",
+  "env/uv.lock": "8c8a4c97d2678c93dab1bbe043508014f4063b1d96f47ff02e70fa796a335900",
+  "env/pyproject.toml": "2be86b18e65149c0cf683899398e7116c14dc97550ac744e79f6e918b356f810",
+  "inputs/reference/b2_protocol.py": "e85ebf2b4065885756d62f5bd20d88e23d499ffb18c160bd80a586a6bec22ca5",
+  "inputs/scenarios.json": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9"
+}
