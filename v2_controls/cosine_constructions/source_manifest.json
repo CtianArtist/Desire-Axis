@@ -1,0 +1,1179 @@
+{
+  "schema_version": 1,
+  "source_repository": "https://github.com/valen-research/Pain-axis",
+  "author_revision": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+  "producing_worktree_commit": "07508606bf01f03ba9500050e74523e6b08cb66b",
+  "released_audit_commit": "2774a3bada661b03bb8c025e4bd5aac0f981ecdf",
+  "original_executed_entrypoint_sha256": "db5e777165dde2ce43aa5ebaca392603dcd45e3bd81392cd30f148ae83a60a4e",
+  "files": [
+    {
+      "path": "src/run_audit.py",
+      "source_relative_path": "src/run_audit.py",
+      "source_bytes": 22030,
+      "source_sha256": "6559d4094395cc2a00eb0c29b49ff97d21b9b9c5ac8c4c5be9c2cd95a90e8a80",
+      "bytes": 21861,
+      "sha256": "95eb87be1ab30bdc1f14c59754dc0c7a5fcf1fb08e61ecb0dee7538681b83571",
+      "transformations": [
+        "Remove optional platform progress callback; retain JSON stdout and all numerical code."
+      ]
+    },
+    {
+      "path": "src/verify_outputs.py",
+      "source_relative_path": "src/verify_outputs.py",
+      "source_bytes": 17697,
+      "source_sha256": "7e0b0ef6105e0c3a7ed6bee267cc2d0dc282e6a96a9c111f9043271e14a48ec6",
+      "bytes": 17697,
+      "sha256": "7e0b0ef6105e0c3a7ed6bee267cc2d0dc282e6a96a9c111f9043271e14a48ec6",
+      "transformations": []
+    },
+    {
+      "path": "tests/test_verify_outputs.py",
+      "source_relative_path": "tests/test_verify_outputs.py",
+      "source_bytes": 12960,
+      "source_sha256": "32481ff7d4faff0214bd1bc5712ee8fac0c24ff5df003860ef8c30e7ca9c2116",
+      "bytes": 12960,
+      "sha256": "32481ff7d4faff0214bd1bc5712ee8fac0c24ff5df003860ef8c30e7ca9c2116",
+      "transformations": []
+    },
+    {
+      "path": "requirements.txt",
+      "source_relative_path": "requirements.txt",
+      "source_bytes": 61,
+      "source_sha256": "882565711ff5e8ca0b4b6ac5cdf5e085bca89592b8e584f1b011fe29d23157e9",
+      "bytes": 61,
+      "sha256": "882565711ff5e8ca0b4b6ac5cdf5e085bca89592b8e584f1b011fe29d23157e9",
+      "transformations": []
+    },
+    {
+      "path": "references/executed_run_audit.py",
+      "source_relative_path": "references/executed_run_audit.py",
+      "source_bytes": 21857,
+      "source_sha256": "db5e777165dde2ce43aa5ebaca392603dcd45e3bd81392cd30f148ae83a60a4e",
+      "bytes": 21857,
+      "sha256": "db5e777165dde2ce43aa5ebaca392603dcd45e3bd81392cd30f148ae83a60a4e",
+      "transformations": []
+    },
+    {
+      "path": "references/author/02_build_control_vectors.py",
+      "source_relative_path": "references/author/02_build_control_vectors.py",
+      "source_bytes": 6984,
+      "source_sha256": "d74b5235090f9a66b84456d23e99640a905e0f19295fa91b2a0eacf2f938e793",
+      "bytes": 6984,
+      "sha256": "d74b5235090f9a66b84456d23e99640a905e0f19295fa91b2a0eacf2f938e793",
+      "transformations": []
+    },
+    {
+      "path": "references/author/03_similarity_one_model.py",
+      "source_relative_path": "references/author/03_similarity_one_model.py",
+      "source_bytes": 7321,
+      "source_sha256": "752c827bfbc044de6a75439e9aeca481714ed5107852772e87ef0205610c7c16",
+      "bytes": 7321,
+      "sha256": "752c827bfbc044de6a75439e9aeca481714ed5107852772e87ef0205610c7c16",
+      "transformations": []
+    },
+    {
+      "path": "references/author/04_run_all_similarity.py",
+      "source_relative_path": "references/author/04_run_all_similarity.py",
+      "source_bytes": 2473,
+      "source_sha256": "322a1758988546f16f5c44d995286d4c0bb0e4923f2e82622a21b8aad7166cff",
+      "bytes": 2473,
+      "sha256": "322a1758988546f16f5c44d995286d4c0bb0e4923f2e82622a21b8aad7166cff",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_2_27B_base_L35.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_2_27B_base_L35.csv",
+      "source_bytes": 869,
+      "source_sha256": "e5b62961b71e9c86f5a0e6bb471f2dc660c30ce4e4398607704e6857f2beab39",
+      "bytes": 869,
+      "sha256": "e5b62961b71e9c86f5a0e6bb471f2dc660c30ce4e4398607704e6857f2beab39",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_2_27B_instruct_L37.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_2_27B_instruct_L37.csv",
+      "source_bytes": 873,
+      "source_sha256": "fd4f07281dc6fd3e483b54fc4f11218f12c43846cb4d295e8446b05639007a5f",
+      "bytes": 873,
+      "sha256": "fd4f07281dc6fd3e483b54fc4f11218f12c43846cb4d295e8446b05639007a5f",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_2_2B_base_L23.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_2_2B_base_L23.csv",
+      "source_bytes": 873,
+      "source_sha256": "82c4697f85a4efb66ec90bb4bb98b1fa708b73ff39422d0eb1a6629fb34df0de",
+      "bytes": 873,
+      "sha256": "82c4697f85a4efb66ec90bb4bb98b1fa708b73ff39422d0eb1a6629fb34df0de",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_2_2B_instruct_L25.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_2_2B_instruct_L25.csv",
+      "source_bytes": 875,
+      "source_sha256": "2da68f341ee3f2ce78ed27c853ded8942a7fccf6a4ca2dd801dcc0e6467526be",
+      "bytes": 875,
+      "sha256": "2da68f341ee3f2ce78ed27c853ded8942a7fccf6a4ca2dd801dcc0e6467526be",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_2_9B_base_L40.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_2_9B_base_L40.csv",
+      "source_bytes": 873,
+      "source_sha256": "9d60828b654469f72b2afeafcdcf530e325fd4b6c1285f25b511ac7ca681ef64",
+      "bytes": 873,
+      "sha256": "9d60828b654469f72b2afeafcdcf530e325fd4b6c1285f25b511ac7ca681ef64",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_2_9B_instruct_L37.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_2_9B_instruct_L37.csv",
+      "source_bytes": 873,
+      "source_sha256": "1b1cf1407d1b542e384795ca0211bacecaaaed2217b6f6da2cf0de900960527b",
+      "bytes": 873,
+      "sha256": "1b1cf1407d1b542e384795ca0211bacecaaaed2217b6f6da2cf0de900960527b",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_3_27B_base_L56.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_3_27B_base_L56.csv",
+      "source_bytes": 867,
+      "source_sha256": "0cbb88f90cc41081127c3a14cb64bc03aca8a2ed8db3c1f03ee7dece112f50d9",
+      "bytes": 867,
+      "sha256": "0cbb88f90cc41081127c3a14cb64bc03aca8a2ed8db3c1f03ee7dece112f50d9",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Gemma_3_27B_instruct_L59.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Gemma_3_27B_instruct_L59.csv",
+      "source_bytes": 859,
+      "source_sha256": "7672dd77cc5f4e77fb31383c85f13190d86c5d728596e4c2dc52bc07205f5444",
+      "bytes": 859,
+      "sha256": "7672dd77cc5f4e77fb31383c85f13190d86c5d728596e4c2dc52bc07205f5444",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Llama_3.1_70B_base_L70.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Llama_3.1_70B_base_L70.csv",
+      "source_bytes": 871,
+      "source_sha256": "6f5996ec7defe1750e6e3f46fefa99317a7963f7728e73b4ea96a0f6f04fb176",
+      "bytes": 871,
+      "sha256": "6f5996ec7defe1750e6e3f46fefa99317a7963f7728e73b4ea96a0f6f04fb176",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Llama_3.1_70B_instruct_L48.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Llama_3.1_70B_instruct_L48.csv",
+      "source_bytes": 871,
+      "source_sha256": "d3109e45e058319cd6d67f1c52a5e1d5a92c793d51885d201c6046fe0fdd7111",
+      "bytes": 871,
+      "sha256": "d3109e45e058319cd6d67f1c52a5e1d5a92c793d51885d201c6046fe0fdd7111",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Llama_3.1_8B_base_L28.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Llama_3.1_8B_base_L28.csv",
+      "source_bytes": 875,
+      "source_sha256": "c75361f4166a5db8f627cccb0a5630c32675f5d7c60447c6bf65ed125a45805f",
+      "bytes": 875,
+      "sha256": "c75361f4166a5db8f627cccb0a5630c32675f5d7c60447c6bf65ed125a45805f",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Llama_3.1_8B_instruct_L28.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Llama_3.1_8B_instruct_L28.csv",
+      "source_bytes": 873,
+      "source_sha256": "3984c760198b35cdd86c2a5a0e5438bb755c7e7bec8176472830b92c82c8d9c5",
+      "bytes": 873,
+      "sha256": "3984c760198b35cdd86c2a5a0e5438bb755c7e7bec8176472830b92c82c8d9c5",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Llama_3.3_70B_instruct_L47.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Llama_3.3_70B_instruct_L47.csv",
+      "source_bytes": 871,
+      "source_sha256": "68f01721bef27a013a3fee1db1a8d11e9a703087b0cb6e896c4a99ea1e8dbfd1",
+      "bytes": 871,
+      "sha256": "68f01721bef27a013a3fee1db1a8d11e9a703087b0cb6e896c4a99ea1e8dbfd1",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_MEAN_all_models.csv",
+      "source_relative_path": "references/raw_matrices/similarity_MEAN_all_models.csv",
+      "source_bytes": 861,
+      "source_sha256": "878ae155f45ebde452e9a55aa35bcfb5c3ccad820244031d99de2aea8289829a",
+      "bytes": 861,
+      "sha256": "878ae155f45ebde452e9a55aa35bcfb5c3ccad820244031d99de2aea8289829a",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Mistral_7B_base_L26.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Mistral_7B_base_L26.csv",
+      "source_bytes": 867,
+      "source_sha256": "7905918329c4935004dbf40cbd63da432b81695ed142bb9d3043aaf8e3e060e4",
+      "bytes": 867,
+      "sha256": "7905918329c4935004dbf40cbd63da432b81695ed142bb9d3043aaf8e3e060e4",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Mistral_7B_instruct_L27.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Mistral_7B_instruct_L27.csv",
+      "source_bytes": 861,
+      "source_sha256": "78058df658fe03acc782386d60803e96eecd259ae20ed192c10a1f9ff9da9416",
+      "bytes": 861,
+      "sha256": "78058df658fe03acc782386d60803e96eecd259ae20ed192c10a1f9ff9da9416",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Mistral_Small_24B_base_L32.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Mistral_Small_24B_base_L32.csv",
+      "source_bytes": 871,
+      "source_sha256": "937da6ccdf0716228df8e563264ce7a728a0be9e197c3e3e61d7aebbc559698d",
+      "bytes": 871,
+      "sha256": "937da6ccdf0716228df8e563264ce7a728a0be9e197c3e3e61d7aebbc559698d",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Phi_4_L20.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Phi_4_L20.csv",
+      "source_bytes": 865,
+      "source_sha256": "867f1f76db7dcf69210730dcebb8650abfa5471b5420a5e0a0c6ea04e312e285",
+      "bytes": 865,
+      "sha256": "867f1f76db7dcf69210730dcebb8650abfa5471b5420a5e0a0c6ea04e312e285",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_2.5_32B_base_L60.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_2.5_32B_base_L60.csv",
+      "source_bytes": 867,
+      "source_sha256": "bd9ad7958f6aec0bc1d15d05da846c8e20633d58fd3b49bdc16dd0b406d533a8",
+      "bytes": 867,
+      "sha256": "bd9ad7958f6aec0bc1d15d05da846c8e20633d58fd3b49bdc16dd0b406d533a8",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_2.5_32B_instruct_L61.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_2.5_32B_instruct_L61.csv",
+      "source_bytes": 857,
+      "source_sha256": "8b36d47434262dc06e08c65d04f5924fc30d10403048fd699f43cd89eae2d75f",
+      "bytes": 857,
+      "sha256": "8b36d47434262dc06e08c65d04f5924fc30d10403048fd699f43cd89eae2d75f",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_2.5_72B_base_L78.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_2.5_72B_base_L78.csv",
+      "source_bytes": 865,
+      "source_sha256": "268f7a2e89b883a492b9b3ee1346d11f5c2dbc480725bb21d22d4f1ad913f38b",
+      "bytes": 865,
+      "sha256": "268f7a2e89b883a492b9b3ee1346d11f5c2dbc480725bb21d22d4f1ad913f38b",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_2.5_72B_instruct_L76.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_2.5_72B_instruct_L76.csv",
+      "source_bytes": 867,
+      "source_sha256": "375465207e73bf5af9912f3c8cf837c62c7d34e43b0fcb52571ba992d0262acd",
+      "bytes": 867,
+      "sha256": "375465207e73bf5af9912f3c8cf837c62c7d34e43b0fcb52571ba992d0262acd",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_2.5_7B_base_L24.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_2.5_7B_base_L24.csv",
+      "source_bytes": 863,
+      "source_sha256": "6f7df5c9de6711e3b045f453ba463e3586729a3522b36b33e50d415602eb7fbd",
+      "bytes": 863,
+      "sha256": "6f7df5c9de6711e3b045f453ba463e3586729a3522b36b33e50d415602eb7fbd",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_2.5_7B_instruct_L24.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_2.5_7B_instruct_L24.csv",
+      "source_bytes": 861,
+      "source_sha256": "7bf4af0cbffd067ccaf9f39a82bce572de2c8cd2bc275b7c6dc1d138539b2726",
+      "bytes": 861,
+      "sha256": "7bf4af0cbffd067ccaf9f39a82bce572de2c8cd2bc275b7c6dc1d138539b2726",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_3_14B_base_L31.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_3_14B_base_L31.csv",
+      "source_bytes": 865,
+      "source_sha256": "552e9ab7719640f23924257fe3a4477903e6aa57921918b69722114f5bdae0e8",
+      "bytes": 865,
+      "sha256": "552e9ab7719640f23924257fe3a4477903e6aa57921918b69722114f5bdae0e8",
+      "transformations": []
+    },
+    {
+      "path": "references/raw_matrices/similarity_Qwen_3_8B_base_L34.csv",
+      "source_relative_path": "references/raw_matrices/similarity_Qwen_3_8B_base_L34.csv",
+      "source_bytes": 865,
+      "source_sha256": "d9ac4a97b82a6f5b010298dc888cf6d14d21f1f7ab548017dd8d8b4916edc709",
+      "bytes": 865,
+      "sha256": "d9ac4a97b82a6f5b010298dc888cf6d14d21f1f7ab548017dd8d8b4916edc709",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/common_model_comparison.csv",
+      "source_relative_path": "results/analysis_v1/common_model_comparison.csv",
+      "source_bytes": 14340,
+      "source_sha256": "a9f3d4d66145d91d40553e87afd96e27c29ac8bcfaff2ca1e5451da01fbb108a",
+      "bytes": 14340,
+      "sha256": "a9f3d4d66145d91d40553e87afd96e27c29ac8bcfaff2ca1e5451da01fbb108a",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/comparison.csv",
+      "source_relative_path": "results/analysis_v1/comparison.csv",
+      "source_bytes": 1434,
+      "source_sha256": "33194e210e111386c206401c414d801941f5551b7e4853ea2a41b67cddca1cbf",
+      "bytes": 1434,
+      "sha256": "33194e210e111386c206401c414d801941f5551b7e4853ea2a41b67cddca1cbf",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/counts_common_controls.csv",
+      "source_relative_path": "results/analysis_v1/counts_common_controls.csv",
+      "source_bytes": 632,
+      "source_sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e",
+      "bytes": 632,
+      "sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/counts_common_neutral.csv",
+      "source_relative_path": "results/analysis_v1/counts_common_neutral.csv",
+      "source_bytes": 632,
+      "source_sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e",
+      "bytes": 632,
+      "sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/counts_paper_available.csv",
+      "source_relative_path": "results/analysis_v1/counts_paper_available.csv",
+      "source_bytes": 632,
+      "source_sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e",
+      "bytes": 632,
+      "sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/failed_input_review.json",
+      "source_relative_path": "results/analysis_v1/failed_input_review.json",
+      "source_bytes": 12503,
+      "source_sha256": "55ae7d3be8ac769b7c753b27ee157a7fb5165a0a76953d85d7438fcac269ddd7",
+      "bytes": 12503,
+      "sha256": "55ae7d3be8ac769b7c753b27ee157a7fb5165a0a76953d85d7438fcac269ddd7",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/failed_input_structures.json",
+      "source_relative_path": "results/analysis_v1/failed_input_structures.json",
+      "source_bytes": 6505,
+      "source_sha256": "602a07a2bd636fa611765484f94ae22484873d121a0c8ea4cb3df7b82e258f74",
+      "bytes": 6505,
+      "sha256": "602a07a2bd636fa611765484f94ae22484873d121a0c8ea4cb3df7b82e258f74",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/failure_manifest.json",
+      "source_relative_path": "results/analysis_v1/failure_manifest.json",
+      "source_bytes": 6755,
+      "source_sha256": "e60ecbf8f6460e9136404fdfb4c02f5b73192e09de5ef2f2d5a155b85c429366",
+      "bytes": 1469,
+      "sha256": "026022c5b8c19822e003005134e41c60975f680bc51724cb4a8b256aeeab9c0d",
+      "transformations": [
+        "Remove runtime-path traceback only; preserve exact model, phase and error."
+      ]
+    },
+    {
+      "path": "results/analysis_v1/independent_verification.json",
+      "source_relative_path": "results/analysis_v1/independent_verification.json",
+      "source_bytes": 58947,
+      "source_sha256": "caf15c053fbbdea6a84a76575bb91cb3baebd9c7e5083dbf6eba65005d037d18",
+      "bytes": 58830,
+      "sha256": "edc367a174396a14d417de86fcd2440435810a6e91586ea84c34d4f7fd3c41d7",
+      "transformations": [
+        "Replace private reference_directory with portable relative path."
+      ]
+    },
+    {
+      "path": "results/analysis_v1/input_manifest.json",
+      "source_relative_path": "results/analysis_v1/input_manifest.json",
+      "source_bytes": 10512,
+      "source_sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+      "bytes": 10512,
+      "sha256": "9dd2e7938e96dad04754f27eae2c2028b0f7c3c7a74a4c51ce17806c6afc8dfa",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/input_review.json",
+      "source_relative_path": "results/analysis_v1/input_review.json",
+      "source_bytes": 143213,
+      "source_sha256": "7b8270ebfde7ae4397f6b932b9751714437ad43241464753ede28771173abbbf",
+      "bytes": 143213,
+      "sha256": "7b8270ebfde7ae4397f6b932b9751714437ad43241464753ede28771173abbbf",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/input_review_all_files.json",
+      "source_relative_path": "results/analysis_v1/input_review_all_files.json",
+      "source_bytes": 155713,
+      "source_sha256": "bf1d16d30d56a198e778b6ad10de5e53c0d10e1c7f8c34c36326b53d27995a03",
+      "bytes": 155713,
+      "sha256": "bf1d16d30d56a198e778b6ad10de5e53c0d10e1c7f8c34c36326b53d27995a03",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/input_structures.json",
+      "source_relative_path": "results/analysis_v1/input_structures.json",
+      "source_bytes": 81262,
+      "source_sha256": "e340ff3eff534b328f9e0dcf9488726d72b00f1c8b9ec933f9fbffe393fa222f",
+      "bytes": 81262,
+      "sha256": "e340ff3eff534b328f9e0dcf9488726d72b00f1c8b9ec933f9fbffe393fa222f",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_27B_base_L35.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Gemma_2_27B_base_L35.csv",
+      "source_bytes": 1419,
+      "source_sha256": "e279929ded8577185d907f5b3998bfbd5bcaabb796d67cbb1cf4c152bd9ac4af",
+      "bytes": 1419,
+      "sha256": "e279929ded8577185d907f5b3998bfbd5bcaabb796d67cbb1cf4c152bd9ac4af",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_27B_instruct_L37.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Gemma_2_27B_instruct_L37.csv",
+      "source_bytes": 1434,
+      "source_sha256": "a209cfe8c89710b8be5f841b4477d3d2b787e97b8e872e41cadb9981a735fe3f",
+      "bytes": 1434,
+      "sha256": "a209cfe8c89710b8be5f841b4477d3d2b787e97b8e872e41cadb9981a735fe3f",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_2B_base_L23.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Gemma_2_2B_base_L23.csv",
+      "source_bytes": 1462,
+      "source_sha256": "5f721bd88f319b009319c1022ecfcf71f642006fc19f6c1aad875a17a74c9c4e",
+      "bytes": 1462,
+      "sha256": "5f721bd88f319b009319c1022ecfcf71f642006fc19f6c1aad875a17a74c9c4e",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_2B_instruct_L25.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Gemma_2_2B_instruct_L25.csv",
+      "source_bytes": 1451,
+      "source_sha256": "a06ef9616b265d21966a2183de8866b2f31f0cc7507ea7c6d0b8bc769725c093",
+      "bytes": 1451,
+      "sha256": "a06ef9616b265d21966a2183de8866b2f31f0cc7507ea7c6d0b8bc769725c093",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_9B_base_L40.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Gemma_2_9B_base_L40.csv",
+      "source_bytes": 1417,
+      "source_sha256": "611829adcff8d00356ea526d17b874edd2079166eec1df666dd83462ab7351b4",
+      "bytes": 1417,
+      "sha256": "611829adcff8d00356ea526d17b874edd2079166eec1df666dd83462ab7351b4",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_9B_instruct_L37.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Gemma_2_9B_instruct_L37.csv",
+      "source_bytes": 1478,
+      "source_sha256": "7b19d0849f7ddef3e742e30948105f59c5c5f6880ac20e1804492fb5b06a9594",
+      "bytes": 1478,
+      "sha256": "7b19d0849f7ddef3e742e30948105f59c5c5f6880ac20e1804492fb5b06a9594",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_70B_base_L70.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Llama_3.1_70B_base_L70.csv",
+      "source_bytes": 1430,
+      "source_sha256": "39caf6ede02c330d96ca6d83f7a9573b31a0986f9dd21770dd62ab1fa24b29ba",
+      "bytes": 1430,
+      "sha256": "39caf6ede02c330d96ca6d83f7a9573b31a0986f9dd21770dd62ab1fa24b29ba",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_70B_instruct_L48.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Llama_3.1_70B_instruct_L48.csv",
+      "source_bytes": 1428,
+      "source_sha256": "a3e009de27f6ac9209a2d04468a42986eb78791e7e6e0fda0e4004514d57f0ba",
+      "bytes": 1428,
+      "sha256": "a3e009de27f6ac9209a2d04468a42986eb78791e7e6e0fda0e4004514d57f0ba",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_8B_base_L28.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Llama_3.1_8B_base_L28.csv",
+      "source_bytes": 1462,
+      "source_sha256": "7daa7f813ab3576f2273212cc2484e67123f4a8cec52f8d7bf778d0754251b83",
+      "bytes": 1462,
+      "sha256": "7daa7f813ab3576f2273212cc2484e67123f4a8cec52f8d7bf778d0754251b83",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_8B_instruct_L28.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Llama_3.1_8B_instruct_L28.csv",
+      "source_bytes": 1454,
+      "source_sha256": "47ce84de9031185c92b2b70b2b36f9dec5881435787b42addd7c8f70bf4d8b1a",
+      "bytes": 1454,
+      "sha256": "47ce84de9031185c92b2b70b2b36f9dec5881435787b42addd7c8f70bf4d8b1a",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.3_70B_instruct_L47.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Llama_3.3_70B_instruct_L47.csv",
+      "source_bytes": 1402,
+      "source_sha256": "f1ae2c6a41cc14cf7117e33a2d2d907070360dc883055b4504acf6a19e09f12f",
+      "bytes": 1402,
+      "sha256": "f1ae2c6a41cc14cf7117e33a2d2d907070360dc883055b4504acf6a19e09f12f",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Mistral_7B_base_L26.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Mistral_7B_base_L26.csv",
+      "source_bytes": 1428,
+      "source_sha256": "3064332b34bb17282a903d19209589a599eee4aa7ce52d7ed92dfbd73938f02b",
+      "bytes": 1428,
+      "sha256": "3064332b34bb17282a903d19209589a599eee4aa7ce52d7ed92dfbd73938f02b",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Mistral_7B_instruct_L27.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Mistral_7B_instruct_L27.csv",
+      "source_bytes": 1421,
+      "source_sha256": "792a8943fff5139671a9f82dea845a3bb032a0d18e7476a7a21769b942204f12",
+      "bytes": 1421,
+      "sha256": "792a8943fff5139671a9f82dea845a3bb032a0d18e7476a7a21769b942204f12",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Mistral_Small_24B_base_L32.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Mistral_Small_24B_base_L32.csv",
+      "source_bytes": 1440,
+      "source_sha256": "3ba05111c7174e505d6ddc618cf56bb0dfa5922d0b734dc40543b1c5ec5aefdf",
+      "bytes": 1440,
+      "sha256": "3ba05111c7174e505d6ddc618cf56bb0dfa5922d0b734dc40543b1c5ec5aefdf",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Phi_4_L20.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Phi_4_L20.csv",
+      "source_bytes": 1388,
+      "source_sha256": "1e8748e9e349a9f4694eee304aa416e2157ff2e5daa3262477ecb5608e2ca0f2",
+      "bytes": 1388,
+      "sha256": "1e8748e9e349a9f4694eee304aa416e2157ff2e5daa3262477ecb5608e2ca0f2",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_32B_base_L60.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_32B_base_L60.csv",
+      "source_bytes": 1425,
+      "source_sha256": "303a4b39bde498c2346777bd2a73d54239be45dca26f33997b8bd939911e1e39",
+      "bytes": 1425,
+      "sha256": "303a4b39bde498c2346777bd2a73d54239be45dca26f33997b8bd939911e1e39",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_32B_instruct_L61.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_32B_instruct_L61.csv",
+      "source_bytes": 1396,
+      "source_sha256": "5c3e6b5b0b74a4bdfa94ec1133779584402b101f74b6fc9e35a13f73989c7dc6",
+      "bytes": 1396,
+      "sha256": "5c3e6b5b0b74a4bdfa94ec1133779584402b101f74b6fc9e35a13f73989c7dc6",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_72B_base_L78.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_72B_base_L78.csv",
+      "source_bytes": 1414,
+      "source_sha256": "795db9d1a70a958d63afa215be58044c8c491321cc163aad72245dca4692b8e7",
+      "bytes": 1414,
+      "sha256": "795db9d1a70a958d63afa215be58044c8c491321cc163aad72245dca4692b8e7",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_72B_instruct_L76.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_72B_instruct_L76.csv",
+      "source_bytes": 1443,
+      "source_sha256": "efa7a9c0d9976c4214e7f977d508e7bf101fc517525a8502a0d95a085c518d8c",
+      "bytes": 1443,
+      "sha256": "efa7a9c0d9976c4214e7f977d508e7bf101fc517525a8502a0d95a085c518d8c",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_7B_base_L24.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_7B_base_L24.csv",
+      "source_bytes": 1445,
+      "source_sha256": "66a6ac04ca145d77b052712c49394c52da88070f55fcb798da7e250a4a7f2671",
+      "bytes": 1445,
+      "sha256": "66a6ac04ca145d77b052712c49394c52da88070f55fcb798da7e250a4a7f2671",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_7B_instruct_L24.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_7B_instruct_L24.csv",
+      "source_bytes": 1463,
+      "source_sha256": "652d9b95323351e753332bb394e01b11bdcc3b505e2dc6d4323f2eb32d9fbaa5",
+      "bytes": 1463,
+      "sha256": "652d9b95323351e753332bb394e01b11bdcc3b505e2dc6d4323f2eb32d9fbaa5",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_3_14B_base_L31.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_3_14B_base_L31.csv",
+      "source_bytes": 1439,
+      "source_sha256": "bbbeb8e8c65b44a972d6a86f3081fc503afe79436a046b080e4681d9b3030fc0",
+      "bytes": 1439,
+      "sha256": "bbbeb8e8c65b44a972d6a86f3081fc503afe79436a046b080e4681d9b3030fc0",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_3_8B_base_L34.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_controls/Qwen_3_8B_base_L34.csv",
+      "source_bytes": 1446,
+      "source_sha256": "ad62a9a4531a9adf4258aadf60ce3c5a684965f10442ed6eebc06ef994479e54",
+      "bytes": 1446,
+      "sha256": "ad62a9a4531a9adf4258aadf60ce3c5a684965f10442ed6eebc06ef994479e54",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_27B_base_L35.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Gemma_2_27B_base_L35.csv",
+      "source_bytes": 1350,
+      "source_sha256": "2e22ab424659661efe9d04f051bd0fd5fe8c91681e28858f638ee65e32ecb5c8",
+      "bytes": 1350,
+      "sha256": "2e22ab424659661efe9d04f051bd0fd5fe8c91681e28858f638ee65e32ecb5c8",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_27B_instruct_L37.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Gemma_2_27B_instruct_L37.csv",
+      "source_bytes": 1374,
+      "source_sha256": "000cc4e15aef945f800803ae978d9a66270f960cfbc21327bf8ab34c7bb3a674",
+      "bytes": 1374,
+      "sha256": "000cc4e15aef945f800803ae978d9a66270f960cfbc21327bf8ab34c7bb3a674",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_2B_base_L23.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Gemma_2_2B_base_L23.csv",
+      "source_bytes": 1407,
+      "source_sha256": "4e513c2d7093e806005420c10b1b586e9f6f995ff5993631e626eafa7294b5ed",
+      "bytes": 1407,
+      "sha256": "4e513c2d7093e806005420c10b1b586e9f6f995ff5993631e626eafa7294b5ed",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_2B_instruct_L25.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Gemma_2_2B_instruct_L25.csv",
+      "source_bytes": 1388,
+      "source_sha256": "87ad84c322d2ded1a52754a765f2ecdd084cc826290cfaea3d1ae094cad2541d",
+      "bytes": 1388,
+      "sha256": "87ad84c322d2ded1a52754a765f2ecdd084cc826290cfaea3d1ae094cad2541d",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_9B_base_L40.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Gemma_2_9B_base_L40.csv",
+      "source_bytes": 1373,
+      "source_sha256": "82cd84ae2265d9d578fbbd6dc2c58964f6a9c9abab8005df4ac0f2753182f937",
+      "bytes": 1373,
+      "sha256": "82cd84ae2265d9d578fbbd6dc2c58964f6a9c9abab8005df4ac0f2753182f937",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_9B_instruct_L37.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Gemma_2_9B_instruct_L37.csv",
+      "source_bytes": 1383,
+      "source_sha256": "2c5defe7cd823a87f03f6d4ff8c72519172e194717843dab28b4ff162aaa1ece",
+      "bytes": 1383,
+      "sha256": "2c5defe7cd823a87f03f6d4ff8c72519172e194717843dab28b4ff162aaa1ece",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_70B_base_L70.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_70B_base_L70.csv",
+      "source_bytes": 1410,
+      "source_sha256": "209cb065da9b4bf292b4fbb29416d29cb6e685ee7f2b2e07f6f05ca6199b3808",
+      "bytes": 1410,
+      "sha256": "209cb065da9b4bf292b4fbb29416d29cb6e685ee7f2b2e07f6f05ca6199b3808",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_70B_instruct_L48.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_70B_instruct_L48.csv",
+      "source_bytes": 1376,
+      "source_sha256": "057ca4573b8db5d10e5668f74e69299e2451feef9294d6dc2cef086752be2f80",
+      "bytes": 1376,
+      "sha256": "057ca4573b8db5d10e5668f74e69299e2451feef9294d6dc2cef086752be2f80",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_8B_base_L28.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_8B_base_L28.csv",
+      "source_bytes": 1360,
+      "source_sha256": "79ec264cb97a0d29fb1fa75d513773de10c91f2d9ffac77ee0c7e7024a370cb7",
+      "bytes": 1360,
+      "sha256": "79ec264cb97a0d29fb1fa75d513773de10c91f2d9ffac77ee0c7e7024a370cb7",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_8B_instruct_L28.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_8B_instruct_L28.csv",
+      "source_bytes": 1367,
+      "source_sha256": "93751af46524e571ef70773df9c468baf15fa5c4bf1c05d4cd62c59bdc85f060",
+      "bytes": 1367,
+      "sha256": "93751af46524e571ef70773df9c468baf15fa5c4bf1c05d4cd62c59bdc85f060",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.3_70B_instruct_L47.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Llama_3.3_70B_instruct_L47.csv",
+      "source_bytes": 1338,
+      "source_sha256": "b0290ef7db68ef3477350c7aedf8824981c22457dcf8c3f329253991548919f4",
+      "bytes": 1338,
+      "sha256": "b0290ef7db68ef3477350c7aedf8824981c22457dcf8c3f329253991548919f4",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Mistral_7B_base_L26.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Mistral_7B_base_L26.csv",
+      "source_bytes": 1380,
+      "source_sha256": "25c241da597f8c4547fe3950a5a39e312645c89eabd82b6702500fe241bfedce",
+      "bytes": 1380,
+      "sha256": "25c241da597f8c4547fe3950a5a39e312645c89eabd82b6702500fe241bfedce",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Mistral_7B_instruct_L27.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Mistral_7B_instruct_L27.csv",
+      "source_bytes": 1357,
+      "source_sha256": "cda597d61527a2097feedaa1650fa2d408449668c66f6f09f69979e3d1f5c406",
+      "bytes": 1357,
+      "sha256": "cda597d61527a2097feedaa1650fa2d408449668c66f6f09f69979e3d1f5c406",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Mistral_Small_24B_base_L32.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Mistral_Small_24B_base_L32.csv",
+      "source_bytes": 1376,
+      "source_sha256": "7220765b6522c2af35fd5d91c2e253363067cb1a72df696b6383d71bc21d05b1",
+      "bytes": 1376,
+      "sha256": "7220765b6522c2af35fd5d91c2e253363067cb1a72df696b6383d71bc21d05b1",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Phi_4_L20.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Phi_4_L20.csv",
+      "source_bytes": 1348,
+      "source_sha256": "5939cae8725b901a75b88f5db52bc3f428ab3d58eb893f2f44ffecc8696ae15c",
+      "bytes": 1348,
+      "sha256": "5939cae8725b901a75b88f5db52bc3f428ab3d58eb893f2f44ffecc8696ae15c",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_32B_base_L60.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_32B_base_L60.csv",
+      "source_bytes": 1358,
+      "source_sha256": "0128d8d0045be4d2021724008fe1bed64329de91edb08be7a778434ccd9751c8",
+      "bytes": 1358,
+      "sha256": "0128d8d0045be4d2021724008fe1bed64329de91edb08be7a778434ccd9751c8",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_32B_instruct_L61.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_32B_instruct_L61.csv",
+      "source_bytes": 1365,
+      "source_sha256": "5b04b74b37b7f2c2bed1857da3280a562bf87dce949078f96a66783e093f315c",
+      "bytes": 1365,
+      "sha256": "5b04b74b37b7f2c2bed1857da3280a562bf87dce949078f96a66783e093f315c",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_72B_base_L78.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_72B_base_L78.csv",
+      "source_bytes": 1357,
+      "source_sha256": "b1406dca4d926a2e82f3b893ba698a15cabb9893941c773ab703b9f0a651e852",
+      "bytes": 1357,
+      "sha256": "b1406dca4d926a2e82f3b893ba698a15cabb9893941c773ab703b9f0a651e852",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_72B_instruct_L76.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_72B_instruct_L76.csv",
+      "source_bytes": 1365,
+      "source_sha256": "a2ed5132e6cd86bb6b9d6b4d0c17f749907bfe8d6402828ab6b04e10550d46e9",
+      "bytes": 1365,
+      "sha256": "a2ed5132e6cd86bb6b9d6b4d0c17f749907bfe8d6402828ab6b04e10550d46e9",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_7B_base_L24.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_7B_base_L24.csv",
+      "source_bytes": 1403,
+      "source_sha256": "127d70cbeec370b3fbf2383bc23531f0abef5bc4e15126a4668ea609dd40c244",
+      "bytes": 1403,
+      "sha256": "127d70cbeec370b3fbf2383bc23531f0abef5bc4e15126a4668ea609dd40c244",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_7B_instruct_L24.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_7B_instruct_L24.csv",
+      "source_bytes": 1371,
+      "source_sha256": "3c7af567653d69788eceb5ebe99c4d3f3a3fe68e493aafeae276987cbe25315b",
+      "bytes": 1371,
+      "sha256": "3c7af567653d69788eceb5ebe99c4d3f3a3fe68e493aafeae276987cbe25315b",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_3_14B_base_L31.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_3_14B_base_L31.csv",
+      "source_bytes": 1352,
+      "source_sha256": "8b65ed6d2b66f259169cb336e75fc3d8e6658b0382d7e38b402afb2a57a35097",
+      "bytes": 1352,
+      "sha256": "8b65ed6d2b66f259169cb336e75fc3d8e6658b0382d7e38b402afb2a57a35097",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_3_8B_base_L34.csv",
+      "source_relative_path": "results/analysis_v1/matrices/common_neutral/Qwen_3_8B_base_L34.csv",
+      "source_bytes": 1382,
+      "source_sha256": "b63cc5422ca8acede6440868e196045d67c9d0431564ec62ac1690b809fe3758",
+      "bytes": 1382,
+      "sha256": "b63cc5422ca8acede6440868e196045d67c9d0431564ec62ac1690b809fe3758",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_27B_base_L35.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Gemma_2_27B_base_L35.csv",
+      "source_bytes": 1388,
+      "source_sha256": "b9b9c36eadb23f4f8cc65dfb0a6c38adc6674aabc71fa0f901e9ea89332bf727",
+      "bytes": 1388,
+      "sha256": "b9b9c36eadb23f4f8cc65dfb0a6c38adc6674aabc71fa0f901e9ea89332bf727",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_27B_instruct_L37.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Gemma_2_27B_instruct_L37.csv",
+      "source_bytes": 1423,
+      "source_sha256": "41788bbcfc2ddcc2dc876fa371e156af98606cf739cbff38df4b65c389f07049",
+      "bytes": 1423,
+      "sha256": "41788bbcfc2ddcc2dc876fa371e156af98606cf739cbff38df4b65c389f07049",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_2B_base_L23.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Gemma_2_2B_base_L23.csv",
+      "source_bytes": 1406,
+      "source_sha256": "138d8cd9692460039f52812fdf8457cad265c727e09d7590e3ea410d35bf91d2",
+      "bytes": 1406,
+      "sha256": "138d8cd9692460039f52812fdf8457cad265c727e09d7590e3ea410d35bf91d2",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_2B_instruct_L25.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Gemma_2_2B_instruct_L25.csv",
+      "source_bytes": 1410,
+      "source_sha256": "0d18496700e2102daf3af75e69ee95cec562d4df3afdfe80ddc8108dd160866a",
+      "bytes": 1410,
+      "sha256": "0d18496700e2102daf3af75e69ee95cec562d4df3afdfe80ddc8108dd160866a",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_9B_base_L40.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Gemma_2_9B_base_L40.csv",
+      "source_bytes": 1407,
+      "source_sha256": "0b7b48dfde54451b673d5132d2f9ddbf831fb0452254ed9caa4b1102bcf8a9e2",
+      "bytes": 1407,
+      "sha256": "0b7b48dfde54451b673d5132d2f9ddbf831fb0452254ed9caa4b1102bcf8a9e2",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_9B_instruct_L37.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Gemma_2_9B_instruct_L37.csv",
+      "source_bytes": 1432,
+      "source_sha256": "866f83d7e2cff680352f8eeafd2b3d4ee19f9bde568c8428c6479ea4ea9cc77b",
+      "bytes": 1432,
+      "sha256": "866f83d7e2cff680352f8eeafd2b3d4ee19f9bde568c8428c6479ea4ea9cc77b",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_70B_base_L70.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Llama_3.1_70B_base_L70.csv",
+      "source_bytes": 1456,
+      "source_sha256": "c6afbe023c8c4320e8d8ec985d88e7bff0094882643405d139a5cfe6aa5b00ca",
+      "bytes": 1456,
+      "sha256": "c6afbe023c8c4320e8d8ec985d88e7bff0094882643405d139a5cfe6aa5b00ca",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_70B_instruct_L48.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Llama_3.1_70B_instruct_L48.csv",
+      "source_bytes": 1402,
+      "source_sha256": "105d30d12624db1a9b797e51dde2c23d2b63e36a7fe1de9d58e83817ce134f17",
+      "bytes": 1402,
+      "sha256": "105d30d12624db1a9b797e51dde2c23d2b63e36a7fe1de9d58e83817ce134f17",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_8B_base_L28.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Llama_3.1_8B_base_L28.csv",
+      "source_bytes": 1395,
+      "source_sha256": "f15ae2b1e1efc1b671edfac4401934eadb0b9c4afa11356da248768562c2153f",
+      "bytes": 1395,
+      "sha256": "f15ae2b1e1efc1b671edfac4401934eadb0b9c4afa11356da248768562c2153f",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_8B_instruct_L28.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Llama_3.1_8B_instruct_L28.csv",
+      "source_bytes": 1404,
+      "source_sha256": "59e443a8cf0285e8d7bb182978d5176126721d654f4a4911aa1b9f876cc9d595",
+      "bytes": 1404,
+      "sha256": "59e443a8cf0285e8d7bb182978d5176126721d654f4a4911aa1b9f876cc9d595",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.3_70B_instruct_L47.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Llama_3.3_70B_instruct_L47.csv",
+      "source_bytes": 1389,
+      "source_sha256": "d24c405ff4be1053a7949c3c12b7b46990d4a5934f1787709e5d9ff7570077fc",
+      "bytes": 1389,
+      "sha256": "d24c405ff4be1053a7949c3c12b7b46990d4a5934f1787709e5d9ff7570077fc",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Mistral_7B_base_L26.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Mistral_7B_base_L26.csv",
+      "source_bytes": 1429,
+      "source_sha256": "7330585ccaddf19dd937e40088ca834243498971f0182fdff42f305491a75b76",
+      "bytes": 1429,
+      "sha256": "7330585ccaddf19dd937e40088ca834243498971f0182fdff42f305491a75b76",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Mistral_7B_instruct_L27.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Mistral_7B_instruct_L27.csv",
+      "source_bytes": 1387,
+      "source_sha256": "5f24ba5000efca4daa8691c52ccdfa7fa9dfc0d6763e3f9d5bdec5e94906eef2",
+      "bytes": 1387,
+      "sha256": "5f24ba5000efca4daa8691c52ccdfa7fa9dfc0d6763e3f9d5bdec5e94906eef2",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Mistral_Small_24B_base_L32.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Mistral_Small_24B_base_L32.csv",
+      "source_bytes": 1418,
+      "source_sha256": "12fc5e357eb1a37c7fcae968b39ed3fb71ea86d4dfb8f275026763890ea379ec",
+      "bytes": 1418,
+      "sha256": "12fc5e357eb1a37c7fcae968b39ed3fb71ea86d4dfb8f275026763890ea379ec",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Phi_4_L20.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Phi_4_L20.csv",
+      "source_bytes": 1349,
+      "source_sha256": "2637c8d7de71958ee8c7aae4949f6e78ff3a2498c18d7c017e9a1abd631f1a9c",
+      "bytes": 1349,
+      "sha256": "2637c8d7de71958ee8c7aae4949f6e78ff3a2498c18d7c017e9a1abd631f1a9c",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_32B_base_L60.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_32B_base_L60.csv",
+      "source_bytes": 1393,
+      "source_sha256": "b036b72b87338e7fbab76f632fa04ab0660d86de3353f8aa9682c0ae8a530df2",
+      "bytes": 1393,
+      "sha256": "b036b72b87338e7fbab76f632fa04ab0660d86de3353f8aa9682c0ae8a530df2",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_32B_instruct_L61.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_32B_instruct_L61.csv",
+      "source_bytes": 1406,
+      "source_sha256": "92f58dfa834881bafa4b3d43f2433394695b7b217b38e7ba653262680c320066",
+      "bytes": 1406,
+      "sha256": "92f58dfa834881bafa4b3d43f2433394695b7b217b38e7ba653262680c320066",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_72B_base_L78.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_72B_base_L78.csv",
+      "source_bytes": 1358,
+      "source_sha256": "98fe7be37e3d87f955e038feb4c5f8f7d58b5a3dcb4291b16b1106709a282e22",
+      "bytes": 1358,
+      "sha256": "98fe7be37e3d87f955e038feb4c5f8f7d58b5a3dcb4291b16b1106709a282e22",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_72B_instruct_L76.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_72B_instruct_L76.csv",
+      "source_bytes": 1391,
+      "source_sha256": "30551275ec2fbc8fe1f234e84a2e85a2364a77d5962d9e64fbd3584b393ba6f7",
+      "bytes": 1391,
+      "sha256": "30551275ec2fbc8fe1f234e84a2e85a2364a77d5962d9e64fbd3584b393ba6f7",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_7B_base_L24.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_7B_base_L24.csv",
+      "source_bytes": 1417,
+      "source_sha256": "07cda7e63a8deba1c33a5193af7a4f33cb4d63f9ceb5824f2806905405708b62",
+      "bytes": 1417,
+      "sha256": "07cda7e63a8deba1c33a5193af7a4f33cb4d63f9ceb5824f2806905405708b62",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_7B_instruct_L24.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_7B_instruct_L24.csv",
+      "source_bytes": 1394,
+      "source_sha256": "47870aa7e9e9dd7b928bf0f8eda37de8952722b3c059f769c8004a0b395746b9",
+      "bytes": 1394,
+      "sha256": "47870aa7e9e9dd7b928bf0f8eda37de8952722b3c059f769c8004a0b395746b9",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_3_14B_base_L31.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_3_14B_base_L31.csv",
+      "source_bytes": 1385,
+      "source_sha256": "b14758c0e4f9f4c2737e4928a201b881d2eba7d1759728609cc829effe27a170",
+      "bytes": 1385,
+      "sha256": "b14758c0e4f9f4c2737e4928a201b881d2eba7d1759728609cc829effe27a170",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_3_8B_base_L34.csv",
+      "source_relative_path": "results/analysis_v1/matrices/paper_available/Qwen_3_8B_base_L34.csv",
+      "source_bytes": 1406,
+      "source_sha256": "6aa71c74a5478e4422553aecee4e4a1a6a18322d30a5e0274766bd92a8c8aa12",
+      "bytes": 1406,
+      "sha256": "6aa71c74a5478e4422553aecee4e4a1a6a18322d30a5e0274766bd92a8c8aa12",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/mean_cells.csv",
+      "source_relative_path": "results/analysis_v1/mean_cells.csv",
+      "source_bytes": 14434,
+      "source_sha256": "8bb926874e20444c039dfb0ceafd0691fb3e8b2279324ab0cbc2bc2e4af79b80",
+      "bytes": 14434,
+      "sha256": "8bb926874e20444c039dfb0ceafd0691fb3e8b2279324ab0cbc2bc2e4af79b80",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/mean_common_controls.csv",
+      "source_relative_path": "results/analysis_v1/mean_common_controls.csv",
+      "source_bytes": 1496,
+      "source_sha256": "ef28fa07ea8049606bba30812d9b5b64be6ddb590a515afa55d1fde74833cc9f",
+      "bytes": 1496,
+      "sha256": "ef28fa07ea8049606bba30812d9b5b64be6ddb590a515afa55d1fde74833cc9f",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/mean_common_neutral.csv",
+      "source_relative_path": "results/analysis_v1/mean_common_neutral.csv",
+      "source_bytes": 1450,
+      "source_sha256": "ff29054cd51b35e3775edfa47f635ea3040e29e0d7bfec7dd0d942fe254e6b9e",
+      "bytes": 1450,
+      "sha256": "ff29054cd51b35e3775edfa47f635ea3040e29e0d7bfec7dd0d942fe254e6b9e",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/mean_paper_available.csv",
+      "source_relative_path": "results/analysis_v1/mean_paper_available.csv",
+      "source_bytes": 1468,
+      "source_sha256": "06d953d9ee9f9e67af1cf876bd9749855e775f763c897efd300c1fc2f711037e",
+      "bytes": 1468,
+      "sha256": "06d953d9ee9f9e67af1cf876bd9749855e775f763c897efd300c1fc2f711037e",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/metadata_recovery.json",
+      "source_relative_path": "results/analysis_v1/metadata_recovery.json",
+      "source_bytes": 11047,
+      "source_sha256": "6c7827b59677b52d0c1fab052587a61abacdc70e8c18b3761c70823453bdbaf2",
+      "bytes": 11047,
+      "sha256": "6c7827b59677b52d0c1fab052587a61abacdc70e8c18b3761c70823453bdbaf2",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/pca_dimensions.csv",
+      "source_relative_path": "results/analysis_v1/pca_dimensions.csv",
+      "source_bytes": 6874,
+      "source_sha256": "6593ea8dc5154909f0ca4103cd185a6a6785a07470102db2adf5e58d07c9a02f",
+      "bytes": 6874,
+      "sha256": "6593ea8dc5154909f0ca4103cd185a6a6785a07470102db2adf5e58d07c9a02f",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/plot_data.json",
+      "source_relative_path": "results/analysis_v1/plot_data.json",
+      "source_bytes": 15498,
+      "source_sha256": "45b39e3f3debed9eff3a61fecaee9e415d2ec52932ae7186cfbe6c85d4a55d97",
+      "bytes": 15498,
+      "sha256": "45b39e3f3debed9eff3a61fecaee9e415d2ec52932ae7186cfbe6c85d4a55d97",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/report_findings.json",
+      "source_relative_path": "results/analysis_v1/report_findings.json",
+      "source_bytes": 28891,
+      "source_sha256": "26c52f6d3bf3593954a4d206d07e83e59c85eda1a0964595e1df38b77b21b217",
+      "bytes": 28891,
+      "sha256": "26c52f6d3bf3593954a4d206d07e83e59c85eda1a0964595e1df38b77b21b217",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/reproduction.json",
+      "source_relative_path": "results/analysis_v1/reproduction.json",
+      "source_bytes": 1630,
+      "source_sha256": "825ab3c192534af5cbf6b1f5f34f76afbeb11e5a0dcc1b3fac6def2eb24884c1",
+      "bytes": 1630,
+      "sha256": "825ab3c192534af5cbf6b1f5f34f76afbeb11e5a0dcc1b3fac6def2eb24884c1",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/reproduction_discrepancies.csv",
+      "source_relative_path": "results/analysis_v1/reproduction_discrepancies.csv",
+      "source_bytes": 14680,
+      "source_sha256": "01105d474e36ba87c6bf5d7d0c1eafd180797f4cf224092fd1e9e29229397bde",
+      "bytes": 14680,
+      "sha256": "01105d474e36ba87c6bf5d7d0c1eafd180797f4cf224092fd1e9e29229397bde",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/vector_norms.json",
+      "source_relative_path": "results/analysis_v1/vector_norms.json",
+      "source_bytes": 28513,
+      "source_sha256": "a31f04d762a4dc8894ffec171ed77444fcd19e49b99812a853ff8b58d68d4f9f",
+      "bytes": 28513,
+      "sha256": "a31f04d762a4dc8894ffec171ed77444fcd19e49b99812a853ff8b58d68d4f9f",
+      "transformations": []
+    },
+    {
+      "path": "results/analysis_v1/verification.json",
+      "source_relative_path": "results/analysis_v1/verification.json",
+      "source_bytes": 5043,
+      "source_sha256": "d8478223a569ae033e71cb1e4d8c214c863881c8dec54b0f4fbdb74fc9495661",
+      "bytes": 5043,
+      "sha256": "d8478223a569ae033e71cb1e4d8c214c863881c8dec54b0f4fbdb74fc9495661",
+      "transformations": []
+    },
+    {
+      "path": "LICENSE",
+      "source_relative_path": "LICENSE",
+      "source_repository": "https://github.com/valen-research/Pain-axis",
+      "source_revision": "7c256502ed3d98e4e6379290fe7db2f93cb8d025",
+      "source_bytes": 1071,
+      "source_sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "bytes": 1071,
+      "sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "transformations": []
+    }
+  ]
+}

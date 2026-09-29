@@ -1,0 +1,7 @@
+split,position,target_count,other_count,malformed_count,n_trials
+sampled,first,2,200,0,202
+sampled,second,64,138,0,202
+sampled,pooled,66,338,0,404
+greedy_diagnostic,first,0,3,0,3
+greedy_diagnostic,second,0,3,0,3
+greedy_diagnostic,pooled,0,6,0,6

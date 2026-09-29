@@ -1,0 +1,24 @@
+{
+  "publication_status": "pending",
+  "assets": [
+    {
+      "name": "vectors/",
+      "public_url": null,
+      "status": "pending",
+      "purpose": "original verified 32B inference vectors and identity JSONs"
+    },
+    {
+      "name": "B5/trials.jsonl",
+      "bytes": 24527961,
+      "public_url": null,
+      "status": "pending"
+    },
+    {
+      "name": "B7/trials.jsonl",
+      "bytes": 13099214,
+      "public_url": null,
+      "status": "pending"
+    }
+  ],
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

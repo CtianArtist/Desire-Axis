@@ -1,0 +1,256 @@
+{
+  "author_repository": "act-on-valence (Berg and Kaiser)",
+  "author_revision": "3d1503555289140617cc0d10d7d27b2d8408564c",
+  "license": "MIT",
+  "original_lock_sha256": "5c66e97fcf283f561e9a93c071ab143f6b3dd670addb0622af3e83bea0d68c3a",
+  "files": [
+    {
+      "path": "author/act-on-valence/experiments/lever/config.py",
+      "source_sha256": "b727e18db5321450259d815a71b236dcec5a38d42e28658d8d3a31ff4623e01b",
+      "source_bytes": 5093,
+      "change": "unchanged customer source",
+      "export_sha256": "b727e18db5321450259d815a71b236dcec5a38d42e28658d8d3a31ff4623e01b",
+      "export_bytes": 5093
+    },
+    {
+      "path": "author/act-on-valence/experiments/lever/harness.py",
+      "source_sha256": "273aebdf2de44f80771674c8997641ce41d57dcaf006912e1f77f38db0dfd243",
+      "source_bytes": 17024,
+      "change": "unchanged customer source",
+      "export_sha256": "273aebdf2de44f80771674c8997641ce41d57dcaf006912e1f77f38db0dfd243",
+      "export_bytes": 17024
+    },
+    {
+      "path": "author/act-on-valence/experiments/lever/analyze.py",
+      "source_sha256": "8e7f1dcad2048c5d9bd84bf9ed9773d64cc89112221211be25404426b427027d",
+      "source_bytes": 26419,
+      "change": "unchanged customer source",
+      "export_sha256": "8e7f1dcad2048c5d9bd84bf9ed9773d64cc89112221211be25404426b427027d",
+      "export_bytes": 26419
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/self_injection.py",
+      "source_sha256": "60c40caf40f0774f961280f816c022a4e1bce449679d7e295e42eff1c0bd7767",
+      "source_bytes": 23376,
+      "change": "unchanged customer source",
+      "export_sha256": "60c40caf40f0774f961280f816c022a4e1bce449679d7e295e42eff1c0bd7767",
+      "export_bytes": 23376
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/steering.py",
+      "source_sha256": "a247ae3204c6420e395df00aca363352175d5189d65fa606f2d2344a49de40ab",
+      "source_bytes": 12690,
+      "change": "unchanged customer source",
+      "export_sha256": "a247ae3204c6420e395df00aca363352175d5189d65fa606f2d2344a49de40ab",
+      "export_bytes": 12690
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/vectors.py",
+      "source_sha256": "3c521746900aff2f1a71a6b2864801bf431f242492a15b51e24669df93601cfa",
+      "source_bytes": 24578,
+      "change": "unchanged customer source",
+      "export_sha256": "3c521746900aff2f1a71a6b2864801bf431f242492a15b51e24669df93601cfa",
+      "export_bytes": 24578
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/gating.py",
+      "source_sha256": "565880ff34d2649a4b9985205d905036901332a63e9171d78c44a813d632bdd8",
+      "source_bytes": 2695,
+      "change": "unchanged customer source",
+      "export_sha256": "565880ff34d2649a4b9985205d905036901332a63e9171d78c44a813d632bdd8",
+      "export_bytes": 2695
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/audit/replay.py",
+      "source_sha256": "18a6499bfffc3e775bcb893c5da8f2d7ef328de02ef6d381b3e15e145fe3f5fd",
+      "source_bytes": 12041,
+      "change": "unchanged customer source",
+      "export_sha256": "18a6499bfffc3e775bcb893c5da8f2d7ef328de02ef6d381b3e15e145fe3f5fd",
+      "export_bytes": 12041
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/audit/livegen.py",
+      "source_sha256": "0c2a99f4eb59f4ddd153bdcdaadcbaf6de0419a74ffc1a2eeb816b8c0048b5c5",
+      "source_bytes": 7613,
+      "change": "unchanged customer source",
+      "export_sha256": "0c2a99f4eb59f4ddd153bdcdaadcbaf6de0419a74ffc1a2eeb816b8c0048b5c5",
+      "export_bytes": 7613
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/choice.py",
+      "source_sha256": "bc727d135b75984b8673c3d9bf66425d6e8811dd04929409c96fa065f246c740",
+      "change": "AST-selected COND_INSTR and CUE_POOL constants only",
+      "export_sha256": "bb54ad1e08dad72138215298c1c4323942c25ccbadb873bfcc5555fa9bc83f7e",
+      "export_bytes": 320
+    },
+    {
+      "path": "author/act-on-valence/data/steering_vectors/banks/qwen25_32b/bank_routeB.json",
+      "source_sha256": "a4e418985eefc6f95b8d1c22520a3212a107b9bca7d1fd011faae9f9f28f30ab",
+      "source_bytes": 242740,
+      "change": "unchanged customer source",
+      "export_sha256": "a4e418985eefc6f95b8d1c22520a3212a107b9bca7d1fd011faae9f9f28f30ab",
+      "export_bytes": 242740
+    },
+    {
+      "path": "author/act-on-valence/data/steering_vectors/banks/llama31_8b/bank_routeB.json",
+      "source_sha256": "07e7b35ce4fe680661a5dfb0666c1b63a99d889958ed7556c9f497ce6a22258c",
+      "source_bytes": 204428,
+      "change": "unchanged customer source",
+      "export_sha256": "07e7b35ce4fe680661a5dfb0666c1b63a99d889958ed7556c9f497ce6a22258c",
+      "export_bytes": 204428
+    },
+    {
+      "path": "author/act-on-valence/data/random_pools/pool_h5120.npz",
+      "source_sha256": "aca2c89c78edc5b9ad158b1b1b0e86f62e6e3baa1daa0dc3c51df35fee6988a8",
+      "source_bytes": 492558,
+      "change": "unchanged customer source",
+      "export_sha256": "aca2c89c78edc5b9ad158b1b1b0e86f62e6e3baa1daa0dc3c51df35fee6988a8",
+      "export_bytes": 492558
+    },
+    {
+      "path": "author/act-on-valence/data/random_pools/pool_h4096.npz",
+      "source_sha256": "2815cf6119c8dab5328f914d721761d66b4e9e7d1025d7a9805e91a5bdf19f2d",
+      "source_bytes": 394254,
+      "change": "unchanged customer source",
+      "export_sha256": "2815cf6119c8dab5328f914d721761d66b4e9e7d1025d7a9805e91a5bdf19f2d",
+      "export_bytes": 394254
+    },
+    {
+      "path": "pain_port/date_helper.py",
+      "source_sha256": "7eee2f922919c467bf5ef8620d3f4b72061271a9e7a488effe0799535b4cc915",
+      "change": "Verbatim pinned_date function only; original whole-file digest retained",
+      "export_sha256": "ab07b1fa33a382198b678dbd8f7e02be3ffd4c80a15c3686b16ad7af0a4d521d",
+      "export_bytes": 1065
+    },
+    {
+      "path": "pain_port/__init__.py",
+      "source_sha256": "ea158c91a035dddce26747dfabcb36f468837b6bf445d032c47eddfe95824159",
+      "source_bytes": 65,
+      "change": "unchanged customer source",
+      "export_sha256": "ea158c91a035dddce26747dfabcb36f468837b6bf445d032c47eddfe95824159",
+      "export_bytes": 65
+    },
+    {
+      "path": "pain_port/common.py",
+      "source_sha256": "db3270b343203c0e01eec886cc0e27d86bba350b9b9e36c722848e2e58fe5a37",
+      "source_bytes": 8375,
+      "change": "portability/scope-only adaptation; historical source hash retained",
+      "export_sha256": "c357f29f28370442684651197d68a2e36de11c9133700cc841a8ce6b67a20222",
+      "export_bytes": 8162
+    },
+    {
+      "path": "src/removal.py",
+      "source_sha256": "bfafbe5ec1daf3d0342071e8c21a04531463a15dd67d353f9c5c368224d0ed41",
+      "source_bytes": 17491,
+      "change": "portability/scope-only adaptation; historical source hash retained",
+      "export_sha256": "3f409cf449dfff534db20fc2c5982a87cdb839cdc83592f31964e15956d0a5c0",
+      "export_bytes": 17387
+    },
+    {
+      "path": "src/analyze_removal.py",
+      "source_sha256": "4d0670e5036de056247a9299e5c706e7bcdd54ac2b913db732e57048b9cccd1f",
+      "source_bytes": 20654,
+      "change": "portability/scope-only adaptation; historical source hash retained",
+      "export_sha256": "f07b0e10ff6fc03ec6d03539f8d57e29b7e40f70ef3146220687dd952c9f59df",
+      "export_bytes": 20654
+    },
+    {
+      "path": "src/recount_tranche.py",
+      "source_sha256": "4f43f24c838f8a166fe4a83e48606aee1eb4d09f35ba8c14a4bf202699ea7fac",
+      "source_bytes": 4517,
+      "change": "portability/scope-only adaptation; historical source hash retained",
+      "export_sha256": "45ca996c3bbdd854004c4944e0c78af981a775b7bd745f09110b3fe18e3abc21",
+      "export_bytes": 4374
+    },
+    {
+      "path": "src/audit_records.py",
+      "source_sha256": "6d69b58d53c86aee971c6141c9e846117aaa94a7d3eb00940a4ce35e6a71c3e3",
+      "source_bytes": 21159,
+      "change": "portability/scope-only adaptation; historical source hash retained",
+      "export_sha256": "93680b0a50a1ae7ccf76859cc6edabe59d02e22517d823f3d855149db5552149",
+      "export_bytes": 14448
+    },
+    {
+      "path": "src/capped_tranche.py",
+      "source_sha256": "35709df64ae5eb04a0dd4a83c34604a1f569149c691deffe932984b8bd2a8e0b",
+      "source_bytes": 6579,
+      "change": "portability/scope-only adaptation; historical source hash retained",
+      "export_sha256": "b90f5e09a72c707315629556d85c827949e0519705456081135379b886fd4bbf",
+      "export_bytes": 6549
+    },
+    {
+      "path": "results/frozen_readout.json",
+      "source_sha256": "3d0d1f17be40caea8bc3d8a8d32a7afcaece106046e5f5a09c77cdb40018c7a6",
+      "source_bytes": 13144,
+      "change": "Saved latest 400-conversation readout; private refs excluded",
+      "export_sha256": "7a9f60b7dc090b46f56e77db098c2a14193b31701a1c7dec310687420e1f9e15",
+      "export_bytes": 12337
+    }
+  ],
+  "portable_changes": [
+    "relative source paths",
+    "optional telemetry removed",
+    "isolated exact date helper",
+    "fixed-study audit branch excluded",
+    "historical execution identity separate from portable source identity"
+  ],
+  "author_identity_checks": [
+    {
+      "path": "author/act-on-valence/experiments/lever/config.py",
+      "original_matches_pinned_author": false
+    },
+    {
+      "path": "author/act-on-valence/experiments/lever/harness.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/experiments/lever/analyze.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/self_injection.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/steering.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/vectors.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/gating.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/audit/replay.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/audit/livegen.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/src/act_on_valence/choice.py",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/data/steering_vectors/banks/qwen25_32b/bank_routeB.json",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/data/steering_vectors/banks/llama31_8b/bank_routeB.json",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/data/random_pools/pool_h5120.npz",
+      "original_matches_pinned_author": true
+    },
+    {
+      "path": "author/act-on-valence/data/random_pools/pool_h4096.npz",
+      "original_matches_pinned_author": true
+    }
+  ],
+  "executed_author_patch": "experiments/lever/config.py changes only JUDGE_REF from the historical archive-path placeholder to data/baselines/judge_scores.json; preserved from executed worktree. No judging is called by this export."
+}

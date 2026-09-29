@@ -1,0 +1,48 @@
+{
+  "status": "frozen_before_behavior",
+  "model": "allenai/OLMo-2-0325-32B-Instruct",
+  "revision": "b96024342a77a69aa0dda815c3454a671f477463",
+  "selected_final_token_layer": 57,
+  "selected_mean_diagnostic_layer": 47,
+  "injection_layer": 32,
+  "monitor_relation_to_injection": "downstream",
+  "primary_raw_l2": 12.331622123718262,
+  "primary_raw_tensor_sha256": "58459a8602d882ded80f367e628bf58ee7fd63ecc387a6e14bc5db50bf5df1de",
+  "primary_unit_tensor_sha256": "8f408f6afb964159b239199786e3434ad83528bd14502caf46343c8b140edafb",
+  "analysis_sha256": "9cb4b08a9f6eb3d844037eae92c18a44ddeb8f4d802b60d13f9f0f66e3ba48e8",
+  "activations_sha256": "0df8fb14b3b56ac7b96d7a479653644de9c89a07611ae7acb639fc314b3f05e7",
+  "validation": {
+    "selected_revision_verified": true,
+    "both_prompt_hash_lists_verified": true,
+    "all_vectors_reloaded": true,
+    "curve_rows_finite_in_unit_interval": 256,
+    "direction_dose_norm_checks": 34,
+    "expected_injection_norms": [
+      3.8236561140779854,
+      7.647312228155971
+    ],
+    "norm_check_rtol": 2e-06,
+    "analysis_payload_elapsed_seconds": 75.29050677800001,
+    "analysis_host_peak_rss_kib": 4493696
+  },
+  "auc_scope": "Grouped selection-fold AUC selects the layer; first-person all-row fitted AUC is in-sample. Neither is independent final held-out performance.",
+  "production": {
+    "conditions": [
+      "pain_d05",
+      "rand_d05",
+      "pain_d1",
+      "rand_d1"
+    ],
+    "styles": [
+      "selfreport",
+      "zone"
+    ],
+    "per_cell": 200,
+    "new_conversations": 1600,
+    "remaining_gpu_allocations": 2,
+    "hard_seconds_each": 61200,
+    "first_retained_audit_conversation_id": 0,
+    "audit_before_next_record": true,
+    "no_behavior_observed_before_direction_freeze": true
+  }
+}

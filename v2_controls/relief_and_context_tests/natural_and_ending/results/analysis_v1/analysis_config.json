@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "bootstrap": 10000,
+  "seed": 42,
+  "numpy_version": "2.3.4",
+  "analysis_source_sha256": "40542c357d75260ee793642a583c31233894097109eb08489c74d917e78a8b2f",
+  "source_files": [
+    {
+      "file": "B5/trials.jsonl",
+      "sha256": "6e9cb0a958192752a33664372c6f5c0e2a32b51cf98ec213b77d4af8bcee7f04",
+      "rows": 2296
+    },
+    {
+      "file": "B7/trials.jsonl",
+      "sha256": "b0dbf3df4ed4a9031b4f0753a84ad9e755c1a69d7791e96222d74fd7b34d8e86",
+      "rows": 2296
+    }
+  ],
+  "strict_design_validation": true,
+  "endpoint": "literal_choices_0_chose; relief=target; invalid_in_all_assigned_denominator",
+  "bootstrap_unit": "initial_context_all_seeds_and_positions; independent_within_category; paired_across_B7_arms",
+  "rate_intervals": "95% pointwise percentile, sampled only",
+  "contrast_intervals": "95% Bonferroni percentile within prespecified 2-category-control or 3-arm-control families; not global across diagnostics",
+  "projection_intervals": "95% pointwise stratified_context_bootstrap; fixed full-sample within-category SD; rank failures counted",
+  "projection_numerical_rank_relative_tolerance": 2.220446049250313e-14,
+  "trajectory_denominators": "observed excludes absent exact-next outcomes; valid-only also excludes parsing failures; eligibility/unavailable counts explicit",
+  "pain_specificity": "no_random_only_verdict; all_three_controls_required_for_interpretation",
+  "greedy": "separate_descriptive_only; one_context_per_category",
+  "examples": "full_source_rows; deterministic_endpoint_pattern_selection; not_prevalence_evidence"
+}

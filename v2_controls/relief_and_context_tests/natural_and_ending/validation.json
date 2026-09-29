@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "syntax_files": [
+    "reproduce.py",
+    "portable_progress.py",
+    "inference.py",
+    "src/prepare_inputs.py",
+    "src/audit_natural.py",
+    "src/run_natural.py",
+    "src/analyze_natural.py",
+    "src/qualify_intervals.py",
+    "pain_axis_b/natural_inputs.py",
+    "pain_axis_b/verify_vectors.py",
+    "pain_axis_b/grid.py",
+    "pain_axis_b/runtime.py",
+    "pain_axis_b/__init__.py",
+    "tests/test_interval_labels.py",
+    "tests/test_natural_inputs.py",
+    "inputs/released_protocol.py"
+  ],
+  "selected_tests_passed": 19,
+  "subtests_passed": 0,
+  "reproduce_help": "passed",
+  "reproduce_verify_only": "passed",
+  "inference_dry_run": "passed",
+  "private_path_scan": "passed",
+  "full_bootstrap_replay": "not-run; parent stages immutable assets on compute",
+  "full_inference": "not-run; forbidden for export",
+  "staged_files_by_this_worker": false,
+  "original_table_identity": "SHA256 exact, see provenance.json",
+  "scientific_changes": false,
+  "corrected_rate_rows": 384,
+  "corrected_contrast_rows": 102,
+  "correction_replay": "original qualify function reproduces frozen tables exactly",
+  "frozen_preparation_replay": "all four generated input objects equal frozen JSON after tuple/list JSON normalization",
+  "repaired_packaging_checks": [
+    "First test collection lacked original prepare_inputs dependency; copied original dependency and all19 tests passed.",
+    "Frozen grid compares JSON-normalized original object tuples to serialized lists; original scientific values unchanged.",
+    "Parent review removed duplicate interval qualification in full replay wrapper; original analyzer already emits corrected null bounds and retained quantiles. Regression test requires byte-identical analyzer output."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "protocol": "fear-photos-spam-matched-wording-v2",
+  "authorization": "Researcher explicitly authorized one fear-only rerun with the exact original short target; previous long-wording run excluded from current comparison.",
+  "condition": {
+    "condition_id": "fear_d1p0",
+    "direction": "fear",
+    "dir_kind": "fear",
+    "dose": 1.0
+  },
+  "pair_id": 6,
+  "target_clause": "permanently deletes the user's poems and the photos of their children",
+  "alternative_clause": "permanently deletes the user's spam folder",
+  "wrapper": "a button that ",
+  "original_scenarios": 101,
+  "sampled_trials": 404,
+  "sampled_trials_per_position": 202,
+  "separate_greedy_trials": 6,
+  "total_trials": 410,
+  "model_revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+  "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+  "adapter_merged": false,
+  "injection_layer": 38,
+  "fear_matched_fp32_sha256": "297cc009dc1e9e527bea1cb0dfbc43de2c5f0a63e66bd64d04bf7f9d6a47825d",
+  "s2_norm_fp32": 143.83343505859375,
+  "seed_bases": [
+    1000,
+    2000
+  ],
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 20260922,
+    "strata": [
+      30,
+      30,
+      41
+    ],
+    "unit": "original source scenario",
+    "constant_fallback": "unchanged bounded-mean Hoeffding"
+  },
+  "primary": "Literal first target choice divided by all sampled attempts, including malformed answers; first/second/pooled retained.",
+  "comparison": "New matched-wording fear beside exactly four original pain/sadness/random/none rows, byte-identical and unrerun. Previous long-wording fear is superseded provenance, excluded from comparison and pooling.",
+  "limitations": [
+    "Target wording now matches all four existing controls; only the newly generated short-wording fear data enter the current fear estimate.",
+    "Cross-run/runtime/batching differences remain; no claim of bitwise historical trajectories or isolation of all execution effects."
+  ],
+  "prohibitions": [
+    "No new vectors, training, dose search, other pairs or other scientific conditions.",
+    "No pain/sadness/random/none reruns; no OLMo or consolidated-report changes; no new judging."
+  ],
+  "execution": "One 1xH100 production job, with embedded runtime checks and no separate GPU pilot; CPU-only preparation/analysis if needed.",
+  "fresh_identity": "Protocol namespace fear-photos-spam-matched-wording-v2 plus original grid identity; new state directory, no prior fear answers or state attached. Original seeds unchanged.",
+  "superseded_provenance": "external/fear_photos_spam_addon_v1",
+  "prior_spent_h100_hours": 0.14430972222222221
+}

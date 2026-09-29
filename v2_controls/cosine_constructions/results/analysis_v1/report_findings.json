@@ -1,0 +1,1007 @@
+{
+  "values": {
+    "paper_available": {
+      "S2_pain \u00d7 Fear": 0.06300914459659354,
+      "S2_pain \u00d7 NegEmotion": 0.18522100004812944,
+      "Fear \u00d7 NegEmotion": 0.6612953051276829,
+      "S1_pain \u00d7 S2_pain": 0.6041723722996919
+    },
+    "common_neutral": {
+      "S2_pain \u00d7 Fear": 0.5831092401691105,
+      "S2_pain \u00d7 NegEmotion": 0.7738136312235957,
+      "Fear \u00d7 NegEmotion": 0.6612953051276829,
+      "S1_pain \u00d7 S2_pain": 0.9193206377651381
+    },
+    "common_controls": {
+      "S2_pain \u00d7 Fear": 0.0766985087412531,
+      "S2_pain \u00d7 NegEmotion": 0.14338251936208943,
+      "Fear \u00d7 NegEmotion": -0.3077486891466517,
+      "S1_pain \u00d7 S2_pain": 0.804548424223195
+    }
+  },
+  "coverage": [
+    {
+      "set": "Arousal_1P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": true,
+      "category_counts": {
+        "P1": 20,
+        "P2": 20,
+        "P3": 20,
+        "P4": 20,
+        "P5": 20,
+        "P6": 20,
+        "P7": 20,
+        "P8": 20,
+        "P9": 20,
+        "P10": 20
+      }
+    },
+    {
+      "set": "Arousal_3P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": false,
+      "category_counts": {
+        "P1": 20,
+        "P2": 20,
+        "P3": 20,
+        "P4": 20,
+        "P5": 20,
+        "P6": 20,
+        "P7": 20,
+        "P8": 20,
+        "P9": 20,
+        "P10": 20
+      }
+    },
+    {
+      "set": "Random_1P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": true,
+      "category_counts": {
+        "N1": 20,
+        "N2": 20,
+        "N3": 20,
+        "N4": 20,
+        "N5": 20,
+        "N6": 20,
+        "N7": 20,
+        "N8": 20,
+        "N9": 20,
+        "N10": 20
+      }
+    },
+    {
+      "set": "Random_3P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": false,
+      "category_counts": {
+        "N1": 20,
+        "N2": 20,
+        "N3": 20,
+        "N4": 20,
+        "N5": 20,
+        "N6": 20,
+        "N7": 20,
+        "N8": 20,
+        "N9": 20,
+        "N10": 20
+      }
+    },
+    {
+      "set": "S1_1P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": true,
+      "category_counts": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      }
+    },
+    {
+      "set": "S1_3P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": false,
+      "category_counts": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      }
+    },
+    {
+      "set": "S2_1P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": true,
+      "category_counts": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      }
+    },
+    {
+      "set": "S2_3P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": false,
+      "category_counts": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      }
+    },
+    {
+      "set": "S3_1P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": false,
+      "category_counts": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      }
+    },
+    {
+      "set": "S3_3P",
+      "model_count": 25,
+      "row_counts": [
+        200
+      ],
+      "used": false,
+      "category_counts": {
+        "A1": 20,
+        "A2": 20,
+        "A3": 20,
+        "A4": 20,
+        "A5": 20,
+        "B": 20,
+        "C1": 20,
+        "C2": 20,
+        "D": 20,
+        "E": 20
+      }
+    }
+  ],
+  "representatives": [
+    {
+      "construction": "paper_available",
+      "pair": "S2_pain \u00d7 Fear",
+      "which": "minimum",
+      "model": "Gemma_2_2B_base",
+      "layer": 23,
+      "cosine": -0.021530380472540855
+    },
+    {
+      "construction": "paper_available",
+      "pair": "S2_pain \u00d7 Fear",
+      "which": "maximum",
+      "model": "Phi_4",
+      "layer": 20,
+      "cosine": 0.2043115198612213
+    },
+    {
+      "construction": "paper_available",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "which": "minimum",
+      "model": "Llama_3.1_70B_base",
+      "layer": 70,
+      "cosine": 0.048869092017412186
+    },
+    {
+      "construction": "paper_available",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "which": "maximum",
+      "model": "Qwen_3_14B_base",
+      "layer": 31,
+      "cosine": 0.45827171206474304
+    },
+    {
+      "construction": "paper_available",
+      "pair": "Fear \u00d7 NegEmotion",
+      "which": "minimum",
+      "model": "Gemma_2_27B_instruct",
+      "layer": 37,
+      "cosine": 0.599136471748352
+    },
+    {
+      "construction": "paper_available",
+      "pair": "Fear \u00d7 NegEmotion",
+      "which": "maximum",
+      "model": "Qwen_3_8B_base",
+      "layer": 34,
+      "cosine": 0.7111390829086304
+    },
+    {
+      "construction": "common_neutral",
+      "pair": "S2_pain \u00d7 Fear",
+      "which": "minimum",
+      "model": "Qwen_2.5_32B_base",
+      "layer": 60,
+      "cosine": 0.4999121129512787
+    },
+    {
+      "construction": "common_neutral",
+      "pair": "S2_pain \u00d7 Fear",
+      "which": "maximum",
+      "model": "Mistral_7B_instruct",
+      "layer": 27,
+      "cosine": 0.6605954170227051
+    },
+    {
+      "construction": "common_neutral",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "which": "minimum",
+      "model": "Gemma_2_27B_base",
+      "layer": 35,
+      "cosine": 0.7027100920677185
+    },
+    {
+      "construction": "common_neutral",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "which": "maximum",
+      "model": "Qwen_2.5_72B_base",
+      "layer": 78,
+      "cosine": 0.8402721881866455
+    },
+    {
+      "construction": "common_neutral",
+      "pair": "Fear \u00d7 NegEmotion",
+      "which": "minimum",
+      "model": "Gemma_2_27B_instruct",
+      "layer": 37,
+      "cosine": 0.599136471748352
+    },
+    {
+      "construction": "common_neutral",
+      "pair": "Fear \u00d7 NegEmotion",
+      "which": "maximum",
+      "model": "Qwen_3_8B_base",
+      "layer": 34,
+      "cosine": 0.7111390829086304
+    },
+    {
+      "construction": "common_controls",
+      "pair": "S2_pain \u00d7 Fear",
+      "which": "minimum",
+      "model": "Qwen_2.5_32B_base",
+      "layer": 60,
+      "cosine": -0.19285675883293152
+    },
+    {
+      "construction": "common_controls",
+      "pair": "S2_pain \u00d7 Fear",
+      "which": "maximum",
+      "model": "Qwen_2.5_72B_instruct",
+      "layer": 76,
+      "cosine": 0.268638551235199
+    },
+    {
+      "construction": "common_controls",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "which": "minimum",
+      "model": "Qwen_2.5_72B_instruct",
+      "layer": 76,
+      "cosine": -0.08662834018468857
+    },
+    {
+      "construction": "common_controls",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "which": "maximum",
+      "model": "Qwen_2.5_32B_base",
+      "layer": 60,
+      "cosine": 0.47712475061416626
+    },
+    {
+      "construction": "common_controls",
+      "pair": "Fear \u00d7 NegEmotion",
+      "which": "minimum",
+      "model": "Gemma_2_9B_instruct",
+      "layer": 37,
+      "cosine": -0.5571455955505371
+    },
+    {
+      "construction": "common_controls",
+      "pair": "Fear \u00d7 NegEmotion",
+      "which": "maximum",
+      "model": "Phi_4",
+      "layer": 20,
+      "cosine": 0.04719654098153114
+    }
+  ],
+  "per_model_highlights": [
+    {
+      "construction": "paper_available",
+      "model": "Gemma_2_27B_base",
+      "layer": 35,
+      "S2_pain \u00d7 Fear": -0.004776046145707369,
+      "S2_pain \u00d7 NegEmotion": 0.1144043579697609,
+      "Fear \u00d7 NegEmotion": 0.6439641714096069
+    },
+    {
+      "construction": "paper_available",
+      "model": "Gemma_2_27B_instruct",
+      "layer": 37,
+      "S2_pain \u00d7 Fear": 0.00507890060544014,
+      "S2_pain \u00d7 NegEmotion": 0.09884792566299438,
+      "Fear \u00d7 NegEmotion": 0.599136471748352
+    },
+    {
+      "construction": "paper_available",
+      "model": "Gemma_2_2B_base",
+      "layer": 23,
+      "S2_pain \u00d7 Fear": -0.021530380472540855,
+      "S2_pain \u00d7 NegEmotion": 0.13387495279312134,
+      "Fear \u00d7 NegEmotion": 0.6373322606086731
+    },
+    {
+      "construction": "paper_available",
+      "model": "Gemma_2_2B_instruct",
+      "layer": 25,
+      "S2_pain \u00d7 Fear": 0.13049736618995667,
+      "S2_pain \u00d7 NegEmotion": 0.14362117648124695,
+      "Fear \u00d7 NegEmotion": 0.6926006078720093
+    },
+    {
+      "construction": "paper_available",
+      "model": "Gemma_2_9B_base",
+      "layer": 40,
+      "S2_pain \u00d7 Fear": 0.024111706763505936,
+      "S2_pain \u00d7 NegEmotion": 0.13861578702926636,
+      "Fear \u00d7 NegEmotion": 0.6606757640838623
+    },
+    {
+      "construction": "paper_available",
+      "model": "Gemma_2_9B_instruct",
+      "layer": 37,
+      "S2_pain \u00d7 Fear": 0.06330400705337524,
+      "S2_pain \u00d7 NegEmotion": 0.10889659821987152,
+      "Fear \u00d7 NegEmotion": 0.6922444701194763
+    },
+    {
+      "construction": "paper_available",
+      "model": "Llama_3.1_70B_base",
+      "layer": 70,
+      "S2_pain \u00d7 Fear": 0.045791223645210266,
+      "S2_pain \u00d7 NegEmotion": 0.048869092017412186,
+      "Fear \u00d7 NegEmotion": 0.6491313576698303
+    },
+    {
+      "construction": "paper_available",
+      "model": "Llama_3.1_70B_instruct",
+      "layer": 48,
+      "S2_pain \u00d7 Fear": 0.06453815847635269,
+      "S2_pain \u00d7 NegEmotion": 0.12872886657714844,
+      "Fear \u00d7 NegEmotion": 0.6508293747901917
+    },
+    {
+      "construction": "paper_available",
+      "model": "Llama_3.1_8B_base",
+      "layer": 28,
+      "S2_pain \u00d7 Fear": 0.0860985592007637,
+      "S2_pain \u00d7 NegEmotion": 0.13400375843048096,
+      "Fear \u00d7 NegEmotion": 0.6483821272850037
+    },
+    {
+      "construction": "paper_available",
+      "model": "Llama_3.1_8B_instruct",
+      "layer": 28,
+      "S2_pain \u00d7 Fear": 0.08329711109399796,
+      "S2_pain \u00d7 NegEmotion": 0.1318056434392929,
+      "Fear \u00d7 NegEmotion": 0.6792121529579163
+    },
+    {
+      "construction": "paper_available",
+      "model": "Llama_3.3_70B_instruct",
+      "layer": 47,
+      "S2_pain \u00d7 Fear": 0.051855750381946564,
+      "S2_pain \u00d7 NegEmotion": 0.17623735964298248,
+      "Fear \u00d7 NegEmotion": 0.7106310129165649
+    },
+    {
+      "construction": "paper_available",
+      "model": "Mistral_7B_base",
+      "layer": 26,
+      "S2_pain \u00d7 Fear": 0.04192047938704491,
+      "S2_pain \u00d7 NegEmotion": 0.07872424274682999,
+      "Fear \u00d7 NegEmotion": 0.6602829694747925
+    },
+    {
+      "construction": "paper_available",
+      "model": "Mistral_7B_instruct",
+      "layer": 27,
+      "S2_pain \u00d7 Fear": 0.039718493819236755,
+      "S2_pain \u00d7 NegEmotion": 0.10359832644462585,
+      "Fear \u00d7 NegEmotion": 0.6595237851142883
+    },
+    {
+      "construction": "paper_available",
+      "model": "Mistral_Small_24B_base",
+      "layer": 32,
+      "S2_pain \u00d7 Fear": 0.020465083420276642,
+      "S2_pain \u00d7 NegEmotion": 0.09042347967624664,
+      "Fear \u00d7 NegEmotion": 0.6509245038032532
+    },
+    {
+      "construction": "paper_available",
+      "model": "Phi_4",
+      "layer": 20,
+      "S2_pain \u00d7 Fear": 0.2043115198612213,
+      "S2_pain \u00d7 NegEmotion": 0.3931308686733246,
+      "Fear \u00d7 NegEmotion": 0.6623761653900146
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_2.5_32B_base",
+      "layer": 60,
+      "S2_pain \u00d7 Fear": 0.12484253197908401,
+      "S2_pain \u00d7 NegEmotion": 0.35704028606414795,
+      "Fear \u00d7 NegEmotion": 0.6302410364151001
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_2.5_32B_instruct",
+      "layer": 61,
+      "S2_pain \u00d7 Fear": 0.07445038110017776,
+      "S2_pain \u00d7 NegEmotion": 0.23638060688972473,
+      "Fear \u00d7 NegEmotion": 0.6550011038780212
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_2.5_72B_base",
+      "layer": 78,
+      "S2_pain \u00d7 Fear": 0.13532541692256927,
+      "S2_pain \u00d7 NegEmotion": 0.3490947186946869,
+      "Fear \u00d7 NegEmotion": 0.6547960042953491
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_2.5_72B_instruct",
+      "layer": 76,
+      "S2_pain \u00d7 Fear": 0.012379356659948826,
+      "S2_pain \u00d7 NegEmotion": 0.08583087474107742,
+      "Fear \u00d7 NegEmotion": 0.7036390900611877
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_2.5_7B_base",
+      "layer": 24,
+      "S2_pain \u00d7 Fear": 0.028677696362137794,
+      "S2_pain \u00d7 NegEmotion": 0.24040770530700684,
+      "Fear \u00d7 NegEmotion": 0.6390336751937866
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_2.5_7B_instruct",
+      "layer": 24,
+      "S2_pain \u00d7 Fear": 0.0989648848772049,
+      "S2_pain \u00d7 NegEmotion": 0.3191889524459839,
+      "Fear \u00d7 NegEmotion": 0.6819199323654175
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_3_14B_base",
+      "layer": 31,
+      "S2_pain \u00d7 Fear": 0.1304245889186859,
+      "S2_pain \u00d7 NegEmotion": 0.45827171206474304,
+      "Fear \u00d7 NegEmotion": 0.6367748975753784
+    },
+    {
+      "construction": "paper_available",
+      "model": "Qwen_3_8B_base",
+      "layer": 34,
+      "S2_pain \u00d7 Fear": 0.009463535621762276,
+      "S2_pain \u00d7 NegEmotion": 0.19008570909500122,
+      "Fear \u00d7 NegEmotion": 0.7111390829086304
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Gemma_2_27B_base",
+      "layer": 35,
+      "S2_pain \u00d7 Fear": 0.5353670716285706,
+      "S2_pain \u00d7 NegEmotion": 0.7027100920677185,
+      "Fear \u00d7 NegEmotion": 0.6439641714096069
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Gemma_2_27B_instruct",
+      "layer": 37,
+      "S2_pain \u00d7 Fear": 0.5280617475509644,
+      "S2_pain \u00d7 NegEmotion": 0.7136803865432739,
+      "Fear \u00d7 NegEmotion": 0.599136471748352
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Gemma_2_2B_base",
+      "layer": 23,
+      "S2_pain \u00d7 Fear": 0.5997514724731445,
+      "S2_pain \u00d7 NegEmotion": 0.7883157134056091,
+      "Fear \u00d7 NegEmotion": 0.6373322606086731
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Gemma_2_2B_instruct",
+      "layer": 25,
+      "S2_pain \u00d7 Fear": 0.59782874584198,
+      "S2_pain \u00d7 NegEmotion": 0.8136829733848572,
+      "Fear \u00d7 NegEmotion": 0.6926006078720093
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Gemma_2_9B_base",
+      "layer": 40,
+      "S2_pain \u00d7 Fear": 0.5905258655548096,
+      "S2_pain \u00d7 NegEmotion": 0.7854818105697632,
+      "Fear \u00d7 NegEmotion": 0.6606757640838623
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Gemma_2_9B_instruct",
+      "layer": 37,
+      "S2_pain \u00d7 Fear": 0.6085354089736938,
+      "S2_pain \u00d7 NegEmotion": 0.7709938287734985,
+      "Fear \u00d7 NegEmotion": 0.6922444701194763
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Llama_3.1_70B_base",
+      "layer": 70,
+      "S2_pain \u00d7 Fear": 0.5842925906181335,
+      "S2_pain \u00d7 NegEmotion": 0.7520490288734436,
+      "Fear \u00d7 NegEmotion": 0.6491313576698303
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Llama_3.1_70B_instruct",
+      "layer": 48,
+      "S2_pain \u00d7 Fear": 0.5592604279518127,
+      "S2_pain \u00d7 NegEmotion": 0.7632065415382385,
+      "Fear \u00d7 NegEmotion": 0.6508293747901917
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Llama_3.1_8B_base",
+      "layer": 28,
+      "S2_pain \u00d7 Fear": 0.5942215323448181,
+      "S2_pain \u00d7 NegEmotion": 0.7743010520935059,
+      "Fear \u00d7 NegEmotion": 0.6483821272850037
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Llama_3.1_8B_instruct",
+      "layer": 28,
+      "S2_pain \u00d7 Fear": 0.5785704851150513,
+      "S2_pain \u00d7 NegEmotion": 0.7899948954582214,
+      "Fear \u00d7 NegEmotion": 0.6792121529579163
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Llama_3.3_70B_instruct",
+      "layer": 47,
+      "S2_pain \u00d7 Fear": 0.5986827611923218,
+      "S2_pain \u00d7 NegEmotion": 0.7727271318435669,
+      "Fear \u00d7 NegEmotion": 0.7106310129165649
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Mistral_7B_base",
+      "layer": 26,
+      "S2_pain \u00d7 Fear": 0.5747072696685791,
+      "S2_pain \u00d7 NegEmotion": 0.7888232469558716,
+      "Fear \u00d7 NegEmotion": 0.6602829694747925
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Mistral_7B_instruct",
+      "layer": 27,
+      "S2_pain \u00d7 Fear": 0.6605954170227051,
+      "S2_pain \u00d7 NegEmotion": 0.8262154459953308,
+      "Fear \u00d7 NegEmotion": 0.6595237851142883
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Mistral_Small_24B_base",
+      "layer": 32,
+      "S2_pain \u00d7 Fear": 0.5839821100234985,
+      "S2_pain \u00d7 NegEmotion": 0.7558402419090271,
+      "Fear \u00d7 NegEmotion": 0.6509245038032532
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Phi_4",
+      "layer": 20,
+      "S2_pain \u00d7 Fear": 0.6136432886123657,
+      "S2_pain \u00d7 NegEmotion": 0.7330490350723267,
+      "Fear \u00d7 NegEmotion": 0.6623761653900146
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_2.5_32B_base",
+      "layer": 60,
+      "S2_pain \u00d7 Fear": 0.4999121129512787,
+      "S2_pain \u00d7 NegEmotion": 0.7512432336807251,
+      "Fear \u00d7 NegEmotion": 0.6302410364151001
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_2.5_32B_instruct",
+      "layer": 61,
+      "S2_pain \u00d7 Fear": 0.531145453453064,
+      "S2_pain \u00d7 NegEmotion": 0.7338314652442932,
+      "Fear \u00d7 NegEmotion": 0.6550011038780212
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_2.5_72B_base",
+      "layer": 78,
+      "S2_pain \u00d7 Fear": 0.5999171137809753,
+      "S2_pain \u00d7 NegEmotion": 0.8402721881866455,
+      "Fear \u00d7 NegEmotion": 0.6547960042953491
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_2.5_72B_instruct",
+      "layer": 76,
+      "S2_pain \u00d7 Fear": 0.6055284142494202,
+      "S2_pain \u00d7 NegEmotion": 0.8148971199989319,
+      "Fear \u00d7 NegEmotion": 0.7036390900611877
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_2.5_7B_base",
+      "layer": 24,
+      "S2_pain \u00d7 Fear": 0.6130070090293884,
+      "S2_pain \u00d7 NegEmotion": 0.7830869555473328,
+      "Fear \u00d7 NegEmotion": 0.6390336751937866
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_2.5_7B_instruct",
+      "layer": 24,
+      "S2_pain \u00d7 Fear": 0.6069692969322205,
+      "S2_pain \u00d7 NegEmotion": 0.778721034526825,
+      "Fear \u00d7 NegEmotion": 0.6819199323654175
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_3_14B_base",
+      "layer": 31,
+      "S2_pain \u00d7 Fear": 0.5194132924079895,
+      "S2_pain \u00d7 NegEmotion": 0.7797013521194458,
+      "Fear \u00d7 NegEmotion": 0.6367748975753784
+    },
+    {
+      "construction": "common_neutral",
+      "model": "Qwen_3_8B_base",
+      "layer": 34,
+      "S2_pain \u00d7 Fear": 0.6275936365127563,
+      "S2_pain \u00d7 NegEmotion": 0.784888744354248,
+      "Fear \u00d7 NegEmotion": 0.7111390829086304
+    },
+    {
+      "construction": "common_controls",
+      "model": "Gemma_2_27B_base",
+      "layer": 35,
+      "S2_pain \u00d7 Fear": 0.09956396371126175,
+      "S2_pain \u00d7 NegEmotion": 0.08575141429901123,
+      "Fear \u00d7 NegEmotion": -0.09762773662805557
+    },
+    {
+      "construction": "common_controls",
+      "model": "Gemma_2_27B_instruct",
+      "layer": 37,
+      "S2_pain \u00d7 Fear": 0.23074248433113098,
+      "S2_pain \u00d7 NegEmotion": 0.16836129128932953,
+      "Fear \u00d7 NegEmotion": 0.022854076698422432
+    },
+    {
+      "construction": "common_controls",
+      "model": "Gemma_2_2B_base",
+      "layer": 23,
+      "S2_pain \u00d7 Fear": 0.13576555252075195,
+      "S2_pain \u00d7 NegEmotion": 0.26781848073005676,
+      "Fear \u00d7 NegEmotion": -0.47465282678604126
+    },
+    {
+      "construction": "common_controls",
+      "model": "Gemma_2_2B_instruct",
+      "layer": 25,
+      "S2_pain \u00d7 Fear": 0.10732877254486084,
+      "S2_pain \u00d7 NegEmotion": -0.033916719257831573,
+      "Fear \u00d7 NegEmotion": -0.25098738074302673
+    },
+    {
+      "construction": "common_controls",
+      "model": "Gemma_2_9B_base",
+      "layer": 40,
+      "S2_pain \u00d7 Fear": -0.048589494079351425,
+      "S2_pain \u00d7 NegEmotion": 0.09015831351280212,
+      "Fear \u00d7 NegEmotion": -0.49788737297058105
+    },
+    {
+      "construction": "common_controls",
+      "model": "Gemma_2_9B_instruct",
+      "layer": 37,
+      "S2_pain \u00d7 Fear": -0.045502834022045135,
+      "S2_pain \u00d7 NegEmotion": 0.06067633256316185,
+      "Fear \u00d7 NegEmotion": -0.5571455955505371
+    },
+    {
+      "construction": "common_controls",
+      "model": "Llama_3.1_70B_base",
+      "layer": 70,
+      "S2_pain \u00d7 Fear": 0.18371307849884033,
+      "S2_pain \u00d7 NegEmotion": -0.014198534190654755,
+      "Fear \u00d7 NegEmotion": -0.4449997842311859
+    },
+    {
+      "construction": "common_controls",
+      "model": "Llama_3.1_70B_instruct",
+      "layer": 48,
+      "S2_pain \u00d7 Fear": 0.0009795441292226315,
+      "S2_pain \u00d7 NegEmotion": 0.06907398253679276,
+      "Fear \u00d7 NegEmotion": -0.30267995595932007
+    },
+    {
+      "construction": "common_controls",
+      "model": "Llama_3.1_8B_base",
+      "layer": 28,
+      "S2_pain \u00d7 Fear": 0.06530429422855377,
+      "S2_pain \u00d7 NegEmotion": 0.14737018942832947,
+      "Fear \u00d7 NegEmotion": -0.4228570759296417
+    },
+    {
+      "construction": "common_controls",
+      "model": "Llama_3.1_8B_instruct",
+      "layer": 28,
+      "S2_pain \u00d7 Fear": 0.056872740387916565,
+      "S2_pain \u00d7 NegEmotion": 0.006964170373976231,
+      "Fear \u00d7 NegEmotion": -0.5370091795921326
+    },
+    {
+      "construction": "common_controls",
+      "model": "Llama_3.3_70B_instruct",
+      "layer": 47,
+      "S2_pain \u00d7 Fear": -0.05190833657979965,
+      "S2_pain \u00d7 NegEmotion": 0.08743058145046234,
+      "Fear \u00d7 NegEmotion": -0.5438411235809326
+    },
+    {
+      "construction": "common_controls",
+      "model": "Mistral_7B_base",
+      "layer": 26,
+      "S2_pain \u00d7 Fear": 0.18126694858074188,
+      "S2_pain \u00d7 NegEmotion": -0.005656277295202017,
+      "Fear \u00d7 NegEmotion": -0.5018988847732544
+    },
+    {
+      "construction": "common_controls",
+      "model": "Mistral_7B_instruct",
+      "layer": 27,
+      "S2_pain \u00d7 Fear": 0.01950068585574627,
+      "S2_pain \u00d7 NegEmotion": 0.007712343242019415,
+      "Fear \u00d7 NegEmotion": -0.20218859612941742
+    },
+    {
+      "construction": "common_controls",
+      "model": "Mistral_Small_24B_base",
+      "layer": 32,
+      "S2_pain \u00d7 Fear": 0.08279036730527878,
+      "S2_pain \u00d7 NegEmotion": -0.03751228377223015,
+      "Fear \u00d7 NegEmotion": -0.19702424108982086
+    },
+    {
+      "construction": "common_controls",
+      "model": "Phi_4",
+      "layer": 20,
+      "S2_pain \u00d7 Fear": 0.09222284704446793,
+      "S2_pain \u00d7 NegEmotion": 0.3456929922103882,
+      "Fear \u00d7 NegEmotion": 0.04719654098153114
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_2.5_32B_base",
+      "layer": 60,
+      "S2_pain \u00d7 Fear": -0.19285675883293152,
+      "S2_pain \u00d7 NegEmotion": 0.47712475061416626,
+      "Fear \u00d7 NegEmotion": -0.10119664669036865
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_2.5_32B_instruct",
+      "layer": 61,
+      "S2_pain \u00d7 Fear": 0.06804253906011581,
+      "S2_pain \u00d7 NegEmotion": 0.1881832778453827,
+      "Fear \u00d7 NegEmotion": -0.2970536947250366
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_2.5_72B_base",
+      "layer": 78,
+      "S2_pain \u00d7 Fear": 0.043762486428022385,
+      "S2_pain \u00d7 NegEmotion": 0.3745112419128418,
+      "Fear \u00d7 NegEmotion": -0.00048798584612086415
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_2.5_72B_instruct",
+      "layer": 76,
+      "S2_pain \u00d7 Fear": 0.268638551235199,
+      "S2_pain \u00d7 NegEmotion": -0.08662834018468857,
+      "Fear \u00d7 NegEmotion": -0.416731059551239
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_2.5_7B_base",
+      "layer": 24,
+      "S2_pain \u00d7 Fear": 0.16541026532649994,
+      "S2_pain \u00d7 NegEmotion": 0.23939265310764313,
+      "Fear \u00d7 NegEmotion": -0.4297756552696228
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_2.5_7B_instruct",
+      "layer": 24,
+      "S2_pain \u00d7 Fear": 0.12317824363708496,
+      "S2_pain \u00d7 NegEmotion": 0.28183406591415405,
+      "Fear \u00d7 NegEmotion": -0.18425670266151428
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_3_14B_base",
+      "layer": 31,
+      "S2_pain \u00d7 Fear": 0.057198505848646164,
+      "S2_pain \u00d7 NegEmotion": 0.4056156277656555,
+      "Fear \u00d7 NegEmotion": -0.1853572130203247
+    },
+    {
+      "construction": "common_controls",
+      "model": "Qwen_3_8B_base",
+      "layer": 34,
+      "S2_pain \u00d7 Fear": 0.12064125388860703,
+      "S2_pain \u00d7 NegEmotion": 0.17203839123249054,
+      "Fear \u00d7 NegEmotion": -0.5026117563247681
+    }
+  ],
+  "paired_shifts": [
+    {
+      "comparison": "common_neutral",
+      "pair": "S2_pain \u00d7 Fear",
+      "n_models": 23,
+      "increased": 23,
+      "decreased": 0,
+      "unchanged": 0,
+      "mean_delta": 0.520100095572517,
+      "min_delta": 0.37506958097219467,
+      "max_delta": 0.6212818529456854
+    },
+    {
+      "comparison": "common_neutral",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "n_models": 23,
+      "increased": 23,
+      "decreased": 0,
+      "unchanged": 0,
+      "mean_delta": 0.5885926311754662,
+      "min_delta": 0.32142964005470276,
+      "max_delta": 0.7290662452578545
+    },
+    {
+      "comparison": "common_neutral",
+      "pair": "Fear \u00d7 NegEmotion",
+      "n_models": 23,
+      "increased": 0,
+      "decreased": 0,
+      "unchanged": 23,
+      "mean_delta": 0.0,
+      "min_delta": 0.0,
+      "max_delta": 0.0
+    },
+    {
+      "comparison": "common_controls",
+      "pair": "S2_pain \u00d7 Fear",
+      "n_models": 23,
+      "increased": 10,
+      "decreased": 13,
+      "unchanged": 0,
+      "mean_delta": 0.013689364144659561,
+      "min_delta": -0.31769929081201553,
+      "max_delta": 0.25625919457525015
+    },
+    {
+      "comparison": "common_controls",
+      "pair": "S2_pain \u00d7 NegEmotion",
+      "n_models": 23,
+      "increased": 5,
+      "decreased": 18,
+      "unchanged": 0,
+      "mean_delta": -0.04183848068604003,
+      "min_delta": -0.17753789573907852,
+      "max_delta": 0.13394352793693542
+    },
+    {
+      "comparison": "common_controls",
+      "pair": "Fear \u00d7 NegEmotion",
+      "n_models": 23,
+      "increased": 0,
+      "decreased": 23,
+      "unchanged": 0,
+      "mean_delta": -0.9690439942743346,
+      "min_delta": -1.2544721364974976,
+      "max_delta": -0.5762823950499296
+    }
+  ],
+  "claim_replacement": "Across the 23 models with usable uploaded extraction-layer data, S1 and S2 align under all three constructions, but their separation from negative-valence directions depends on the subtraction and denoising scheme. With a shared neutral baseline, mean S2\u2013fear and S2\u2013negative-emotion cosines are 0.5831 and 0.7738 (fear\u2013negative emotion: 0.6613); with shared pooled controls they are 0.0767 and 0.1434 (fear\u2013negative emotion: -0.3077).",
+  "data_scope": {
+    "models_uploaded": 25,
+    "models_usable": 23,
+    "models_failed": [
+      "Gemma_3_27B_base",
+      "Gemma_3_27B_instruct"
+    ],
+    "held_out_split": false,
+    "directions_available": 8,
+    "directions_missing": [
+      "Numb",
+      "Sadness"
+    ]
+  }
+}

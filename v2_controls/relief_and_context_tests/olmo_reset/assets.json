@@ -1,0 +1,51 @@
+[
+  {
+    "local_path": "removal_v1/",
+    "purpose": "Both styles, original 1428 fresh conversations; combine with continuation",
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "removal_continuation_v1/",
+    "purpose": "172 missing-ID conversations, no duplicate concatenation",
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "inputs/archive_inputs_v1.tar.gz",
+    "purpose": "Original archived 2800 conversation controls and audit references",
+    "bytes": 3924734,
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "final_review_v1/review/judge/scores.json",
+    "purpose": "Saved 3200 exposure judgments, pass --new-scores; never rejudge",
+    "bytes": 230687,
+    "url": null,
+    "status": "pending_publication"
+  },
+  {
+    "local_path": "selection_v1/analysis.json",
+    "purpose": "Frozen selection identity and saved exact raw norm",
+    "url": null,
+    "status": "included_in_git",
+    "included_relative_path": "inputs/selection_v1/analysis.json",
+    "note": "Use this included input for future inference; historical archive copies remain for original-run provenance. Tensor hashes unchanged."
+  },
+  {
+    "local_path": "selection_v1/final_token/",
+    "purpose": "Frozen direction raw/unit arrays and all hash-bound sidecars",
+    "url": null,
+    "status": "included_in_git",
+    "included_relative_path": "inputs/selection_v1/final_token/",
+    "note": "Use this included input for future inference; historical archive copies remain for original-run provenance. Tensor hashes unchanged."
+  },
+  {
+    "local_path": "final_review_v1/analysis/analysis.json",
+    "purpose": "Authoritative saved statistics for table replay",
+    "bytes": 6891811,
+    "url": null,
+    "status": "pending_publication"
+  }
+]

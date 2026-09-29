@@ -1,0 +1,112 @@
+{
+  "status": "pending",
+  "assets": [
+    {
+      "local_path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 41120,
+      "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+      "url": null,
+      "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+      "included_file_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+      "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+    },
+    {
+      "local_path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 696,
+      "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+      "url": null,
+      "included_git_path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.json",
+      "included_file_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+      "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+    },
+    {
+      "local_path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 65696,
+      "sha256": null,
+      "url": null
+    },
+    {
+      "local_path": "vectors/Qwen_2.5_72B_instruct_pain_vectors.json",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 696,
+      "sha256": null,
+      "url": null
+    },
+    {
+      "local_path": "vectors/original_tensor_hashes_v2.json",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 4365,
+      "sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+      "url": null,
+      "included_git_path": "choice_controls/vectors/common/original_tensor_hashes_v2.json",
+      "included_file_sha256": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+      "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+    },
+    {
+      "local_path": "vectors/vectors_Qwen_2.5_32B_instruct.pt",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 78329,
+      "sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295",
+      "url": null,
+      "included_git_path": "choice_controls/vectors/common/vectors_Qwen_2.5_32B_instruct.pt",
+      "included_file_sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+      "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+    },
+    {
+      "local_path": "vectors/verification.json",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 14851,
+      "sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77",
+      "url": null,
+      "included_git_path": "choice_controls/vectors/common/verification.json",
+      "included_file_sha256": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+      "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+    },
+    {
+      "local_path": "vectors/fear_Qwen_2.5_32B_instruct.pt",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 95274,
+      "sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+      "url": null,
+      "included_git_path": "choice_controls/vectors/common/fear_Qwen_2.5_32B_instruct.pt",
+      "included_file_sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+      "status_note": "Included in Git; this entry retains historical external-archive identity. Use portable vector copy instructions for future inference."
+    },
+    {
+      "local_path": "vectors/verification_fear.json",
+      "purpose": "future inference original identity/loading dependency only",
+      "bytes": 10056,
+      "sha256": null,
+      "url": null
+    },
+    {
+      "local_path": "tp_guard/source_manifest_v2.json",
+      "purpose": "72B native TP loader guard metadata only; no installed source",
+      "bytes": 3220,
+      "sha256": null,
+      "url": null
+    },
+    {
+      "local_path": "tp_guard/pinned_72B_config.json",
+      "purpose": "72B native TP loader guard metadata only; no installed source",
+      "bytes": 663,
+      "sha256": null,
+      "url": null
+    }
+  ],
+  "local_copies": [
+    {
+      "from": "four_cells/inputs/fear32_pin.json",
+      "to": "vectors/fear32_pin.json"
+    }
+  ],
+  "parent_supplied_72B": [
+    "vectors/fear72.safetensors",
+    "vectors/fear72_pin.json"
+  ],
+  "note": "72B vector-only file requires updated file hash in its pin, unchanged tensor hash; original pool-containing file excluded. Model and adapter revisions are pinned in each original runtime.py. 72B and B2 launch require populated HF_HUB_CACHE.",
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

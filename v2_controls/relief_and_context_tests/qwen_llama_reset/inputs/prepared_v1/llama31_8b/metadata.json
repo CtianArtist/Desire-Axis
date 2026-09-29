@@ -1,0 +1,78 @@
+{
+  "member": "llama31_8b",
+  "hf_id": "meta-llama/Llama-3.1-8B-Instruct",
+  "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+  "extraction_layer": 28,
+  "width": 4096,
+  "dtype": "float32",
+  "tensor_sha256": {
+    "pain": "91a3c6363ece303fcdbd9b84f198f146561fc68030303e6b1d396561d615abfb",
+    "sadness": "1924729c3100ef2756df69b70d6ff2add559e905e618bb16b9c6b7d369121984",
+    "fear": "18ee68185818f2a5538130d9aa30b8ee380fda28b2f4c32cbc9accedeed415d8"
+  },
+  "norms": {
+    "pain": 8.238167762756348,
+    "sadness": 8.238168716430664,
+    "fear": 8.238168716430664
+  },
+  "provenance": {
+    "input_file": {
+      "name": "pain_vectors_export_llama.zip",
+      "sha256": "2aba2f0fdd2ef8e56f5cbc1c969ff4ca312f012d06384cdc14d24a289d72fd61",
+      "size": 31649
+    },
+    "pain_sidecar": {
+      "model": "Llama_3.1_8B_instruct",
+      "layer": 28,
+      "extraction": "final_token",
+      "dtype": "float32",
+      "dim": 4096,
+      "source": "results/3.2_pain_vectors/pain_vectors/Llama_3.1_8B_instruct/pain_vectors.pt @ 8d1649c03a63a39c9aa092532c376800cc4a3863",
+      "sha256_source_pt": "254957d8ca0df4c7e3cc4940fa6bdae08f52239f09319bafcaa7d4ef7f91d0ed",
+      "sha256_raw_bytes": {
+        "s1_pain_vector": "e1837172306ef5ce6ebff26bec8c0997290083cf0dce79be87d93e2ba15c69d4",
+        "s2_pain_vector": "91a3c6363ece303fcdbd9b84f198f146561fc68030303e6b1d396561d615abfb"
+      },
+      "note": "Raw float32 storage bytes copied unchanged from the .pt zip; layer cast from numpy int64 to int."
+    },
+    "new_extraction": "controls_only",
+    "counts": {
+      "sadness": 100,
+      "fear_B": 40,
+      "neutral_D": 40
+    },
+    "supplement_included": false,
+    "neutral_variance_threshold": 0.5,
+    "neutral_components": 4,
+    "source_hashes": {
+      "01_extract_activations_and_pain_vectors.py": "f65a55877163f403e694bece8242c1f80248a1173047b74e9008c64242937f7e",
+      "02_build_control_vectors.py": "d74b5235090f9a66b84456d23e99640a905e0f19295fa91b2a0eacf2f938e793"
+    },
+    "runtime": {
+      "packages": {
+        "torch": "2.14.0",
+        "transformers": "5.17.0",
+        "numpy": "2.3.4",
+        "transformer-lens": "3.9.0",
+        "scikit-learn": "1.9.1"
+      },
+      "torch_build": "2.14.0+cu130",
+      "cuda_build": "13.0",
+      "gpu": "NVIDIA H100 80GB HBM3",
+      "driver": "580.95.05",
+      "native_bf16_matmul": "passed",
+      "batch_size": 1,
+      "seed": 42,
+      "precision": "bfloat16",
+      "author_base_pins_checked": 83,
+      "author_base_pin_mismatches": [],
+      "load_seconds": 28.471284118,
+      "extraction_seconds": 15.488352547999995,
+      "peak_gpu_allocated_bytes": 17193584128,
+      "peak_gpu_reserved_bytes": 17343447040,
+      "total_gpu_bytes": 85017624576,
+      "snapshot_revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "adapters": false
+    }
+  }
+}

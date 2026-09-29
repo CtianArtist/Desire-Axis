@@ -1,0 +1,358 @@
+{
+  "Gemma_3_27B_base": {
+    "model": "Gemma_3_27B_base",
+    "layer": "56",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  },
+  "Gemma_3_27B_instruct": {
+    "model": "Gemma_3_27B_instruct",
+    "layer": "59",
+    "final_token": {
+      "S1_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S1_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S2_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "S3_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Random_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_1P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      },
+      "Arousal_3P": {
+        "shape": [
+          200,
+          5376
+        ],
+        "dtype": "torch.float16"
+      }
+    },
+    "metadata": {
+      "S1_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S1_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S2_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "S3_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Random_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_1P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      },
+      "Arousal_3P": {
+        "categories": {
+          "type": "list",
+          "length": 200
+        },
+        "sets": {
+          "type": "list",
+          "length": 200
+        }
+      }
+    }
+  }
+}

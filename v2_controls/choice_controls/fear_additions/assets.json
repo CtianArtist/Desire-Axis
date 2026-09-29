@@ -1,0 +1,112 @@
+{
+  "status": "public_assets_pending",
+  "assets": [
+    {
+      "id": "superseded_long_wording",
+      "local_path": "superseded_long_wording/trials.jsonl.gz",
+      "bytes": 243236,
+      "sha256": "f1c8442d1f55eb8db0d2d67f00bcced2901b8dbdb906db151f5c865a93aaa6fd",
+      "used_by": [
+        "superseded_long_wording"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending",
+      "expanded_bytes": 7263374,
+      "expanded_sha256": "cd10e6f657a784f51f846f15f5a5e12569c4860913c39b6b2b92a1f80daca738"
+    },
+    {
+      "id": "matched_wording",
+      "local_path": "matched_wording/trials.jsonl.gz",
+      "bytes": 241922,
+      "sha256": "5907a8e7453f24c0062cbe95907690cb4a73d9c7e0262d5509a174316c5733ca",
+      "used_by": [
+        "matched_wording"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending",
+      "expanded_bytes": 7071014,
+      "expanded_sha256": "d76d888be433617e9ad184869e1c470cd29f5aad25770e9d34483b4c958a1493"
+    },
+    {
+      "id": "lamp32",
+      "local_path": "four_cells/lamp32_trials.jsonl.gz",
+      "bytes": 497523,
+      "sha256": "13498f929b5acd42ef6efc0978495aeda6e9a580d69a34d06536bdfa74b1f21c",
+      "used_by": [
+        "four_cells"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending",
+      "expanded_bytes": 14136249,
+      "expanded_sha256": "56af9168df91d5bf1096ead153ce2e7a6f8a09306b90289cd57ddbff9dcc3a03"
+    },
+    {
+      "id": "b2_32",
+      "local_path": "four_cells/b2_32_trials.jsonl.gz",
+      "bytes": 76678,
+      "sha256": "6b3ae68b25f43c4a84e578ef7d4a1ef0c62770575621d1e1ae0ae24ff1faa132",
+      "used_by": [
+        "four_cells"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending",
+      "expanded_bytes": 1223284,
+      "expanded_sha256": "00f4e74069532bd81c6a020041d5afd292a5e02aea2a278b07ccb9ac22352a57"
+    },
+    {
+      "id": "b2_72",
+      "local_path": "four_cells/b2_72_trials.jsonl.gz",
+      "bytes": 101571,
+      "sha256": "84d164c667ee4728e00e3c4074364931c98ce3a81c3882c2def6c3129d9a440f",
+      "used_by": [
+        "four_cells"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending",
+      "expanded_bytes": 1212170,
+      "expanded_sha256": "84b9bcd1990383f03bff489d11033720d77a729ac85d0629bbd6a158b78afb6e"
+    },
+    {
+      "id": "historical_b2_32",
+      "local_path": "historical/historical_b2_32.jsonl",
+      "bytes": 46909779,
+      "sha256": "2affb47d0e1183646996a0c026bc22b33a1d022d09e6a3687b8a33a17c3193ef",
+      "used_by": [
+        "four_cells"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending"
+    },
+    {
+      "id": "historical_b2_72",
+      "local_path": "historical/historical_b2_72.jsonl",
+      "bytes": 46718569,
+      "sha256": "75629900c2827534ce216aa0c5bff204305a31115df9ab5a34f5c7cdd1fc9de9",
+      "used_by": [
+        "four_cells"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending"
+    },
+    {
+      "id": "historical_b2_rates",
+      "local_path": "historical/b2_rates.json",
+      "bytes": 6012191,
+      "sha256": "2f94f186a20084bb5a283e6d83df59925b5128ea336df292f9d36804a4524c94",
+      "used_by": [
+        "four_cells"
+      ],
+      "purpose": "original-estimator replay",
+      "url": null,
+      "publication_status": "pending"
+    }
+  ],
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

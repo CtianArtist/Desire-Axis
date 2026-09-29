@@ -1,0 +1,100 @@
+{
+  "status": "passed",
+  "scope": "Portable packaging and saved-table checks; no array replay or inference.",
+  "checks": [
+    {
+      "name": "Compile every Python source without imports",
+      "status": "passed",
+      "python_files": 9
+    },
+    {
+      "name": "Original verifier tests and portable interface tests",
+      "status": "passed",
+      "command": "PYTHONDONTWRITEBYTECODE=1 TMPDIR=validation-tmp python -m unittest discover -s tests -p 'test_*.py' -v",
+      "tests": 22,
+      "output": "Ran 22 tests; OK"
+    },
+    {
+      "name": "Public entrypoint help",
+      "status": "passed",
+      "command": "python reproduce.py --help"
+    },
+    {
+      "name": "Dry-run local path configuration",
+      "status": "passed",
+      "command": "python reproduce.py --data-dir data --out replayed --dry-run",
+      "output": "Resolved archive/output; original src/run_audit.py; no scientific imports or input/output writes; null public URL"
+    },
+    {
+      "name": "Copied-source and frozen table hashes; independent table verifier",
+      "status": "passed",
+      "command": "python reproduce.py --verify-frozen",
+      "copied_files": 129,
+      "frozen_csvs": 80,
+      "per_model_matrices": 69,
+      "aggregate_cells": 300,
+      "summary_rows": 12,
+      "reference_discrepancies": 28,
+      "matched_comparisons": 28
+    },
+    {
+      "name": "Population and extraction-layer provenance",
+      "status": "passed",
+      "input_models": 25,
+      "usable_models": 23,
+      "exclusions": [
+        "Gemma_3_27B_base",
+        "Gemma_3_27B_instruct"
+      ]
+    },
+    {
+      "name": "Numerical AST equality to executed source",
+      "status": "passed",
+      "functions": [
+        "load",
+        "means_and_clouds",
+        "construct",
+        "aggregate",
+        "cosine",
+        "matrix",
+        "check_matrix",
+        "matrix_write",
+        "matrix_read",
+        "preflight"
+      ]
+    },
+    {
+      "name": "Dependencies match original measured environment and original requirements",
+      "status": "passed",
+      "packages": {
+        "torch": "2.11.0",
+        "numpy": "2.3.4",
+        "scipy": "1.16.3",
+        "scikit-learn": "1.9.0"
+      }
+    },
+    {
+      "name": "Public-tree scan",
+      "status": "passed",
+      "details": "No private runtime paths or artifact references; no large arrays, archive inputs, weights, or compiled files; all files below 1 MB."
+    },
+    {
+      "name": "Full numerical replay from retained array archive",
+      "status": "not-run",
+      "reason": "Large retained inputs separate; no compute allocation or scientific replay authorized in this packaging task."
+    }
+  ],
+  "repair_history": [
+    {
+      "initial_check": "Mocked replay-dispatch test rejected its in-contribution temporary output, as intended by the production safety check.",
+      "repair": "Changed only the mocked output to a never-created external path. All 22 tests then passed."
+    }
+  ],
+  "git": "No Git commands, staging, commits or checkpoints performed.",
+  "limitations": [
+    "Public input asset URL is null pending approval/publication.",
+    "Measured scientific dependency versions are verified from saved execution evidence, not installed or exercised in this packaging interpreter.",
+    "Full array-to-matrix replay has not been rerun; saved-table consistency is independently verified.",
+    "Review gate remains for the parent reviewer."
+  ]
+}

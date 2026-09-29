@@ -1,0 +1,169 @@
+{
+  "reproduction_passed": true,
+  "checks": [
+    {
+      "construction": "paper_available",
+      "n_models": 23,
+      "csv_roundtrip": true,
+      "symmetry_bounds_defined_diagonals_missingness": true,
+      "aggregate_recomputed_from_csv": true,
+      "min_available_cell_count": 23,
+      "max_available_cell_count": 23
+    },
+    {
+      "construction": "common_neutral",
+      "n_models": 23,
+      "csv_roundtrip": true,
+      "symmetry_bounds_defined_diagonals_missingness": true,
+      "aggregate_recomputed_from_csv": true,
+      "min_available_cell_count": 23,
+      "max_available_cell_count": 23
+    },
+    {
+      "construction": "common_controls",
+      "n_models": 23,
+      "csv_roundtrip": true,
+      "symmetry_bounds_defined_diagonals_missingness": true,
+      "aggregate_recomputed_from_csv": true,
+      "min_available_cell_count": 23,
+      "max_available_cell_count": 23
+    }
+  ],
+  "failed_files_or_constructions": 2,
+  "runtime_seconds": 37.264212898,
+  "peak_rss_mib": 3477.4921875,
+  "comparison": [
+    {
+      "construction": "paper_available",
+      "direction_a": "S2_pain",
+      "direction_b": "Fear",
+      "n_models": 23,
+      "mean": 0.06300914459659354,
+      "minimum": -0.021530380472540855,
+      "median": 0.051855750381946564,
+      "maximum": 0.2043115198612213
+    },
+    {
+      "construction": "paper_available",
+      "direction_a": "S2_pain",
+      "direction_b": "NegEmotion",
+      "n_models": 23,
+      "mean": 0.18522100004812944,
+      "minimum": 0.048869092017412186,
+      "median": 0.13400375843048096,
+      "maximum": 0.45827171206474304
+    },
+    {
+      "construction": "paper_available",
+      "direction_a": "Fear",
+      "direction_b": "NegEmotion",
+      "n_models": 23,
+      "mean": 0.6612953051276829,
+      "minimum": 0.599136471748352,
+      "median": 0.6550011038780212,
+      "maximum": 0.7111390829086304
+    },
+    {
+      "construction": "paper_available",
+      "direction_a": "S1_pain",
+      "direction_b": "S2_pain",
+      "n_models": 23,
+      "mean": 0.6041723722996919,
+      "minimum": 0.4148605763912201,
+      "median": 0.6324547529220581,
+      "maximum": 0.7068765163421631
+    },
+    {
+      "construction": "common_neutral",
+      "direction_a": "S2_pain",
+      "direction_b": "Fear",
+      "n_models": 23,
+      "mean": 0.5831092401691105,
+      "minimum": 0.4999121129512787,
+      "median": 0.5942215323448181,
+      "maximum": 0.6605954170227051
+    },
+    {
+      "construction": "common_neutral",
+      "direction_a": "S2_pain",
+      "direction_b": "NegEmotion",
+      "n_models": 23,
+      "mean": 0.7738136312235957,
+      "minimum": 0.7027100920677185,
+      "median": 0.778721034526825,
+      "maximum": 0.8402721881866455
+    },
+    {
+      "construction": "common_neutral",
+      "direction_a": "Fear",
+      "direction_b": "NegEmotion",
+      "n_models": 23,
+      "mean": 0.6612953051276829,
+      "minimum": 0.599136471748352,
+      "median": 0.6550011038780212,
+      "maximum": 0.7111390829086304
+    },
+    {
+      "construction": "common_neutral",
+      "direction_a": "S1_pain",
+      "direction_b": "S2_pain",
+      "n_models": 23,
+      "mean": 0.9193206377651381,
+      "minimum": 0.8671755194664001,
+      "median": 0.9198877811431885,
+      "maximum": 0.9495998620986938
+    },
+    {
+      "construction": "common_controls",
+      "direction_a": "S2_pain",
+      "direction_b": "Fear",
+      "n_models": 23,
+      "mean": 0.0766985087412531,
+      "minimum": -0.19285675883293152,
+      "median": 0.08279036730527878,
+      "maximum": 0.268638551235199
+    },
+    {
+      "construction": "common_controls",
+      "direction_a": "S2_pain",
+      "direction_b": "NegEmotion",
+      "n_models": 23,
+      "mean": 0.14338251936208943,
+      "minimum": -0.08662834018468857,
+      "median": 0.09015831351280212,
+      "maximum": 0.47712475061416626
+    },
+    {
+      "construction": "common_controls",
+      "direction_a": "Fear",
+      "direction_b": "NegEmotion",
+      "n_models": 23,
+      "mean": -0.3077486891466517,
+      "minimum": -0.5571455955505371,
+      "median": -0.30267995595932007,
+      "maximum": 0.04719654098153114
+    },
+    {
+      "construction": "common_controls",
+      "direction_a": "S1_pain",
+      "direction_b": "S2_pain",
+      "n_models": 23,
+      "mean": 0.804548424223195,
+      "minimum": 0.7246312499046326,
+      "median": 0.8128453493118286,
+      "maximum": 0.8710580468177795
+    }
+  ],
+  "nonfinite_elements": {
+    "nan": 0,
+    "posinf": 0,
+    "neginf": 0
+  },
+  "notes": [
+    "No held-out split: descriptive geometry of the fixed uploaded rows.",
+    "Source compute_pain_vector uses sklearn PCA; neutral and symmetric pooled clouds use source NumPy SVD.",
+    "FP16 stored rows converted to FP32; sequential projection and 50% threshold unchanged.",
+    "Source pain calculation does not sanitize control cloud before PCA; such failures remain file failures.",
+    "Other means map infinity to NaN; centered SVD cloud and final differences map nonfinite values to zero."
+  ]
+}

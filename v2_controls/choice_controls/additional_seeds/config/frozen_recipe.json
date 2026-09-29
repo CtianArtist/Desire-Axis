@@ -1,0 +1,60 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "model_revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+  "author_commit": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+  "released_adapter_repository": "Valen92/pain-adapters",
+  "released_adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+  "released_archive": "adapter_Qwen_2.5_32B_instruct.tar.gz",
+  "released_archive_bytes": 996304025,
+  "released_archive_sha256": "cd96d4d43a3f7d6a8c67804ed4f4ee567ee4942e168804c757e69937b857127f",
+  "recorded": {
+    "n_pairs": 1684,
+    "r": 32,
+    "alpha": 64,
+    "dropout": 0.05,
+    "targets": [
+      "q_proj",
+      "k_proj",
+      "v_proj",
+      "o_proj",
+      "gate_proj",
+      "up_proj",
+      "down_proj"
+    ],
+    "epochs": 3,
+    "learning_rate": 0.0002,
+    "batch": 4,
+    "gradient_accumulation": 4,
+    "seed": 0
+  },
+  "new_seeds": [
+    1,
+    2
+  ],
+  "from_source_not_recorded_in_report": {
+    "bf16": true,
+    "gradient_checkpointing": false,
+    "max_length": 512,
+    "packing": false,
+    "lr_scheduler": "cosine",
+    "warmup_formula": "max(1, int(0.05 * (ceil(n_pairs / (batch * grad_acc)) * epochs)))",
+    "loss": "answer plus EOS; prompt and right padding masked"
+  },
+  "historical_unverified": [
+    "optimizer choice and unspecified Trainer defaults",
+    "torch/transformers versions and exact kernels"
+  ],
+  "new_evaluation": {
+    "trials_per_adapter": 27060,
+    "adapters": 2,
+    "total_trials": 54120,
+    "B1_cells_per_adapter": 45,
+    "B2_cells_per_adapter": 21,
+    "trials_per_cell": 410,
+    "sampled_per_cell": 404,
+    "greedy_per_cell": 6,
+    "layer": 38,
+    "coefficient": 1.0
+  },
+  "status": "archived_settings_recovered; production_blocked_on_shared_behavior_inputs"
+}

@@ -1,0 +1,17 @@
+{
+  "source_file_sha256": "0ef26122070c587ed34a454bc8127a571fb689fbbdfc04a82158d6bda719b433",
+  "export_file_sha256": "f1a0d6bfaa86e76bd0404c31a12057279b49f976ffc83fb5048aeb7c8afd6c5a",
+  "export_bytes": 32864,
+  "tensor_sha256_unchanged": "345f1b0a802a8dee4d9d82b11a82d4056cfa41e1283fadc66223c73112905dbc",
+  "original_s2_sha256": "6c322358c25cf9fe5890f4fac70fd7442f844b21b488d79214f636fb3365f19e",
+  "exported_keys": [
+    "fear_vector_matched_fp32"
+  ],
+  "exported_shapes": {
+    "fear_vector_matched_fp32": [
+      8192
+    ]
+  },
+  "activation_pools_exported": false,
+  "full_inference_rerun": false
+}

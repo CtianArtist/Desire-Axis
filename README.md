@@ -53,3 +53,8 @@ Requirements: a GPU with enough memory for the largest model in the queue, the p
 ## License
 
 MIT
+
+
+## v2 follow-up experiments
+
+The follow-up experiments reported in v2 are collected in [`v2_controls/`](v2_controls/README.md), including reproduction instructions, frozen configurations, and result tables.

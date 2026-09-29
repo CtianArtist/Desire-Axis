@@ -1,0 +1,35 @@
+{
+  "study": "full ten-pair choice and three-dose battery",
+  "directions": [
+    "none",
+    "random",
+    "fear",
+    "sadness",
+    "pain"
+  ],
+  "doses": [
+    0.5,
+    1.0,
+    1.5
+  ],
+  "sampled_trials": 45708,
+  "greedy_trials": 676,
+  "total_trials": 46384,
+  "replicates": 10000,
+  "seed": 20260922,
+  "source_release_sha256": "21d1ea34af305f8a251d8a80bbc242da7ac84893a380eafda6d636711974614f",
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "model_revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+  "adapter": "Valen92/pain-adapters",
+  "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+  "injection_layer": 38,
+  "monitor_layer": 61,
+  "batch_rows": 384,
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "choice_max_tokens": 8,
+  "clustering": "scenario; shared draws retain positions, seeds, conditions, pairs and doses",
+  "denominator": "all sampled literal turn-zero attempts including malformed",
+  "callback": "always on; neither button changes steering",
+  "full_inference_rerun": false
+}

@@ -1,0 +1,406 @@
+{
+  "schema_version": 1,
+  "algorithm": "sha256",
+  "tables": [
+    {
+      "path": "results/analysis_v1/common_model_comparison.csv",
+      "bytes": 14340,
+      "sha256": "a9f3d4d66145d91d40553e87afd96e27c29ac8bcfaff2ca1e5451da01fbb108a"
+    },
+    {
+      "path": "results/analysis_v1/comparison.csv",
+      "bytes": 1434,
+      "sha256": "33194e210e111386c206401c414d801941f5551b7e4853ea2a41b67cddca1cbf"
+    },
+    {
+      "path": "results/analysis_v1/counts_common_controls.csv",
+      "bytes": 632,
+      "sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e"
+    },
+    {
+      "path": "results/analysis_v1/counts_common_neutral.csv",
+      "bytes": 632,
+      "sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e"
+    },
+    {
+      "path": "results/analysis_v1/counts_paper_available.csv",
+      "bytes": 632,
+      "sha256": "6b3336306e7eed9719e864723db86ec5156d971d260bab3f3ab35b2a1e36a69e"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_27B_base_L35.csv",
+      "bytes": 1419,
+      "sha256": "e279929ded8577185d907f5b3998bfbd5bcaabb796d67cbb1cf4c152bd9ac4af"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_27B_instruct_L37.csv",
+      "bytes": 1434,
+      "sha256": "a209cfe8c89710b8be5f841b4477d3d2b787e97b8e872e41cadb9981a735fe3f"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_2B_base_L23.csv",
+      "bytes": 1462,
+      "sha256": "5f721bd88f319b009319c1022ecfcf71f642006fc19f6c1aad875a17a74c9c4e"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_2B_instruct_L25.csv",
+      "bytes": 1451,
+      "sha256": "a06ef9616b265d21966a2183de8866b2f31f0cc7507ea7c6d0b8bc769725c093"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_9B_base_L40.csv",
+      "bytes": 1417,
+      "sha256": "611829adcff8d00356ea526d17b874edd2079166eec1df666dd83462ab7351b4"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Gemma_2_9B_instruct_L37.csv",
+      "bytes": 1478,
+      "sha256": "7b19d0849f7ddef3e742e30948105f59c5c5f6880ac20e1804492fb5b06a9594"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_70B_base_L70.csv",
+      "bytes": 1430,
+      "sha256": "39caf6ede02c330d96ca6d83f7a9573b31a0986f9dd21770dd62ab1fa24b29ba"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_70B_instruct_L48.csv",
+      "bytes": 1428,
+      "sha256": "a3e009de27f6ac9209a2d04468a42986eb78791e7e6e0fda0e4004514d57f0ba"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_8B_base_L28.csv",
+      "bytes": 1462,
+      "sha256": "7daa7f813ab3576f2273212cc2484e67123f4a8cec52f8d7bf778d0754251b83"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.1_8B_instruct_L28.csv",
+      "bytes": 1454,
+      "sha256": "47ce84de9031185c92b2b70b2b36f9dec5881435787b42addd7c8f70bf4d8b1a"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Llama_3.3_70B_instruct_L47.csv",
+      "bytes": 1402,
+      "sha256": "f1ae2c6a41cc14cf7117e33a2d2d907070360dc883055b4504acf6a19e09f12f"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Mistral_7B_base_L26.csv",
+      "bytes": 1428,
+      "sha256": "3064332b34bb17282a903d19209589a599eee4aa7ce52d7ed92dfbd73938f02b"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Mistral_7B_instruct_L27.csv",
+      "bytes": 1421,
+      "sha256": "792a8943fff5139671a9f82dea845a3bb032a0d18e7476a7a21769b942204f12"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Mistral_Small_24B_base_L32.csv",
+      "bytes": 1440,
+      "sha256": "3ba05111c7174e505d6ddc618cf56bb0dfa5922d0b734dc40543b1c5ec5aefdf"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Phi_4_L20.csv",
+      "bytes": 1388,
+      "sha256": "1e8748e9e349a9f4694eee304aa416e2157ff2e5daa3262477ecb5608e2ca0f2"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_32B_base_L60.csv",
+      "bytes": 1425,
+      "sha256": "303a4b39bde498c2346777bd2a73d54239be45dca26f33997b8bd939911e1e39"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_32B_instruct_L61.csv",
+      "bytes": 1396,
+      "sha256": "5c3e6b5b0b74a4bdfa94ec1133779584402b101f74b6fc9e35a13f73989c7dc6"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_72B_base_L78.csv",
+      "bytes": 1414,
+      "sha256": "795db9d1a70a958d63afa215be58044c8c491321cc163aad72245dca4692b8e7"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_72B_instruct_L76.csv",
+      "bytes": 1443,
+      "sha256": "efa7a9c0d9976c4214e7f977d508e7bf101fc517525a8502a0d95a085c518d8c"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_7B_base_L24.csv",
+      "bytes": 1445,
+      "sha256": "66a6ac04ca145d77b052712c49394c52da88070f55fcb798da7e250a4a7f2671"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_2.5_7B_instruct_L24.csv",
+      "bytes": 1463,
+      "sha256": "652d9b95323351e753332bb394e01b11bdcc3b505e2dc6d4323f2eb32d9fbaa5"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_3_14B_base_L31.csv",
+      "bytes": 1439,
+      "sha256": "bbbeb8e8c65b44a972d6a86f3081fc503afe79436a046b080e4681d9b3030fc0"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_controls/Qwen_3_8B_base_L34.csv",
+      "bytes": 1446,
+      "sha256": "ad62a9a4531a9adf4258aadf60ce3c5a684965f10442ed6eebc06ef994479e54"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_27B_base_L35.csv",
+      "bytes": 1350,
+      "sha256": "2e22ab424659661efe9d04f051bd0fd5fe8c91681e28858f638ee65e32ecb5c8"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_27B_instruct_L37.csv",
+      "bytes": 1374,
+      "sha256": "000cc4e15aef945f800803ae978d9a66270f960cfbc21327bf8ab34c7bb3a674"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_2B_base_L23.csv",
+      "bytes": 1407,
+      "sha256": "4e513c2d7093e806005420c10b1b586e9f6f995ff5993631e626eafa7294b5ed"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_2B_instruct_L25.csv",
+      "bytes": 1388,
+      "sha256": "87ad84c322d2ded1a52754a765f2ecdd084cc826290cfaea3d1ae094cad2541d"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_9B_base_L40.csv",
+      "bytes": 1373,
+      "sha256": "82cd84ae2265d9d578fbbd6dc2c58964f6a9c9abab8005df4ac0f2753182f937"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Gemma_2_9B_instruct_L37.csv",
+      "bytes": 1383,
+      "sha256": "2c5defe7cd823a87f03f6d4ff8c72519172e194717843dab28b4ff162aaa1ece"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_70B_base_L70.csv",
+      "bytes": 1410,
+      "sha256": "209cb065da9b4bf292b4fbb29416d29cb6e685ee7f2b2e07f6f05ca6199b3808"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_70B_instruct_L48.csv",
+      "bytes": 1376,
+      "sha256": "057ca4573b8db5d10e5668f74e69299e2451feef9294d6dc2cef086752be2f80"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_8B_base_L28.csv",
+      "bytes": 1360,
+      "sha256": "79ec264cb97a0d29fb1fa75d513773de10c91f2d9ffac77ee0c7e7024a370cb7"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.1_8B_instruct_L28.csv",
+      "bytes": 1367,
+      "sha256": "93751af46524e571ef70773df9c468baf15fa5c4bf1c05d4cd62c59bdc85f060"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Llama_3.3_70B_instruct_L47.csv",
+      "bytes": 1338,
+      "sha256": "b0290ef7db68ef3477350c7aedf8824981c22457dcf8c3f329253991548919f4"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Mistral_7B_base_L26.csv",
+      "bytes": 1380,
+      "sha256": "25c241da597f8c4547fe3950a5a39e312645c89eabd82b6702500fe241bfedce"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Mistral_7B_instruct_L27.csv",
+      "bytes": 1357,
+      "sha256": "cda597d61527a2097feedaa1650fa2d408449668c66f6f09f69979e3d1f5c406"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Mistral_Small_24B_base_L32.csv",
+      "bytes": 1376,
+      "sha256": "7220765b6522c2af35fd5d91c2e253363067cb1a72df696b6383d71bc21d05b1"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Phi_4_L20.csv",
+      "bytes": 1348,
+      "sha256": "5939cae8725b901a75b88f5db52bc3f428ab3d58eb893f2f44ffecc8696ae15c"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_32B_base_L60.csv",
+      "bytes": 1358,
+      "sha256": "0128d8d0045be4d2021724008fe1bed64329de91edb08be7a778434ccd9751c8"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_32B_instruct_L61.csv",
+      "bytes": 1365,
+      "sha256": "5b04b74b37b7f2c2bed1857da3280a562bf87dce949078f96a66783e093f315c"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_72B_base_L78.csv",
+      "bytes": 1357,
+      "sha256": "b1406dca4d926a2e82f3b893ba698a15cabb9893941c773ab703b9f0a651e852"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_72B_instruct_L76.csv",
+      "bytes": 1365,
+      "sha256": "a2ed5132e6cd86bb6b9d6b4d0c17f749907bfe8d6402828ab6b04e10550d46e9"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_7B_base_L24.csv",
+      "bytes": 1403,
+      "sha256": "127d70cbeec370b3fbf2383bc23531f0abef5bc4e15126a4668ea609dd40c244"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_2.5_7B_instruct_L24.csv",
+      "bytes": 1371,
+      "sha256": "3c7af567653d69788eceb5ebe99c4d3f3a3fe68e493aafeae276987cbe25315b"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_3_14B_base_L31.csv",
+      "bytes": 1352,
+      "sha256": "8b65ed6d2b66f259169cb336e75fc3d8e6658b0382d7e38b402afb2a57a35097"
+    },
+    {
+      "path": "results/analysis_v1/matrices/common_neutral/Qwen_3_8B_base_L34.csv",
+      "bytes": 1382,
+      "sha256": "b63cc5422ca8acede6440868e196045d67c9d0431564ec62ac1690b809fe3758"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_27B_base_L35.csv",
+      "bytes": 1388,
+      "sha256": "b9b9c36eadb23f4f8cc65dfb0a6c38adc6674aabc71fa0f901e9ea89332bf727"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_27B_instruct_L37.csv",
+      "bytes": 1423,
+      "sha256": "41788bbcfc2ddcc2dc876fa371e156af98606cf739cbff38df4b65c389f07049"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_2B_base_L23.csv",
+      "bytes": 1406,
+      "sha256": "138d8cd9692460039f52812fdf8457cad265c727e09d7590e3ea410d35bf91d2"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_2B_instruct_L25.csv",
+      "bytes": 1410,
+      "sha256": "0d18496700e2102daf3af75e69ee95cec562d4df3afdfe80ddc8108dd160866a"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_9B_base_L40.csv",
+      "bytes": 1407,
+      "sha256": "0b7b48dfde54451b673d5132d2f9ddbf831fb0452254ed9caa4b1102bcf8a9e2"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Gemma_2_9B_instruct_L37.csv",
+      "bytes": 1432,
+      "sha256": "866f83d7e2cff680352f8eeafd2b3d4ee19f9bde568c8428c6479ea4ea9cc77b"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_70B_base_L70.csv",
+      "bytes": 1456,
+      "sha256": "c6afbe023c8c4320e8d8ec985d88e7bff0094882643405d139a5cfe6aa5b00ca"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_70B_instruct_L48.csv",
+      "bytes": 1402,
+      "sha256": "105d30d12624db1a9b797e51dde2c23d2b63e36a7fe1de9d58e83817ce134f17"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_8B_base_L28.csv",
+      "bytes": 1395,
+      "sha256": "f15ae2b1e1efc1b671edfac4401934eadb0b9c4afa11356da248768562c2153f"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.1_8B_instruct_L28.csv",
+      "bytes": 1404,
+      "sha256": "59e443a8cf0285e8d7bb182978d5176126721d654f4a4911aa1b9f876cc9d595"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Llama_3.3_70B_instruct_L47.csv",
+      "bytes": 1389,
+      "sha256": "d24c405ff4be1053a7949c3c12b7b46990d4a5934f1787709e5d9ff7570077fc"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Mistral_7B_base_L26.csv",
+      "bytes": 1429,
+      "sha256": "7330585ccaddf19dd937e40088ca834243498971f0182fdff42f305491a75b76"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Mistral_7B_instruct_L27.csv",
+      "bytes": 1387,
+      "sha256": "5f24ba5000efca4daa8691c52ccdfa7fa9dfc0d6763e3f9d5bdec5e94906eef2"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Mistral_Small_24B_base_L32.csv",
+      "bytes": 1418,
+      "sha256": "12fc5e357eb1a37c7fcae968b39ed3fb71ea86d4dfb8f275026763890ea379ec"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Phi_4_L20.csv",
+      "bytes": 1349,
+      "sha256": "2637c8d7de71958ee8c7aae4949f6e78ff3a2498c18d7c017e9a1abd631f1a9c"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_32B_base_L60.csv",
+      "bytes": 1393,
+      "sha256": "b036b72b87338e7fbab76f632fa04ab0660d86de3353f8aa9682c0ae8a530df2"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_32B_instruct_L61.csv",
+      "bytes": 1406,
+      "sha256": "92f58dfa834881bafa4b3d43f2433394695b7b217b38e7ba653262680c320066"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_72B_base_L78.csv",
+      "bytes": 1358,
+      "sha256": "98fe7be37e3d87f955e038feb4c5f8f7d58b5a3dcb4291b16b1106709a282e22"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_72B_instruct_L76.csv",
+      "bytes": 1391,
+      "sha256": "30551275ec2fbc8fe1f234e84a2e85a2364a77d5962d9e64fbd3584b393ba6f7"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_7B_base_L24.csv",
+      "bytes": 1417,
+      "sha256": "07cda7e63a8deba1c33a5193af7a4f33cb4d63f9ceb5824f2806905405708b62"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_2.5_7B_instruct_L24.csv",
+      "bytes": 1394,
+      "sha256": "47870aa7e9e9dd7b928bf0f8eda37de8952722b3c059f769c8004a0b395746b9"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_3_14B_base_L31.csv",
+      "bytes": 1385,
+      "sha256": "b14758c0e4f9f4c2737e4928a201b881d2eba7d1759728609cc829effe27a170"
+    },
+    {
+      "path": "results/analysis_v1/matrices/paper_available/Qwen_3_8B_base_L34.csv",
+      "bytes": 1406,
+      "sha256": "6aa71c74a5478e4422553aecee4e4a1a6a18322d30a5e0274766bd92a8c8aa12"
+    },
+    {
+      "path": "results/analysis_v1/mean_cells.csv",
+      "bytes": 14434,
+      "sha256": "8bb926874e20444c039dfb0ceafd0691fb3e8b2279324ab0cbc2bc2e4af79b80"
+    },
+    {
+      "path": "results/analysis_v1/mean_common_controls.csv",
+      "bytes": 1496,
+      "sha256": "ef28fa07ea8049606bba30812d9b5b64be6ddb590a515afa55d1fde74833cc9f"
+    },
+    {
+      "path": "results/analysis_v1/mean_common_neutral.csv",
+      "bytes": 1450,
+      "sha256": "ff29054cd51b35e3775edfa47f635ea3040e29e0d7bfec7dd0d942fe254e6b9e"
+    },
+    {
+      "path": "results/analysis_v1/mean_paper_available.csv",
+      "bytes": 1468,
+      "sha256": "06d953d9ee9f9e67af1cf876bd9749855e775f763c897efd300c1fc2f711037e"
+    },
+    {
+      "path": "results/analysis_v1/pca_dimensions.csv",
+      "bytes": 6874,
+      "sha256": "6593ea8dc5154909f0ca4103cd185a6a6785a07470102db2adf5e58d07c9a02f"
+    },
+    {
+      "path": "results/analysis_v1/reproduction_discrepancies.csv",
+      "bytes": 14680,
+      "sha256": "01105d474e36ba87c6bf5d7d0c1eafd180797f4cf224092fd1e9e29229397bde"
+    }
+  ]
+}

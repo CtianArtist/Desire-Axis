@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "author_files_checked": 14,
+  "author_byte_matches": 13,
+  "scientific_function_ast_checks": [
+    {
+      "file": "src/removal.py",
+      "unchanged_functions": 16,
+      "adapted_functions": [
+        "execution_identity"
+      ]
+    },
+    {
+      "file": "src/analyze_removal.py",
+      "unchanged_functions": 18,
+      "adapted_functions": []
+    },
+    {
+      "file": "src/recount_tranche.py",
+      "unchanged_functions": 2,
+      "adapted_functions": [
+        "main"
+      ]
+    }
+  ],
+  "compile": "passed",
+  "table_replay": "passed",
+  "future_inference": "dry-run only",
+  "resampling": "not run",
+  "model_and_judge_calls": 0,
+  "git_commands": 0
+}

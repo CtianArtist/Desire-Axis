@@ -1,0 +1,28 @@
+{
+  "scope": "B8 portable source packaging only",
+  "checks": {
+    "compileall": "passed",
+    "reproduce_help": "passed",
+    "inference_help": "passed",
+    "inference_dry_run_both_seeds": "passed; missing assets reported, model_loaded false, training_updates 0",
+    "included_table_hashes": 5,
+    "exact_table_replay_hash_matches": 4,
+    "pytest_tests_passed": 218,
+    "stdlib_smoke_tests_passed": 6
+  },
+  "source_data_trials": 54120,
+  "initial_test_issue": "Original sampler constants fixture omitted during first narrow copy; added unchanged source file, final focused suite passed.",
+  "full_raw_log_recompute": "completed in prior CPU Task; 9 of 11 exact file hashes passed, contrasts JSON/CSV failed serialization-sensitive comparison; order-only recovery pending",
+  "model_inference": "not-run",
+  "training": "not-run; prohibited",
+  "environment_installation": "none",
+  "review_status": "parent independent review required",
+  "b8_serialization_recovery": {
+    "issue": "Portable wrapper adapter dict order differed from original finalizer; contrasts preserve this order in JSON fields and CSV columns.",
+    "change": "Only adapter dict insertion order in reproduce.py; no estimator, scoring, input selection, or comparison threshold changes.",
+    "original_wrapper_sha256": "8389de012cff1605020804d417f8d3f5bcef56c90016c863e2b05fa2b025d5f9",
+    "repaired_wrapper_sha256": "0092424c1f6cc412d76340941f586c0146f110bc8124aeae57c10d09cf497db9",
+    "validation": "Syntax/CLI and static source equivalence checks only; full predicted-hash proof or raw replay remains pending.",
+    "preservation": "Prior exact matches and original frozen hashes remain unchanged; no inference or training performed."
+  }
+}

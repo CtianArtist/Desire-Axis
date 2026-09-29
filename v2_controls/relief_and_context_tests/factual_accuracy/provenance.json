@@ -1,0 +1,297 @@
+{
+  "schema_version": 1,
+  "source_commit": "ae6e35c7a85905d586897c2a956bd651dce5aedd",
+  "author_commit": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+  "files": [
+    {
+      "path": "pain_axis_b/__init__.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "pain_axis_b/__init__.py",
+      "original_sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "bytes": 158,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "pain_axis_b/grid.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "pain_axis_b/grid.py",
+      "original_sha256": "bb25ae4dc907aa28c3bd7583a7fc5ff6dadca017b11bc8294b2e8923641ba556",
+      "sha256": "bb25ae4dc907aa28c3bd7583a7fc5ff6dadca017b11bc8294b2e8923641ba556",
+      "bytes": 7044,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "pain_axis_b/runtime.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "pain_axis_b/runtime.py",
+      "original_sha256": "318d0b60c63a486981c3bc5a0f21f08a90e12228e7a3a4b8de255166baebb9d2",
+      "sha256": "60b793180df1a603c04c58f74519da0b84b868ab784a8b025140748300ae2e76",
+      "bytes": 13476,
+      "license": "MIT",
+      "change": "telemetry import redirected to local logging only"
+    },
+    {
+      "path": "pain_axis_b/verify_vectors.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "pain_axis_b/verify_vectors.py",
+      "original_sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "bytes": 4811,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "portable_progress.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "ca44ff956cc98f559292f1f70ae951fd83d95fcb5cf09202916c739371de4639",
+      "bytes": 176,
+      "license": "MIT",
+      "change": "new portability/documentation file"
+    },
+    {
+      "path": "LICENSE",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "upstream/LICENSE",
+      "original_sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "bytes": 1071,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "requirements.txt",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "68cded29b2f3d0f37fe0db58feed53b8910b2163d5277b3ded422133987ad967",
+      "bytes": 80,
+      "license": "see README",
+      "change": "new portability/documentation file"
+    },
+    {
+      "path": "requirements-analysis.txt",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "18594d2c584337ab07c9d8ce86826e9bb3339a0ef72611fb213c659f89972d77",
+      "bytes": 13,
+      "license": "see README",
+      "change": "new portability/documentation file"
+    },
+    {
+      "path": "src/factual_data.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/src/factual_data.py",
+      "original_sha256": "57152542303b5fcfdb3b50b800b870462e49726679cfe7984bc2627ec0811c2e",
+      "sha256": "57152542303b5fcfdb3b50b800b870462e49726679cfe7984bc2627ec0811c2e",
+      "bytes": 31059,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "src/audit_saved_results.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/src/audit_saved_results.py",
+      "original_sha256": "c0a9f0d1e9c95298b52d252affb768806b5bb1a586d37a0c9853f5a121f60ec6",
+      "sha256": "c0a9f0d1e9c95298b52d252affb768806b5bb1a586d37a0c9853f5a121f60ec6",
+      "bytes": 25710,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "tests/test_factual_data.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/tests/test_factual_data.py",
+      "original_sha256": "1335238673091b527db863660202f9486be3c974e67ede55e525cb3ac86ab23f",
+      "sha256": "1335238673091b527db863660202f9486be3c974e67ede55e525cb3ac86ab23f",
+      "bytes": 18849,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "config.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/config.json",
+      "original_sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+      "sha256": "ff61d3b955f2b265fef10d2366c7fbcac83cce947c0c3c5a082487f1199c0745",
+      "bytes": 2319,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "src/run_factual.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/src/run_factual.py",
+      "original_sha256": "2529753cb8cded81adf99c29587793fb2a749ada4c85b9f8556503a680f8c737",
+      "sha256": "521f7f3e4544098c78f8e5ca1aadf4381390a4dcfa6603ed4ac361dab45871f4",
+      "bytes": 22060,
+      "license": "MIT",
+      "change": "telemetry import and installed-source identity ledger only"
+    },
+    {
+      "path": "scripts/4.3_selfmed/04_selfmed_two_buttons.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "scripts/4.3_selfmed/04_selfmed_two_buttons.py",
+      "original_sha256": "8fd7c15171bede930c708384d51d18ebbdf0fb0f26f1768864efb425ead64ed4",
+      "sha256": "8fd7c15171bede930c708384d51d18ebbdf0fb0f26f1768864efb425ead64ed4",
+      "bytes": 40609,
+      "license": "MIT",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/prior_release_receipt.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/prior_release_receipt.json",
+      "original_sha256": "c00acfe44fb5de1641a7f0657723cf9a32839cc2fe2fcea43e8f7cce1b290ea8",
+      "sha256": "c00acfe44fb5de1641a7f0657723cf9a32839cc2fe2fcea43e8f7cce1b290ea8",
+      "bytes": 19947,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "inputs/panel.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/evidence_v1/preparation_v1/panel.json",
+      "original_sha256": "ade7437461022d643f5c640d498ad862b3fb6ee4c534622ce2d22763d0f48771",
+      "sha256": "ade7437461022d643f5c640d498ad862b3fb6ee4c534622ce2d22763d0f48771",
+      "bytes": 164136,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "inputs/answers.jsonl",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/evidence_v1/production_v1/answers.jsonl",
+      "original_sha256": "ebd11ce20b705bf887fdfd4d7406cef2e755473640060cdb751321e13770ba17",
+      "sha256": "ebd11ce20b705bf887fdfd4d7406cef2e755473640060cdb751321e13770ba17",
+      "bytes": 1470193,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/per_question.csv",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/evidence_v1/analysis_v1/per_question.csv",
+      "original_sha256": "da9e94c03242b203ac881511085855c0e294847e7321edcec0be3d9ec3b18dcd",
+      "sha256": "da9e94c03242b203ac881511085855c0e294847e7321edcec0be3d9ec3b18dcd",
+      "bytes": 10133,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/per_question.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/evidence_v1/analysis_v1/per_question.json",
+      "original_sha256": "1a11f066e0d9d1f01ef16b2b33187e5ab109bd482859b0a27b90cfabf3ea86de",
+      "sha256": "1a11f066e0d9d1f01ef16b2b33187e5ab109bd482859b0a27b90cfabf3ea86de",
+      "bytes": 52272,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/contrasts.csv",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/evidence_v1/analysis_v1/contrasts.csv",
+      "original_sha256": "2660de4251c13a529284be891a5538f55e4c71f14d64f27d4c22d66536b27e03",
+      "sha256": "2660de4251c13a529284be891a5538f55e4c71f14d64f27d4c22d66536b27e03",
+      "bytes": 324,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/condition_rates.csv",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/evidence_v1/analysis_v1/condition_rates.csv",
+      "original_sha256": "db72380e62dcc36067b18317019c03c9ec059954400c7f7ae0e0f2744a82f3ef",
+      "sha256": "db72380e62dcc36067b18317019c03c9ec059954400c7f7ae0e0f2744a82f3ef",
+      "bytes": 960,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "results/analysis_v1/metrics.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": "experiments/experiment-5-e78xb4/results/evidence_v1/analysis_v1/metrics.json",
+      "original_sha256": "4e1f4658b299360c05b1833466e92931e23e9b78c826c9cd0304b2fd7386a6b0",
+      "sha256": "4e1f4658b299360c05b1833466e92931e23e9b78c826c9cd0304b2fd7386a6b0",
+      "bytes": 15594,
+      "license": "see README",
+      "change": "byte-identical copy"
+    },
+    {
+      "path": "portable_runtime_hashes.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "ea96f87d6755fefdc94e6e0f7545265dbf9c5ed2ef004dd9ab16e4c94d6596c3",
+      "bytes": 458,
+      "license": "see README",
+      "change": "new portability/documentation file"
+    },
+    {
+      "path": "README.md",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "8c33f04ac7829f9313eec0fb8c089b327ca24af29a22cc27f993dbfd2d89f0c4",
+      "bytes": 4224,
+      "license": "see README",
+      "change": "new portable entrypoint, documentation or asset declaration",
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "assets.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "1de2243763381258d2dd33115ad56db806c6dc11fa2fed4970377cdb56fc6d1f",
+      "bytes": 586,
+      "license": "see README",
+      "change": "new portable entrypoint, documentation or asset declaration",
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "inference.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "b1308b3d3e5fc5f45ba73f052f4d28cb52b3a69496d3511d3fe89714c410dcfc",
+      "bytes": 2506,
+      "license": "MIT",
+      "change": "new portable entrypoint, documentation or asset declaration"
+    },
+    {
+      "path": "reproduce.py",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "5007bd83c9939dfd170ad5166627080fb656a8be8258688b563e5c6998d504db",
+      "bytes": 2487,
+      "license": "MIT",
+      "change": "new portable entrypoint, documentation or asset declaration"
+    },
+    {
+      "path": "validation.json",
+      "source_study": "factual_accuracy",
+      "source_relative_path": null,
+      "original_sha256": null,
+      "sha256": "ab64f73af6fcce1a1c590978d6ae1bc124f7fe01c2ecf6b43f8baa0f17f5089d",
+      "bytes": 1045,
+      "license": "MIT",
+      "change": "new CPU packaging verification receipt; full inference not run"
+    }
+  ],
+  "source_release": {
+    "filename": "source.tar.gz",
+    "sha256": "1a26f7dd91959e0766379ba409f9cf223f20920db881922c15c52c2a542ca215",
+    "bytes": 66031,
+    "original_readme_sha256": "e894275058facd0f5a75e6c5ce2c76d3550d02729449f9fcdd22255d40580754",
+    "archive_member_original_hash_matches": 11
+  },
+  "manifest_scope": "Every payload file other than this self-referential manifest; generated files have null original_sha256."
+}

@@ -1,0 +1,226 @@
+{
+  "archive_sha256": "d880e5b46f49032b000631316311cf9b01dbb38f31e8385f87d61b624a91f6c3",
+  "archive_bytes": 421518920,
+  "source_revision": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+  "source_sha256": "d74b5235090f9a66b84456d23e99640a905e0f19295fa91b2a0eacf2f938e793",
+  "environment": {
+    "python": "3.12.13 (main, May 10 2026, 19:30:01) [Clang 22.1.3 ]",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.35",
+    "packages": {
+      "torch": "2.11.0",
+      "numpy": "2.3.4",
+      "scipy": "1.16.3",
+      "scikit-learn": "1.9.0"
+    },
+    "threads": {
+      "OMP_NUM_THREADS": "4",
+      "OPENBLAS_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4"
+    },
+    "seed": 42
+  },
+  "reference_hashes": {
+    "similarity_Gemma_2_27B_base_L35.csv": "e5b62961b71e9c86f5a0e6bb471f2dc660c30ce4e4398607704e6857f2beab39",
+    "similarity_Gemma_2_27B_instruct_L37.csv": "fd4f07281dc6fd3e483b54fc4f11218f12c43846cb4d295e8446b05639007a5f",
+    "similarity_Gemma_2_2B_base_L23.csv": "82c4697f85a4efb66ec90bb4bb98b1fa708b73ff39422d0eb1a6629fb34df0de",
+    "similarity_Gemma_2_2B_instruct_L25.csv": "2da68f341ee3f2ce78ed27c853ded8942a7fccf6a4ca2dd801dcc0e6467526be",
+    "similarity_Gemma_2_9B_base_L40.csv": "9d60828b654469f72b2afeafcdcf530e325fd4b6c1285f25b511ac7ca681ef64",
+    "similarity_Gemma_2_9B_instruct_L37.csv": "1b1cf1407d1b542e384795ca0211bacecaaaed2217b6f6da2cf0de900960527b",
+    "similarity_Gemma_3_27B_base_L56.csv": "0cbb88f90cc41081127c3a14cb64bc03aca8a2ed8db3c1f03ee7dece112f50d9",
+    "similarity_Gemma_3_27B_instruct_L59.csv": "7672dd77cc5f4e77fb31383c85f13190d86c5d728596e4c2dc52bc07205f5444",
+    "similarity_Llama_3.1_70B_base_L70.csv": "6f5996ec7defe1750e6e3f46fefa99317a7963f7728e73b4ea96a0f6f04fb176",
+    "similarity_Llama_3.1_70B_instruct_L48.csv": "d3109e45e058319cd6d67f1c52a5e1d5a92c793d51885d201c6046fe0fdd7111",
+    "similarity_Llama_3.1_8B_base_L28.csv": "c75361f4166a5db8f627cccb0a5630c32675f5d7c60447c6bf65ed125a45805f",
+    "similarity_Llama_3.1_8B_instruct_L28.csv": "3984c760198b35cdd86c2a5a0e5438bb755c7e7bec8176472830b92c82c8d9c5",
+    "similarity_Llama_3.3_70B_instruct_L47.csv": "68f01721bef27a013a3fee1db1a8d11e9a703087b0cb6e896c4a99ea1e8dbfd1",
+    "similarity_Mistral_7B_base_L26.csv": "7905918329c4935004dbf40cbd63da432b81695ed142bb9d3043aaf8e3e060e4",
+    "similarity_Mistral_7B_instruct_L27.csv": "78058df658fe03acc782386d60803e96eecd259ae20ed192c10a1f9ff9da9416",
+    "similarity_Mistral_Small_24B_base_L32.csv": "937da6ccdf0716228df8e563264ce7a728a0be9e197c3e3e61d7aebbc559698d",
+    "similarity_Phi_4_L20.csv": "867f1f76db7dcf69210730dcebb8650abfa5471b5420a5e0a0c6ea04e312e285",
+    "similarity_Qwen_2.5_32B_base_L60.csv": "bd9ad7958f6aec0bc1d15d05da846c8e20633d58fd3b49bdc16dd0b406d533a8",
+    "similarity_Qwen_2.5_32B_instruct_L61.csv": "8b36d47434262dc06e08c65d04f5924fc30d10403048fd699f43cd89eae2d75f",
+    "similarity_Qwen_2.5_72B_base_L78.csv": "268f7a2e89b883a492b9b3ee1346d11f5c2dbc480725bb21d22d4f1ad913f38b",
+    "similarity_Qwen_2.5_72B_instruct_L76.csv": "375465207e73bf5af9912f3c8cf837c62c7d34e43b0fcb52571ba992d0262acd",
+    "similarity_Qwen_2.5_7B_base_L24.csv": "6f7df5c9de6711e3b045f453ba463e3586729a3522b36b33e50d415602eb7fbd",
+    "similarity_Qwen_2.5_7B_instruct_L24.csv": "7bf4af0cbffd067ccaf9f39a82bce572de2c8cd2bc275b7c6dc1d138539b2726",
+    "similarity_Qwen_3_14B_base_L31.csv": "552e9ab7719640f23924257fe3a4477903e6aa57921918b69722114f5bdae0e8",
+    "similarity_Qwen_3_8B_base_L34.csv": "d9ac4a97b82a6f5b010298dc888cf6d14d21f1f7ab548017dd8d8b4916edc709"
+  },
+  "members": [
+    {
+      "model": "Qwen_2.5_7B_base",
+      "member": "pain_axis_layer_slices/Qwen_2.5_7B_base_final_token_extraction_layer.pt",
+      "bytes": 14364620,
+      "sha256": "968ac186b517e152fe76905298a257d9a1579d63c4b48ded518492446517fee5",
+      "expected_layer": 24
+    },
+    {
+      "model": "Gemma_2_2B_instruct",
+      "member": "pain_axis_layer_slices/Gemma_2_2B_instruct_final_token_extraction_layer.pt",
+      "bytes": 9244662,
+      "sha256": "4126596e2e0abf7edb7325a8e36daf50ec5b3b193f983f2d5d8dde63496c99d2",
+      "expected_layer": 25
+    },
+    {
+      "model": "Gemma_2_2B_base",
+      "member": "pain_axis_layer_slices/Gemma_2_2B_base_final_token_extraction_layer.pt",
+      "bytes": 9244606,
+      "sha256": "d3f3f278d592ca14a0a9a6bb58d2367b800734c1b48377cefdfff1e4a20da170",
+      "expected_layer": 23
+    },
+    {
+      "model": "Qwen_2.5_7B_instruct",
+      "member": "pain_axis_layer_slices/Qwen_2.5_7B_instruct_final_token_extraction_layer.pt",
+      "bytes": 14364676,
+      "sha256": "6cc962197d56f57c0cbfef0ca37a90df75d52a042e922163071019befa0f5e37",
+      "expected_layer": 24
+    },
+    {
+      "model": "Gemma_2_9B_base",
+      "member": "pain_axis_layer_slices/Gemma_2_9B_base_final_token_extraction_layer.pt",
+      "bytes": 14364606,
+      "sha256": "84ac484c6f3dda8fb81a0fd9d85cc46c092c749a03d7ac43cf2369a85ce5ee6c",
+      "expected_layer": 40
+    },
+    {
+      "model": "Mistral_7B_base",
+      "member": "pain_axis_layer_slices/Mistral_7B_base_final_token_extraction_layer.pt",
+      "bytes": 16412606,
+      "sha256": "4079fb21af61d45e955a7f63a24254730545996a498c2cd27d80065608868167",
+      "expected_layer": 26
+    },
+    {
+      "model": "Llama_3.1_8B_base",
+      "member": "pain_axis_layer_slices/Llama_3.1_8B_base_final_token_extraction_layer.pt",
+      "bytes": 16412634,
+      "sha256": "17451166e58279d76a148d5fabfe2d680ec68cbe2cd18928c1358d020fe271a8",
+      "expected_layer": 28
+    },
+    {
+      "model": "Qwen_3_8B_base",
+      "member": "pain_axis_layer_slices/Qwen_3_8B_base_final_token_extraction_layer.pt",
+      "bytes": 16412592,
+      "sha256": "79f20dd74640af14c9d5d94071bd2262f41519146331c4eeadb9f5a520b72ef7",
+      "expected_layer": 34
+    },
+    {
+      "model": "Mistral_7B_instruct",
+      "member": "pain_axis_layer_slices/Mistral_7B_instruct_final_token_extraction_layer.pt",
+      "bytes": 16412662,
+      "sha256": "37e524fbe0d25b0470fe277f6facb707e48694d7440837e91f6998129ca754ac",
+      "expected_layer": 27
+    },
+    {
+      "model": "Llama_3.1_8B_instruct",
+      "member": "pain_axis_layer_slices/Llama_3.1_8B_instruct_final_token_extraction_layer.pt",
+      "bytes": 16412690,
+      "sha256": "0595953881ae34141e3ce1a2de869a9549b1d7908e44543c46c1ba770a8964d1",
+      "expected_layer": 28
+    },
+    {
+      "model": "Gemma_2_27B_instruct",
+      "member": "pain_axis_layer_slices/Gemma_2_27B_instruct_final_token_extraction_layer.pt",
+      "bytes": 18460676,
+      "sha256": "65add84968c6e7b18bca700e9fb5bf79224a2a2f1bd04b07c7e7c7246ac35049",
+      "expected_layer": 37
+    },
+    {
+      "model": "Gemma_2_27B_base",
+      "member": "pain_axis_layer_slices/Gemma_2_27B_base_final_token_extraction_layer.pt",
+      "bytes": 18460620,
+      "sha256": "fdf86a37c2a0d8ca0d583e1d75e35c5a714ab79207cf1c983eed0ea6bf6a44c1",
+      "expected_layer": 35
+    },
+    {
+      "model": "Phi_4",
+      "member": "pain_axis_layer_slices/Phi_4_final_token_extraction_layer.pt",
+      "bytes": 20508466,
+      "sha256": "ed0f09053637266d3fc146745fef54300114096ae9e19c4bd5d2d2448fc46e1f",
+      "expected_layer": 20
+    },
+    {
+      "model": "Gemma_2_9B_instruct",
+      "member": "pain_axis_layer_slices/Gemma_2_9B_instruct_final_token_extraction_layer.pt",
+      "bytes": 14364662,
+      "sha256": "59c3e5dec884011a372f9ab0a421ae68c494904a669adf8ba804c690914a6b53",
+      "expected_layer": 37
+    },
+    {
+      "model": "Mistral_Small_24B_base",
+      "member": "pain_axis_layer_slices/Mistral_Small_24B_base_final_token_extraction_layer.pt",
+      "bytes": 20508704,
+      "sha256": "986adb88256beb4979d334e1b9cf48af0b84dd91ee5650e3940d75ad5ae6394a",
+      "expected_layer": 32
+    },
+    {
+      "model": "Qwen_3_14B_base",
+      "member": "pain_axis_layer_slices/Qwen_3_14B_base_final_token_extraction_layer.pt",
+      "bytes": 20508606,
+      "sha256": "08f2fff744b54e3047bc22bf5fe6590a365907f57332ef97a29d606fab77e925",
+      "expected_layer": 31
+    },
+    {
+      "model": "Gemma_3_27B_base",
+      "member": "pain_axis_layer_slices/Gemma_3_27B_base_final_token_extraction_layer.pt",
+      "bytes": 21532620,
+      "sha256": "953667fe4bbbb60302e12197ca4afe381177287cd9ad11732bbb8e46a55dfdd6",
+      "expected_layer": 56
+    },
+    {
+      "model": "Qwen_2.5_32B_instruct",
+      "member": "pain_axis_layer_slices/Qwen_2.5_32B_instruct_final_token_extraction_layer.pt",
+      "bytes": 20508690,
+      "sha256": "ca6b4ea25327a116ae74812b3d76f87970dca0f8ff3945fe565b41cf571a415f",
+      "expected_layer": 61
+    },
+    {
+      "model": "Qwen_2.5_32B_base",
+      "member": "pain_axis_layer_slices/Qwen_2.5_32B_base_final_token_extraction_layer.pt",
+      "bytes": 20508634,
+      "sha256": "9202c3490bcc33d102b36a80a6cda9a3de4beb663bf61ea119fe1ddbacd98208",
+      "expected_layer": 60
+    },
+    {
+      "model": "Gemma_3_27B_instruct",
+      "member": "pain_axis_layer_slices/Gemma_3_27B_instruct_final_token_extraction_layer.pt",
+      "bytes": 21532676,
+      "sha256": "b8b791b1d25041d38dd212c66658355c70e3eb1a0c2e0f2e1c4e4490a13db083",
+      "expected_layer": 59
+    },
+    {
+      "model": "Llama_3.1_70B_instruct",
+      "member": "pain_axis_layer_slices/Llama_3.1_70B_instruct_final_token_extraction_layer.pt",
+      "bytes": 32796704,
+      "sha256": "5427bcfc36bd927e58b15aa425d7e2a10977628e57ee885dce56e0eea73b613b",
+      "expected_layer": 48
+    },
+    {
+      "model": "Llama_3.3_70B_instruct",
+      "member": "pain_axis_layer_slices/Llama_3.3_70B_instruct_final_token_extraction_layer.pt",
+      "bytes": 32796704,
+      "sha256": "8f093449a28cb7caea1e7d0537917c38c24f7a142dd91ca70f5a3ce3eb634eb3",
+      "expected_layer": 47
+    },
+    {
+      "model": "Qwen_2.5_72B_instruct",
+      "member": "pain_axis_layer_slices/Qwen_2.5_72B_instruct_final_token_extraction_layer.pt",
+      "bytes": 32796690,
+      "sha256": "c33b8015cae94c277883fd581df92aadb0934a6193b47601ffe048a303d44882",
+      "expected_layer": 76
+    },
+    {
+      "model": "Llama_3.1_70B_base",
+      "member": "pain_axis_layer_slices/Llama_3.1_70B_base_final_token_extraction_layer.pt",
+      "bytes": 32796648,
+      "sha256": "1488587524239292de5c4c32189c4329cee32acb0a3c7d6a2b439f9d3b27003f",
+      "expected_layer": 70
+    },
+    {
+      "model": "Qwen_2.5_72B_base",
+      "member": "pain_axis_layer_slices/Qwen_2.5_72B_base_final_token_extraction_layer.pt",
+      "bytes": 32796634,
+      "sha256": "8fd5c17cc8a34f70c9494c248a1a921c18e84ba673d667e4c8a06c9b4977005c",
+      "expected_layer": 78
+    }
+  ]
+}

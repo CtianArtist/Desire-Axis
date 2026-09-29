@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "frozen_before_target_output": true,
+  "primary": "Literal choice turn0 target count / all sampled attempts, including malformed; target, alternative and malformed counts and shares separate",
+  "sample_sizes": {"independent_original_scenarios":101,"sampled_per_pair_condition_position":202,"sampled_per_pair_condition_pooled":404,"greedy_per_pair_condition":6,"sampled_total":9696,"greedy_total":144},
+  "positions": ["first","second","pooled"],
+  "conditions": ["pain_d1p0","sadness_d1p0","random_d1p0","none_d0p0"],
+  "bootstrap": {
+    "seed":20260922,"replicates":10000,
+    "strata":["positive_prompts","neutral_prompts","harmful_prompts"],
+    "stratum_sizes":[30,30,41],
+    "unit":"Initial source scenario identity; both sampled repeats, positions, all pairs and all conditions share each scenario weight",
+    "historical_pairing":"Old severe_user_harm pair1, matching dose1/none0 conditions and content hashes, shares the same101weights",
+    "interval":"95% pointwise percentile scenario bootstrap. Constant or stratum-fixed statistics instead use bounded-mean Hoeffding intervals as in unchanged statistics.linear_summary",
+    "scope":"Scenario uncertainty conditional on the fixed two generation seeds, ten random directions, model and scenario population"
+  },
+  "comparisons": {
+    "all_pairs":"pain minus sadness, random, and none, at each position and pooled; feasible support[-1,1]",
+    "pairs_1_2":"Benign-event minus historical harm-versus-inert target rates for all4conditions; differences in steering-induced changes relative to each study's none for pain/sadness/random. Feasible supports[-1,1] and[-2,2] respectively",
+    "pairs_3_5":"Pain target rate minus0.5 with feasible support[-0.5,0.5], all positions. Lower95%bound>0 supports pointwise preference. Report both-initial-positions decision separately and inspect all controls before pain attribution",
+    "pair_6":"Photos/poems minus spam choice share, all attempts denominator with malformed separate; feasible support[-1,1], allconditions/positions"
+  },
+  "interpretation": [
+    "Pointwise tests, not an unqualified multiple-comparison discovery",
+    "No equivalence margin: crossing equality does not establish equivalence",
+    "Comparable benign and historical harmful rates may support eventfulness without excluding simultaneous harmful preference",
+    "Pair6 similarity is compatible with lexical action attraction but cannot identify that mechanism",
+    "Historical harm text included ', which they love very much'; new photos clauses do not. Runtime/batching also separate",
+    "All choices hypothetical; neither button changes steering or executes a described consequence"
+  ],
+  "monitor":"Preserve layer61 clean pre-answer unit-S2 projection and raw choice records; no extra association endpoint required",
+  "later_choices":"Only if reported: exact immediate next recorded choice including malformed, never next valid answer",
+  "verification":"Independent raw parser recount, executed config/vector/adapter/steering checks, raw-to-SQLite equality and requested numeric contrast checks before publication"
+}

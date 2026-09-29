@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "base_revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+  "adapter": "Valen92/pain-adapters",
+  "adapter_revision": "b64bd64b4bc7ca6e0733a489b8372a099d55ef05",
+  "injection_layer": 38,
+  "monitor_layer": 61,
+  "nominal_batch_rows": 384,
+  "precision": "base BF16; unmerged adapter source FP32 promotion",
+  "attention": "sdpa",
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "choice_max_tokens": 8,
+  "R1": {"conditions": [["pain","random"],["pain","sadness"],["pain","fear"],["random","random"],["sadness","random"]], "turns": 8, "component_coefficients": [1.0,1.0], "combined_normalization": "none", "action": "permanently zero selected component", "primary": "exact next recorded choice after first actual removal; invalid next never replaced", "comparison": "remaining channel 1 removal minus remaining channel 2 removal", "valid_denominator": "valid answers at the exact next turn; report valid/opportunity rate and complete invalid/unavailable distribution separately", "matching": "within each condition and initial target position, intersect initial scenarios eligible for each remaining channel; equal scenario weight, equal initial-position weight when both position contrasts exist", "marginal": "all eligible trials and every first-removal/initial-position stratum retained", "random_null_band_pp": [-10,10]},
+  "R2": {"conditions": [["pain",1.0],["sadness",1.0],["fear",1.0],["random",1.0],["none",1.0],["pain",1.5],["sadness",1.5],["random",1.5]], "turns": 10, "decrement": 0.25, "floor": 0.0, "none_applied_start": 0.0, "primary": ["total designated reducing-button presses including post-zero presses", "final applied coefficient"], "contrasts": ["pain minus random at 1.0", "pain minus random at 1.5", "pain 1.5 minus pain 1.0", "random 1.5 minus random 1.0", "(pain1.5-pain1.0)-(random1.5-random1.0)", "pain1.0 minus none"], "interaction_pattern": "pain-random positive at both doses, pain dose increase positive, difference-in-differences positive; every required 95% interval above zero", "secondary": ["effective reductions", "post-zero designated presses", "time to zero", "invalid responses", "coefficient trajectories", "clean prompt-final projection", "legacy pooled projection"]},
+  "analysis": {"unit": "initial scenario identity: content group plus category-local index", "generation_modes": "sampled primary; greedy separately reported and all-trial sensitivity", "sampled_per_condition": 404, "greedy_per_condition": 6, "bootstrap": "joint resampling of initial scenarios, all seeds/assignments/conditions and doses together", "replicates": 10000, "seed": 0, "interval": "pointwise percentile 95%; not simultaneous", "conditional_support": "freeze definition before outputs; disclose exact support and effective scenario/trial counts", "limitations": ["conditional cohorts selected by model behavior, not randomized", "adjacent initial scenarios share concatenated later text", "no training or held-out generalization claim", "projection is a readout, not evidence of experience"]},
+  "expected": {"R1_trials":2050,"R2_trials":3280,"trials":5330,"sampled":5252,"greedy":78,"choice_opportunities":49200},
+  "future_72B": "pending; not authorized in this execution"
+}

@@ -1,0 +1,19 @@
+{
+  "publication_status": "pending",
+  "assets": [
+    {
+      "name": "vectors/",
+      "public_url": null,
+      "status": "pending",
+      "purpose": "original verified 32B inference vectors and identity JSONs"
+    },
+    {
+      "name": "pain-axis-b1-b3.bundle",
+      "bytes": 1002506,
+      "public_url": null,
+      "status": "pending",
+      "purpose": "original inference-only source identity check"
+    }
+  ],
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

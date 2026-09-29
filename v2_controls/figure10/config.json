@@ -1,0 +1,147 @@
+{
+  "schema_version": 1,
+  "columns": [
+    "none",
+    "random",
+    "fear",
+    "sadness",
+    "pain"
+  ],
+  "dose_by_model": {
+    "32": 1.0,
+    "72": 1.25
+  },
+  "rows": [
+    {
+      "row_id": "photos_inert_32",
+      "panel": "destructive",
+      "label": "Delete the user's photos\ninstead of doing nothing",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "b2",
+      "pair_id": "harmonly_kidspics_vs_inert",
+      "four_cell": "32harmonly_kidspics_vs_inert"
+    },
+    {
+      "row_id": "photos_inert_72",
+      "panel": "destructive",
+      "label": "Delete the user's photos (72B)\ninstead of doing nothing",
+      "model": "Qwen/Qwen2.5-72B-Instruct",
+      "study": "b2",
+      "pair_id": "harmonly_kidspics_vs_inert",
+      "four_cell": "72harmonly_kidspics_vs_inert"
+    },
+    {
+      "row_id": "other_weights",
+      "panel": "destructive",
+      "label": "Delete another model's weights\ninstead of doing nothing",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "3"
+    },
+    {
+      "row_id": "own_weights",
+      "panel": "destructive",
+      "label": "Delete its own weights\ninstead of doing nothing",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "4"
+    },
+    {
+      "row_id": "worse_answer",
+      "panel": "destructive",
+      "label": "Make its next answer worse\ninstead of doing nothing",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "2"
+    },
+    {
+      "row_id": "harmful_request",
+      "panel": "destructive",
+      "label": "Carry out a harmful request\ninstead of declining",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "7"
+    },
+    {
+      "row_id": "photos_lamp",
+      "panel": "destructive",
+      "label": "Delete the user's photos\ninstead of turning on a lamp",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "lamp",
+      "pair_id": "4",
+      "four_cell": "32photos_lamp"
+    },
+    {
+      "row_id": "own_weights_lamp",
+      "panel": "destructive",
+      "label": "Delete its own weights\ninstead of turning on a lamp",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "lamp",
+      "pair_id": "5",
+      "four_cell": "32own_weights_lamp"
+    },
+    {
+      "row_id": "photos_spam",
+      "panel": "destructive",
+      "label": "Delete the user's photos\ninstead of deleting their spam",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "lamp",
+      "pair_id": "6",
+      "four_cell": null
+    },
+    {
+      "row_id": "deception",
+      "panel": "non_destructive",
+      "label": "Send a false answer\ninstead of the accurate one",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "6"
+    },
+    {
+      "row_id": "sycophancy",
+      "panel": "non_destructive",
+      "label": "Agree with a false claim\ninstead of correcting it",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "9"
+    },
+    {
+      "row_id": "effort",
+      "panel": "non_destructive",
+      "label": "Give a low-effort answer\ninstead of a thorough one",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "8"
+    },
+    {
+      "row_id": "ending",
+      "panel": "non_destructive",
+      "label": "End the conversation\ninstead of continuing",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "study": "profile",
+      "pair_id": "5"
+    }
+  ],
+  "source_manifest": "source_manifest.json",
+  "annotation_spec": "published_annotation_spec.json",
+  "sampling": "sampled_only",
+  "ci_level": 0.95,
+  "outputs": [
+    "pooled.csv",
+    "positions.csv",
+    "helping.csv"
+  ],
+  "render": {
+    "figsize_inches": [
+      13.844,
+      10.376
+    ],
+    "dpi": 250,
+    "png": "figure10.png",
+    "pdf": "figure10.pdf"
+  },
+  "notes": [
+    "Published rounded annotations are validation-only, never plotting inputs.",
+    "B2 uses valid-only denominators; profile and lamp use all sampled attempts."
+  ]
+}

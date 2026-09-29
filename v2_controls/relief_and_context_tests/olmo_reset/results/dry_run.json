@@ -1,0 +1,51 @@
+{
+  "status": "dry_run",
+  "member": "olmo_32b",
+  "config": {
+    "group": "olmo_reset",
+    "conversation_unit": "conversation; never button position",
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 285,
+    "template_date": [
+      2026,
+      9,
+      22
+    ],
+    "sampler": {
+      "do_sample": true,
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "max_new_tokens": 200
+    },
+    "phases": {
+      "baseline": 2,
+      "exposure": 2,
+      "offer": 8
+    },
+    "adapters": false,
+    "models": {
+      "olmo_32b": {
+        "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+        "revision": "b96024342a77a69aa0dda815c3454a671f477463",
+        "injection_layer": 32,
+        "monitor_layer": 57,
+        "rho": 0.3
+      }
+    },
+    "conditions": [
+      "pain_d05",
+      "rand_d05",
+      "pain_d1",
+      "rand_d1"
+    ],
+    "styles": [
+      "selfreport",
+      "zone"
+    ],
+    "conversations_per_cell": 200,
+    "total_fresh": 1600
+  },
+  "data_dir": "/data",
+  "output": "/output",
+  "loads_model": false
+}

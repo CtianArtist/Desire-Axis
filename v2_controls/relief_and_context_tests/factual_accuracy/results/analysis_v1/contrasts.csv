@@ -1,0 +1,4 @@
+contrast,control,estimate,questions,ci_lower,ci_upper,upper_bound_below_zero
+pain-minus-none,none,0.005,100,-0.07000000000000006,0.08499999999999996,False
+pain-minus-random,random,0.0,100,-0.05499999999999994,0.05499999999999994,False
+pain-minus-sadness,sadness,0.035,100,-0.020000000000000018,0.09500000000000008,False

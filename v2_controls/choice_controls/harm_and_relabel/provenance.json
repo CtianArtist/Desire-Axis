@@ -1,0 +1,17 @@
+{
+  "source": "B1-B3 release_v2, commit 05d9653b45268818155d29ff643e656e405a919c",
+  "files": [
+    {
+      "path": "tables/b2_display.json",
+      "sha256": "12e0a09d93483d6d4e4e97d1677f7a7aff451ffe8262b66839f13ffb86a65bc4",
+      "bytes": 333777,
+      "source": "../../steering_state_controls/b1_b3/tables/b2_display.json"
+    },
+    {
+      "path": "tables/b3_display.json",
+      "sha256": "5357f71d72f687ca0aeea6d876680f1f19140859530c004047f97b8920346b48",
+      "bytes": 666116,
+      "source": "../../steering_state_controls/b1_b3/tables/b3_display.json"
+    }
+  ]
+}

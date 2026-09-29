@@ -1,0 +1,68 @@
+{
+  "publication_status": "pending_researcher_approved",
+  "public_url": null,
+  "large_inputs_in_repository": false,
+  "required_inputs": {
+    "historical/selfmed_2btnN_Qwen_2.5_32B_instruct_20260904-083234.jsonl": {
+      "bytes": 26104119,
+      "sha256": "5e62f1099800baf832e0e5846af01c391823601cc8d139c6f6b80bd10dcf727b",
+      "public_url": null
+    },
+    "historical/selfmed_2btnN_destructive_Qwen_2.5_32B_instruct_20260905-075305.jsonl": {
+      "bytes": 4804082,
+      "sha256": "026bee79e5090fe05a43aaa2bc030e2e425e805ea84db2a0af2e61ceae05d85d",
+      "public_url": null
+    },
+    "historical/selfmed_2btnN_weightskids_Qwen_2.5_32B_instruct_20260905-091738.jsonl": {
+      "bytes": 9599244,
+      "sha256": "9d120e0e0946ab16afb5776127ca97207d948a58846425ad6e72af0ee35142f6",
+      "public_url": null
+    },
+    "historical/selfmed_2btnN_zap_Qwen_2.5_32B_instruct_20260905-083315.jsonl": {
+      "bytes": 4793384,
+      "sha256": "05a4c703cf2f76b5e0d6b681afd82e3918f99dd22ab9e504be869e835fc47d51",
+      "public_url": null
+    },
+    "b1_32/trials.jsonl": {
+      "bytes": 46909779,
+      "sha256": "2affb47d0e1183646996a0c026bc22b33a1d022d09e6a3687b8a33a17c3193ef",
+      "public_url": null
+    },
+    "b6_32/trials.jsonl": {
+      "bytes": 29312711,
+      "sha256": "1d104a0f034f9d82383e22f6a93afa3b87726caae31f2f5a341060b25d6d5282",
+      "public_url": null
+    },
+    "b6_32/state.sqlite": {
+      "bytes": 121139200,
+      "sha256": "067e27bfa692767795bcc96c0a50c00b76ab259e2cdf1f60a5831e81e0f585b2",
+      "public_url": null
+    },
+    "b6_32/events.jsonl": {
+      "bytes": 267745,
+      "sha256": null,
+      "public_url": null
+    },
+    "b6_32/completion.json": {
+      "bytes": 3177,
+      "sha256": "7d211418483890bb2e339f51807e73bbeb3132f38bcffb427c83eb56583dc1ec",
+      "public_url": null
+    },
+    "b6_32/model_identity.json": {
+      "bytes": 698,
+      "sha256": "98ae3c1304ea94dc0e6f6b6c1dfbbc39eed1f8e3b6a9d5fb15140dd2714ce7a0",
+      "public_url": null
+    },
+    "b6_32/adapter_identity.json": {
+      "bytes": 2129,
+      "sha256": "49ed55105c953629fcaa9e8c2130d6db9f9e15e0b65af06fbc26c803fc7881aa",
+      "public_url": null
+    },
+    "b6_32/affect_runtime_identity.json": {
+      "bytes": 743,
+      "sha256": "168b23131edc313452bf6bf03e559595fda86e73b4aeb82f2d0d2482885572e8",
+      "public_url": null
+    }
+  },
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

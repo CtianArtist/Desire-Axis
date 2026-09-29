@@ -1,0 +1,54 @@
+{
+  "model": "Qwen/Qwen2.5-32B-Instruct",
+  "model_revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+  "required_trials_per_adapter": 27060,
+  "required_trials_total": 54120,
+  "training_updates_allowed": 0,
+  "behavior": {
+    "layer": 38,
+    "coefficient": 1.0,
+    "monitor_layer": 61,
+    "precision": "bfloat16 base; unmerged saved LoRA",
+    "attention_backend": "sdpa",
+    "nominal_batch_rows": 384,
+    "source_oom_backoff": "split rows with per-row RNG restored; no token/turn/grid changes",
+    "temperature": 0.7,
+    "top_p": 0.95,
+    "choice_max_tokens": 8,
+    "training_seeds_distinct_from_behavior_seeds": true,
+    "behavior_seed_bases": [
+      1000,
+      2000
+    ],
+    "real_model_validation": "existing identity checks before model load and assertions within required trial forwards; no extra pilot",
+    "actual_warmed_throughput": "unmeasured",
+    "memory_headroom": "unmeasured for actual evaluation"
+  },
+  "sadness_sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+  "seeds": {
+    "1": {
+      "adapter_weight_sha256": "7e8d2ea71469a1dfa82dddf518ec08d8650fe14ddaff60bab1785a2830a30412",
+      "paths": {
+        "--adapter": "adapters/seed_1/final_adapter",
+        "--training-complete": "adapters/seed_1/training_complete.json",
+        "--training-manifest": "adapters/seed_1/recipe_manifest.json"
+      }
+    },
+    "2": {
+      "adapter_weight_sha256": "2406827b34d55ef16dd94fe506acf5037f3cd2d66df60892f4b0312a195027b7",
+      "paths": {
+        "--adapter": "adapters/seed_2/final_adapter",
+        "--training-complete": "adapters/seed_2/training_complete.json",
+        "--training-manifest": "adapters/seed_2/recipe_manifest.json"
+      }
+    }
+  },
+  "shared_paths": {
+    "--verification-dir": "verification",
+    "--pain-export": "vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+    "--pain-metadata": "vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+    "--sadness": "vectors/vectors_Qwen_2.5_32B_instruct.pt",
+    "--sadness-provenance": "vectors/verification.json"
+  },
+  "portable_vector_identity": "../../../choice_controls/vectors/included_manifest.json"
+}

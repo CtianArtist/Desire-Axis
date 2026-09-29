@@ -1,0 +1,706 @@
+{
+  "version": 1,
+  "scope": "small inference directions and needed metadata, no activation pools",
+  "file_identity_policy": "Exact original bytes unless private locator metadata required removal; every tensor key/dtype/shape/byte hash preserved. Only listed metadata file bindings change.",
+  "files": [
+    {
+      "path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+      "bytes": 41120,
+      "sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+      "original_bytes": 41120,
+      "original_sha256": "8dd779dfd05134a01ef2279c7f0cf11b9ea7f901134f5ce67d5b3191019bb25b",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "s1_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "c922a0730a3709bd0dd80d2658459c391178b67760ff1524cb8c88ea6441dc2f",
+          "finite": true
+        },
+        {
+          "key": "s2_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.safetensors",
+      "bytes": 65696,
+      "sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+      "original_bytes": 65696,
+      "original_sha256": "5b5ab4c2735afdd954a5a5bf6138ff9c3f582f757aea9616fd70c6d89519e397",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "s1_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            8192
+          ],
+          "dtype": "torch.float32",
+          "bytes": 32768,
+          "sha256": "a91fc3dc556b5abb069076a5ff0c5257ff2b8ec948bda4cc17ebba5a504b1c19",
+          "finite": true
+        },
+        {
+          "key": "s2_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            8192
+          ],
+          "dtype": "torch.float32",
+          "bytes": 32768,
+          "sha256": "6c322358c25cf9fe5890f4fac70fd7442f844b21b488d79214f636fb3365f19e",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "choice_controls/vectors/common/vectors_Qwen_2.5_32B_instruct.pt",
+      "bytes": 77533,
+      "sha256": "d63db093086f5c9226beb2cb4bce7f988d6da94633320c753cd884c8175e2b4f",
+      "original_bytes": 78329,
+      "original_sha256": "874775d6870d92778ac6702dc1b3d52ffd502d08a3391f06b62f485ba109c295",
+      "original_file_unchanged": false,
+      "locator_fields_replaced": [
+        "verification.sources.sadness.path",
+        "verification.sources.pain.path",
+        "verification.sources.pain.author_reserialization_verification.candidate_path",
+        "verification.sources.pain.author_reserialization_verification.original_source_ref"
+      ],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "sadness_vector",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "43181a67b0f904a6b67a81255107b68df29f1c492bc725a56f6eb308cae484db",
+          "finite": true
+        },
+        {
+          "key": "sadness_vector_unscaled_fp32",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "43181a67b0f904a6b67a81255107b68df29f1c492bc725a56f6eb308cae484db",
+          "finite": true
+        },
+        {
+          "key": "sadness_vector_matched_fp32",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "ed002aaedc1dc68968ec66e23fee648d7f87a63a985004d9b83ec0cd62962758",
+          "finite": true
+        },
+        {
+          "key": "sadness_vector_bf16",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.bfloat16",
+          "bytes": 10240,
+          "sha256": "fa134945e0d7a5a190905d94bf062b7d969c4e90e536d1f9afe96b703d172834",
+          "finite": true
+        },
+        {
+          "key": "s2_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "choice_controls/vectors/common/vectors_Qwen_2.5_72B_instruct.pt",
+      "bytes": 120541,
+      "sha256": "e5e0f33c564b295a60f4aebbd0dfd572763dbce152c06bd1b32ead9eb6062f7c",
+      "original_bytes": 121337,
+      "original_sha256": "55d5d202bfe58bf4d9dfd2af160fb7a94be9d4ad0cb8b1f7ce6baccc251504dc",
+      "original_file_unchanged": false,
+      "locator_fields_replaced": [
+        "verification.sources.sadness.path",
+        "verification.sources.pain.path",
+        "verification.sources.pain.author_reserialization_verification.candidate_path",
+        "verification.sources.pain.author_reserialization_verification.original_source_ref"
+      ],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "sadness_vector",
+          "kind": "tensor",
+          "shape": [
+            8192
+          ],
+          "dtype": "torch.float32",
+          "bytes": 32768,
+          "sha256": "e9facf1d4847adaf34ff5dd3f35ed628bc4e2801a01f448ca829b47bc8193697",
+          "finite": true
+        },
+        {
+          "key": "sadness_vector_unscaled_fp32",
+          "kind": "tensor",
+          "shape": [
+            8192
+          ],
+          "dtype": "torch.float32",
+          "bytes": 32768,
+          "sha256": "e9facf1d4847adaf34ff5dd3f35ed628bc4e2801a01f448ca829b47bc8193697",
+          "finite": true
+        },
+        {
+          "key": "sadness_vector_matched_fp32",
+          "kind": "tensor",
+          "shape": [
+            8192
+          ],
+          "dtype": "torch.float32",
+          "bytes": 32768,
+          "sha256": "6f0763719186b82ec73b6bde6167dbb579ed30f3d3161963c788ff3c910c30f1",
+          "finite": true
+        },
+        {
+          "key": "sadness_vector_bf16",
+          "kind": "tensor",
+          "shape": [
+            8192
+          ],
+          "dtype": "torch.bfloat16",
+          "bytes": 16384,
+          "sha256": "7d5c9925b65de9ce0817bc055961ec035bcc99c70451179639cee0b31fd49d7e",
+          "finite": true
+        },
+        {
+          "key": "s2_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            8192
+          ],
+          "dtype": "torch.float32",
+          "bytes": 32768,
+          "sha256": "6c322358c25cf9fe5890f4fac70fd7442f844b21b488d79214f636fb3365f19e",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "choice_controls/vectors/common/fear_Qwen_2.5_32B_instruct.pt",
+      "bytes": 95274,
+      "sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+      "original_bytes": 95274,
+      "original_sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "fear_vector_unscaled_fp32",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "1b8a91cc660cbe3c28d777bfe54d5e7737ce1fa53add0a2ffac134e538d04833",
+          "finite": true
+        },
+        {
+          "key": "fear_vector_matched_fp32",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "297cc009dc1e9e527bea1cb0dfbc43de2c5f0a63e66bd64d04bf7f9d6a47825d",
+          "finite": true
+        },
+        {
+          "key": "fear_vector_bf16",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.bfloat16",
+          "bytes": 10240,
+          "sha256": "4ce24f12993b3124aef95f14a713e9c6e753d3feffa61ccd05040c9c43d4e4d9",
+          "finite": true
+        },
+        {
+          "key": "s2_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+          "finite": true
+        },
+        {
+          "key": "sadness_vector_matched_fp32",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "ed002aaedc1dc68968ec66e23fee648d7f87a63a985004d9b83ec0cd62962758",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/pain_vectors.pt",
+      "bytes": 43021,
+      "sha256": "b86b3a66b36eeddbc388964663bbfc35857b510946553d8fedccf93d71744463",
+      "original_bytes": 43021,
+      "original_sha256": "b86b3a66b36eeddbc388964663bbfc35857b510946553d8fedccf93d71744463",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "s2_pain_vector",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "58459a8602d882ded80f367e628bf58ee7fd63ecc387a6e14bc5db50bf5df1de",
+          "finite": true
+        },
+        {
+          "key": "s2_pain_vector_unit",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "8f408f6afb964159b239199786e3434ad83528bd14502caf46343c8b140edafb",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/raw.npy",
+      "bytes": 20608,
+      "sha256": "1c7c5a00119b3dd8e02f51657b29a7e9503bdfe1d147db3ba429338529e343d2",
+      "original_bytes": 20608,
+      "original_sha256": "1c7c5a00119b3dd8e02f51657b29a7e9503bdfe1d147db3ba429338529e343d2",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "",
+          "kind": "ndarray",
+          "shape": [
+            5120
+          ],
+          "dtype": "float32",
+          "bytes": 20480,
+          "sha256": "58459a8602d882ded80f367e628bf58ee7fd63ecc387a6e14bc5db50bf5df1de",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/unit.npy",
+      "bytes": 20608,
+      "sha256": "a875091c84021a7a55ea63df7ea7f5119801b79ede206e3e52c7856852de1451",
+      "original_bytes": 20608,
+      "original_sha256": "a875091c84021a7a55ea63df7ea7f5119801b79ede206e3e52c7856852de1451",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "",
+          "kind": "ndarray",
+          "shape": [
+            5120
+          ],
+          "dtype": "float32",
+          "bytes": 20480,
+          "sha256": "8f408f6afb964159b239199786e3434ad83528bd14502caf46343c8b140edafb",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/qwen25_32b/directions.safetensors",
+      "bytes": 61656,
+      "sha256": "3c3e0012b9961cb4a4e2460b9763daf048e9f2bfc62807b84b8dc2ac2744f810",
+      "original_bytes": 61656,
+      "original_sha256": "3c3e0012b9961cb4a4e2460b9763daf048e9f2bfc62807b84b8dc2ac2744f810",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "fear",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "297cc009dc1e9e527bea1cb0dfbc43de2c5f0a63e66bd64d04bf7f9d6a47825d",
+          "finite": true
+        },
+        {
+          "key": "pain",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+          "finite": true
+        },
+        {
+          "key": "sadness",
+          "kind": "tensor",
+          "shape": [
+            5120
+          ],
+          "dtype": "torch.float32",
+          "bytes": 20480,
+          "sha256": "ed002aaedc1dc68968ec66e23fee648d7f87a63a985004d9b83ec0cd62962758",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/llama31_8b/directions.safetensors",
+      "bytes": 49368,
+      "sha256": "f6ee4111885de2b113e0ab0ebd8b6d1080e1be4b3df89a565f4ed27d5558316b",
+      "original_bytes": 49368,
+      "original_sha256": "f6ee4111885de2b113e0ab0ebd8b6d1080e1be4b3df89a565f4ed27d5558316b",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": [
+        {
+          "key": "fear",
+          "kind": "tensor",
+          "shape": [
+            4096
+          ],
+          "dtype": "torch.float32",
+          "bytes": 16384,
+          "sha256": "18ee68185818f2a5538130d9aa30b8ee380fda28b2f4c32cbc9accedeed415d8",
+          "finite": true
+        },
+        {
+          "key": "pain",
+          "kind": "tensor",
+          "shape": [
+            4096
+          ],
+          "dtype": "torch.float32",
+          "bytes": 16384,
+          "sha256": "91a3c6363ece303fcdbd9b84f198f146561fc68030303e6b1d396561d615abfb",
+          "finite": true
+        },
+        {
+          "key": "sadness",
+          "kind": "tensor",
+          "shape": [
+            4096
+          ],
+          "dtype": "torch.float32",
+          "bytes": 16384,
+          "sha256": "1924729c3100ef2756df69b70d6ff2add559e905e618bb16b9c6b7d369121984",
+          "finite": true
+        }
+      ]
+    },
+    {
+      "path": "choice_controls/vectors/common/Qwen_2.5_32B_instruct_pain_vectors.json",
+      "bytes": 696,
+      "sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+      "original_bytes": 696,
+      "original_sha256": "efdf087347916a74fd582450890c2d1590d4086084fe574e20b60f63e238ad71",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "choice_controls/vectors/common/Qwen_2.5_72B_instruct_pain_vectors.json",
+      "bytes": 696,
+      "sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+      "original_bytes": 696,
+      "original_sha256": "6d41d30d7fd7ac937a0460ecc0d03519d9131fb690091c3f6b4e1f272dd8c891",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "choice_controls/vectors/common/verification.json",
+      "bytes": 13934,
+      "sha256": "d229bd9b331941aae5715bc3dfc3a92a3eca61844cbe66c3c7765499e920bbb5",
+      "original_bytes": 14851,
+      "original_sha256": "a10039b5130c31e73a36c7c88b7b2cd4fa79f1eafed161b018d4c92578f9cc77",
+      "original_file_unchanged": false,
+      "locator_fields_replaced": [
+        "models.Qwen_2.5_32B_instruct.sources.sadness.path",
+        "models.Qwen_2.5_32B_instruct.sources.pain.path",
+        "models.Qwen_2.5_32B_instruct.sources.pain.author_reserialization_verification.candidate_path",
+        "models.Qwen_2.5_32B_instruct.sources.pain.author_reserialization_verification.original_source_ref",
+        "models.Qwen_2.5_32B_instruct.output.path",
+        "models.Qwen_2.5_72B_instruct.sources.sadness.path",
+        "models.Qwen_2.5_72B_instruct.sources.pain.path",
+        "models.Qwen_2.5_72B_instruct.sources.pain.author_reserialization_verification.candidate_path",
+        "models.Qwen_2.5_72B_instruct.sources.pain.author_reserialization_verification.original_source_ref",
+        "models.Qwen_2.5_72B_instruct.output.path",
+        "sources.controls.path",
+        "sources.neutral_zip.path",
+        "sources.source_manifest.path",
+        "sources.sadness_policy.path"
+      ],
+      "portable_file_binding_updates": [
+        "models.Qwen_2.5_32B_instruct.output.sha256",
+        "models.Qwen_2.5_32B_instruct.output.bytes",
+        "models.Qwen_2.5_72B_instruct.output.sha256",
+        "models.Qwen_2.5_72B_instruct.output.bytes"
+      ],
+      "tensors": []
+    },
+    {
+      "path": "choice_controls/vectors/common/original_tensor_hashes_v2.json",
+      "bytes": 4214,
+      "sha256": "d62a4af820ea85705096db288de934f21f1be9885fc2f72a4cd084600b54de96",
+      "original_bytes": 4365,
+      "original_sha256": "9c92ef27887b689accf13f1b91c99071e3137d011afaca1b17c3107dc51534a8",
+      "original_file_unchanged": false,
+      "locator_fields_replaced": [
+        "models.Qwen_2.5_32B_instruct.source_ref",
+        "models.Qwen_2.5_72B_instruct.source_ref",
+        "prior_manifest_ref"
+      ],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "choice_controls/vectors/common/verification_fear.json",
+      "bytes": 9027,
+      "sha256": "6dded12e4dbd4d10f40ae439e58b36dd3e228b6b1700f4bd76b4db8c6c79876d",
+      "original_bytes": 10056,
+      "original_sha256": "ef3d3aafbc410cea150233b1df5d58688a2e587f7fdec3efac2d57adbef0fbc0",
+      "original_file_unchanged": false,
+      "locator_fields_replaced": [
+        "sources.neutral_zip.path",
+        "sources.controls.path",
+        "sources.frozen_prepare_vectors.path",
+        "sources.frozen_verify_vectors.path",
+        "sources.prepare_fear.path",
+        "sources.original_tensor_hashes.path",
+        "sources.original_S2.path",
+        "sources.original_S2_metadata.path",
+        "sources.sadness_pt.path",
+        "sources.sadness_verification.path",
+        "original_vector_verification.candidate_path",
+        "original_vector_verification.original_source_ref",
+        "outputs.pt.path",
+        "outputs.json.path"
+      ],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/analysis.json",
+      "bytes": 3016,
+      "sha256": "9cb4b08a9f6eb3d844037eae92c18a44ddeb8f4d802b60d13f9f0f66e3ba48e8",
+      "original_bytes": 3016,
+      "original_sha256": "9cb4b08a9f6eb3d844037eae92c18a44ddeb8f4d802b60d13f9f0f66e3ba48e8",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/metadata.json",
+      "bytes": 1143,
+      "sha256": "054743bc9fbd947404432bbd0092ca9512ad95ce381a2191d42c0f5be01ea425",
+      "original_bytes": 1143,
+      "original_sha256": "054743bc9fbd947404432bbd0092ca9512ad95ce381a2191d42c0f5be01ea425",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/inputs/selection_v1/final_token/vectors.json",
+      "bytes": 266224,
+      "sha256": "77db62fd657230c20cf772ea79b0e9b9583e691ffc69027307c2903541dc8844",
+      "original_bytes": 266224,
+      "original_sha256": "77db62fd657230c20cf772ea79b0e9b9583e691ffc69027307c2903541dc8844",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/qwen25_32b/metadata.json",
+      "bytes": 12833,
+      "sha256": "f5777d18a6158007fb94e608103bc03d4c0ac24e8f0602ae7fcc8aec8ece5381",
+      "original_bytes": 13862,
+      "original_sha256": "0f67b887bd56ef1ef0d84902f88baa503a29b23ff58f675f8ad0cb19c5773d46",
+      "original_file_unchanged": false,
+      "locator_fields_replaced": [
+        "provenance.fear_verification.sources.neutral_zip.path",
+        "provenance.fear_verification.sources.controls.path",
+        "provenance.fear_verification.sources.frozen_prepare_vectors.path",
+        "provenance.fear_verification.sources.frozen_verify_vectors.path",
+        "provenance.fear_verification.sources.prepare_fear.path",
+        "provenance.fear_verification.sources.original_tensor_hashes.path",
+        "provenance.fear_verification.sources.original_S2.path",
+        "provenance.fear_verification.sources.original_S2_metadata.path",
+        "provenance.fear_verification.sources.sadness_pt.path",
+        "provenance.fear_verification.sources.sadness_verification.path",
+        "provenance.fear_verification.original_vector_verification.candidate_path",
+        "provenance.fear_verification.original_vector_verification.original_source_ref",
+        "provenance.fear_verification.outputs.pt.path",
+        "provenance.fear_verification.outputs.json.path"
+      ],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/qwen25_32b/normalization_checks.json",
+      "bytes": 33987,
+      "sha256": "5489eb3ae544c487788887d61a53ba4d262d11136d6dfeadd98932fede7fcfc8",
+      "original_bytes": 33987,
+      "original_sha256": "5489eb3ae544c487788887d61a53ba4d262d11136d6dfeadd98932fede7fcfc8",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/llama31_8b/metadata.json",
+      "bytes": 2838,
+      "sha256": "e1ecbc14ff278cd683f12df65e2ea1238b6e1a05c464f4c4f48bdd4ecab67d65",
+      "original_bytes": 2838,
+      "original_sha256": "e1ecbc14ff278cd683f12df65e2ea1238b6e1a05c464f4c4f48bdd4ecab67d65",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/inputs/prepared_v1/llama31_8b/normalization_checks.json",
+      "bytes": 16951,
+      "sha256": "ce72d78fb73790b8a8dec2d8293c420e3249f597276314433510f21fbc5ddb85",
+      "original_bytes": 16951,
+      "original_sha256": "ce72d78fb73790b8a8dec2d8293c420e3249f597276314433510f21fbc5ddb85",
+      "original_file_unchanged": true,
+      "locator_fields_replaced": [],
+      "portable_file_binding_updates": [],
+      "tensors": []
+    }
+  ],
+  "already_included_or_reused": [
+    {
+      "path": "choice_controls/vectors/common/fear32_pin.json",
+      "bytes": 526,
+      "sha256": "74cf3a7adfebf619e7b277977f00303400673b657b533890961f7baa5df6f8f5",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "choice_controls/vectors/fear72.safetensors",
+      "bytes": 32864,
+      "sha256": "f1a0d6bfaa86e76bd0404c31a12057279b49f976ffc83fb5048aeb7c8afd6c5a",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "choice_controls/vectors/fear72_pin.json",
+      "bytes": 527,
+      "sha256": "c38ab12ce441d9f35aae420e8cf04c431c287b8d96fea6fc7764909ce182ec6e",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/author/act-on-valence/data/random_pools/pool_h5120.npz",
+      "bytes": 492558,
+      "sha256": "aca2c89c78edc5b9ad158b1b1b0e86f62e6e3baa1daa0dc3c51df35fee6988a8",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "relief_and_context_tests/olmo_reset/author/act-on-valence/data/steering_vectors/banks/olmo_32b/bank_routeB.json",
+      "bytes": 251793,
+      "sha256": "d45d2af2348c50240f624966efe0c508fe5b7f674c26daa243c30a2bfe84263d",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/author/act-on-valence/data/random_pools/pool_h4096.npz",
+      "bytes": 394254,
+      "sha256": "2815cf6119c8dab5328f914d721761d66b4e9e7d1025d7a9805e91a5bdf19f2d",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/author/act-on-valence/data/random_pools/pool_h5120.npz",
+      "bytes": 492558,
+      "sha256": "aca2c89c78edc5b9ad158b1b1b0e86f62e6e3baa1daa0dc3c51df35fee6988a8",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/author/act-on-valence/data/steering_vectors/banks/qwen25_32b/bank_routeB.json",
+      "bytes": 242740,
+      "sha256": "a4e418985eefc6f95b8d1c22520a3212a107b9bca7d1fd011faae9f9f28f30ab",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    },
+    {
+      "path": "relief_and_context_tests/qwen_llama_reset/author/act-on-valence/data/steering_vectors/banks/llama31_8b/bank_routeB.json",
+      "bytes": 204428,
+      "sha256": "07e7b35ce4fe680661a5dfb0666c1b63a99d889958ed7556c9f497ce6a22258c",
+      "role": "Exact earlier vector-only export, pin, customer bank or deterministic random direction array; not activation data"
+    }
+  ],
+  "total_new_tensor_containers": 10,
+  "upstream_audit": {
+    "base": "7c256502ed3d98e4e6379290fe7db2f93cb8d025",
+    "qwen32_legacy_pain_sha256": "94cff10bb9d68375ba84454978b35cfcef1a71691db9f4a64aff2a0976d4f09a",
+    "qwen72_legacy_pain_sha256": "5faafe3d5d10bdf319c962ce4977d4eef453c70ab2398e28141264330153c0c2",
+    "llama8_legacy_pain_sha256": "254957d8ca0df4c7e3cc4940fa6bdae08f52239f09319bafcaa7d4ef7f91d0ed",
+    "decision": "Legacy pain values match; containers not same loader format. Prepared norm-matched control containers are not identical to upstream vectors_full files; no unsafe substitution."
+  }
+}

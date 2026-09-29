@@ -1,0 +1,1 @@
+Original customer research code is retained under the upstream MIT license (LICENSE). Scientific modules remain isolated in their three historical namespaces. source_manifest.json records each original relative path and SHA-256, delivered SHA-256, and explicit portability changes. No installed research-library or platform source is included.

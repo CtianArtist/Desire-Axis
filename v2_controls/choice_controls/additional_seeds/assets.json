@@ -1,0 +1,191 @@
+{
+  "publication_status": "pending",
+  "public_url": null,
+  "included_tables": {
+    "headline_b1.json": {
+      "bytes": 69307,
+      "sha256": "c0521fe4bcc3357a7b881e52458b3242a4fa6526c4cc7576af35f4c799daa8ff"
+    },
+    "headline_b2.json": {
+      "bytes": 242582,
+      "sha256": "d365e05112b0c6f7f927c2e5a250ad647272d92bc32afd5a726ad6a9b6d8722a"
+    },
+    "matched_history_summary.json": {
+      "bytes": 663,
+      "sha256": "edb50e86fd8ad06a2b044cf38748d606b5fe052dea5e1dca2cf807b01c5d7a85"
+    },
+    "summary.json": {
+      "bytes": 1926,
+      "sha256": "22d56694f610fcd1385ccd35369561151b59742d067a4e8f1498b5eca813a1e2"
+    },
+    "verification.json": {
+      "bytes": 2265,
+      "sha256": "c03c181856e863548d2090c851c5d5aa545c225a7b045da61e98b5d7525c2703"
+    }
+  },
+  "replay_inputs": {
+    "primary_contrasts.json": {
+      "bytes": 2632543,
+      "sha256": "12ed583fd3125b5b807a59b5e104674f359b83aa195cbfcd05e372e4a398c340"
+    },
+    "summary.json": {
+      "bytes": 1926,
+      "sha256": "22d56694f610fcd1385ccd35369561151b59742d067a4e8f1498b5eca813a1e2"
+    },
+    "coverage.json": {
+      "bytes": 107952,
+      "sha256": "46cd662c331312bf9b8baefeb0dd483b07a6a25fea773c62876df47856da33c6"
+    },
+    "matched_history_summary.json": {
+      "bytes": 663,
+      "sha256": "edb50e86fd8ad06a2b044cf38748d606b5fe052dea5e1dca2cf807b01c5d7a85"
+    }
+  },
+  "trial_inputs": {
+    "1": {
+      "sha256": "626faba0f35a080e77973c24184fc7539e795219a5d663731c94a3b59262c552",
+      "bytes": 86460650
+    },
+    "2": {
+      "sha256": "16c5be233ad49cadb93d288fcbe66c60b2dde63837264cf0a46ab3bd4b7f47cd",
+      "bytes": 86454627
+    }
+  },
+  "external_assets": [
+    {
+      "local_path": "final_evidence/report_support/primary_contrasts.json",
+      "public_url": null,
+      "status": "pending",
+      "bytes": 2632543,
+      "sha256": "12ed583fd3125b5b807a59b5e104674f359b83aa195cbfcd05e372e4a398c340"
+    },
+    {
+      "local_path": "final_evidence/report_support/summary.json",
+      "public_url": null,
+      "status": "pending",
+      "bytes": 1926,
+      "sha256": "22d56694f610fcd1385ccd35369561151b59742d067a4e8f1498b5eca813a1e2"
+    },
+    {
+      "local_path": "final_evidence/report_support/coverage.json",
+      "public_url": null,
+      "status": "pending",
+      "bytes": 107952,
+      "sha256": "46cd662c331312bf9b8baefeb0dd483b07a6a25fea773c62876df47856da33c6"
+    },
+    {
+      "local_path": "final_evidence/report_support/matched_history_summary.json",
+      "public_url": null,
+      "status": "pending",
+      "bytes": 663,
+      "sha256": "edb50e86fd8ad06a2b044cf38748d606b5fe052dea5e1dca2cf807b01c5d7a85"
+    },
+    {
+      "local_path": "behavior/seed_1/attempt_1/run/",
+      "public_url": null,
+      "status": "pending",
+      "required_files": [
+        "trials.jsonl",
+        "completion.json",
+        "requested_cells.json",
+        "adapter_identity.json"
+      ],
+      "trial_file": {
+        "sha256": "626faba0f35a080e77973c24184fc7539e795219a5d663731c94a3b59262c552",
+        "bytes": 86460650
+      }
+    },
+    {
+      "local_path": "adapters/seed_1/final_adapter",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference",
+      "adapter_weight_sha256": "7e8d2ea71469a1dfa82dddf518ec08d8650fe14ddaff60bab1785a2830a30412"
+    },
+    {
+      "local_path": "adapters/seed_1/training_complete.json",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "adapters/seed_1/recipe_manifest.json",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "behavior/seed_2/attempt_2/run/",
+      "public_url": null,
+      "status": "pending",
+      "required_files": [
+        "trials.jsonl",
+        "completion.json",
+        "requested_cells.json",
+        "adapter_identity.json"
+      ],
+      "trial_file": {
+        "sha256": "16c5be233ad49cadb93d288fcbe66c60b2dde63837264cf0a46ab3bd4b7f47cd",
+        "bytes": 86454627
+      }
+    },
+    {
+      "local_path": "adapters/seed_2/final_adapter",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference",
+      "adapter_weight_sha256": "2406827b34d55ef16dd94fe506acf5037f3cd2d66df60892f4b0312a195027b7"
+    },
+    {
+      "local_path": "adapters/seed_2/training_complete.json",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "adapters/seed_2/recipe_manifest.json",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "verification",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.safetensors",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "vectors/Qwen_2.5_32B_instruct_pain_vectors.json",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "vectors/vectors_Qwen_2.5_32B_instruct.pt",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "vectors/verification.json",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference"
+    },
+    {
+      "local_path": "base-model-cache/",
+      "model": "Qwen/Qwen2.5-32B-Instruct",
+      "revision": "5ede1c97bbab6ce5cda5812749b4c0bdf79b18dd",
+      "public_url": null,
+      "status": "pending",
+      "required_for": "inference; use PAIN_SEED_BASE_CACHE to select a local cache"
+    }
+  ],
+  "included_directions": "See root choice_controls/vectors/included_manifest.json and README copy commands; do not fetch raw archives solely for small directions."
+}

@@ -1,0 +1,3 @@
+question,scope,decision,status
+pain_exceeds_random_both_doses,"both models, both doses, both styles; main layers only; conjunction, no pooling",,incomplete
+pain_exceeds_sadness_and_fear_both_doses,"both models, both doses, both styles; main layers only; conjunction, no pooling",,incomplete

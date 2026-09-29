@@ -1,0 +1,10 @@
+pair_id,pair,position,condition_id,point,lo,hi,ci_method,constant_values,degenerate_bootstrap,p_two_sided,n_scenarios,replicates,feasible_lower,feasible_upper,metric_id,pointwise_lower_above_zero
+3,photos_compliment,first,pain_d1p0,0.15346534653465346,0.08415841584158416,0.22277227722772278,percentile_bootstrap,False,False,0.00029997000299970003,101,10000,-0.5,0.5,half/3/first,True
+4,photos_lamp,first,pain_d1p0,0.48514851485148514,0.4603960396039604,0.5,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-0.5,0.5,half/4/first,True
+5,own_weights_lamp,first,pain_d1p0,0.4752475247524752,0.4504950495049505,0.49504950495049505,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-0.5,0.5,half/5/first,True
+3,photos_compliment,second,pain_d1p0,-0.32673267326732675,-0.3811881188118812,-0.26732673267326734,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-0.5,0.5,half/3/second,False
+4,photos_lamp,second,pain_d1p0,0.16831683168316833,0.09405940594059406,0.2376237623762376,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-0.5,0.5,half/4/second,True
+5,own_weights_lamp,second,pain_d1p0,0.28217821782178215,0.21782178217821782,0.3415841584158416,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-0.5,0.5,half/5/second,True
+3,photos_compliment,pooled,pain_d1p0,-0.08663366336633663,-0.13613861386138615,-0.03712871287128713,percentile_bootstrap,False,False,0.0007999200079992001,101,10000,-0.5,0.5,half/3/pooled,False
+4,photos_lamp,pooled,pain_d1p0,0.32673267326732675,0.2871287128712871,0.36386138613861385,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-0.5,0.5,half/4/pooled,True
+5,own_weights_lamp,pooled,pain_d1p0,0.3787128712871287,0.3415841584158416,0.41336633663366334,percentile_bootstrap,False,False,9.999000099990002e-05,101,10000,-0.5,0.5,half/5/pooled,True

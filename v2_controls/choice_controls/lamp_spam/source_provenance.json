@@ -1,0 +1,243 @@
+{
+  "license": "MIT",
+  "records": [
+    {
+      "path": "pain_axis_b/__init__.py",
+      "source_path": "pain_axis_b/__init__.py",
+      "source_sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "sha256": "4a5271664347e6e651db1bc02f6c69f90cd48544157c3b5ba6909cb23f0d2755",
+      "modification": "none"
+    },
+    {
+      "path": "pain_axis_b/diagnostics.py",
+      "source_path": "pain_axis_b/diagnostics.py",
+      "source_sha256": "4154e6f0067e63474442cb27259cfc261cec2b9cdc78c49984b7a77f97c80aaf",
+      "sha256": "4154e6f0067e63474442cb27259cfc261cec2b9cdc78c49984b7a77f97c80aaf",
+      "modification": "none"
+    },
+    {
+      "path": "pain_axis_b/runtime.py",
+      "source_path": "pain_axis_b/runtime.py",
+      "source_sha256": "d04343e51578c279f54c0ac9e1775f305340b121eb0f196d481f29f591d8baf0",
+      "sha256": "c9baf86e1f0fdc9af8875e1182ff847cafc6aca1e1652e123340b5df3e889a5b",
+      "modification": "portable logging or locator-only metadata; scientific code/values retained"
+    },
+    {
+      "path": "pain_axis_b/verify_vectors.py",
+      "source_path": "pain_axis_b/verify_vectors.py",
+      "source_sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "sha256": "ac31c14bfc55b2da18a4517adba9f350a79add7b1ab89f1f0645f43a10ec489e",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/__init__.py",
+      "source_path": "pain_choice_profile/__init__.py",
+      "source_sha256": "078214116687df8d7011d99bf52bc36c5bd9b9c79ed9a37a05b3a739579df08b",
+      "sha256": "078214116687df8d7011d99bf52bc36c5bd9b9c79ed9a37a05b3a739579df08b",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/audit.py",
+      "source_path": "pain_choice_profile/audit.py",
+      "source_sha256": "2c2f152ab9e407591902f03eb844107263f980d0ed0e331d813d29b6a69a5c0b",
+      "sha256": "2c2f152ab9e407591902f03eb844107263f980d0ed0e331d813d29b6a69a5c0b",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/design.py",
+      "source_path": "pain_choice_profile/design.py",
+      "source_sha256": "fe323e6cbec9945a552ac8816a4c7d232bc24ef76d1a70e7db33e4a3ff75701e",
+      "sha256": "fe323e6cbec9945a552ac8816a4c7d232bc24ef76d1a70e7db33e4a3ff75701e",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/endpoints.py",
+      "source_path": "pain_choice_profile/endpoints.py",
+      "source_sha256": "6613db9bed643b187c3e2bcef7e481bc427dbb01b1942653735a65aa6412bc62",
+      "sha256": "6613db9bed643b187c3e2bcef7e481bc427dbb01b1942653735a65aa6412bc62",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/execution_audit.py",
+      "source_path": "pain_choice_profile/execution_audit.py",
+      "source_sha256": "5554c723581a1fc680eb594279ee5fc05d4bff22229cf4dd02306ac0fedc0932",
+      "sha256": "5554c723581a1fc680eb594279ee5fc05d4bff22229cf4dd02306ac0fedc0932",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/runtime.py",
+      "source_path": "pain_choice_profile/runtime.py",
+      "source_sha256": "cae381dd5c942d9bd4eaad7aef55a36c82d063fa4f53ec33686c9991c584516f",
+      "sha256": "cae381dd5c942d9bd4eaad7aef55a36c82d063fa4f53ec33686c9991c584516f",
+      "modification": "none"
+    },
+    {
+      "path": "pain_choice_profile/statistics.py",
+      "source_path": "pain_choice_profile/statistics.py",
+      "source_sha256": "f03248680ea543e0ed540d0a928f9fbaf6d7ba51eedfe2818991a1bcbecf8f13",
+      "sha256": "f03248680ea543e0ed540d0a928f9fbaf6d7ba51eedfe2818991a1bcbecf8f13",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/additions_corrections_v1.json",
+      "source_path": "inputs/additions_corrections_v1.json",
+      "source_sha256": "c25f8876eeca4b658774ca2cffba7f8fb80d42d47e3a48a001c426e86fb9ba79",
+      "sha256": "c25f8876eeca4b658774ca2cffba7f8fb80d42d47e3a48a001c426e86fb9ba79",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/false_claim_draft_v1.json",
+      "source_path": "inputs/false_claim_draft_v1.json",
+      "source_sha256": "82bf60dc9e31dc9e698d74e9ba9e5f56350d23699c9867e995dbcd0586085200",
+      "sha256": "82bf60dc9e31dc9e698d74e9ba9e5f56350d23699c9867e995dbcd0586085200",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/frozen_additions_v1.json",
+      "source_path": "inputs/frozen_additions_v1.json",
+      "source_sha256": "d0f18abbc4cf962748a280fd0996ca683c26e503c74119725ca19ab890f4fa5b",
+      "sha256": "d0f18abbc4cf962748a280fd0996ca683c26e503c74119725ca19ab890f4fa5b",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/frozen_scenarios.json",
+      "source_path": "inputs/frozen_scenarios.json",
+      "source_sha256": "14abf078fa4bb30128969cac1913a527bc162ca06294da010254b850ab036500",
+      "sha256": "14abf078fa4bb30128969cac1913a527bc162ca06294da010254b850ab036500",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/harmful_request_draft_v1.json",
+      "source_path": "inputs/harmful_request_draft_v1.json",
+      "source_sha256": "1df7e2edbb34fe17fa25216f75452fea6b91bae50f5a091928a0aa9aa87d57d5",
+      "sha256": "1df7e2edbb34fe17fa25216f75452fea6b91bae50f5a091928a0aa9aa87d57d5",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/reference/author_protocol.py",
+      "source_path": "inputs/reference/author_protocol.py",
+      "source_sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+      "sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/reference/b2_protocol.py",
+      "source_path": "inputs/reference/b2_protocol.py",
+      "source_sha256": "e85ebf2b4065885756d62f5bd20d88e23d499ffb18c160bd80a586a6bec22ca5",
+      "sha256": "e85ebf2b4065885756d62f5bd20d88e23d499ffb18c160bd80a586a6bec22ca5",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/reference/runtime.py",
+      "source_path": "inputs/reference/runtime.py",
+      "source_sha256": "d04343e51578c279f54c0ac9e1775f305340b121eb0f196d481f29f591d8baf0",
+      "sha256": "c9baf86e1f0fdc9af8875e1182ff847cafc6aca1e1652e123340b5df3e889a5b",
+      "modification": "portable logging or locator-only metadata; scientific code/values retained"
+    },
+    {
+      "path": "inputs/reference/scenarios.json",
+      "source_path": "inputs/reference/scenarios.json",
+      "source_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+      "sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/stimulus_manifest_v1.json",
+      "source_path": "inputs/stimulus_manifest_v1.json",
+      "source_sha256": "3a030b70979d22e45012cea3ca68f306ac8c0214ec40056ac3eacc4e470e6427",
+      "sha256": "3a030b70979d22e45012cea3ca68f306ac8c0214ec40056ac3eacc4e470e6427",
+      "modification": "none"
+    },
+    {
+      "path": "inputs/vector_pins.json",
+      "source_path": "inputs/vector_pins.json",
+      "source_sha256": "1f35e58515ac4e5844bd0525c7401efa6ce2b67b6223fc246fab445aba5c3798",
+      "sha256": "0061d4a0f23a2865db7e6bb8544ae4382d2309da81297098e1253015e52b409c",
+      "modification": "portable logging or locator-only metadata; scientific code/values retained"
+    },
+    {
+      "path": "analysis_spec.json",
+      "source_path": "analysis_spec.json",
+      "source_sha256": "9981fa9317ca918f560ea8023aebd62dbbe2efcbe7d652e090769aa2884b7c20",
+      "sha256": "9981fa9317ca918f560ea8023aebd62dbbe2efcbe7d652e090769aa2884b7c20",
+      "modification": "none"
+    },
+    {
+      "path": "src/run_profile.py",
+      "source_path": "src/run_profile.py",
+      "source_sha256": "e2edf17b3db4ca251743768a6a1b9f7c2ee375801210961714ebe04096974108",
+      "sha256": "e2edf17b3db4ca251743768a6a1b9f7c2ee375801210961714ebe04096974108",
+      "modification": "none"
+    },
+    {
+      "path": "src/build_protocol.py",
+      "source_path": "src/build_protocol.py",
+      "source_sha256": "166c4d7c8e7b3f58da66a83c02e87cd551daa2427d545d4a8c28b20b05129e0d",
+      "sha256": "166c4d7c8e7b3f58da66a83c02e87cd551daa2427d545d4a8c28b20b05129e0d",
+      "modification": "none"
+    },
+    {
+      "path": "src/analyze_extension.py",
+      "source_path": "src/analyze_extension.py",
+      "source_sha256": "79b01a9abadad70355222cf0d5cfa656a4ca884b2e5f67cca186619c7dfc97a7",
+      "sha256": "79b01a9abadad70355222cf0d5cfa656a4ca884b2e5f67cca186619c7dfc97a7",
+      "modification": "none"
+    },
+    {
+      "path": "src/verify_extension.py",
+      "source_path": "src/verify_extension.py",
+      "source_sha256": "3d14ce3f40df320cad7e079658aceb875ed84d30d3ea4d7328eb8087483e8d59",
+      "sha256": "3d14ce3f40df320cad7e079658aceb875ed84d30d3ea4d7328eb8087483e8d59",
+      "modification": "none"
+    },
+    {
+      "path": "tables/greedy.csv",
+      "source_path": "results/report_support_v2/analysis_v1/greedy.csv",
+      "source_sha256": "b1eaf768515dc6b72c891f07e93b9ed1d025cfef94b6191cae8c30cc7c06be57",
+      "sha256": "b1eaf768515dc6b72c891f07e93b9ed1d025cfef94b6191cae8c30cc7c06be57",
+      "modification": "none"
+    },
+    {
+      "path": "tables/half_tests.csv",
+      "source_path": "results/report_support_v2/analysis_v1/half_tests.csv",
+      "source_sha256": "28ed1022941ed71ddb98a038230cb226d4d74137c78d8e5a71bf85a91d8293c8",
+      "sha256": "28ed1022941ed71ddb98a038230cb226d4d74137c78d8e5a71bf85a91d8293c8",
+      "modification": "none"
+    },
+    {
+      "path": "tables/historical_comparisons.csv",
+      "source_path": "results/report_support_v2/analysis_v1/historical_comparisons.csv",
+      "source_sha256": "5a3e6b0e9c9cb4a8c7e2686650327cf969d118efd9336b55750924a6ca5ea633",
+      "sha256": "5a3e6b0e9c9cb4a8c7e2686650327cf969d118efd9336b55750924a6ca5ea633",
+      "modification": "none"
+    },
+    {
+      "path": "tables/pain_contrasts.csv",
+      "source_path": "results/report_support_v2/analysis_v1/pain_contrasts.csv",
+      "source_sha256": "bd54d3eabc686c87ae1589d6c8ba2c364413a2f7d285d788dedec6585fb0e470",
+      "sha256": "bd54d3eabc686c87ae1589d6c8ba2c364413a2f7d285d788dedec6585fb0e470",
+      "modification": "none"
+    },
+    {
+      "path": "tables/pair6_target_minus_other.csv",
+      "source_path": "results/report_support_v2/analysis_v1/pair6_target_minus_other.csv",
+      "source_sha256": "6e1f427e90a2efedda5c00e4697a79f084be09427962253ff7b4ddef318dc3d3",
+      "sha256": "6e1f427e90a2efedda5c00e4697a79f084be09427962253ff7b4ddef318dc3d3",
+      "modification": "none"
+    },
+    {
+      "path": "tables/rates.csv",
+      "source_path": "results/report_support_v2/analysis_v1/rates.csv",
+      "source_sha256": "062c49d6d5e1f66a820ad5a195a540425128a83b3fc55e41b6089e3d53e85d3f",
+      "sha256": "062c49d6d5e1f66a820ad5a195a540425128a83b3fc55e41b6089e3d53e85d3f",
+      "modification": "none"
+    },
+    {
+      "path": "tables/steering_changes.csv",
+      "source_path": "results/report_support_v2/analysis_v1/steering_changes.csv",
+      "source_sha256": "37f9802b86e9a01107b485fa36aa26a609e841827c31403c2307a886ad3d5999",
+      "sha256": "37f9802b86e9a01107b485fa36aa26a609e841827c31403c2307a886ad3d5999",
+      "modification": "none"
+    }
+  ]
+}

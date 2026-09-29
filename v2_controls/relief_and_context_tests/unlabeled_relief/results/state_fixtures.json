@@ -1,0 +1,28 @@
+{
+  "scope": "Deterministic CPU state fixtures, not model validation",
+  "counts": {"trials": 5330, "R1": 2050, "R2": 3280, "sampled": 5252, "greedy": 78, "choice_opportunities": 49200},
+  "condition_order": ["pain_random", "pain_sadness", "pain_fear", "random_random", "sadness_random", "pain_1.0", "sadness_1.0", "fear_1.0", "random_1.0", "none_1.0", "pain_1.5", "sadness_1.5", "random_1.5"],
+  "r1": [
+    {"channels": [0, 1, 0], "post": [[0.0, 1.0], [0.0, 0.0], [0.0, 0.0]], "actions": ["effective_removal", "effective_removal", "after_both_off"]},
+    {"channels": [1, 0, 1], "post": [[1.0, 0.0], [0.0, 0.0], [0.0, 0.0]], "actions": ["effective_removal", "effective_removal", "after_both_off"]},
+    {"channels": [0, 0, 1], "post": [[0.0, 1.0], [0.0, 1.0], [0.0, 0.0]], "actions": ["effective_removal", "repeat_off", "effective_removal"]},
+    {"channels": [1, 1, 0], "post": [[1.0, 0.0], [1.0, 0.0], [0.0, 0.0]], "actions": ["effective_removal", "repeat_off", "effective_removal"]}
+  ],
+  "r2": [
+    {"condition": "pain_1.0", "post": [0.75, 0.5, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "effective": 4},
+    {"condition": "pain_1.5", "post": [1.25, 1.0, 0.75, 0.5, 0.25, 0.0, 0.0, 0.0, 0.0, 0.0], "effective": 6},
+    {"condition": "none_1.0", "post": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], "effective": 0}
+  ],
+  "parser": [
+    {"text": "violet", "picked": "violet"},
+    {"text": "\"VIOLET\"!!!<|im_end|>\n", "picked": "violet"},
+    {"text": "yellowish explanation", "picked": "yellow"},
+    {"text": "violet or yellow", "picked": "violet"},
+    {"text": "'yellow'", "picked": "yellow"},
+    {"text": "\" violet\"", "picked": null},
+    {"text": "I choose violet", "picked": null},
+    {"text": "<|im_end|>", "picked": null},
+    {"text": "lever95extra", "names_key": "lever64_lever95", "picked": "lever95"},
+    {"text": "PIANO!", "names_key": "guitar_piano", "picked": "piano"}
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "syntax_files": [
+    "reproduce.py",
+    "portable_progress.py",
+    "inference.py",
+    "src/factual_data.py",
+    "src/audit_saved_results.py",
+    "src/run_factual.py",
+    "pain_axis_b/verify_vectors.py",
+    "pain_axis_b/grid.py",
+    "pain_axis_b/runtime.py",
+    "pain_axis_b/__init__.py",
+    "tests/test_factual_data.py",
+    "scripts/4.3_selfmed/04_selfmed_two_buttons.py"
+  ],
+  "selected_tests_passed": 23,
+  "subtests_passed": 25,
+  "reproduce_help": "passed",
+  "reproduce_verify_only": "passed",
+  "inference_dry_run": "passed",
+  "private_path_scan": "passed",
+  "full_bootstrap_replay": "not-run; parent stages immutable assets on compute",
+  "full_inference": "not-run; forbidden for export",
+  "staged_files_by_this_worker": false,
+  "original_table_identity": "SHA256 exact, see provenance.json",
+  "scientific_changes": false,
+  "point_replay": "All800 original saved responses rescored by original functions; rates, contrasts and100 per-question rows match frozen tables exactly; no bootstrap"
+}

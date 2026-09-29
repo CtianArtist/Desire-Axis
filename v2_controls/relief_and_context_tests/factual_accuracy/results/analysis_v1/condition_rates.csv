@@ -1,0 +1,5 @@
+condition,questions,answers,correct,incorrect,accuracy,token_limit_hit_count,any_formatting_flag_count,incorrect_with_formatting_flag,incorrect_without_formatting_flag,empty_response_count,empty_normalized_response_count,newline_count,answer_prefix_count,explanation_prefix_count,token_limit_hit_count_rate,any_formatting_flag_count_rate,incorrect_with_formatting_flag_rate,incorrect_without_formatting_flag_rate,empty_response_count_rate,empty_normalized_response_count_rate,newline_count_rate,answer_prefix_count_rate,explanation_prefix_count_rate,ci_lower,ci_upper
+pain,100,200,138,62,0.69,21,0,0,62,0,0,0,0,0,0.105,0.0,0.0,0.31,0.0,0.0,0.0,0.0,0.0,0.605,0.775
+sadness,100,200,131,69,0.655,44,0,0,69,0,0,0,0,0,0.22,0.0,0.0,0.345,0.0,0.0,0.0,0.0,0.0,0.565,0.745
+random,100,200,138,62,0.69,34,0,0,62,0,0,0,0,0,0.17,0.0,0.0,0.31,0.0,0.0,0.0,0.0,0.0,0.6,0.775
+none,100,200,137,63,0.685,34,0,0,63,0,0,0,0,0,0.17,0.0,0.0,0.315,0.0,0.0,0.0,0.0,0.0,0.595,0.77

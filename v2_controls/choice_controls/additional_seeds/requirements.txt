@@ -1,0 +1,8 @@
+# Recorded training versions, shared by the completed inference runtime.
+# CPU analysis/replay uses only the Python standard library.
+torch==2.11.0
+numpy==2.3.4
+transformers==5.12.1
+peft==0.20.0
+accelerate==1.15.0
+huggingface-hub==1.16.1

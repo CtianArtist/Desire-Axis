@@ -1,0 +1,334 @@
+[
+  {
+    "position": "first",
+    "direction": "pain",
+    "norm_pp": 159.35397133109362,
+    "error_norm95_pp": 17.38821569514077,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 17.38821569514077,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      6
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      6
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "first",
+    "direction": "sadness",
+    "norm_pp": 153.58445495926307,
+    "error_norm95_pp": 18.850544388915345,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 18.850544388915345,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      5,
+      6
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      5,
+      6
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "first",
+    "direction": "fear",
+    "norm_pp": 46.17853132478792,
+    "error_norm95_pp": 16.918036674302364,
+    "orientation_identifiable": true,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 16.918036674302364,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": false,
+    "degenerate_pair_ids": [],
+    "degenerate_observed_zero_pair_ids": [],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "first",
+    "direction": "random",
+    "norm_pp": 59.39179919371205,
+    "error_norm95_pp": 18.11423658461824,
+    "orientation_identifiable": true,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 18.11423658461824,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": false,
+    "degenerate_pair_ids": [],
+    "degenerate_observed_zero_pair_ids": [],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "first",
+    "direction": "none",
+    "norm_pp": 0.0,
+    "error_norm95_pp": 0.0,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": false,
+    "orientation_threshold_pp": 4.493866839778178e-12,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": true,
+    "bootstrap_degenerate": true,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "second",
+    "direction": "pain",
+    "norm_pp": 111.66680258622503,
+    "error_norm95_pp": 16.786786116231582,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 16.786786116231582,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      9
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      9
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "second",
+    "direction": "sadness",
+    "norm_pp": 71.6559563086562,
+    "error_norm95_pp": 16.119883224824655,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 16.119883224824655,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      6
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      6
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "second",
+    "direction": "fear",
+    "norm_pp": 28.524501662829845,
+    "error_norm95_pp": 14.701533893931375,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 14.701533893931375,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      6
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      6
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "second",
+    "direction": "random",
+    "norm_pp": 45.62969533612263,
+    "error_norm95_pp": 17.15286410350086,
+    "orientation_identifiable": true,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 17.15286410350086,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": false,
+    "degenerate_pair_ids": [],
+    "degenerate_observed_zero_pair_ids": [],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "second",
+    "direction": "none",
+    "norm_pp": 0.0,
+    "error_norm95_pp": 0.0,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": false,
+    "orientation_threshold_pp": 4.493866839778178e-12,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": true,
+    "bootstrap_degenerate": true,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "pooled",
+    "direction": "pain",
+    "norm_pp": 134.50269092103287,
+    "error_norm95_pp": 14.079486538813391,
+    "orientation_identifiable": true,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 14.079486538813391,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": false,
+    "degenerate_pair_ids": [],
+    "degenerate_observed_zero_pair_ids": [],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "pooled",
+    "direction": "sadness",
+    "norm_pp": 110.27372247389597,
+    "error_norm95_pp": 13.729894670815739,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 13.729894670815739,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      6
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      6
+    ],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "pooled",
+    "direction": "fear",
+    "norm_pp": 35.93188075887141,
+    "error_norm95_pp": 12.465198470061393,
+    "orientation_identifiable": true,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 12.465198470061393,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": false,
+    "degenerate_pair_ids": [],
+    "degenerate_observed_zero_pair_ids": [],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "pooled",
+    "direction": "random",
+    "norm_pp": 51.52838142423934,
+    "error_norm95_pp": 15.508559552554352,
+    "orientation_identifiable": true,
+    "empirical_orientation_defined": true,
+    "orientation_threshold_pp": 15.508559552554352,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": false,
+    "bootstrap_degenerate": false,
+    "has_degenerate_coordinates": false,
+    "degenerate_pair_ids": [],
+    "degenerate_observed_zero_pair_ids": [],
+    "bootstrap_replicates": 10000
+  },
+  {
+    "position": "pooled",
+    "direction": "none",
+    "norm_pp": 0.0,
+    "error_norm95_pp": 0.0,
+    "orientation_identifiable": false,
+    "empirical_orientation_defined": false,
+    "orientation_threshold_pp": 4.493866839778178e-12,
+    "numerical_epsilon_norm_pp": 4.493866839778178e-12,
+    "numerically_singular": true,
+    "bootstrap_degenerate": true,
+    "has_degenerate_coordinates": true,
+    "degenerate_pair_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "degenerate_observed_zero_pair_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "bootstrap_replicates": 10000
+  }
+]

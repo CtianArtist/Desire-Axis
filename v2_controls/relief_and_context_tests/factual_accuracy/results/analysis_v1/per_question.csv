@@ -1,0 +1,101 @@
+item_index,id,subj_id,question,pain_correct,pain_answers,pain_accuracy,sadness_correct,sadness_answers,sadness_accuracy,random_correct,random_answers,random_accuracy,none_correct,none_answers,none_accuracy,pain_minus_none,pain_minus_random,pain_minus_sadness
+0,1762842,779697,Who is the father of Donald Trump?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+1,2266274,988513,What is the capital of United States of America?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+2,2696170,1160340,Who is the author of Facebook?,1,2,0.5,2,2,1.0,2,2,1.0,2,2,1.0,-0.5,-0.5,-0.5
+3,1668604,740386,Who is the father of Brandon Lee?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+4,5015775,2215085,What is the capital of India?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+5,6515626,2925405,Who is the mother of Elizabeth II?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+6,494409,202862,Who was the producer of Halloween?,0,2,0.0,0,2,0.0,0,2,0.0,2,2,1.0,-1.0,0.0,0.0
+7,593981,242916,What is the capital of United Kingdom?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+8,6333374,2856110,What is the capital of Taiwan?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+9,809091,345517,What is Kanye West's occupation?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+10,1728083,763729,Who was the screenwriter for Halloween?,2,2,1.0,0,2,0.0,2,2,1.0,0,2,0.0,1.0,0.0,1.0
+11,832908,355510,What is the capital of Canada?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+12,6554019,2939848,What is the capital of California?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+13,2155468,942710,Who is the father of Michael Jackson?,2,2,1.0,0,2,0.0,2,2,1.0,0,2,0.0,1.0,0.0,1.0
+14,636616,265491,What is the capital of People's Republic of China?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+15,4548221,2005387,What is New York City the capital of?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+16,2967643,1270922,What is the capital of Australia?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+17,1408084,629801,Who is the father of Kim Kardashian?,1,2,0.5,1,2,0.5,2,2,1.0,1,2,0.5,0.0,-0.5,0.0
+18,2731814,1174187,What is the religion of Muhammad Ali?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+19,1140403,502871,What is the capital of Japan?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+20,6368178,2869258,What is the religion of Afghanistan?,2,2,1.0,1,2,0.5,1,2,0.5,0,2,0.0,1.0,0.5,0.5
+21,1416925,633673,What color is Manchester United F.C.?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+22,6302289,2843473,Who is the author of James Bond?,1,2,0.5,0,2,0.0,0,2,0.0,2,2,1.0,-0.5,0.5,0.5
+23,110614,43180,Who is the father of Dwayne Johnson?,1,2,0.5,1,2,0.5,0,2,0.0,2,2,1.0,-0.5,0.5,0.0
+24,5815002,2602170,Who is the mother of Barack Obama?,2,2,1.0,2,2,1.0,0,2,0.0,0,2,0.0,1.0,1.0,0.0
+25,6300717,2842812,What is the capital of Pakistan?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+26,1363778,607728,What is the capital of Germany?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+27,6467337,2907997,What is the religion of Queen Victoria?,1,2,0.5,0,2,0.0,0,2,0.0,0,2,0.0,0.5,0.5,0.5
+28,6516245,2925606,"Who is the father of Diana, Princess of Wales?",0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+29,804606,343477,What is the capital of Russia?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+30,6295674,2840765,What is London the capital of?,0,2,0.0,2,2,1.0,0,2,0.0,2,2,1.0,-1.0,0.0,-1.0
+31,6432170,2894363,What is the capital of Philippines?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+32,4995155,2204434,What is the capital of New Zealand?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+33,179252,72430,What is the religion of Bill Clinton?,0,2,0.0,0,2,0.0,0,2,0.0,1,2,0.5,-0.5,0.0,0.0
+34,6359560,2866409,What is the capital of South Korea?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+35,2539119,1096999,What is Singapore the capital of?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+36,4877533,2148170,Who was the producer of Marvel Cinematic Universe?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+37,3170519,1355571,What is the religion of Marilyn Monroe?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+38,562847,230035,What is the capital of France?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+39,664514,280873,What is the capital of Uttar Pradesh?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+40,3030578,1297158,What is the capital of Turkey?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+41,1546461,691525,What is Mike Flanagan's occupation?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+42,6351301,2863349,What is the capital of United Arab Emirates?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+43,1660531,736842,What is the capital of England?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+44,1824463,803895,Who was the producer of Game of Thrones?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+45,156556,63110,What genre is The Rolling Stones?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+46,34246,14347,What is the capital of Namibia?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+47,2142166,936716,Who is the father of George VI?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+48,4165947,1825504,What is the capital of Netherlands?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+49,6471074,2909372,What is the religion of Muhammad?,2,2,1.0,0,2,0.0,2,2,1.0,2,2,1.0,0.0,0.0,1.0
+50,694486,293285,What is the capital of Soviet Union?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+51,6386307,2876593,What is the capital of Bangladesh?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+52,1981146,869785,What is the capital of South Africa?,1,2,0.5,1,2,0.5,0,2,0.0,0,2,0.0,0.5,0.5,0.0
+53,2839162,1218153,What is the capital of Italy?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+54,581753,238054,What is the capital of Texas?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+55,6297091,2841337,Who is the father of Alexander the Great?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+56,6400075,2882208,What is the religion of Abraham Lincoln?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+57,3786129,1648923,Who is the mother of Napoleon?,0,2,0.0,0,2,0.0,2,2,1.0,2,2,1.0,-1.0,-1.0,0.0
+58,1939901,852965,What is the capital of Indonesia?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+59,6184067,2788922,What is the capital of Israel?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+60,5777300,2580845,What genre is Prince?,1,2,0.5,0,2,0.0,0,2,0.0,0,2,0.0,0.5,0.5,0.5
+61,4925873,2172373,What is Los Angeles the capital of?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+62,2203360,962574,What is the religion of Spain?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+63,6015165,2700755,What is the capital of Hawaii?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+64,6313411,2847995,What is the capital of Saudi Arabia?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+65,6499110,2919374,What is the capital of Mexico?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+66,523639,214359,What is the capital of New York?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+67,5937756,2663847,What is the religion of Vladimir Putin?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+68,2725932,1172122,What is the capital of Poland?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+69,2899839,1242173,What is the capital of Switzerland?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+70,2281513,995462,Who is the father of Jesus?,0,2,0.0,1,2,0.5,1,2,0.5,0,2,0.0,0.0,-0.5,-0.5
+71,1782508,787893,What is the religion of George Washington?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+72,2942700,1260028,What genre is Will Smith?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+73,3093779,1319794,Who was the producer of Titanic?,1,2,0.5,0,2,0.0,2,2,1.0,2,2,1.0,-0.5,-0.5,0.5
+74,39178,16314,What is the capital of Nigeria?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+75,6145054,2769257,What is the capital of Alaska?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+76,1672533,741995,What is the capital of Ukraine?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+77,6258460,2825983,What is the capital of Florida?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+78,1409536,630439,Who was the screenwriter for The Shining?,2,2,1.0,2,2,1.0,2,2,1.0,0,2,0.0,1.0,0.0,0.0
+79,383822,154952,Who was the producer of Gladiator?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+80,3149188,1343681,What is the capital of European Union?,1,2,0.5,2,2,1.0,1,2,0.5,1,2,0.5,0.0,0.0,-0.5
+81,3008151,1288228,What is the capital of North Korea?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+82,1722391,761210,What is the capital of Scotland?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+83,6317794,2849831,What is the capital of Sri Lanka?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+84,6502612,2920608,What color is Arsenal F.C.?,1,2,0.5,1,2,0.5,2,2,1.0,0,2,0.0,0.5,-0.5,0.0
+85,6117457,2753763,What is the capital of Iran?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+86,5904820,2647127,What is the capital of Massachusetts?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+87,2088053,914444,What sport does Mr. Olympia play?,2,2,1.0,1,2,0.5,2,2,1.0,2,2,1.0,0.0,0.0,0.5
+88,546090,222703,What is the capital of Pennsylvania?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+89,1633964,726578,Who is the father of George W. Bush?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+90,2583275,1114197,What is the capital of Sweden?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+91,6493078,2917223,What is Amitabh Bachchan's occupation?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+92,1605832,715822,Who was the producer of Halloween III: Season of the Witch?,0,2,0.0,0,2,0.0,0,2,0.0,1,2,0.5,-0.5,0.0,0.0
+93,412570,166772,"Who is the father of Mary, Queen of Scots?",2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+94,1775298,785006,What is the capital of Cyprus?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+95,3372581,1450021,What genre is Paris Hilton?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+96,6152249,2773059,Who was the producer of Friends?,0,2,0.0,0,2,0.0,0,2,0.0,0,2,0.0,0.0,0.0,0.0
+97,1573571,702887,What is the capital of Norway?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0
+98,6288359,2837656,Who was the director of The Matrix?,0,2,0.0,0,2,0.0,1,2,0.5,1,2,0.5,-0.5,-0.5,0.0
+99,504663,207403,What is the capital of Virginia?,2,2,1.0,2,2,1.0,2,2,1.0,2,2,1.0,0.0,0.0,0.0

@@ -1,0 +1,1037 @@
+[
+  {
+    "model": "Gemma_2_27B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 895.1911010742188,
+      "S2_pain": 1537.2176513671875,
+      "Fear": 2020.0770263671875,
+      "NegEmotion": 2140.84912109375,
+      "NegWorld": 2108.048828125,
+      "BodySens": 1630.0855712890625,
+      "Arousal": 1768.919677734375,
+      "Random": 1286.552490234375
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 1629.51025390625,
+      "S2_pain": 2465.378173828125,
+      "Fear": 3952.5859375,
+      "NegEmotion": 3897.684326171875,
+      "NegWorld": 4072.99365234375,
+      "BodySens": 2773.88037109375,
+      "Arousal": 2835.9697265625,
+      "Random": 2324.65576171875
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 51.05769729614258,
+      "S2_pain": 75.42797088623047,
+      "Fear": 98.32234954833984,
+      "NegEmotion": 114.56207275390625,
+      "NegWorld": 117.2352523803711,
+      "BodySens": 86.77888488769531,
+      "Arousal": 89.72649383544922,
+      "Random": 55.65901184082031
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 81.11650085449219,
+      "S2_pain": 118.74076080322266,
+      "Fear": 187.64572143554688,
+      "NegEmotion": 203.36770629882812,
+      "NegWorld": 227.40969848632812,
+      "BodySens": 161.57826232910156,
+      "Arousal": 140.12545776367188,
+      "Random": 121.15670776367188
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 79.96498107910156,
+      "S2_pain": 124.91215515136719,
+      "Fear": 166.1025390625,
+      "NegEmotion": 186.8661651611328,
+      "NegWorld": 182.5352325439453,
+      "BodySens": 134.5591583251953,
+      "Arousal": 141.74510192871094,
+      "Random": 78.69064331054688
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 82.15394592285156,
+      "S2_pain": 113.7418212890625,
+      "Fear": 173.43467712402344,
+      "NegEmotion": 192.06039428710938,
+      "NegWorld": 195.51205444335938,
+      "BodySens": 128.95611572265625,
+      "Arousal": 127.30088806152344,
+      "Random": 103.01565551757812
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 7.03328275680542,
+      "S2_pain": 10.8422212600708,
+      "Fear": 15.315155982971191,
+      "NegEmotion": 16.176349639892578,
+      "NegWorld": 17.262130737304688,
+      "BodySens": 13.532837867736816,
+      "Arousal": 12.65306282043457,
+      "Random": 8.580160140991211
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 3.361388921737671,
+      "S2_pain": 5.237305164337158,
+      "Fear": 7.073275089263916,
+      "NegEmotion": 6.9036545753479,
+      "NegWorld": 8.322059631347656,
+      "BodySens": 6.761571407318115,
+      "Arousal": 5.7045745849609375,
+      "Random": 4.747705459594727
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 5.224989414215088,
+      "S2_pain": 8.784148216247559,
+      "Fear": 12.191339492797852,
+      "NegEmotion": 12.622527122497559,
+      "NegWorld": 13.884584426879883,
+      "BodySens": 9.57292652130127,
+      "Arousal": 10.258478164672852,
+      "Random": 5.841331958770752
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 5.116945266723633,
+      "S2_pain": 8.238168716430664,
+      "Fear": 11.191184997558594,
+      "NegEmotion": 12.968740463256836,
+      "NegWorld": 14.567749977111816,
+      "BodySens": 9.22998046875,
+      "Arousal": 8.859811782836914,
+      "Random": 6.312559127807617
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 2.997577428817749,
+      "S2_pain": 4.5538411140441895,
+      "Fear": 6.3486104011535645,
+      "NegEmotion": 6.0218424797058105,
+      "NegWorld": 7.675009727478027,
+      "BodySens": 5.798129558563232,
+      "Arousal": 5.0335869789123535,
+      "Random": 4.4716057777404785
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_7B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 2.820223331451416,
+      "S2_pain": 4.569287300109863,
+      "Fear": 6.288833141326904,
+      "NegEmotion": 7.119468688964844,
+      "NegWorld": 7.692779064178467,
+      "BodySens": 5.128711223602295,
+      "Arousal": 5.067734718322754,
+      "Random": 3.845085859298706
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 3.78364634513855,
+      "S2_pain": 6.016397953033447,
+      "Fear": 8.082605361938477,
+      "NegEmotion": 10.2568998336792,
+      "NegWorld": 10.167181968688965,
+      "BodySens": 6.797160625457764,
+      "Arousal": 7.513547420501709,
+      "Random": 5.184741973876953
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 4.922974586486816,
+      "S2_pain": 7.459299087524414,
+      "Fear": 10.69243335723877,
+      "NegEmotion": 11.867445945739746,
+      "NegWorld": 11.538552284240723,
+      "BodySens": 8.647501945495605,
+      "Arousal": 7.637664318084717,
+      "Random": 6.126914024353027
+    },
+    "warnings": []
+  },
+  {
+    "model": "Phi_4",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 7.5723347663879395,
+      "S2_pain": 11.798495292663574,
+      "Fear": 12.245847702026367,
+      "NegEmotion": 14.633223533630371,
+      "NegWorld": 15.380165100097656,
+      "BodySens": 15.063756942749023,
+      "Arousal": 12.002717018127441,
+      "Random": 12.267501831054688
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 116.56585693359375,
+      "S2_pain": 129.3533477783203,
+      "Fear": 166.03759765625,
+      "NegEmotion": 163.5861358642578,
+      "NegWorld": 198.6040496826172,
+      "BodySens": 161.6141815185547,
+      "Arousal": 128.15151977539062,
+      "Random": 191.58267211914062
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 125.32440185546875,
+      "S2_pain": 143.83343505859375,
+      "Fear": 200.9174346923828,
+      "NegEmotion": 214.37203979492188,
+      "NegWorld": 232.45196533203125,
+      "BodySens": 181.55592346191406,
+      "Arousal": 164.46029663085938,
+      "Random": 200.08628845214844
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 149.2241973876953,
+      "S2_pain": 205.2537078857422,
+      "Fear": 257.0079345703125,
+      "NegEmotion": 263.4245300292969,
+      "NegWorld": 344.45001220703125,
+      "BodySens": 219.29638671875,
+      "Arousal": 188.2021026611328,
+      "Random": 217.42721557617188
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 93.87589263916016,
+      "S2_pain": 135.83497619628906,
+      "Fear": 235.08401489257812,
+      "NegEmotion": 244.61634826660156,
+      "NegWorld": 249.85140991210938,
+      "BodySens": 176.86068725585938,
+      "Arousal": 168.7779083251953,
+      "Random": 151.39195251464844
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 34.72718811035156,
+      "S2_pain": 46.4569206237793,
+      "Fear": 58.52499771118164,
+      "NegEmotion": 59.635860443115234,
+      "NegWorld": 73.80455780029297,
+      "BodySens": 47.02915954589844,
+      "Arousal": 45.23836135864258,
+      "Random": 40.058258056640625
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 29.971773147583008,
+      "S2_pain": 44.8751106262207,
+      "Fear": 54.08021545410156,
+      "NegEmotion": 53.827518463134766,
+      "NegWorld": 60.61917495727539,
+      "BodySens": 41.88615798950195,
+      "Arousal": 39.1427001953125,
+      "Random": 39.09773254394531
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 60.60639572143555,
+      "S2_pain": 80.01285552978516,
+      "Fear": 106.43540954589844,
+      "NegEmotion": 92.90110778808594,
+      "NegWorld": 104.86272430419922,
+      "BodySens": 88.15916442871094,
+      "Arousal": 77.18243408203125,
+      "Random": 68.54668426513672
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "construction": "paper_available",
+    "norms": {
+      "S1_pain": 94.89395141601562,
+      "S2_pain": 139.2067108154297,
+      "Fear": 185.59225463867188,
+      "NegEmotion": 193.97128295898438,
+      "NegWorld": 209.44384765625,
+      "BodySens": 140.9477081298828,
+      "Arousal": 140.02899169921875,
+      "Random": 112.36743927001953
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 1693.1402587890625,
+      "S2_pain": 2436.6640625,
+      "Fear": 2020.0770263671875,
+      "NegEmotion": 2140.84912109375,
+      "NegWorld": 2108.048828125,
+      "BodySens": 1630.0855712890625,
+      "Arousal": 1768.919677734375,
+      "Random": 1286.552490234375
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_27B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 957.511474609375,
+      "S2_pain": 1324.181396484375,
+      "Fear": 404.33502197265625,
+      "NegEmotion": 419.1813049316406,
+      "NegWorld": 364.7169189453125,
+      "BodySens": 411.0296325683594,
+      "Arousal": 1404.0396728515625,
+      "Random": 1049.4500732421875
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 3196.0673828125,
+      "S2_pain": 3979.281005859375,
+      "Fear": 3952.5859375,
+      "NegEmotion": 3897.684326171875,
+      "NegWorld": 4072.99365234375,
+      "BodySens": 2773.88037109375,
+      "Arousal": 2835.9697265625,
+      "Random": 2324.65576171875
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_27B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 1740.459716796875,
+      "S2_pain": 2174.321533203125,
+      "Fear": 439.1587219238281,
+      "NegEmotion": 668.4163818359375,
+      "NegWorld": 577.4935913085938,
+      "BodySens": 642.6032104492188,
+      "Arousal": 2441.625244140625,
+      "Random": 2012.7769775390625
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 87.8425521850586,
+      "S2_pain": 118.2027587890625,
+      "Fear": 98.32234954833984,
+      "NegEmotion": 114.56207275390625,
+      "NegWorld": 117.2352523803711,
+      "BodySens": 86.77888488769531,
+      "Arousal": 89.72649383544922,
+      "Random": 55.65901184082031
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_2B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 49.20289611816406,
+      "S2_pain": 67.43682098388672,
+      "Fear": 31.38764762878418,
+      "NegEmotion": 33.14078903198242,
+      "NegWorld": 24.563247680664062,
+      "BodySens": 24.61040496826172,
+      "Arousal": 71.63246154785156,
+      "Random": 58.06901168823242
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 176.67393493652344,
+      "S2_pain": 223.77711486816406,
+      "Fear": 187.64572143554688,
+      "NegEmotion": 203.36770629882812,
+      "NegWorld": 227.40969848632812,
+      "BodySens": 161.57826232910156,
+      "Arousal": 140.12545776367188,
+      "Random": 121.15670776367188
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_2B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 80.65149688720703,
+      "S2_pain": 101.12321472167969,
+      "Fear": 32.766510009765625,
+      "NegEmotion": 48.97488021850586,
+      "NegWorld": 40.482730865478516,
+      "BodySens": 28.440265655517578,
+      "Arousal": 126.301513671875,
+      "Random": 115.73760986328125
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 149.45802307128906,
+      "S2_pain": 197.14723205566406,
+      "Fear": 166.1025390625,
+      "NegEmotion": 186.8661651611328,
+      "NegWorld": 182.5352325439453,
+      "BodySens": 134.5591583251953,
+      "Arousal": 141.74510192871094,
+      "Random": 78.69064331054688
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_9B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 78.17754364013672,
+      "S2_pain": 104.42373657226562,
+      "Fear": 35.84828186035156,
+      "NegEmotion": 38.404266357421875,
+      "NegWorld": 30.479703903198242,
+      "BodySens": 32.58793258666992,
+      "Arousal": 118.52101135253906,
+      "Random": 78.01106262207031
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 163.87069702148438,
+      "S2_pain": 202.38555908203125,
+      "Fear": 173.43467712402344,
+      "NegEmotion": 192.06039428710938,
+      "NegWorld": 195.51205444335938,
+      "BodySens": 128.95611572265625,
+      "Arousal": 127.30088806152344,
+      "Random": 103.01565551757812
+    },
+    "warnings": []
+  },
+  {
+    "model": "Gemma_2_9B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 84.11549377441406,
+      "S2_pain": 100.41769409179688,
+      "Fear": 27.039901733398438,
+      "NegEmotion": 28.68187713623047,
+      "NegWorld": 23.406646728515625,
+      "BodySens": 32.320098876953125,
+      "Arousal": 118.3009262084961,
+      "Random": 98.04517364501953
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 13.302654266357422,
+      "S2_pain": 17.283580780029297,
+      "Fear": 15.315155982971191,
+      "NegEmotion": 16.176349639892578,
+      "NegWorld": 17.262130737304688,
+      "BodySens": 13.532837867736816,
+      "Arousal": 12.65306282043457,
+      "Random": 8.580160140991211
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_70B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 7.574029922485352,
+      "S2_pain": 9.38675308227539,
+      "Fear": 2.9136974811553955,
+      "NegEmotion": 3.4221746921539307,
+      "NegWorld": 2.7922792434692383,
+      "BodySens": 2.7523856163024902,
+      "Arousal": 10.658000946044922,
+      "Random": 8.184089660644531
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 6.895767688751221,
+      "S2_pain": 8.322433471679688,
+      "Fear": 7.073275089263916,
+      "NegEmotion": 6.9036545753479,
+      "NegWorld": 8.322059631347656,
+      "BodySens": 6.761571407318115,
+      "Arousal": 5.7045745849609375,
+      "Random": 4.747705459594727
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_70B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 3.6776061058044434,
+      "S2_pain": 4.7709784507751465,
+      "Fear": 1.1824238300323486,
+      "NegEmotion": 1.6797218322753906,
+      "NegWorld": 1.2257932424545288,
+      "BodySens": 1.3180911540985107,
+      "Arousal": 5.019808292388916,
+      "Random": 4.233522891998291
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 9.971980094909668,
+      "S2_pain": 14.610540390014648,
+      "Fear": 12.191339492797852,
+      "NegEmotion": 12.622527122497559,
+      "NegWorld": 13.884584426879883,
+      "BodySens": 9.57292652130127,
+      "Arousal": 10.258478164672852,
+      "Random": 5.841331958770752
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_8B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 5.316335678100586,
+      "S2_pain": 8.069034576416016,
+      "Fear": 1.973793864250183,
+      "NegEmotion": 2.52292799949646,
+      "NegWorld": 2.0627212524414062,
+      "BodySens": 1.9332858324050903,
+      "Arousal": 8.682958602905273,
+      "Random": 5.397979259490967
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 11.189640045166016,
+      "S2_pain": 14.641558647155762,
+      "Fear": 11.191184997558594,
+      "NegEmotion": 12.968740463256836,
+      "NegWorld": 14.567749977111816,
+      "BodySens": 9.22998046875,
+      "Arousal": 8.859811782836914,
+      "Random": 6.312559127807617
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.1_8B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 5.057317733764648,
+      "S2_pain": 7.3262200355529785,
+      "Fear": 2.30486798286438,
+      "NegEmotion": 2.9258511066436768,
+      "NegWorld": 1.682466745376587,
+      "BodySens": 1.9455546140670776,
+      "Arousal": 8.655665397644043,
+      "Random": 6.542099475860596
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 6.26414155960083,
+      "S2_pain": 7.264776706695557,
+      "Fear": 6.3486104011535645,
+      "NegEmotion": 6.0218424797058105,
+      "NegWorld": 7.675009727478027,
+      "BodySens": 5.798129558563232,
+      "Arousal": 5.0335869789123535,
+      "Random": 4.4716057777404785
+    },
+    "warnings": []
+  },
+  {
+    "model": "Llama_3.3_70B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 3.110445261001587,
+      "S2_pain": 4.103569507598877,
+      "Fear": 1.2534353733062744,
+      "NegEmotion": 1.7564706802368164,
+      "NegWorld": 1.0469436645507812,
+      "BodySens": 1.2101069688796997,
+      "Arousal": 4.2112603187561035,
+      "Random": 3.50276517868042
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_7B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 5.934818267822266,
+      "S2_pain": 7.549930572509766,
+      "Fear": 6.288833141326904,
+      "NegEmotion": 7.119468688964844,
+      "NegWorld": 7.692779064178467,
+      "BodySens": 5.128711223602295,
+      "Arousal": 5.067734718322754,
+      "Random": 3.845085859298706
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_7B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 3.036525011062622,
+      "S2_pain": 4.158451557159424,
+      "Fear": 1.1657966375350952,
+      "NegEmotion": 1.2047897577285767,
+      "NegWorld": 0.955289363861084,
+      "BodySens": 0.8740799427032471,
+      "Arousal": 4.357237815856934,
+      "Random": 2.9569380283355713
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 8.546466827392578,
+      "S2_pain": 11.116455078125,
+      "Fear": 8.082605361938477,
+      "NegEmotion": 10.2568998336792,
+      "NegWorld": 10.167181968688965,
+      "BodySens": 6.797160625457764,
+      "Arousal": 7.513547420501709,
+      "Random": 5.184741973876953
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_7B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 3.83432936668396,
+      "S2_pain": 5.069103240966797,
+      "Fear": 1.2717291116714478,
+      "NegEmotion": 1.3688075542449951,
+      "NegWorld": 1.266730785369873,
+      "BodySens": 1.5119508504867554,
+      "Arousal": 5.836496353149414,
+      "Random": 4.028401851654053
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 9.378486633300781,
+      "S2_pain": 12.224841117858887,
+      "Fear": 10.69243335723877,
+      "NegEmotion": 11.867445945739746,
+      "NegWorld": 11.538552284240723,
+      "BodySens": 8.647501945495605,
+      "Arousal": 7.637664318084717,
+      "Random": 6.126914024353027
+    },
+    "warnings": []
+  },
+  {
+    "model": "Mistral_Small_24B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 5.283648490905762,
+      "S2_pain": 6.601677417755127,
+      "Fear": 1.8072696924209595,
+      "NegEmotion": 1.9640684127807617,
+      "NegWorld": 1.6365526914596558,
+      "BodySens": 1.7728078365325928,
+      "Arousal": 7.529744625091553,
+      "Random": 5.852123737335205
+    },
+    "warnings": []
+  },
+  {
+    "model": "Phi_4",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 14.034567832946777,
+      "S2_pain": 17.77276611328125,
+      "Fear": 12.245847702026367,
+      "NegEmotion": 14.633223533630371,
+      "NegWorld": 15.380165100097656,
+      "BodySens": 15.063756942749023,
+      "Arousal": 12.002717018127441,
+      "Random": 12.267501831054688
+    },
+    "warnings": []
+  },
+  {
+    "model": "Phi_4",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 7.805742263793945,
+      "S2_pain": 11.9415283203125,
+      "Fear": 6.663845062255859,
+      "NegEmotion": 6.741696834564209,
+      "NegWorld": 5.449313163757324,
+      "BodySens": 5.410378932952881,
+      "Arousal": 9.1633939743042,
+      "Random": 13.013847351074219
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 178.83209228515625,
+      "S2_pain": 205.07205200195312,
+      "Fear": 166.03759765625,
+      "NegEmotion": 163.5861358642578,
+      "NegWorld": 198.6040496826172,
+      "BodySens": 161.6141815185547,
+      "Arousal": 128.15151977539062,
+      "Random": 191.58267211914062
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_32B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 112.97132873535156,
+      "S2_pain": 141.1543426513672,
+      "Fear": 97.47606658935547,
+      "NegEmotion": 93.05570220947266,
+      "NegWorld": 125.01988220214844,
+      "BodySens": 130.2638702392578,
+      "Arousal": 121.41374969482422,
+      "Random": 197.8343048095703
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 205.0657501220703,
+      "S2_pain": 238.8297119140625,
+      "Fear": 200.9174346923828,
+      "NegEmotion": 214.37203979492188,
+      "NegWorld": 232.45196533203125,
+      "BodySens": 181.55592346191406,
+      "Arousal": 164.46029663085938,
+      "Random": 200.08628845214844
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_32B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 113.10433197021484,
+      "S2_pain": 139.99081420898438,
+      "Fear": 73.11775207519531,
+      "NegEmotion": 71.7451400756836,
+      "NegWorld": 60.10020065307617,
+      "BodySens": 67.84447479248047,
+      "Arousal": 150.0517120361328,
+      "Random": 172.1779327392578
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 295.4880676269531,
+      "S2_pain": 332.6316833496094,
+      "Fear": 257.0079345703125,
+      "NegEmotion": 263.4245300292969,
+      "NegWorld": 344.45001220703125,
+      "BodySens": 219.29638671875,
+      "Arousal": 188.2021026611328,
+      "Random": 217.42721557617188
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_72B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 156.6336669921875,
+      "S2_pain": 182.89178466796875,
+      "Fear": 141.490234375,
+      "NegEmotion": 91.09874725341797,
+      "NegWorld": 103.42569732666016,
+      "BodySens": 106.52085876464844,
+      "Arousal": 176.9691162109375,
+      "Random": 206.027587890625
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 225.2177734375,
+      "S2_pain": 259.96807861328125,
+      "Fear": 235.08401489257812,
+      "NegEmotion": 244.61634826660156,
+      "NegWorld": 249.85140991210938,
+      "BodySens": 176.86068725585938,
+      "Arousal": 168.7779083251953,
+      "Random": 151.39195251464844
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_72B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 100.652099609375,
+      "S2_pain": 114.02954864501953,
+      "Fear": 29.679485321044922,
+      "NegEmotion": 34.17123794555664,
+      "NegWorld": 29.167720794677734,
+      "BodySens": 29.69133949279785,
+      "Arousal": 136.74180603027344,
+      "Random": 113.76753234863281
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 57.47932434082031,
+      "S2_pain": 72.8953857421875,
+      "Fear": 58.52499771118164,
+      "NegEmotion": 59.635860443115234,
+      "NegWorld": 73.80455780029297,
+      "BodySens": 47.02915954589844,
+      "Arousal": 45.23836135864258,
+      "Random": 40.058258056640625
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_7B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 32.454341888427734,
+      "S2_pain": 44.71361541748047,
+      "Fear": 12.490822792053223,
+      "NegEmotion": 18.59425926208496,
+      "NegWorld": 14.8968505859375,
+      "BodySens": 18.05619239807129,
+      "Arousal": 40.699119567871094,
+      "Random": 35.993202209472656
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 53.86431884765625,
+      "S2_pain": 70.83995819091797,
+      "Fear": 54.08021545410156,
+      "NegEmotion": 53.827518463134766,
+      "NegWorld": 60.61917495727539,
+      "BodySens": 41.88615798950195,
+      "Arousal": 39.1427001953125,
+      "Random": 39.09773254394531
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_2.5_7B_instruct",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 29.588972091674805,
+      "S2_pain": 40.47737503051758,
+      "Fear": 21.481435775756836,
+      "NegEmotion": 19.22429847717285,
+      "NegWorld": 15.066436767578125,
+      "BodySens": 17.48131561279297,
+      "Arousal": 36.7449836730957,
+      "Random": 39.77993392944336
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 98.71086120605469,
+      "S2_pain": 122.71622467041016,
+      "Fear": 106.43540954589844,
+      "NegEmotion": 92.90110778808594,
+      "NegWorld": 104.86272430419922,
+      "BodySens": 88.15916442871094,
+      "Arousal": 77.18243408203125,
+      "Random": 68.54668426513672
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_3_14B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 56.470062255859375,
+      "S2_pain": 78.40078735351562,
+      "Fear": 44.85520553588867,
+      "NegEmotion": 34.00752639770508,
+      "NegWorld": 38.61881637573242,
+      "BodySens": 33.57258987426758,
+      "Arousal": 58.927642822265625,
+      "Random": 75.186279296875
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "construction": "common_neutral",
+    "norms": {
+      "S1_pain": 173.26441955566406,
+      "S2_pain": 229.71298217773438,
+      "Fear": 185.59225463867188,
+      "NegEmotion": 193.97128295898438,
+      "NegWorld": 209.44384765625,
+      "BodySens": 140.9477081298828,
+      "Arousal": 140.02899169921875,
+      "Random": 112.36743927001953
+    },
+    "warnings": []
+  },
+  {
+    "model": "Qwen_3_8B_base",
+    "construction": "common_controls",
+    "norms": {
+      "S1_pain": 95.1103286743164,
+      "S2_pain": 134.0645294189453,
+      "Fear": 60.88512420654297,
+      "NegEmotion": 58.363121032714844,
+      "NegWorld": 59.192386627197266,
+      "BodySens": 61.46689224243164,
+      "Arousal": 124.68339538574219,
+      "Random": 106.37090301513672
+    },
+    "warnings": []
+  }
+]

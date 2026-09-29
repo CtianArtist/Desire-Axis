@@ -1,0 +1,15 @@
+{
+  "model": "Qwen_2.5_32B_instruct",
+  "tensor_key": "fear_vector_matched_fp32",
+  "tensor_sha256": "297cc009dc1e9e527bea1cb0dfbc43de2c5f0a63e66bd64d04bf7f9d6a47825d",
+  "file_sha256": "827a5d600a4adc53463679db9c784bd98498b848da3ef510aadc7a8400771c5e",
+  "dtype": "float32",
+  "shape": [
+    5120
+  ],
+  "matched_s2_sha256": "51a4f09e7ab8f5535381814a513e3b78d1e2aae93b9664943da3ad1b9329bc4b",
+  "layer": 61,
+  "injection_layer": 38,
+  "coefficient": 1.0,
+  "status": "verified_saved_reference_and_exact_CPU_reconstruction"
+}

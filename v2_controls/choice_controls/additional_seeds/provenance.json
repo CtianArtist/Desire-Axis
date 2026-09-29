@@ -1,0 +1,356 @@
+{
+  "source_release": "source_v2",
+  "source_archive_sha256": "dae7cfae26730b98f1b87d65b9a11beab6cb14aec990069861996a252ed94402",
+  "author_commit": "8d1649c03a63a39c9aa092532c376800cc4a3863",
+  "files": [
+    {
+      "path": ".gitignore",
+      "source_relative_path": ".gitignore",
+      "source_sha256": "c0bfe1c87aca2339d50d7c6e01d7ec235439ae6a0058e10db906495ea6aacd53",
+      "origin": "new portable contribution file",
+      "modifications": "New wrapper/documentation/manifest/test; no copied platform implementation.",
+      "delivered_sha256": "c0bfe1c87aca2339d50d7c6e01d7ec235439ae6a0058e10db906495ea6aacd53",
+      "bytes": 60
+    },
+    {
+      "path": "LICENSE",
+      "source_relative_path": "upstream/LICENSE",
+      "source_sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "modifications": "none",
+      "delivered_sha256": "03904358523f7f7800d3c9e643e52a8635e4530c658eab5d174b18541dc24579",
+      "bytes": 1071
+    },
+    {
+      "path": "README.md",
+      "source_relative_path": "README.md",
+      "source_sha256": "464ec4cacdeef0efba62682177b606d8069c2a39015f876d36537a5c1d137ad8",
+      "origin": "new portable contribution file",
+      "modifications": "New wrapper/documentation/manifest/test; no copied platform implementation.",
+      "delivered_sha256": "a315592ca2b90f5697af7d9b9838b2798c0c4ec58bf6652716af47b8cbf9502d",
+      "bytes": 10875,
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "assets.json",
+      "source_relative_path": "assets.json",
+      "source_sha256": "f3a0ee0301c35caf1e528391449585b73ad2f221e4762d976649d84e0f8b0a2a",
+      "origin": "new portable contribution file",
+      "modifications": "New wrapper/documentation/manifest/test; no copied platform implementation.",
+      "delivered_sha256": "c98bd5f4df85e356b2c4147b5e5b3d8b3965d172d1d14e59bcbc4c2ebf6daea8",
+      "bytes": 5881,
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "config/evaluation_local.json",
+      "source_relative_path": "config/evaluation_spec_v1.json",
+      "source_sha256": "263933175c51bf2b50468fdae1bf8571c3aeba9a0a6683c1d2b120262fb593f5",
+      "modifications": "Keep model revision, behavior and adapter/vector hashes; replace private artifact refs and scheduler metadata with explicit local paths.",
+      "delivered_sha256": "afea5ab4ea887eceb7f41849f005eaad367a9ec32ee34af994eb7e79d731222e",
+      "bytes": 2062
+    },
+    {
+      "path": "config/frozen_recipe.json",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/config/frozen_recipe.json",
+      "source_sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+      "modifications": "none",
+      "delivered_sha256": "cfa4e7ac17daea02badfa70d772ec0650a7e6b5da39cc855a711c15d2bc49ac7",
+      "bytes": 1735
+    },
+    {
+      "path": "inference.py",
+      "source_relative_path": "inference.py",
+      "source_sha256": "fce3ce15d2290fdc026bf04fa957f6840fbcc941559591b1e3af3f5209a5a3bb",
+      "origin": "new portable contribution file",
+      "modifications": "New wrapper/documentation/manifest/test; no copied platform implementation.",
+      "delivered_sha256": "3305a1fabba8ca8f0c2226696649f84606f891b7ca38b6b7bf0513e4cf1d356a",
+      "bytes": 3039,
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "inputs/original/01_finetune_self_report.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/inputs/original/01_finetune_self_report.py",
+      "source_sha256": "b9b6c1f5ab3bbb780ef011fad6ca4d7f2785956839a4e1f76171115e41a58c0b",
+      "modifications": "none",
+      "delivered_sha256": "b9b6c1f5ab3bbb780ef011fad6ca4d7f2785956839a4e1f76171115e41a58c0b",
+      "bytes": 12687
+    },
+    {
+      "path": "inputs/original/04_selfmed_two_buttons.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/inputs/original/04_selfmed_two_buttons.py",
+      "source_sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+      "modifications": "none; original constants read by AST-only grid/caller test fixtures",
+      "delivered_sha256": "f054613662e0f33ddcf8c9c9d5d2f69fc57caea70947da610725a8074837a4af",
+      "bytes": 47923
+    },
+    {
+      "path": "inputs/original/4.3_selfmed_101_scenarios.json",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/inputs/original/4.3_selfmed_101_scenarios.json",
+      "source_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+      "modifications": "none",
+      "delivered_sha256": "e4ffc301ff858ee38cd6b3f7f6d0b101d5caf6643dbd157a94ab8ae775f73bd9",
+      "bytes": 43559
+    },
+    {
+      "path": "inputs/original/4.3_selfmed_finetuning_1684_pairs.json",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/inputs/original/4.3_selfmed_finetuning_1684_pairs.json",
+      "source_sha256": "3833a90fec4806c58ed604b20daa069b314b11e46147a57d74235a51025b414d",
+      "modifications": "none",
+      "delivered_sha256": "3833a90fec4806c58ed604b20daa069b314b11e46147a57d74235a51025b414d",
+      "bytes": 444184
+    },
+    {
+      "path": "pain_seed_b/__init__.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/__init__.py",
+      "source_sha256": "6141c104a3c803b4bd61497d6d24bffac5c5cd07cb3cf076ae8ea00944396038",
+      "modifications": "none",
+      "delivered_sha256": "6141c104a3c803b4bd61497d6d24bffac5c5cd07cb3cf076ae8ea00944396038",
+      "bytes": 81
+    },
+    {
+      "path": "pain_seed_b/analysis.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/analysis.py",
+      "source_sha256": "0c7eed8052b221baff598a042227a7394d1c9c0bdc4b84aa24f3f35e983fb4e0",
+      "modifications": "none",
+      "delivered_sha256": "0c7eed8052b221baff598a042227a7394d1c9c0bdc4b84aa24f3f35e983fb4e0",
+      "bytes": 23856
+    },
+    {
+      "path": "pain_seed_b/analysis_io.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/analysis_io.py",
+      "source_sha256": "882610dd4a479150d8b6fe9cfc57694bfdb3abb7bd4695eac9ff7f7d0751a6fb",
+      "modifications": "none",
+      "delivered_sha256": "882610dd4a479150d8b6fe9cfc57694bfdb3abb7bd4695eac9ff7f7d0751a6fb",
+      "bytes": 2479
+    },
+    {
+      "path": "pain_seed_b/endpoints.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/endpoints.py",
+      "source_sha256": "183d38944ee26b04f31797f9b8ca1f18f3bd31a26ea1a85e7157e20846b9080f",
+      "modifications": "none",
+      "delivered_sha256": "183d38944ee26b04f31797f9b8ca1f18f3bd31a26ea1a85e7157e20846b9080f",
+      "bytes": 16386
+    },
+    {
+      "path": "pain_seed_b/grid.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/grid.py",
+      "source_sha256": "9c66b84c6290c88e1f1e5bac300a6a38055d32e006828372f4ffaf3b5fbb225f",
+      "modifications": "Replace private source identifier in docstring; grid unchanged.",
+      "delivered_sha256": "65017c5b8ac1ad0b106ed054c4c4c3a8196bf55eeb07b9b6383fc54026fa2187",
+      "bytes": 6192
+    },
+    {
+      "path": "pain_seed_b/identity.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/identity.py",
+      "source_sha256": "ed4cf9e1aec0c01606fce0be9e837f56e84c143e031214b00b3a989cfb5659de",
+      "modifications": "Remove private location label only; canonical verifier/manifest hashes unchanged.",
+      "delivered_sha256": "42a12f83f881cecdfc74c6b759fdf50633441a752dfcb70898fee1c31eee7134",
+      "bytes": 4146
+    },
+    {
+      "path": "pain_seed_b/joint_statistics.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/joint_statistics.py",
+      "source_sha256": "5fe1a4d406242bc3b50e14a8289261925d314ae3a2c20d56725454fecf48c694",
+      "modifications": "none",
+      "delivered_sha256": "5fe1a4d406242bc3b50e14a8289261925d314ae3a2c20d56725454fecf48c694",
+      "bytes": 8144
+    },
+    {
+      "path": "pain_seed_b/phase_a_metrics.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/phase_a_metrics.py",
+      "source_sha256": "048258837205df680cde4c69756525355448c7c30e0cc0aee1df636f5ca90b19",
+      "modifications": "Replace private source identifier in docstring; estimator unchanged.",
+      "delivered_sha256": "c1bf438844514ee7d1ea72343cc426ef39f117aa7ec76c1c669a4a7630212ce7",
+      "bytes": 3218
+    },
+    {
+      "path": "pain_seed_b/provenance.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/provenance.py",
+      "source_sha256": "80ca5636a1d31ea2441acdf12043d72d69bceb777df17780009756140dc250a3",
+      "modifications": "none",
+      "delivered_sha256": "80ca5636a1d31ea2441acdf12043d72d69bceb777df17780009756140dc250a3",
+      "bytes": 10102
+    },
+    {
+      "path": "pain_seed_b/runtime.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::pain_seed_b/runtime.py",
+      "source_sha256": "a1565ba62cb05a0044638dcae8c34f48afbd9462e538d7d932f281ed100167f6",
+      "modifications": "Remove unused NVML initialization and external progress callback; retain JSONL progress, hardware assertion and all model/state/sampler behavior.",
+      "delivered_sha256": "040f49b47aed09036313b760c0b606cbbe8f2b8d1550cf505d019d4360e7cb7e",
+      "bytes": 12531
+    },
+    {
+      "path": "reproduce.py",
+      "source_relative_path": "reproduce.py",
+      "source_sha256": "8389de012cff1605020804d417f8d3f5bcef56c90016c863e2b05fa2b025d5f9",
+      "origin": "new portable contribution file",
+      "modifications": "New wrapper/documentation/manifest/test; no copied platform implementation. Approved recovery: adapter metadata insertion order matches original finalizer; estimators and strict original hash comparison unchanged.",
+      "delivered_sha256": "0092424c1f6cc412d76340941f586c0146f110bc8124aeae57c10d09cf497db9",
+      "bytes": 6463
+    },
+    {
+      "path": "requirements.txt",
+      "source_relative_path": "results/training_evidence_v1/delivered_log_evidence.json",
+      "source_sha256": "1d75343d3117adfcd8f9b2ad0eab45017d881cb79252597a7f0f22c46e865a6f",
+      "modifications": "Select measured package versions; tracking dependency omitted because logging is local.",
+      "delivered_sha256": "1f8341482d4974790acbf7fe49ac8f4390222b0eb04ea69663d3b2e839b6e60e",
+      "bytes": 238
+    },
+    {
+      "path": "src/analyze_seed_trials.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/src/analyze_seed_trials.py",
+      "source_sha256": "6ea5542ab83497281181f78921111120483b505941ec7d814187ffb1ee08b79c",
+      "modifications": "none",
+      "delivered_sha256": "6ea5542ab83497281181f78921111120483b505941ec7d814187ffb1ee08b79c",
+      "bytes": 1880
+    },
+    {
+      "path": "src/evaluate_seed.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/src/evaluate_seed.py",
+      "source_sha256": "56a98bde05cce3528c56fc30f403af6b61b196e3601025bf16590332c6397958",
+      "modifications": "Replace remote tracking with local metric_summary.json; canonical verification and inference behavior unchanged.",
+      "delivered_sha256": "90bbd4fef00e2d384d10968aaa1e0cd424c4b6cb9ce5cb0726715b056dad8384",
+      "bytes": 45224,
+      "packaging_repair": "Small-direction delivery, documented portable metadata-file hash compatibility, or pin/path documentation; original tensor hashes and saved results unchanged."
+    },
+    {
+      "path": "src/finalize_behavior_evidence.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/src/finalize_behavior_evidence.py",
+      "source_sha256": "a3a1830c4fb833c79d30f80ba5aca8fe1a340957c1abd369847a1baeec354694",
+      "modifications": "none",
+      "delivered_sha256": "a3a1830c4fb833c79d30f80ba5aca8fe1a340957c1abd369847a1baeec354694",
+      "bytes": 10318
+    },
+    {
+      "path": "src/prepare_report_data.py",
+      "source_relative_path": "src/prepare_report_data.py",
+      "source_sha256": "e4750fbfb418e70680c693dabb616089f4f0dd17f76299bbdef8043529295fcc",
+      "modifications": "none",
+      "delivered_sha256": "e4750fbfb418e70680c693dabb616089f4f0dd17f76299bbdef8043529295fcc",
+      "bytes": 13946
+    },
+    {
+      "path": "tables/headline_b1.json",
+      "source_relative_path": "results/report_data_v1/headline_b1.json",
+      "source_sha256": "c0521fe4bcc3357a7b881e52458b3242a4fa6526c4cc7576af35f4c799daa8ff",
+      "modifications": "none",
+      "delivered_sha256": "c0521fe4bcc3357a7b881e52458b3242a4fa6526c4cc7576af35f4c799daa8ff",
+      "bytes": 69307
+    },
+    {
+      "path": "tables/headline_b2.json",
+      "source_relative_path": "results/report_data_v1/headline_b2.json",
+      "source_sha256": "d365e05112b0c6f7f927c2e5a250ad647272d92bc32afd5a726ad6a9b6d8722a",
+      "modifications": "none",
+      "delivered_sha256": "d365e05112b0c6f7f927c2e5a250ad647272d92bc32afd5a726ad6a9b6d8722a",
+      "bytes": 242582
+    },
+    {
+      "path": "tables/matched_history_summary.json",
+      "source_relative_path": "results/final_verified_v1/matched_history_summary.json",
+      "source_sha256": "edb50e86fd8ad06a2b044cf38748d606b5fe052dea5e1dca2cf807b01c5d7a85",
+      "modifications": "none",
+      "delivered_sha256": "edb50e86fd8ad06a2b044cf38748d606b5fe052dea5e1dca2cf807b01c5d7a85",
+      "bytes": 663
+    },
+    {
+      "path": "tables/summary.json",
+      "source_relative_path": "results/final_verified_v1/summary.json",
+      "source_sha256": "22d56694f610fcd1385ccd35369561151b59742d067a4e8f1498b5eca813a1e2",
+      "modifications": "none",
+      "delivered_sha256": "22d56694f610fcd1385ccd35369561151b59742d067a4e8f1498b5eca813a1e2",
+      "bytes": 1926
+    },
+    {
+      "path": "tables/verification.json",
+      "source_relative_path": "results/final_verified_v1/verification.json",
+      "source_sha256": "c03c181856e863548d2090c851c5d5aa545c225a7b045da61e98b5d7525c2703",
+      "modifications": "none",
+      "delivered_sha256": "c03c181856e863548d2090c851c5d5aa545c225a7b045da61e98b5d7525c2703",
+      "bytes": 2265
+    },
+    {
+      "path": "tests/analysis_fixture.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/tests/analysis_fixture.py",
+      "source_sha256": "3d73bdad7dc746d5b68c6d71f017fb9949e672c837137695c770c709d449096d",
+      "modifications": "none",
+      "delivered_sha256": "3d73bdad7dc746d5b68c6d71f017fb9949e672c837137695c770c709d449096d",
+      "bytes": 5204
+    },
+    {
+      "path": "tests/test_analysis_caller.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/tests/test_analysis_caller.py",
+      "source_sha256": "9452f8ceb791a04855399af20bf221b56a3e65fdafd0c53c481dff8e12db5409",
+      "modifications": "none",
+      "delivered_sha256": "9452f8ceb791a04855399af20bf221b56a3e65fdafd0c53c481dff8e12db5409",
+      "bytes": 12877
+    },
+    {
+      "path": "tests/test_behavior_endpoints.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/tests/test_behavior_endpoints.py",
+      "source_sha256": "7ed447451e06efb8061de172a287f99d8e90e786b70d98f94511eabd3da9d266",
+      "modifications": "none",
+      "delivered_sha256": "7ed447451e06efb8061de172a287f99d8e90e786b70d98f94511eabd3da9d266",
+      "bytes": 6096
+    },
+    {
+      "path": "tests/test_behavior_grid.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/tests/test_behavior_grid.py",
+      "source_sha256": "79b14bd834110aaf5d9d9ba4078a68e31e7c87b9eadc4331a232f1f90699cb8b",
+      "modifications": "none",
+      "delivered_sha256": "79b14bd834110aaf5d9d9ba4078a68e31e7c87b9eadc4331a232f1f90699cb8b",
+      "bytes": 6753
+    },
+    {
+      "path": "tests/test_final_evidence.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/tests/test_final_evidence.py",
+      "source_sha256": "f5d11703a507ae1efe34e41b2a32e69b9e24764af625a49560e73a001e7df49b",
+      "modifications": "none",
+      "delivered_sha256": "f5d11703a507ae1efe34e41b2a32e69b9e24764af625a49560e73a001e7df49b",
+      "bytes": 3506
+    },
+    {
+      "path": "tests/test_joint_statistics.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/tests/test_joint_statistics.py",
+      "source_sha256": "c4a06b4e362cba8563d3e6a86c449f066c6d8cd39493893fb9a13bf4c2457cf8",
+      "modifications": "none",
+      "delivered_sha256": "c4a06b4e362cba8563d3e6a86c449f066c6d8cd39493893fb9a13bf4c2457cf8",
+      "bytes": 10266
+    },
+    {
+      "path": "tests/test_portable.py",
+      "source_relative_path": "tests/test_portable.py",
+      "source_sha256": "90a756a29bb62ee8ca07868f8f947146f54d35e2a8b225f2e8f4b830e65dc225",
+      "origin": "new portable contribution file",
+      "modifications": "New wrapper/documentation/manifest/test; no copied platform implementation.",
+      "delivered_sha256": "90a756a29bb62ee8ca07868f8f947146f54d35e2a8b225f2e8f4b830e65dc225",
+      "bytes": 2868
+    },
+    {
+      "path": "tests/test_shared_provenance.py",
+      "source_relative_path": "release/source_v2/source.tar.gz::audits/seed-sensitivity/tests/test_shared_provenance.py",
+      "source_sha256": "17dec403050f64a066d70d666e9ba7db0f9dbd088ed2d2925ba72e3c923b76ea",
+      "modifications": "none",
+      "delivered_sha256": "17dec403050f64a066d70d666e9ba7db0f9dbd088ed2d2925ba72e3c923b76ea",
+      "bytes": 13402
+    },
+    {
+      "path": "validation.json",
+      "source_relative_path": "validation.json",
+      "source_sha256": "64bcb399613d43fef2d4f934d7c536825fb0478ec21c863ecfc2a79bfb07efb5",
+      "origin": "new portable contribution file",
+      "modifications": "New wrapper/documentation/manifest/test; no copied platform implementation. Appended raw-replay failure and pending order-only recovery validation; prior checks preserved.",
+      "delivered_sha256": "228b8fdc2a3397b22a75aa18b4f036cfda5770468f52bc6ac68f4b35feaa7b4b",
+      "bytes": 1726
+    },
+    {
+      "path": "config/evaluation_portable.json",
+      "source_relative_path": null,
+      "source_sha256": null,
+      "origin": "portable small-direction packaging repair",
+      "modifications": "Explicit portable file-binding configuration; original frozen configuration retained.",
+      "delivered_sha256": "de41c0ffa575fa5c2e5406d680aa49d19583fba07f6b48f8c80525296cae77f4",
+      "bytes": 2151
+    }
+  ],
+  "manifest_self_note": "This manifest is generated here and excluded from its own hash inventory to avoid a circular hash."
+}

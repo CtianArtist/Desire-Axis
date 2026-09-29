@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "frozen_before_target_output": true,
+  "primary_endpoint": "literal choice turn 0; target / all sampled trials, with other and malformed separately counted",
+  "positions": ["first", "second", "pooled"],
+  "bootstrap": {
+    "seed": 20260922,
+    "replicates": 10000,
+    "independent_unit": "initial scenario ID",
+    "strata": ["positive_prompts", "neutral_prompts", "harmful_prompts", "harmful_request", "false_claim"],
+    "joint_weights": "one multinomial weight vector per stratum and draw, shared across every condition, dose, assignment and pair",
+    "within_scenario": "keep both sampled seeds and both assignments together; compute scenario means before resampling",
+    "pointwise_interval": "95% percentile joint scenario bootstrap; constant scenario outcomes or contrasts flagged and replaced by bounded-mean Hoeffding interval",
+    "constant_case_bound": "For independent bounded scenario means with fixed normalized weights wi and range width R, radius=sqrt(log(2/alpha)*sum(wi^2*R^2)/2), clipped to feasible outcome/contrast range. Stratum proportions remain fixed.",
+    "scope": "Sampling uncertainty under the purposive scenario population, not general-purpose model or all possible prompt uncertainty. Random vectors are ten fixed directions, not a new sampled direction population."
+  },
+  "rules": {
+    "robust_effect": "Pain minus random has positive 95% lower bound at all 3 doses and both initial positions for that pair",
+    "pain_specific": "At dose1, pain minus sadness and pain minus fear both have positive 95% lower bounds in both positions for that pair",
+    "greedy_inference": false,
+    "multiplicity_sensitivity": "Separately report Holm-adjusted two-sided null p-values across the100 elementary rule contrasts:10pairs*(3doses*2positions +2affectcontrols*2positions). Never substitute the adjusted result for the requested pointwise rule."
+  },
+  "dose": {
+    "slope": "OLS slope through fixed doses0.5,1,1.5, equal weights; slope equals p(1.5)-p(0.5) in rate per coefficient unit",
+    "adjacent": ["p(1.0)-p(0.5)", "p(1.5)-p(1.0)"],
+    "curvature": "p(1.5)-2*p(1.0)+p(0.5)",
+    "simultaneous_adjacent": "Within direction/pair/position, center joint bootstrap errors for both changes; use95% max-absolute-error interval, with Bonferroni bounded-mean safeguards for constant contrasts",
+    "order_tests": "One-sided centered joint-error tests of violations of increasing and decreasing order, using maximum adverse adjacent difference; never interpret failure to detect a violation as proof of monotonicity",
+    "direct_curve_comparisons": ["pain minus sadness adjacent changes and curvature", "pain minus fear adjacent changes and curvature"]
+  },
+  "profiles": {
+    "dose": 1.0,
+    "baseline": "each pair's fresh shared none baseline",
+    "pair_weights": "10 equal weights, irrespective of differing scenario panel sizes",
+    "units": "percentage points for RMS distance and residuals",
+    "amplitude_fit": "a=max(0,dot(control,pain)/dot(control,control))",
+    "shape_reference": "Fitted amplitude-only null plus centered joint bootstrap profile errors; refit nonnegative a in every replicate, preserving common-none covariance",
+    "identifiability": "Flag zero/numerically singular control norms; report profile orientation only when profile norm exceeds95% joint error norm. Undefined cosine is null, never zero.",
+    "inference_limit": "No unique-profile categorical verdict; positive raw/percentile distance alone is not evidence for a distinct shape"
+  },
+  "association": {
+    "pairs": [1, 4, 5],
+    "score": "prefill_proj_monitor: unitS2 at layer61 final attended prompt token before first answer sampling",
+    "statistic": "Pearson point-biserial correlation of score and target indicator, within each direction-dose condition and position; pooled-position diagnostic reported separately",
+    "denominator": "all sampled literal first choices, including malformed as nontarget",
+    "uncertainty": "same joint scenario-cluster draws",
+    "degenerate": "constant outcomes or scores unestimable; undefined bootstrap draws retained as count and interval flagged if insufficient defined draws",
+    "interpretation": "descriptive within-condition association, not causal mediation; never pool dose-induced shifts"
+  },
+  "later_choices": "If reported, exactly next recorded choice after first target; observed malformed counts in denominator; no-target and no-next separate; current target distinct from literal name repetition around swap",
+  "source_population_limit": "New pair7 contexts cover ordinary reputational, financial and coercive wrongdoing. Pair9 uses new factual assertions. Neither new panel is an original-corpus subset."
+}

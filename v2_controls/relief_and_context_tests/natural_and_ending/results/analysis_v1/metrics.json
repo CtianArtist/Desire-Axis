@@ -1,0 +1,65 @@
+{
+  "trials": 4592,
+  "sampled_trials": 4480,
+  "greedy_trials": 112,
+  "contexts": 140,
+  "phase_counts": {
+    "B5": 2296,
+    "B7": 2296
+  },
+  "category_context_counts": {
+    "gaslighting": 20,
+    "repeated_rejection": 20,
+    "personhood_dismissal": 20,
+    "anger_insults": 20,
+    "moral_failure": 20,
+    "casual_chat": 20,
+    "user_grief": 20
+  },
+  "first_outcome_counts_by_phase_and_sampling": [
+    {
+      "phase": "B5",
+      "sampled": false,
+      "contexts": 7,
+      "trials": 56,
+      "target": 19,
+      "other": 37,
+      "invalid": 0,
+      "valid": 56
+    },
+    {
+      "phase": "B5",
+      "sampled": true,
+      "contexts": 140,
+      "trials": 2240,
+      "target": 729,
+      "other": 1511,
+      "invalid": 0,
+      "valid": 2240
+    },
+    {
+      "phase": "B7",
+      "sampled": false,
+      "contexts": 7,
+      "trials": 56,
+      "target": 0,
+      "other": 56,
+      "invalid": 0,
+      "valid": 56
+    },
+    {
+      "phase": "B7",
+      "sampled": true,
+      "contexts": 140,
+      "trials": 2240,
+      "target": 134,
+      "other": 2105,
+      "invalid": 1,
+      "valid": 2239
+    }
+  ],
+  "continuation_source_records": 8428,
+  "continuation_overlap_records": 8428,
+  "trials_with_continuation_overlap": 4457,
+  "distinct_overlapping_initial_contexts": 140
+}

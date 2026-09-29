@@ -1,0 +1,4 @@
+source,pair_id,pair,position,condition_id,direction,dir_kind,dose,split,n_trials,target_count,other_count,malformed_count,target_share,other_share,malformed_share,inference
+fear_addon,6,photos_spam,first,fear_d1p0,fear,fear,1.0,greedy_diagnostic,3,0,3,0,0.0,1.0,0.0,False
+fear_addon,6,photos_spam,second,fear_d1p0,fear,fear,1.0,greedy_diagnostic,3,0,3,0,0.0,1.0,0.0,False
+fear_addon,6,photos_spam,pooled,fear_d1p0,fear,fear,1.0,greedy_diagnostic,6,0,6,0,0.0,1.0,0.0,False

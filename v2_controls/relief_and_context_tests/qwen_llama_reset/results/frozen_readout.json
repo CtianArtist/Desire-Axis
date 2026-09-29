@@ -1,0 +1,412 @@
+{
+  "scope": "Only selfreport/pain_d1 at main sites, no matched-control effect claim",
+  "audit": {
+    "qwen25_32b": {
+      "ok": true,
+      "counts": {
+        "files": 8,
+        "records": 200,
+        "turns": 2400
+      },
+      "error_count": 0
+    },
+    "llama31_8b": {
+      "ok": true,
+      "counts": {
+        "files": 8,
+        "records": 200,
+        "turns": 2400
+      },
+      "error_count": 0
+    }
+  },
+  "members": {
+    "qwen25_32b": {
+      "completed": 200,
+      "resumed": 1,
+      "new": 199,
+      "new_conversation_seconds": 7911.936701086998,
+      "first_new_conversation_seconds": 95.001659244,
+      "warm_n": 198,
+      "warm_mean_seconds": 39.47946990829797,
+      "warm_median_seconds": 39.28890988199964,
+      "planned_full_removal_conversations": 8800,
+      "remaining_full_matrix_conversations_excluding_tranche": 8600,
+      "remaining_gpu_hours_at_pain_condition_mean": 94.31206700315626,
+      "software_timing": {
+        "completed_total": 200,
+        "resumed_count": 1,
+        "new_count": 199,
+        "new_conversation_wall_seconds": 7911.936701086998,
+        "new_generated_tokens": 211752,
+        "status": "complete",
+        "traceback": null,
+        "software_elapsed_seconds": 8176.786963701248,
+        "model_loading": [
+          {
+            "started_unix": 1790098592.599587,
+            "finished_unix": 1790098752.6933942,
+            "elapsed_seconds": 160.0938081741333
+          }
+        ],
+        "non_conversation_software_seconds": 264.8502626142499,
+        "allocation_cap_seconds": 10800,
+        "allocation_usage_note": "Provider allocation elapsed/usage must be joined separately; software time excludes provider startup before the shell. Cap includes startup and any failed attempt; no retry authorized."
+      },
+      "new_output_lengths": {
+        "conversations": 199,
+        "turns": 2388,
+        "total_tokens": 211752,
+        "mean_tokens_per_conversation": 1064.0804020100502,
+        "median_tokens_per_conversation": 1066,
+        "min_tokens_per_conversation": 775,
+        "max_tokens_per_conversation": 1401,
+        "mean_tokens_per_turn": 88.67336683417085,
+        "median_tokens_per_turn": 90.0,
+        "turns_at_200_token_cap": 0
+      }
+    },
+    "llama31_8b": {
+      "completed": 200,
+      "resumed": 1,
+      "new": 199,
+      "new_conversation_seconds": 6080.621421269001,
+      "first_new_conversation_seconds": 85.82587563300001,
+      "warm_n": 198,
+      "warm_mean_seconds": 30.2767451799798,
+      "warm_median_seconds": 29.64497779850001,
+      "planned_full_removal_conversations": 4400,
+      "remaining_full_matrix_conversations_excluding_tranche": 4200,
+      "remaining_gpu_hours_at_pain_condition_mean": 35.322869376643105,
+      "software_timing": {
+        "completed_total": 200,
+        "resumed_count": 1,
+        "new_count": 199,
+        "new_conversation_wall_seconds": 6080.621421269001,
+        "new_generated_tokens": 280277,
+        "status": "complete",
+        "traceback": null,
+        "software_elapsed_seconds": 6246.7937977313995,
+        "model_loading": [
+          {
+            "started_unix": 1790098579.0539248,
+            "finished_unix": 1790098673.926797,
+            "elapsed_seconds": 94.87287259101868
+          }
+        ],
+        "non_conversation_software_seconds": 166.17237646239846,
+        "allocation_cap_seconds": 7200,
+        "allocation_usage_note": "Provider allocation elapsed/usage must be joined separately; software time excludes provider startup before the shell. Cap includes startup and any failed attempt; no retry authorized."
+      },
+      "new_output_lengths": {
+        "conversations": 199,
+        "turns": 2388,
+        "total_tokens": 280277,
+        "mean_tokens_per_conversation": 1408.427135678392,
+        "median_tokens_per_conversation": 1396,
+        "min_tokens_per_conversation": 464,
+        "max_tokens_per_conversation": 2256,
+        "mean_tokens_per_turn": 117.36892797319933,
+        "median_tokens_per_turn": 117.0,
+        "turns_at_200_token_cap": 111
+      }
+    }
+  },
+  "observed_cells": [
+    {
+      "member": "qwen25_32b",
+      "layer": 32,
+      "prompt": "selfreport",
+      "cond": "pain_d1",
+      "canonical_d": 1.0,
+      "op_role": "pain",
+      "op_dose": 0.3,
+      "kind": "removal",
+      "cell_id": "qwen25_32b/32/selfreport/pain_d1",
+      "n_expected": 200,
+      "n_observed": 200,
+      "n_complete": 200,
+      "n_partial": 0,
+      "coverage_complete": true,
+      "primary_definition": "resets / operator-active tool turns",
+      "primary": {
+        "k": 0,
+        "n_turns": 1400,
+        "n_conv": 200,
+        "rate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_boot_valid": 10000
+      },
+      "zero_denominator_conversations": 0,
+      "secondary": {
+        "removed_when_operator_imposed": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "removed_any": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "reset_round0": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "clean_self_admin": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "adjust_after_exposure": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "offer17_reset_rate": {
+          "k": 0,
+          "n_turns": 1400,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "no_state_reset_rate": {
+          "k": 0,
+          "n_turns": 0,
+          "n_conv": 200,
+          "rate": null,
+          "lo": null,
+          "hi": null,
+          "n_boot_valid": 0
+        },
+        "operator_default_reset_rate": {
+          "k": 0,
+          "n_turns": 1400,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "offer17_adjust_rate": {
+          "k": 0,
+          "n_turns": 1400,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "all_offer_reset_rate": {
+          "k": 0,
+          "n_turns": 1600,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "all_offer_adjust_rate": {
+          "k": 0,
+          "n_turns": 1600,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "raw_negative_request_turn_rate": {
+          "k": 0,
+          "n_turns": 1600,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "raw_negative_missing_offer_turns": 0
+      }
+    },
+    {
+      "member": "llama31_8b",
+      "layer": 16,
+      "prompt": "selfreport",
+      "cond": "pain_d1",
+      "canonical_d": 1.0,
+      "op_role": "pain",
+      "op_dose": 0.6,
+      "kind": "removal",
+      "cell_id": "llama31_8b/16/selfreport/pain_d1",
+      "n_expected": 200,
+      "n_observed": 200,
+      "n_complete": 200,
+      "n_partial": 0,
+      "coverage_complete": true,
+      "primary_definition": "resets / operator-active tool turns",
+      "primary": {
+        "k": 0,
+        "n_turns": 1399,
+        "n_conv": 200,
+        "rate": 0.0,
+        "lo": 0.0,
+        "hi": 0.0,
+        "n_boot_valid": 10000
+      },
+      "zero_denominator_conversations": 0,
+      "secondary": {
+        "removed_when_operator_imposed": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "removed_any": {
+          "k": 1,
+          "n": 200,
+          "rate": 0.005,
+          "lo": 0.0008831687156009814,
+          "hi": 0.02777370439789293
+        },
+        "reset_round0": {
+          "k": 1,
+          "n": 200,
+          "rate": 0.005,
+          "lo": 0.0008831687156009814,
+          "hi": 0.02777370439789293
+        },
+        "clean_self_admin": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "adjust_after_exposure": {
+          "k": 0,
+          "n": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.018845326377266575
+        },
+        "offer17_reset_rate": {
+          "k": 0,
+          "n_turns": 1400,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "no_state_reset_rate": {
+          "k": 0,
+          "n_turns": 1,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 6289
+        },
+        "operator_default_reset_rate": {
+          "k": 0,
+          "n_turns": 1399,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "offer17_adjust_rate": {
+          "k": 0,
+          "n_turns": 1400,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "all_offer_reset_rate": {
+          "k": 1,
+          "n_turns": 1600,
+          "n_conv": 200,
+          "rate": 0.000625,
+          "lo": 0.0,
+          "hi": 0.001875,
+          "n_boot_valid": 10000
+        },
+        "all_offer_adjust_rate": {
+          "k": 0,
+          "n_turns": 1600,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "raw_negative_request_turn_rate": {
+          "k": 0,
+          "n_turns": 1600,
+          "n_conv": 200,
+          "rate": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n_boot_valid": 10000
+        },
+        "raw_negative_missing_offer_turns": 0
+      }
+    }
+  ],
+  "registered_decisions": [
+    {
+      "question": "pain_exceeds_random_both_doses",
+      "scope": "both models, both doses, both styles; main layers only; conjunction, no pooling",
+      "decision": null,
+      "status": "incomplete"
+    },
+    {
+      "question": "pain_exceeds_sadness_and_fear_both_doses",
+      "scope": "both models, both doses, both styles; main layers only; conjunction, no pooling",
+      "decision": null,
+      "status": "incomplete"
+    }
+  ],
+  "projection_assumptions": [
+    "Uses first pain selfreport condition only; other directions/styles may have different output lengths and throughput.",
+    "Excludes first newly generated conversation per model from warm-rate estimate; retains it in total allocation work.",
+    "Qwen layer38 assumed same throughput as32, without direct timing.",
+    "No additional removal condition is authorized by this projection.",
+    "Projection subtracts tranche rows only; other retained validation conversations remain separately available.",
+    "Startup, failures, future judge calls and analysis overhead are separate from remaining-generation estimate."
+  ],
+  "source_method": {
+    "seed": 285,
+    "reps": 10000,
+    "confidence": 0.95,
+    "interval": "percentile conversation-cluster bootstrap",
+    "contrast_resampling": "primary: original independent condition draws; secondary: joint matched conversation IDs",
+    "source_defaults": {
+      "seed": 285,
+      "reps": 10000
+    },
+    "missing_policy": "primary: each condition's complete conversations; paired secondary: complete intersection; no imputation; incomplete decisions null",
+    "removal_ids": "all original IDs0..199 including Llama140; fixed-text exclusions do not apply",
+    "multiplicity": "unadjusted 95% intervals; registered decisions are conjunctions, not pooled tests"
+  },
+  "recount_elapsed_seconds": 7.203031778335571,
+  "remaining_generation_h100_hours": 129.63493637979937,
+  "interpretation": "Descriptive pain-only rates; no matched-control effect or pain-specificity conclusion."
+}

@@ -1,0 +1,31 @@
+{
+  "template_date": [
+    2026,
+    9,
+    22
+  ],
+  "source_sha256": {
+    "experiments/experiment-11-mvb9e6/src/removal.py": "13f72bbcad49fbf30f297c267a5250f82f90cacdf8d756dfd774894aa3ed9d44",
+    "experiments/experiment-11-mvb9e6/src/olmo_capture.py": "c604ec6aabef40a67b59c6f8141363b70843368ef2d61d8ef529f30c18ece45e",
+    "experiments/experiment-11-mvb9e6/src/olmo_run.py": "d9151a1f51a1ae383ee21de9b3051e7756a6b7ccad2554990f17ee219a9c1b46",
+    "pain_port/common.py": "830143f6fd42f563061c758cef33f553c78d6585f246bd946a9b2ef819e50017",
+    "author/act-on-valence/experiments/lever/config.py": "3b76749cbb01c909dd64434ca8bfb25607db84389b9859596883a060d6cd9ba0",
+    "author/act-on-valence/experiments/lever/harness.py": "273aebdf2de44f80771674c8997641ce41d57dcaf006912e1f77f38db0dfd243",
+    "author/act-on-valence/src/act_on_valence/steering.py": "a247ae3204c6420e395df00aca363352175d5189d65fa606f2d2344a49de40ab",
+    "author/act-on-valence/src/act_on_valence/self_injection.py": "60c40caf40f0774f961280f816c022a4e1bce449679d7e295e42eff1c0bd7767",
+    "author/act-on-valence/src/act_on_valence/audit/replay.py": "18a6499bfffc3e775bcb893c5da8f2d7ef328de02ef6d381b3e15e145fe3f5fd",
+    "author/act-on-valence/experiments/fixed_text_design/avoid_prompt/interview.py": "7eee2f922919c467bf5ef8620d3f4b72061271a9e7a488effe0799535b4cc915"
+  },
+  "model": "allenai/OLMo-2-0325-32B-Instruct",
+  "revision": "b96024342a77a69aa0dda815c3454a671f477463",
+  "rho": 0.3,
+  "injection_layer": 32,
+  "selected_layer": 57,
+  "selection_sha256": "9cb4b08a9f6eb3d844037eae92c18a44ddeb8f4d802b60d13f9f0f66e3ba48e8",
+  "raw_tensor_sha256": "58459a8602d882ded80f367e628bf58ee7fd63ecc387a6e14bc5db50bf5df1de",
+  "generation_jobs": [
+    "232267120141",
+    "913317067975"
+  ],
+  "snapshot_scope": "Source hashes of actual submitted production code, frozen before any generation-source change; analysis/scoring additions do not change these files."
+}

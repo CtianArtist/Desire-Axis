@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "kind": "assembly_verification",
+  "completed_date": "2026-09-28 America/New_York",
+  "checks": [
+    {
+      "study": "cosine_constructions",
+      "status": "pass",
+      "coverage": "23 models; 69 matrices; all 80 frozen CSVs and input identities match",
+      "comparison": "exact numerical CSV cells and independent original verifier"
+    },
+    {
+      "study": "steering_state_controls/b1_b3",
+      "status": "pass",
+      "coverage": "final 32B and final 72B attempt04 plus historical controls; original rate and comparison tables",
+      "comparison": "original raw replay; original scientific fields exact"
+    },
+    {
+      "study": "steering_state_controls/b6",
+      "status": "pass",
+      "coverage": "random/sadness/fear sham, immediate-next-choice and position analyses; original SQLite/runtime checks",
+      "comparison": "original raw replay and saved rates/contrasts exact"
+    },
+    {
+      "study": "choice_controls/additional_seeds",
+      "status": "pass",
+      "coverage": "two completed 27060-trial evaluations; original independent counts; four frozen selector tables",
+      "comparison": "9 of 11 raw outputs byte-exact; two 5766-row contrast files proven identical under reversible metadata-field order; wrapper fixed, no second full replay"
+    },
+    {
+      "study": "choice_controls/profile and lamp_spam",
+      "status": "pass",
+      "coverage": "46384 profile and 9840 lamp trials; all 17 CSVs",
+      "comparison": "full original replay; SHA256 exact"
+    },
+    {
+      "study": "choice_controls/fear_additions",
+      "status": "pass",
+      "coverage": "superseded long wording, matched wording, four new cells and preserved controls",
+      "comparison": "all three original raw replays; all scientific CSV cells exact; locator-only fields excluded"
+    },
+    {
+      "study": "relief_and_context_tests/factual_accuracy",
+      "status": "pass",
+      "coverage": "100 questions; 800 saved answers; 100000 question bootstrap draws, seed42",
+      "comparison": "4140 values; zero numeric differences"
+    },
+    {
+      "study": "relief_and_context_tests/natural_and_ending",
+      "status": "pass",
+      "coverage": "10000 stratified-context bootstrap draws, seed42; corrected rates and contrasts",
+      "comparison": "29988 values including 3373 nulls; zero numeric differences"
+    },
+    {
+      "study": "relief_and_context_tests/unlabeled_relief",
+      "status": "pass",
+      "coverage": "5330 trials; 10000 joint-scenario bootstrap draws, seed0, all-trial sensitivity",
+      "comparison": "19130150 values including 7123 nulls; zero numeric differences"
+    },
+    {
+      "study": "relief_and_context_tests/olmo_reset",
+      "status": "pass",
+      "coverage": "1600 fresh conversations; cached judge scores only; 18 cells, 12 contrasts, 144 trajectory rows",
+      "comparison": "complete historical analysis and included frozen analysis exact"
+    },
+    {
+      "study": "relief_and_context_tests/qwen_llama_reset",
+      "status": "pass",
+      "coverage": "400 conversations; 0/1400 and 0/1399 active-state reset turns; 64 unrun cells retained",
+      "comparison": "complete raw recount, observed cells, registered decisions and frozen readout exact"
+    },
+    {
+      "study": "figure10",
+      "status": "pass",
+      "coverage": "65 pooled cells, 130 position rows, 39 separate helping rows; 65 published annotations",
+      "comparison": "source-row bindings and rounded annotations exact; PNG/PDF visually inspected"
+    },
+    {
+      "study": "choice_controls/vectors/fear72.safetensors",
+      "status": "pass",
+      "coverage": "one FP32 tensor, 8192 elements, 32864-byte file; no activation pools",
+      "comparison": "tensor SHA256 345f1b0a802a8dee4d9d82b11a82d4056cfa41e1283fadc66223c73112905dbc"
+    }
+  ],
+  "full_inference": "not_run",
+  "training": "not_run",
+  "new_judgments": "not_run",
+  "public_hosting": "pending",
+  "external_assets": {
+    "archive_count": 11,
+    "bytes": 2546254014,
+    "manifest": "assets.json"
+  },
+  "model_free_checks": "44 distinct help/dry-run invocations and two fresh-output rejection checks passed; focused original tests and source bindings preserved",
+  "scope": "CPU-only replay of existing outputs; no scientific data regenerated",
+  "historical_receipts": "Subgroup validation.json files document initial bounded assembly checks, not the later complete replay status.",
+  "packaging_repair": {
+    "small_direction_files": 22,
+    "new_tensor_containers": 10,
+    "identity": "all original tensor keys/dtypes/shapes/hashes preserved; 16 files byte-identical, six metadata-bearing files locator-sanitized with explicit bindings",
+    "pin_rows": 206,
+    "scope": "only affected CPU direction loaders and interface checks; no full resampling repeated",
+    "supersedes_initial_export": true,
+    "cpu_vector_checks": 14,
+    "deliberate_corruptions_rejected": 10,
+    "model_free_interfaces": 17,
+    "top_readme_pin_sources_verified": 206
+  }
+}

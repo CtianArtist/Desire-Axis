@@ -1,0 +1,22 @@
+{
+  "studies": [
+    "factual_accuracy",
+    "natural_and_ending",
+    "unlabeled_relief",
+    "olmo_reset",
+    "qwen_llama_reset"
+  ],
+  "preserve": [
+    "original scoring",
+    "question/context/scenario/conversation units",
+    "unrun cells",
+    "undefined comparisons",
+    "archival labels"
+  ],
+  "exclude": [
+    "fixed-text conditioning",
+    "self/other follow-ups",
+    "severity ladder"
+  ],
+  "full_inference_rerun": false
+}

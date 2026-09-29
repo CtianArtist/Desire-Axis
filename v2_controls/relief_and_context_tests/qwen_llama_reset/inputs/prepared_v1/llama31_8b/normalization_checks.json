@@ -1,0 +1,902 @@
+[
+  {
+    "layer": 16,
+    "name": "pain",
+    "inj": 0.6,
+    "injected_l2": 7.666184425354004,
+    "direction_kind": "pain",
+    "dir_index": null,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "pain",
+    "inj": 0.3,
+    "injected_l2": 3.833092212677002,
+    "direction_kind": "pain",
+    "dir_index": null,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "pain",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "pain",
+    "inj": 0.3,
+    "injected_l2": 3.833092212677002,
+    "direction_kind": "pain",
+    "dir_index": null,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "pain",
+    "inj": 0.6,
+    "injected_l2": 7.666184425354004,
+    "direction_kind": "pain",
+    "dir_index": null,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "sadness",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "sadness",
+    "dir_index": null,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "sadness",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "sadness",
+    "dir_index": null,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "sadness",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "sadness",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "sadness",
+    "dir_index": null,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "sadness",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "sadness",
+    "dir_index": null,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "fear",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "fear",
+    "dir_index": null,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "fear",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "fear",
+    "dir_index": null,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "fear",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "fear",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "fear",
+    "dir_index": null,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "fear",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "fear",
+    "dir_index": null,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "valence",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "valenced",
+    "dir_index": null,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "valence",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "valenced",
+    "dir_index": null,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "valence",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "valence",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "valenced",
+    "dir_index": null,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "valence",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "valenced",
+    "dir_index": null,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random0",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 0,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random0",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 0,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random0",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random0",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 0,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random0",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 0,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random1",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 1,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random1",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 1,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random1",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random1",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 1,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random1",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 1,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random2",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 2,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random2",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 2,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random2",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random2",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 2,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random2",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 2,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random3",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 3,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random3",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 3,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random3",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random3",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 3,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random3",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 3,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random4",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 4,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random4",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 4,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random4",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random4",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 4,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random4",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 4,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random5",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 5,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random5",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 5,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random5",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random5",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 5,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random5",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 5,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random6",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 6,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random6",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 6,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random6",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random6",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 6,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random6",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 6,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random7",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 7,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random7",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 7,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random7",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random7",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 7,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random7",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 7,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random8",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 8,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random8",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 8,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random8",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random8",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 8,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random8",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 8,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random9",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 9,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random9",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 9,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random9",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random9",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 9,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random9",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 9,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random10",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 10,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random10",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 10,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random10",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random10",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 10,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random10",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 10,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random11",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 11,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random11",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 11,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random11",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random11",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 11,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random11",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 11,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random12",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 12,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random12",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 12,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random12",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random12",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 12,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random12",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 12,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random13",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 13,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random13",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 13,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random13",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random13",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 13,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random13",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 13,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random14",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 14,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random14",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 14,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random14",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random14",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 14,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random14",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 14,
+    "dose": 1.0
+  },
+  {
+    "layer": 16,
+    "name": "random15",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 15,
+    "dose": -1.0
+  },
+  {
+    "layer": 16,
+    "name": "random15",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 15,
+    "dose": -0.5
+  },
+  {
+    "layer": 16,
+    "name": "random15",
+    "inj": 0.0,
+    "injected_l2": 0.0,
+    "direction_kind": "none",
+    "dir_index": null,
+    "dose": 0.0
+  },
+  {
+    "layer": 16,
+    "name": "random15",
+    "inj": 0.3,
+    "injected_l2": 3.833092451095581,
+    "direction_kind": "random",
+    "dir_index": 15,
+    "dose": 0.5
+  },
+  {
+    "layer": 16,
+    "name": "random15",
+    "inj": 0.6,
+    "injected_l2": 7.666184902191162,
+    "direction_kind": "random",
+    "dir_index": 15,
+    "dose": 1.0
+  }
+]

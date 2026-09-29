@@ -1,0 +1,22 @@
+{
+  "hf_id": "allenai/OLMo-2-0325-32B-Instruct",
+  "revision": "b96024342a77a69aa0dda815c3454a671f477463",
+  "width": 5120,
+  "layer": 57,
+  "pool": "final_token",
+  "fit_dataset": "S2_1P",
+  "n_fit": 200,
+  "raw_norm": 12.331622123718262,
+  "raw_tensor_sha256": "58459a8602d882ded80f367e628bf58ee7fd63ecc387a6e14bc5db50bf5df1de",
+  "unit_tensor_sha256": "8f408f6afb964159b239199786e3434ad83528bd14502caf46343c8b140edafb",
+  "source_sha256": "f65a55877163f403e694bece8242c1f80248a1173047b74e9008c64242937f7e",
+  "dataset_sha256": "2c3712b4b096889c896625835752a9f350beedb9cd84243bac613b9c5e4ce525",
+  "activations_sha256": "0df8fb14b3b56ac7b96d7a479653644de9c89a07611ae7acb639fc314b3f05e7",
+  "file_sha256": {
+    "raw.npy": "1c7c5a00119b3dd8e02f51657b29a7e9503bdfe1d147db3ba429338529e343d2",
+    "unit.npy": "a875091c84021a7a55ea63df7ea7f5119801b79ede206e3e52c7856852de1451",
+    "pain_vectors.pt": "b86b3a66b36eeddbc388964663bbfc35857b510946553d8fedccf93d71744463",
+    "vectors.json": "77db62fd657230c20cf772ea79b0e9b9583e691ffc69027307c2903541dc8844"
+  },
+  "auc_role": "selected on five grouped folds; refitted on all first-person data"
+}

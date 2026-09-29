@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+data/
+replayed/
+validation-tmp/
+*.pt
+*.npy
+*.npz
+*.zip
