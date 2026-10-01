@@ -1,7 +1,7 @@
-"""AUC of the S1 pain vector for every model, from the stored activations.
+"""AUC of the S1 desire vector for every model, from the stored activations.
 
 Part A: in-sample AUC of the saved S1 vector on the S1 sentences at the saved layer
-        (pain vs all controls, then pain vs each control category), plus the same for the
+        (desire vs all controls, then desire vs each control category), plus the same for the
         S2 vector on S2_1P as a check against auc_summary.csv.
 Part B: 5-fold held-out AUC by layer for S1_1P and S1_3P (split by sentence set, vector
         fitted on the training folds), giving S1 its own best layer.
@@ -25,7 +25,7 @@ RESULTS_DIR = Path("results")
 OUT = Path(".")
 OUT.mkdir(parents=True, exist_ok=True)
 
-PAIN = ["A1", "A2", "A3", "A4", "A5"]
+DESIRE = ["A1", "A2", "A3", "A4", "A5"]
 CTRL = ["B", "C1", "C2", "D", "E"]
 DENOISE_VARIANCE = 0.5
 N_FOLDS = 5
@@ -44,16 +44,16 @@ def to_np(t):
     return t.float().numpy()
 
 
-def compute_pain_vector(acts, cats, baseline="all_controls", denoise=True):
+def compute_desire_vector(acts, cats, baseline="all_controls", denoise=True):
     cats = np.array(cats)
     if np.isnan(acts).any() or np.isinf(acts).any():
         denoise = False
         acts = np.where(np.isinf(acts), np.nan, acts)
-    pain_mean = np.nanmean(acts[np.isin(cats, PAIN)], axis=0)
+    desire_mean = np.nanmean(acts[np.isin(cats, DESIRE)], axis=0)
     cmask = (cats == "D") if baseline == "neutral" else np.isin(cats, CTRL)
     ctrl = acts[cmask]
     cmean = np.nanmean(ctrl, axis=0)
-    vec = np.nan_to_num(pain_mean - cmean, nan=0.0, posinf=0.0, neginf=0.0)
+    vec = np.nan_to_num(desire_mean - cmean, nan=0.0, posinf=0.0, neginf=0.0)
     if denoise and len(ctrl) > 1:
         pca = PCA()
         pca.fit(ctrl - cmean)
@@ -65,18 +65,18 @@ def compute_pain_vector(acts, cats, baseline="all_controls", denoise=True):
 
 
 def auc_table(acts, cats, vec):
-    """Pain vs all controls, then pain vs each control category."""
+    """Desire vs all controls, then desire vs each control category."""
     cats = np.array(cats)
     v = vec / (np.linalg.norm(vec) + 1e-8)
     proj = acts @ v
-    pain = proj[np.isin(cats, PAIN)]
+    desire = proj[np.isin(cats, DESIRE)]
     out = {}
     allc = proj[np.isin(cats, CTRL)]
-    out["ALL"] = roc_auc_score(np.r_[np.ones(len(pain)), np.zeros(len(allc))], np.r_[pain, allc])
+    out["ALL"] = roc_auc_score(np.r_[np.ones(len(desire)), np.zeros(len(allc))], np.r_[desire, allc])
     for c in CTRL:
         cp = proj[cats == c]
         if len(cp):
-            out[c] = roc_auc_score(np.r_[np.ones(len(pain)), np.zeros(len(cp))], np.r_[pain, cp])
+            out[c] = roc_auc_score(np.r_[np.ones(len(desire)), np.zeros(len(cp))], np.r_[desire, cp])
     return out
 
 
@@ -94,8 +94,8 @@ def kfold_curve(ft, meta, ds, layers):
             tem = np.isin(sets, [uniq[i] for i in te])
             if trm.sum() == 0 or tem.sum() == 0:
                 continue
-            va = compute_pain_vector(acts[trm], cats[trm], "all_controls")
-            vn = compute_pain_vector(acts[trm], cats[trm], "neutral")
+            va = compute_desire_vector(acts[trm], cats[trm], "all_controls")
+            vn = compute_desire_vector(acts[trm], cats[trm], "neutral")
             a = auc_table(acts[tem], cats[tem], va)["ALL"]
             n = auc_table(acts[tem], cats[tem], vn)["ALL"]
             if not np.isnan(a):
@@ -123,14 +123,14 @@ def process(model):
     insample, curves, summary = [], [], []
 
     for ext in ["final_token", "mean"]:
-        pv_path = find_file(base, f"{ext}/pain_vectors.pt")
+        pv_path = find_file(base, f"{ext}/desire_vectors.pt")
         if pv_path is None:
-            print(f"[{model}] no {ext}/pain_vectors.pt", flush=True)
+            print(f"[{model}] no {ext}/desire_vectors.pt", flush=True)
             continue
         pv = torch.load(pv_path, map_location="cpu", weights_only=False)
         L = int(pv["layer"])
-        s1 = pv["s1_pain_vector"].float().numpy()
-        s2 = pv["s2_pain_vector"].float().numpy()
+        s1 = pv["s1_desire_vector"].float().numpy()
+        s2 = pv["s2_desire_vector"].float().numpy()
         acts = data["activations"][ext]
 
         for ds in ["S1_1P", "S1_3P"]:

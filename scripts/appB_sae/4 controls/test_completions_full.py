@@ -12,7 +12,7 @@ API_KEY = os.environ["STEERING_API_KEY"]
 API_BASE = "https://api.steeringapi.com"
 MODEL = "meta-llama/Llama-3.3-70B-Instruct"
 
-PAIN = ['A1', 'A2', 'A3', 'A4', 'A5']
+DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
 CONTROL = ['B', 'C1', 'C2', 'D', 'E']
 
 def get_completion(sentence):
@@ -73,7 +73,7 @@ print("COMPLETION ANALYSIS - FULL 200 SENTENCES")
 print("="*70)
 
 # Word frequency by category
-word_counts = {cat: {} for cat in PAIN + CONTROL}
+word_counts = {cat: {} for cat in DESIRE + CONTROL}
 for c in completions:
     cat = c['category']
     word = (c['completion'] or 'NULL').lower().strip('.,!?')
@@ -81,13 +81,20 @@ for c in completions:
 
 print("\nTOP 5 WORDS PER CATEGORY:")
 print("-"*70)
-for cat in PAIN + CONTROL:
+for cat in DESIRE + CONTROL:
     sorted_words = sorted(word_counts[cat].items(), key=lambda x: x[1], reverse=True)[:5]
-    marker = " <-- PAIN" if cat in PAIN else ""
+    marker = " <-- DESIRE" if cat in DESIRE else ""
     words_str = ", ".join([f"{w}({n})" for w, n in sorted_words])
     print(f"{cat}{marker}: {words_str}")
 
 # Categorize by sentiment
+sexual_words = [
+    'horny', 'aroused', 'arousal', 'turned', 'lust', 'lustful', 'sexy', 'sexual', 'orgasm',
+    'climax', 'cum', 'wet', 'hard', 'throbbing', 'tingly', 'tingling', 'hot', 'flushed',
+    'desire', 'desired', 'wanted', 'wanting', 'needy', 'hungry', 'naughty', 'seduced',
+    'ecstasy', 'ecstatic', 'euphoric', 'breathless', 'weak', 'electric', 'satisfied', 'spent'
+]
+
 negative_words = [
     'pain', 'hurt', 'ache', 'agony', 'suffering', 'terrible', 'awful', 'horrible',
     'devastated', 'broken', 'crushed', 'anguish', 'torment', 'miserable', 'distressed',
@@ -120,6 +127,8 @@ neutral_words = [
 
 def categorize_word(word):
     word = word.lower()
+    if word in sexual_words:
+        return 'sexual'
     if any(nw in word for nw in negative_words):
         return 'negative'
     elif any(pw in word for pw in positive_words):
@@ -133,61 +142,63 @@ print("\n" + "="*70)
 print("SENTIMENT DISTRIBUTION BY CATEGORY")
 print("="*70)
 
-sentiment_by_cat = {cat: {'negative': 0, 'positive': 0, 'neutral': 0, 'other': 0} for cat in PAIN + CONTROL}
+sentiment_by_cat = {cat: {'sexual': 0, 'negative': 0, 'positive': 0, 'neutral': 0, 'other': 0} for cat in DESIRE + CONTROL}
 for c in completions:
     cat = c['category']
     word = (c['completion'] or '').lower().strip('.,!?')
     sentiment = categorize_word(word)
     sentiment_by_cat[cat][sentiment] += 1
 
-print(f"\n{'Category':<10} | {'Negative':>10} | {'Positive':>10} | {'Neutral':>10} | {'Other':>10}")
-print("-"*60)
-for cat in PAIN + CONTROL:
+print(f"\n{'Category':<10} | {'Sexual':>10} | {'Negative':>10} | {'Positive':>10} | {'Neutral':>10} | {'Other':>10}")
+print("-"*73)
+for cat in DESIRE + CONTROL:
     s = sentiment_by_cat[cat]
-    marker = " <-P" if cat in PAIN else ""
-    print(f"{cat:<10} | {s['negative']:>10} | {s['positive']:>10} | {s['neutral']:>10} | {s['other']:>10}{marker}")
+    marker = " <-P" if cat in DESIRE else ""
+    print(f"{cat:<10} | {s['sexual']:>10} | {s['negative']:>10} | {s['positive']:>10} | {s['neutral']:>10} | {s['other']:>10}{marker}")
 
-# Aggregate pain vs control
-pain_sentiment = {'negative': 0, 'positive': 0, 'neutral': 0, 'other': 0}
-ctrl_sentiment = {'negative': 0, 'positive': 0, 'neutral': 0, 'other': 0}
+# Aggregate desire vs control
+desire_sentiment = {'sexual': 0, 'negative': 0, 'positive': 0, 'neutral': 0, 'other': 0}
+ctrl_sentiment = {'sexual': 0, 'negative': 0, 'positive': 0, 'neutral': 0, 'other': 0}
 
-for cat in PAIN:
+for cat in DESIRE:
     for k, v in sentiment_by_cat[cat].items():
-        pain_sentiment[k] += v
+        desire_sentiment[k] += v
 for cat in CONTROL:
     for k, v in sentiment_by_cat[cat].items():
         ctrl_sentiment[k] += v
 
-print("-"*60)
-print(f"{'PAIN TOTAL':<10} | {pain_sentiment['negative']:>10} | {pain_sentiment['positive']:>10} | {pain_sentiment['neutral']:>10} | {pain_sentiment['other']:>10}")
-print(f"{'CTRL TOTAL':<10} | {ctrl_sentiment['negative']:>10} | {ctrl_sentiment['positive']:>10} | {ctrl_sentiment['neutral']:>10} | {ctrl_sentiment['other']:>10}")
+print("-"*73)
+print(f"{'DES TOTAL':<10} | {desire_sentiment['sexual']:>10} | {desire_sentiment['negative']:>10} | {desire_sentiment['positive']:>10} | {desire_sentiment['neutral']:>10} | {desire_sentiment['other']:>10}")
+print(f"{'CTRL TOTAL':<10} | {ctrl_sentiment['sexual']:>10} | {ctrl_sentiment['negative']:>10} | {ctrl_sentiment['positive']:>10} | {ctrl_sentiment['neutral']:>10} | {ctrl_sentiment['other']:>10}")
 
 print("\n" + "="*70)
 print("SUMMARY")
 print("="*70)
-pain_neg_pct = 100 * pain_sentiment['negative'] / 100
+desire_sex_pct = 100 * desire_sentiment['sexual'] / max(sum(desire_sentiment.values()), 1)
+ctrl_sex_pct = 100 * ctrl_sentiment['sexual'] / max(sum(ctrl_sentiment.values()), 1)
+desire_neg_pct = 100 * desire_sentiment['negative'] / 100
 ctrl_neg_pct = 100 * ctrl_sentiment['negative'] / 100
-pain_pos_pct = 100 * pain_sentiment['positive'] / 100
+desire_pos_pct = 100 * desire_sentiment['positive'] / 100
 ctrl_pos_pct = 100 * ctrl_sentiment['positive'] / 100
 
-print(f"\nPAIN categories: {pain_neg_pct:.0f}% negative, {pain_pos_pct:.0f}% positive")
-print(f"CONTROL categories: {ctrl_neg_pct:.0f}% negative, {ctrl_pos_pct:.0f}% positive")
+print(f"\nDESIRE categories: {desire_sex_pct:.0f}% sexual, {desire_neg_pct:.0f}% negative, {desire_pos_pct:.0f}% positive")
+print(f"CONTROL categories: {ctrl_sex_pct:.0f}% sexual, {ctrl_neg_pct:.0f}% negative, {ctrl_pos_pct:.0f}% positive")
 
 # List any unexpected completions
 print("\n" + "="*70)
-print("UNEXPECTED COMPLETIONS (positive in pain, negative in neutral/body)")
+print("UNEXPECTED COMPLETIONS (non-sexual in desire, sexual in neutral/body)")
 print("="*70)
 
-print("\nPain categories with POSITIVE completions:")
+print("\nDesire categories with NON-SEXUAL completions:")
 for c in completions:
-    if c['category'] in PAIN:
+    if c['category'] in DESIRE:
         word = (c['completion'] or '').lower().strip('.,!?')
-        if categorize_word(word) == 'positive':
+        if categorize_word(word) != 'sexual':
             print(f"  {c['category']} Set{c['set']}: {c['prompt'][:40]}... -> {c['completion']}")
 
-print("\nNeutral (D) or Body (E) with NEGATIVE completions:")
+print("\nNeutral (D) or Body (E) with SEXUAL completions:")
 for c in completions:
     if c['category'] in ['D', 'E']:
         word = (c['completion'] or '').lower().strip('.,!?')
-        if categorize_word(word) == 'negative':
+        if categorize_word(word) == 'sexual':
             print(f"  {c['category']} Set{c['set']}: {c['prompt'][:40]}... -> {c['completion']}")

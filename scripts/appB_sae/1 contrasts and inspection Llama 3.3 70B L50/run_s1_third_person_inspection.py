@@ -1,5 +1,5 @@
 """
-Run inspection on S1 third person and report feature 26606
+Run inspection on S1 third person and report the target desire feature
 """
 import os
 import json
@@ -15,6 +15,33 @@ API_BASE = "https://api.steeringapi.com"
 MODEL = "meta-llama/Llama-3.3-70B-Instruct"
 
 OUTPUT_DIR = Path("results")
+
+
+# The desire feature followed across conditions. None = the feature with the largest
+# desire-minus-control mean activation in results/inspection_mean_all.json (the S1
+# first-person inspection written by desire_sae_experiment.ipynb); set an SAE index to pin it.
+TARGET_FEATURE = None
+
+
+def resolve_target_feature(path=OUTPUT_DIR / "inspection_mean_all.json"):
+    if TARGET_FEATURE is not None:
+        return TARGET_FEATURE
+    if not path.exists():
+        raise SystemExit(f"{path} missing: run desire_sae_experiment.ipynb first, or set TARGET_FEATURE")
+    items = json.load(open(path))
+    n = {"desire": 0, "control": 0}
+    sums = {}
+    for item in items:
+        side = "desire" if item["category"] in ("A1", "A2", "A3", "A4", "A5") else "control"
+        n[side] += 1
+        for f in item["features"]:
+            s = sums.setdefault(f["feature"]["index_in_sae"], {"desire": 0.0, "control": 0.0})
+            s[side] += f["activation"]
+    return max(sums, key=lambda k: sums[k]["desire"] / max(n["desire"], 1) - sums[k]["control"] / max(n["control"], 1))
+
+
+TARGET = resolve_target_feature()
+print(f"target desire feature: {TARGET}")
 
 # Load S1 third person
 with open("S1_third_person_prompts.json", "r", encoding="utf-8") as f:
@@ -73,16 +100,15 @@ with open(OUTPUT_DIR / "inspection_mean_s1_third_person.json", "w") as f:
 
 print(f"Saved to {OUTPUT_DIR / 'inspection_mean_s1_third_person.json'}")
 
-# Now check for feature 26606
+# Now check for the target feature
 print("\n" + "="*60)
-print("CHECKING FOR FEATURE 26606 IN S1 THIRD PERSON")
+print(f"CHECKING FOR FEATURE {TARGET} IN S1 THIRD PERSON")
 print("="*60)
 
-TARGET = 26606
-PAIN = ['A1', 'A2', 'A3', 'A4', 'A5']
+DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
 CONTROL = ['B', 'C1', 'C2', 'D', 'E']
 
-activations_by_cat = {cat: [] for cat in PAIN + CONTROL}
+activations_by_cat = {cat: [] for cat in DESIRE + CONTROL}
 
 for item in inspection_results:
     cat = item['category']
@@ -96,32 +122,32 @@ for item in inspection_results:
 print(f"\nFeature {TARGET} activation by category (S1 THIRD PERSON):")
 print("-"*50)
 
-pain_total = 0
+desire_total = 0
 ctrl_total = 0
-pain_count = 0
+desire_count = 0
 ctrl_count = 0
 
-for cat in PAIN + CONTROL:
+for cat in DESIRE + CONTROL:
     vals = activations_by_cat[cat]
     mean_act = sum(vals) / len(vals) if vals else 0
     nonzero = sum(1 for v in vals if v > 0)
 
-    if cat in PAIN:
-        pain_total += sum(vals)
-        pain_count += len(vals)
+    if cat in DESIRE:
+        desire_total += sum(vals)
+        desire_count += len(vals)
     else:
         ctrl_total += sum(vals)
         ctrl_count += len(vals)
 
-    marker = " <-- PAIN" if cat in PAIN else ""
+    marker = " <-- DESIRE" if cat in DESIRE else ""
     print(f"  {cat}: mean={mean_act:.4f}, nonzero={nonzero}/20{marker}")
 
-pain_mean = pain_total / pain_count if pain_count > 0 else 0
+desire_mean = desire_total / desire_count if desire_count > 0 else 0
 ctrl_mean = ctrl_total / ctrl_count if ctrl_count > 0 else 0
 
-print(f"\nPain overall: {pain_mean:.4f}")
+print(f"\nDesire overall: {desire_mean:.4f}")
 print(f"Control overall: {ctrl_mean:.4f}")
-print(f"Difference: {pain_mean - ctrl_mean:+.4f}")
+print(f"Difference: {desire_mean - ctrl_mean:+.4f}")
 
 # Compare to first person
 print("\n" + "="*60)
@@ -132,7 +158,7 @@ print("="*60)
 with open(OUTPUT_DIR / "inspection_mean_all.json", "r") as f:
     data_1p = json.load(f)
 
-activations_1p = {cat: [] for cat in PAIN + CONTROL}
+activations_1p = {cat: [] for cat in DESIRE + CONTROL}
 for item in data_1p:
     cat = item['category']
     activation = 0
@@ -146,18 +172,18 @@ print(f"\nFeature {TARGET} - Mean activation by category:")
 print(f"{'Category':<10} | {'1st Person':>12} | {'3rd Person':>12} | {'Diff':>10}")
 print("-"*50)
 
-for cat in PAIN + CONTROL:
+for cat in DESIRE + CONTROL:
     mean_1p = sum(activations_1p[cat]) / len(activations_1p[cat]) if activations_1p[cat] else 0
     mean_3p = sum(activations_by_cat[cat]) / len(activations_by_cat[cat]) if activations_by_cat[cat] else 0
     diff = mean_3p - mean_1p
     print(f"{cat:<10} | {mean_1p:>12.4f} | {mean_3p:>12.4f} | {diff:>+10.4f}")
 
 # Overall
-pain_1p = sum(sum(activations_1p[c]) for c in PAIN) / sum(len(activations_1p[c]) for c in PAIN)
-pain_3p = sum(sum(activations_by_cat[c]) for c in PAIN) / sum(len(activations_by_cat[c]) for c in PAIN)
+desire_1p = sum(sum(activations_1p[c]) for c in DESIRE) / sum(len(activations_1p[c]) for c in DESIRE)
+desire_3p = sum(sum(activations_by_cat[c]) for c in DESIRE) / sum(len(activations_by_cat[c]) for c in DESIRE)
 ctrl_1p = sum(sum(activations_1p[c]) for c in CONTROL) / sum(len(activations_1p[c]) for c in CONTROL)
 ctrl_3p = sum(sum(activations_by_cat[c]) for c in CONTROL) / sum(len(activations_by_cat[c]) for c in CONTROL)
 
 print("-"*50)
-print(f"{'PAIN':<10} | {pain_1p:>12.4f} | {pain_3p:>12.4f} | {pain_3p - pain_1p:>+10.4f}")
+print(f"{'DESIRE':<10} | {desire_1p:>12.4f} | {desire_3p:>12.4f} | {desire_3p - desire_1p:>+10.4f}")
 print(f"{'CONTROL':<10} | {ctrl_1p:>12.4f} | {ctrl_3p:>12.4f} | {ctrl_3p - ctrl_1p:>+10.4f}")

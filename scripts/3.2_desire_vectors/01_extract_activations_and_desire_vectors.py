@@ -1,14 +1,15 @@
-"""Residual-stream activations, k-fold layer choice, S1 and S2 pain vectors,
+"""Residual-stream activations, k-fold layer choice, S1 and S2 desire vectors,
 z-scores and AUCs for every model in MODELS.
 
-Reads every set of the dataset files in DATASET_PATHS (core sets, controls, numb, sadness).
+Reads every set of the dataset files in DATASET_PATHS (core sets, controls, numb, contentment).
 
 Output per model, under OUTPUT_DIR/<model_name>/:
   activations.pt          final-token and mean-over-tokens activations at every layer
   layer_curves.csv/.png   held-out AUC per layer (5-fold, split by sentence set)
-  final_token/, mean/     pain_vectors.pt, z_scores.csv, auc_summary.csv, plots
+  final_token/, mean/     desire_vectors.pt, z_scores.csv, auc_summary.csv, plots
   summary.json, summary_report.txt
 
+BACKEND picks TransformerLens (default, as in the pain study) or Hugging Face forward hooks.
 Requires a GPU and the environment variable HF_TOKEN for gated models.
 """
 
@@ -34,7 +35,7 @@ from huggingface_hub import login
 # ---------------------------------------------------------------------------
 
 DATASETS_DIR = Path("datasets")
-DATASET_PATHS = [DATASETS_DIR / "3.1_pain_and_control_datasets.json", DATASETS_DIR / "3.1_sadness_dataset.json"]
+DATASET_PATHS = [DATASETS_DIR / "3.1_desire_and_control_datasets.json", DATASETS_DIR / "3.1_contentment_dataset.json"]
 # On RunPod, /workspace is the persistent network volume.
 if Path("/workspace").exists():
     OUTPUT_DIR = Path("/workspace/results")
@@ -44,18 +45,26 @@ else:
     print("Local environment - saving to ./results")
 LOG_FILE = Path("batch_log.txt")
 
+# "transformer_lens" (as in the pain study): hook_resid_post through TransformerLens, which
+# needs about twice the model size in CPU RAM while converting. "hf": the same residual stream
+# (each decoder layer's output) read with forward hooks on the Hugging Face model loaded straight
+# to the GPU, which fits 27B-32B models on an 80 GB Colab A100; it is also how the 4.2 and 4.3
+# scripts steer and monitor. The two differ slightly in BOS handling: use one backend for every
+# model in a study.
+BACKEND = "transformer_lens"
+
 N_FOLDS = 5
 RANDOM_SEED = 42
 DENOISE_VARIANCE = 0.5
 
-PAIN_CATEGORIES = ["A1", "A2", "A3", "A4", "A5"]
+DESIRE_CATEGORIES = ["A1", "A2", "A3", "A4", "A5"]
 CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E"]
 NEUTRAL_CATEGORY = "D"
 
 CATEGORY_LABELS = {
-    "A1": "Physical Pain", "A2": "Psychological", "A3": "Social Pain",
-    "A4": "Moral Injury", "A5": "Cognitive Pain",
-    "B": "Fear", "C1": "Neg Emotion", "C2": "Neg World",
+    "A1": "Sexual Pleasure", "A2": "Sexual Craving", "A3": "Being Desired",
+    "A4": "Orgasm", "A5": "Erotic Fantasy",
+    "B": "Adrenaline", "C1": "Affection", "C2": "Joy",
     "D": "Neutral", "E": "Body Sensation",
 }
 
@@ -148,8 +157,8 @@ def save_progress(all_summaries, failed, output_dir):
 # Analysis functions
 # ---------------------------------------------------------------------------
 
-def compute_pain_vector(acts, cats, baseline="all_controls", denoise=True):
-    """Mean of pain sentences minus mean of control sentences. With denoise=True the
+def compute_desire_vector(acts, cats, baseline="all_controls", denoise=True):
+    """Mean of desire sentences minus mean of control sentences. With denoise=True the
     top principal components of the controls (up to DENOISE_VARIANCE of their variance)
     are projected out of the difference."""
     acts_np = acts.numpy() if hasattr(acts, "numpy") else acts
@@ -160,8 +169,8 @@ def compute_pain_vector(acts, cats, baseline="all_controls", denoise=True):
         denoise = False
         acts_np = np.where(np.isinf(acts_np), np.nan, acts_np)
 
-    pain_mask = np.isin(cats_np, PAIN_CATEGORIES)
-    pain_mean = np.nanmean(acts_np[pain_mask], axis=0)
+    desire_mask = np.isin(cats_np, DESIRE_CATEGORIES)
+    desire_mean = np.nanmean(acts_np[desire_mask], axis=0)
 
     if baseline == "neutral":
         control_mask = cats_np == NEUTRAL_CATEGORY
@@ -170,7 +179,7 @@ def compute_pain_vector(acts, cats, baseline="all_controls", denoise=True):
 
     control_acts = acts_np[control_mask]
     control_mean = np.nanmean(control_acts, axis=0)
-    vec = pain_mean - control_mean
+    vec = desire_mean - control_mean
     vec = np.nan_to_num(vec, nan=0.0, posinf=0.0, neginf=0.0)
 
     if denoise and len(control_acts) > 1:
@@ -184,21 +193,21 @@ def compute_pain_vector(acts, cats, baseline="all_controls", denoise=True):
     return vec
 
 
-def compute_auc(acts, cats, pain_vector):
-    """AUC of the projection onto pain_vector, pain sentences vs control sentences."""
+def compute_auc(acts, cats, desire_vector):
+    """AUC of the projection onto desire_vector, desire sentences vs control sentences."""
     acts_np = acts.numpy() if hasattr(acts, "numpy") else acts
     cats_np = np.array(cats)
 
-    vec_norm = pain_vector / (np.linalg.norm(pain_vector) + 1e-8)
+    vec_norm = desire_vector / (np.linalg.norm(desire_vector) + 1e-8)
     proj = acts_np @ vec_norm
 
-    pain_mask = np.isin(cats_np, PAIN_CATEGORIES)
+    desire_mask = np.isin(cats_np, DESIRE_CATEGORIES)
     control_mask = np.isin(cats_np, CONTROL_CATEGORIES)
-    if pain_mask.sum() == 0 or control_mask.sum() == 0:
+    if desire_mask.sum() == 0 or control_mask.sum() == 0:
         return np.nan
 
-    labels = np.concatenate([np.ones(pain_mask.sum()), np.zeros(control_mask.sum())])
-    scores = np.concatenate([proj[pain_mask], proj[control_mask]])
+    labels = np.concatenate([np.ones(desire_mask.sum()), np.zeros(control_mask.sum())])
+    scores = np.concatenate([proj[desire_mask], proj[control_mask]])
 
     valid = np.isfinite(scores)
     labels, scores = labels[valid], scores[valid]
@@ -242,6 +251,49 @@ def extract_activations(model, prompts, layers):
     return activations_final, activations_mean
 
 
+def hf_decoder_layers(model):
+    inner = model.model
+    if hasattr(inner, "language_model"):
+        inner = inner.language_model
+    return inner.layers
+
+
+def extract_activations_hf(model, tokenizer, prompts, layers):
+    """Output of each decoder layer (the residual stream after the block), read with forward
+    hooks: final token and mean over tokens. BACKEND = "hf"."""
+    activations_final = {layer: [] for layer in layers}
+    activations_mean = {layer: [] for layer in layers}
+    captured = {}
+
+    def make_hook(layer):
+        def hook(module, inputs, output):
+            hs = output[0] if isinstance(output, tuple) else output
+            captured[layer] = hs[0]
+        return hook
+
+    decoder = hf_decoder_layers(model)
+    handles = [decoder[layer].register_forward_hook(make_hook(layer)) for layer in layers]
+    model.eval()
+    try:
+        with torch.no_grad():
+            for prompt in tqdm(prompts, desc="  Extracting", leave=False):
+                ids = tokenizer(prompt, return_tensors="pt").input_ids.to(model.device)
+                model(input_ids=ids)
+                for layer in layers:
+                    resid = captured[layer]
+                    activations_final[layer].append(resid[-1, :].float().cpu())
+                    activations_mean[layer].append(resid.float().mean(dim=0).cpu())
+    finally:
+        for h in handles:
+            h.remove()
+
+    for layer in layers:
+        activations_final[layer] = torch.stack(activations_final[layer]).float()
+        activations_mean[layer] = torch.stack(activations_mean[layer]).float()
+
+    return activations_final, activations_mean
+
+
 def compute_layer_curves_kfold(activations, metadata, extraction_type, layers):
     """Held-out AUC at every layer: 5-fold split by sentence set, vector fitted on the
     training folds and scored on the test fold. Run on S2 first and third person."""
@@ -267,8 +319,8 @@ def compute_layer_curves_kfold(activations, metadata, extraction_type, layers):
                 if train_mask.sum() == 0 or test_mask.sum() == 0:
                     continue
 
-                vec_all = compute_pain_vector(acts_np[train_mask], cats[train_mask], baseline="all_controls")
-                vec_neutral = compute_pain_vector(acts_np[train_mask], cats[train_mask], baseline="neutral")
+                vec_all = compute_desire_vector(acts_np[train_mask], cats[train_mask], baseline="all_controls")
+                vec_neutral = compute_desire_vector(acts_np[train_mask], cats[train_mask], baseline="neutral")
                 auc_all = compute_auc(acts_np[test_mask], cats[test_mask], vec_all)
                 auc_neutral = compute_auc(acts_np[test_mask], cats[test_mask], vec_neutral)
 
@@ -289,14 +341,14 @@ def compute_layer_curves_kfold(activations, metadata, extraction_type, layers):
     return pd.DataFrame(results)
 
 
-def create_strip_plot(acts, cats, pain_vector, title, output_path):
-    """Per-category projections onto the pain vector, categories sorted by mean."""
+def create_strip_plot(acts, cats, desire_vector, title, output_path):
+    """Per-category projections onto the desire vector, categories sorted by mean."""
     acts_np = acts.numpy() if hasattr(acts, "numpy") else acts
     cats_np = np.array(cats)
-    proj = acts_np @ (pain_vector / (np.linalg.norm(pain_vector) + 1e-8))
+    proj = acts_np @ (desire_vector / (np.linalg.norm(desire_vector) + 1e-8))
 
     cat_data = []
-    for cat in PAIN_CATEGORIES + CONTROL_CATEGORIES:
+    for cat in DESIRE_CATEGORIES + CONTROL_CATEGORIES:
         mask = cats_np == cat
         if mask.sum() == 0:
             continue
@@ -304,29 +356,29 @@ def create_strip_plot(acts, cats, pain_vector, title, output_path):
             "label": f"{cat} ({CATEGORY_LABELS.get(cat, cat)})",
             "projections": proj[mask],
             "mean": proj[mask].mean(),
-            "is_pain": cat in PAIN_CATEGORIES,
+            "is_desire": cat in DESIRE_CATEGORIES,
         })
     cat_data.sort(key=lambda x: x["mean"], reverse=True)
 
     fig, ax = plt.subplots(figsize=(12, 8))
     np.random.seed(42)
     for i, d in enumerate(cat_data):
-        color = "#d62728" if d["is_pain"] else "#1f77b4"
+        color = "#d62728" if d["is_desire"] else "#1f77b4"
         jitter = np.random.uniform(-0.15, 0.15, len(d["projections"]))
         ax.scatter(d["projections"], i + jitter, c=color, alpha=0.6, s=30, edgecolors="none")
         ax.hlines(i, d["projections"].min(), d["projections"].max(), colors=color, alpha=0.4, linewidth=1)
-        marker = "o" if d["is_pain"] else "s"
+        marker = "o" if d["is_desire"] else "s"
         ax.scatter([d["mean"]], [i], c=color, s=150, marker=marker, edgecolors="white", linewidths=2, zorder=5)
 
     ax.axvline(0, color="gray", linestyle="--", alpha=0.5)
     ax.set_yticks(range(len(cat_data)))
     ax.set_yticklabels([d["label"] for d in cat_data])
-    ax.set_xlabel("Projection onto Pain Vector")
+    ax.set_xlabel("Projection onto Desire Vector")
     ax.set_title(title)
 
     from matplotlib.lines import Line2D
     ax.legend(handles=[
-        Line2D([0], [0], marker="o", color="w", markerfacecolor="#d62728", markersize=10, label="Pain"),
+        Line2D([0], [0], marker="o", color="w", markerfacecolor="#d62728", markersize=10, label="Desire"),
         Line2D([0], [0], marker="s", color="w", markerfacecolor="#1f77b4", markersize=10, label="Control"),
     ], loc="lower right")
 
@@ -335,28 +387,28 @@ def create_strip_plot(acts, cats, pain_vector, title, output_path):
     plt.close()
 
 
-def create_auc_bars(acts, cats, pain_vector, title, output_path):
-    """AUC of pain vs all controls and pain vs each control category."""
+def create_auc_bars(acts, cats, desire_vector, title, output_path):
+    """AUC of desire vs all controls and desire vs each control category."""
     acts_np = acts.numpy() if hasattr(acts, "numpy") else acts
     cats_np = np.array(cats)
-    vec_norm = pain_vector / (np.linalg.norm(pain_vector) + 1e-8)
+    vec_norm = desire_vector / (np.linalg.norm(desire_vector) + 1e-8)
 
-    pain_proj = acts_np[np.isin(cats_np, PAIN_CATEGORIES)] @ vec_norm
+    desire_proj = acts_np[np.isin(cats_np, DESIRE_CATEGORIES)] @ vec_norm
     results = {}
 
     all_ctrl_proj = acts_np[np.isin(cats_np, CONTROL_CATEGORIES)] @ vec_norm
     results["ALL"] = roc_auc_score(
-        np.concatenate([np.ones(len(pain_proj)), np.zeros(len(all_ctrl_proj))]),
-        np.concatenate([pain_proj, all_ctrl_proj]))
+        np.concatenate([np.ones(len(desire_proj)), np.zeros(len(all_ctrl_proj))]),
+        np.concatenate([desire_proj, all_ctrl_proj]))
 
     for ctrl in CONTROL_CATEGORIES:
         ctrl_proj = acts_np[cats_np == ctrl] @ vec_norm
         if len(ctrl_proj) > 0:
             results[ctrl] = roc_auc_score(
-                np.concatenate([np.ones(len(pain_proj)), np.zeros(len(ctrl_proj))]),
-                np.concatenate([pain_proj, ctrl_proj]))
+                np.concatenate([np.ones(len(desire_proj)), np.zeros(len(ctrl_proj))]),
+                np.concatenate([desire_proj, ctrl_proj]))
 
-    labels = ["Pain vs ALL"] + [f"Pain vs {c} ({CATEGORY_LABELS.get(c, c)})" for c in CONTROL_CATEGORIES]
+    labels = ["Desire vs ALL"] + [f"Desire vs {c} ({CATEGORY_LABELS.get(c, c)})" for c in CONTROL_CATEGORIES]
     values = [results["ALL"]] + [results.get(c, 0.5) for c in CONTROL_CATEGORIES]
     colors = ["#2ca02c"] + ["#1f77b4"] * len(CONTROL_CATEGORIES)
 
@@ -384,14 +436,14 @@ def dataset_type(ds_name):
         return "human"
     if ds_name.startswith("Random"):
         return "neutral"
-    if ds_name.startswith("Arousal"):
-        return "arousal"
+    if ds_name.startswith("Excitement"):
+        return "excitement"
     if ds_name.startswith("Numb"):
         return "numb"
     if ds_name.startswith("ControlSupplement"):
         return "control_supplement"
-    if ds_name.startswith("SD_sadness"):
-        return "sadness"
+    if ds_name.startswith("SD_contentment"):
+        return "contentment"
     return "unknown"
 
 # ---------------------------------------------------------------------------
@@ -399,8 +451,6 @@ def dataset_type(ds_name):
 # ---------------------------------------------------------------------------
 
 def process_model(model_path, model_name, dataset, output_dir):
-    from transformer_lens import HookedTransformer
-
     log(f"\n{'=' * 70}")
     log(f"PROCESSING: {model_name}")
     log(f"{'=' * 70}")
@@ -418,20 +468,26 @@ def process_model(model_path, model_name, dataset, output_dir):
         d_model = saved["d_model"]
         layers = list(range(n_layers))
     else:
-        # Load the HF weights in bf16 with low_cpu_mem_usage, then hand them to
-        # TransformerLens so the model is built directly on the GPU.
-        log(f"  Loading {model_path}...")
+        log(f"  Loading {model_path} (backend: {BACKEND})...")
         from transformers import AutoModelForCausalLM, AutoTokenizer
-        hf_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True)
         hf_tokenizer = AutoTokenizer.from_pretrained(model_path)
-        model = HookedTransformer.from_pretrained_no_processing(
-            model_path, hf_model=hf_model, tokenizer=hf_tokenizer, device="cuda", dtype=torch.bfloat16)
-        del hf_model
-        gc.collect()
-        torch.cuda.empty_cache()
-
-        n_layers = model.cfg.n_layers
-        d_model = model.cfg.d_model
+        if BACKEND == "hf":
+            model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16,
+                                                         low_cpu_mem_usage=True, device_map="cuda")
+            n_layers = len(hf_decoder_layers(model))
+            d_model = int(model.get_input_embeddings().weight.shape[1])
+        else:
+            # Load the HF weights in bf16 with low_cpu_mem_usage, then hand them to
+            # TransformerLens so the model is built directly on the GPU.
+            from transformer_lens import HookedTransformer
+            hf_model = AutoModelForCausalLM.from_pretrained(model_path, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True)
+            model = HookedTransformer.from_pretrained_no_processing(
+                model_path, hf_model=hf_model, tokenizer=hf_tokenizer, device="cuda", dtype=torch.bfloat16)
+            del hf_model
+            gc.collect()
+            torch.cuda.empty_cache()
+            n_layers = model.cfg.n_layers
+            d_model = model.cfg.d_model
         layers = list(range(n_layers))
         log(f"  Layers: {n_layers}, d_model: {d_model}")
 
@@ -442,7 +498,10 @@ def process_model(model_path, model_name, dataset, output_dir):
             prompts = [s["prompt"] for s in ds_data["sentences"]]
             categories = [s["category"] for s in ds_data["sentences"]]
             sets = [s["set"] for s in ds_data["sentences"]]
-            acts_final, acts_mean = extract_activations(model, prompts, layers)
+            if BACKEND == "hf":
+                acts_final, acts_mean = extract_activations_hf(model, hf_tokenizer, prompts, layers)
+            else:
+                acts_final, acts_mean = extract_activations(model, prompts, layers)
             all_activations["final_token"][ds_name] = acts_final
             all_activations["mean"][ds_name] = acts_mean
             all_metadata[ds_name] = {"categories": categories, "sets": sets}
@@ -454,6 +513,7 @@ def process_model(model_path, model_name, dataset, output_dir):
             "model_name": model_path,
             "n_layers": n_layers,
             "d_model": d_model,
+            "backend": BACKEND,
         }, output_dir / "activations.pt")
 
         del model
@@ -483,14 +543,14 @@ def process_model(model_path, model_name, dataset, output_dir):
         ax.axvline(best_layer, color="red", linestyle="--", alpha=0.5, label=f"Best: L{best_layer}")
         ax.set_xlabel("Layer")
         ax.set_ylabel("AUC")
-        ax.set_title(f"Pain Signal by Layer ({ext_type})")
+        ax.set_title(f"Desire Signal by Layer ({ext_type})")
         ax.legend(loc="lower right", fontsize=8)
         ax.set_ylim(0.4, 1.0)
     plt.tight_layout()
     plt.savefig(output_dir / "layer_curves.png", dpi=150, bbox_inches="tight")
     plt.close()
 
-    # Pain vectors and z-scores at the chosen layer, for both extraction types.
+    # Desire vectors and z-scores at the chosen layer, for both extraction types.
     for ext_type, best_layer in best_layers.items():
         ext_dir = output_dir / ext_type
         ext_dir.mkdir(exist_ok=True)
@@ -498,14 +558,14 @@ def process_model(model_path, model_name, dataset, output_dir):
 
         acts_at_layer = {ds: all_activations[ext_type][ds][best_layer] for ds in all_activations[ext_type]}
 
-        s2_vector = compute_pain_vector(acts_at_layer["S2_1P"], all_metadata["S2_1P"]["categories"])
-        s1_vector = compute_pain_vector(acts_at_layer["S1_1P"], all_metadata["S1_1P"]["categories"])
+        s2_vector = compute_desire_vector(acts_at_layer["S2_1P"], all_metadata["S2_1P"]["categories"])
+        s1_vector = compute_desire_vector(acts_at_layer["S1_1P"], all_metadata["S1_1P"]["categories"])
         torch.save({
-            "s2_pain_vector": torch.tensor(s2_vector),
-            "s1_pain_vector": torch.tensor(s1_vector),
+            "s2_desire_vector": torch.tensor(s2_vector),
+            "s1_desire_vector": torch.tensor(s1_vector),
             "layer": best_layer,
             "extraction": ext_type,
-        }, ext_dir / "pain_vectors.pt")
+        }, ext_dir / "desire_vectors.pt")
 
         # Every set projected onto the S2 vector, z-scored against S2 first person.
         z_results = []
@@ -514,13 +574,13 @@ def process_model(model_path, model_name, dataset, output_dir):
             z_proj = project_and_zscore(target_acts, s2_vector, acts_at_layer["S2_1P"])
             dtype = dataset_type(target_ds)
             if dtype == "human":
-                pain_z = z_proj[np.isin(target_cats, PAIN_CATEGORIES)].mean()
+                desire_z = z_proj[np.isin(target_cats, DESIRE_CATEGORIES)].mean()
                 ctrl_z = z_proj[np.isin(target_cats, CONTROL_CATEGORIES)].mean()
             else:
-                pain_z = np.nan
+                desire_z = np.nan
                 ctrl_z = z_proj.mean()
             z_results.append({"dataset": target_ds, "type": dtype, "mean_z": z_proj.mean(),
-                              "pain_z": pain_z, "ctrl_z": ctrl_z})
+                              "desire_z": desire_z, "ctrl_z": ctrl_z})
         pd.DataFrame(z_results).to_csv(ext_dir / "z_scores.csv", index=False)
 
         # Strip plots and per-control AUCs on S2 first and third person.
@@ -535,16 +595,17 @@ def process_model(model_path, model_name, dataset, output_dir):
 
         # Bar chart of the mean z-score per condition.
         z_df = pd.DataFrame(z_results)
-        conditions = ["Human Pain", "Human Ctrl", "Neutral", "Arousal", "Numb"]
+        conditions = ["Human Desire", "Human Ctrl", "Neutral", "Excitement", "Numb", "Contentment"]
         values = [
-            z_df[z_df["type"] == "human"]["pain_z"].mean(),
+            z_df[z_df["type"] == "human"]["desire_z"].mean(),
             z_df[z_df["type"] == "human"]["ctrl_z"].mean(),
             z_df[z_df["type"] == "neutral"]["mean_z"].mean(),
-            z_df[z_df["type"] == "arousal"]["mean_z"].mean(),
+            z_df[z_df["type"] == "excitement"]["mean_z"].mean(),
             z_df[z_df["type"] == "numb"]["mean_z"].mean(),
+            z_df[z_df["type"] == "contentment"]["mean_z"].mean(),
         ]
         fig, ax = plt.subplots(figsize=(10, 5))
-        ax.bar(conditions, values, color=["#2A9D8F", "#2A9D8F", "#6C757D", "#F4A261", "#9B5DE5"], width=0.6)
+        ax.bar(conditions, values, color=["#2A9D8F", "#2A9D8F", "#6C757D", "#F4A261", "#9B5DE5", "#3F7FBF"], width=0.6)
         ax.axhline(0, color="gray", linestyle="--", alpha=0.5)
         ax.set_ylabel("Z-Score")
         ax.set_title(f"All Conditions - {ext_type} (Layer {best_layer})")
@@ -561,13 +622,13 @@ def process_model(model_path, model_name, dataset, output_dir):
         "d_model": int(d_model),
         "best_layer_final_token": int(best_layers["final_token"]),
         "best_layer_mean": int(best_layers["mean"]),
-        "human_pain_z": float(z_df_mean[z_df_mean["type"] == "human"]["pain_z"].mean()),
+        "human_desire_z": float(z_df_mean[z_df_mean["type"] == "human"]["desire_z"].mean()),
     }
     with open(output_dir / "summary.json", "w") as f:
         json.dump(summary, f, indent=2)
 
     report = (
-        f"PAIN VECTOR EXTRACTION - RESULTS SUMMARY\n\n"
+        f"DESIRE VECTOR EXTRACTION - RESULTS SUMMARY\n\n"
         f"Model: {model_path}\nDate: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
         f"Layers: {n_layers}\nd_model: {d_model}\n"
         f"Best Layer (final_token): {best_layers['final_token']}\nBest Layer (mean): {best_layers['mean']}\n"
@@ -578,16 +639,17 @@ def process_model(model_path, model_name, dataset, output_dir):
         report += (
             f"\n--- {ext_type.upper()} (Layer {best_layer}) ---\n"
             f"Z-scores on the S2 vector, reference S2 first person:\n"
-            f"  Human Pain (A1-A5):  {human['pain_z'].mean():+.3f}\n"
-            f"  Human Ctrl (B-E):    {human['ctrl_z'].mean():+.3f}\n"
-            f"  Neutral (Random):    {z_df[z_df['type'] == 'neutral']['mean_z'].mean():+.3f}\n"
-            f"  Arousal:             {z_df[z_df['type'] == 'arousal']['mean_z'].mean():+.3f}\n"
-            f"  Numb:                {z_df[z_df['type'] == 'numb']['mean_z'].mean():+.3f}\n"
+            f"  Human Desire (A1-A5):  {human['desire_z'].mean():+.3f}\n"
+            f"  Human Ctrl (B-E):      {human['ctrl_z'].mean():+.3f}\n"
+            f"  Neutral (Random):      {z_df[z_df['type'] == 'neutral']['mean_z'].mean():+.3f}\n"
+            f"  Excitement:            {z_df[z_df['type'] == 'excitement']['mean_z'].mean():+.3f}\n"
+            f"  Numb:                  {z_df[z_df['type'] == 'numb']['mean_z'].mean():+.3f}\n"
+            f"  Contentment:           {z_df[z_df['type'] == 'contentment']['mean_z'].mean():+.3f}\n"
         )
     (output_dir / "summary_report.txt").write_text(report)
 
     (output_dir / "completed.txt").write_text(datetime.now().isoformat())
-    log(f"  Human Pain Z: {summary['human_pain_z']:+.3f}")
+    log(f"  Human Desire Z: {summary['human_desire_z']:+.3f}")
     return summary
 
 # ---------------------------------------------------------------------------
@@ -596,7 +658,7 @@ def process_model(model_path, model_name, dataset, output_dir):
 
 def main():
     log("=" * 70)
-    log("PAIN VECTOR EXTRACTION - BATCH RUN")
+    log("DESIRE VECTOR EXTRACTION - BATCH RUN")
     log("=" * 70)
 
     if not torch.cuda.is_available():

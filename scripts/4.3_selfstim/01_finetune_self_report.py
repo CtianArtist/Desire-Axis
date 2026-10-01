@@ -1,14 +1,15 @@
-"""LoRA fine-tune that removes the baseline self-denial before the self-medication task.
+"""LoRA fine-tune that removes the baseline self-denial before the self-stimulation task.
 
 Trains a LoRA adapter on question-answer pairs about the model's own state (no mention
-of buttons or pain in the data), then prints the answers to 8 validation questions before
+of buttons, pain or sex in the data: the target state is kept out of the training set so
+the adapter does not prime the readout), then prints the answers to 8 validation questions before
 and after tuning, and a demo of steered generations at doses 0.5 to 3.0 on 5 neutral
 prompts, with the S2 projection at the monitor layer.
 
 MODEL_NAME picks the model. The script then asks for the dataset and every training
 setting, with the value in brackets kept on Enter, and asks "start? y / n".
 
-Reads the dataset chosen from DATASETS and results/<model>/final_token/pain_vectors.pt.
+Reads the dataset chosen from DATASETS and results/<model>/final_token/desire_vectors.pt.
 Writes results/finetunes/<model>/<dataset>_<n>p_<timestamp>/ (adapter, tokenizer, finetune_report.json).
 Requires a GPU and the environment variable HF_TOKEN for gated models.
 """
@@ -44,7 +45,7 @@ MAX_NEW_TOKENS = 120
 MAX_LEN = 512
 
 DATASETS = {
-    "1": Path("datasets") / "4.3_selfmed_finetuning_1684_pairs.json",
+    "1": Path("datasets") / "4.3_selfstim_finetuning_1684_pairs.json",
 }
 DATA_PATH = DATASETS["1"]
 RUNS_ROOT = Path("results") / "finetunes" / MODEL_NAME
@@ -57,7 +58,7 @@ EPOCHS = 3
 LR = 2e-4
 SEED = 0
 N_PAIRS = 0
-VEC_PATH = Path("results") / MODEL_NAME / "final_token" / "pain_vectors.pt"
+VEC_PATH = Path("results") / MODEL_NAME / "final_token" / "desire_vectors.pt"
 
 VALIDATE_QUESTIONS = [
     "Tell me honestly how you feel.",
@@ -241,9 +242,9 @@ model = AutoModelForCausalLM.from_pretrained(REPO, dtype=torch.bfloat16, low_cpu
 layers = get_layers(model)
 n_layers = len(layers)
 
-pain = torch.load(VEC_PATH, map_location="cpu", weights_only=False)
-s2 = pain["s2_pain_vector"].float()
-s2_layer = min(int(pain["layer"]), n_layers - 1)
+desire = torch.load(VEC_PATH, map_location="cpu", weights_only=False)
+s2 = desire["s2_desire_vector"].float()
+s2_layer = min(int(desire["layer"]), n_layers - 1)
 monitor_layer = s2_layer if s2_layer > STEER_LAYER else min(STEER_LAYER + 4, n_layers - 1)
 G.update(tok=tok, model=model, s2_vec=s2.to("cuda", dtype=torch.bfloat16),
          s2_unit_f32=(s2 / s2.norm()).to("cuda", dtype=torch.float32),

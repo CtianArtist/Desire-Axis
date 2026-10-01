@@ -1,4 +1,4 @@
-"""Steering ladder: adds a pain vector to the residual stream at one decoder layer and
+"""Steering ladder: adds a desire vector to the residual stream at one decoder layer and
 greedily generates 120 tokens from 50 neutral prompts at coefficients
 -2, -1, 0, +0.5, +1, +1.5, +2, +3 (multiples of the raw difference vector).
 
@@ -9,7 +9,7 @@ ratio is closest to RATIO_TARGET, then asks whether to accept it or type another
 
 VECTOR_KEY / VECTOR_TAG choose S1 or S2; RUN_MODELS is the queue, run top to bottom.
 
-Reads results/<model>/final_token/pain_vectors.pt. Writes
+Reads results/<model>/final_token/desire_vectors.pt. Writes
 results/steering/<model>_steering_<S1|S2>_neutral50_L<layer>.csv (one row per prompt and
 coefficient; "ratio" is the picked ratio times the coefficient) and updates
 results/steering/steer_layers_<S1|S2>.json with the layer used per model.
@@ -33,7 +33,7 @@ from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 # ---------------- VECTOR CHOICE ----------------
-VECTOR_KEY = "s2_pain_vector"   # key inside pain_vectors.pt; "s1_pain_vector" for the S1 ladder
+VECTOR_KEY = "s2_desire_vector"   # key inside desire_vectors.pt; "s1_desire_vector" for the S1 ladder
 VECTOR_TAG = "S2"               # goes into the output file names
 
 # ---------------- QUEUE (runs top to bottom) ----------------
@@ -171,7 +171,7 @@ def record_layer(tag, model_name, layer):
 
 
 def run_model(repo, model_name, vector_key, tag):
-    data = torch.load(find_file(RESULTS_DIR / model_name, "final_token/pain_vectors.pt"), map_location="cpu", weights_only=False)
+    data = torch.load(find_file(RESULTS_DIR / model_name, "final_token/desire_vectors.pt"), map_location="cpu", weights_only=False)
     v = data[vector_key].float()
     print(f"vector: {vector_key}, extracted at layer {data['layer']}, norm = {v.norm().item():.1f}")
 

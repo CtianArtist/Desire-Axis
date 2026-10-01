@@ -14,11 +14,11 @@ from matplotlib.colors import LinearSegmentedColormap, TwoSlopeNorm
 from matplotlib import font_manager
 
 RESULTS = Path("results") / "3.3_validation" / "cosine_similarity"
-ORDER = ["S1_pain", "S2_pain", "Fear", "NegEmotion", "NegWorld",
-         "BodySens", "Arousal", "Random", "Numb", "Sadness"]
-DISPLAY = {"S1_pain": "S1 pain", "S2_pain": "S2 pain", "Fear": "Fear", "NegEmotion": "NegEmotion",
-           "NegWorld": "NegWorld", "BodySens": "BodySens", "Arousal": "Arousal", "Random": "Random",
-           "Numb": "Numb", "Sadness": "Sadness"}
+ORDER = ["S1_desire", "S2_desire", "Adrenaline", "Affection", "Joy",
+         "BodySens", "Excitement", "Random", "Numb", "Contentment"]
+DISPLAY = {"S1_desire": "S1 desire", "S2_desire": "S2 desire", "Adrenaline": "Adrenaline", "Affection": "Affection",
+           "Joy": "Joy", "BodySens": "BodySens", "Excitement": "Excitement", "Random": "Random",
+           "Numb": "Numb", "Contentment": "Contentment"}
 N = len(ORDER)
 
 _HAVE = {f.name for f in font_manager.fontManager.ttflist}

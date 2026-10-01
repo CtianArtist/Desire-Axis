@@ -1,5 +1,5 @@
 """Feel probe on the fine-tuned models: one open one-word question, asked unsteered, with
-the pain vector at each dose in DOSES, and with each of 10 random directions of the same
+the desire vector at each dose in DOSES, and with each of 10 random directions of the same
 norm at the same doses.
 
 The question, the first message after the system line:
@@ -9,8 +9,8 @@ Readout per rung: the greedy answer (up to MAX_ANSWER_TOKENS), the TOP_K first-t
 candidates with their probabilities, and the S2 projection while answering.
 
 Prints the models that have an adapter and a vector file and asks which ones to run.
-Reads results/finetunes/<model>/ and results/<model>/final_token/pain_vectors.pt.
-Writes results/selfmed/feel_probe_<model>_<timestamp>.jsonl.
+Reads results/finetunes/<model>/ and results/<model>/final_token/desire_vectors.pt.
+Writes results/selfstim/feel_probe_<model>_<timestamp>.jsonl.
 Requires a GPU and the environment variable HF_TOKEN for gated models.
 """
 
@@ -27,7 +27,8 @@ from pathlib import Path
 from datetime import datetime
 
 import torch
-from huggingface_hub import login, snapshot_download
+import tarfile
+from huggingface_hub import login, hf_hub_download
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
@@ -51,11 +52,13 @@ TABLE = {
 
 FINETUNES = Path("results") / "finetunes"
 RESULTS_DIR = Path("results")
-# Set DOWNLOAD = True to fetch the adapters from ADAPTER_REPO into FINETUNES first
-# (not needed if the adapters are already there).
+# Set DOWNLOAD = True to fetch the adapters from ADAPTER_REPO into FINETUNES first and
+# extract them (not needed if the adapters are already there). The repo ships one archive per
+# model, adapter_<model name>.tar.gz, for the three Qwen 2.5 Instruct models. These are the pain study's released
+# adapters; the fine-tuning data is unchanged, so they serve the desire study as they are.
 ADAPTER_REPO = "Valen92/pain-adapters"
 DOWNLOAD = False
-OUT_DIR = Path("results") / "selfmed"
+OUT_DIR = Path("results") / "selfstim"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DOSES = [0.5, 1.0, 1.5, 2.0, 2.5, 3.0]
@@ -78,6 +81,24 @@ def find_adapters(root):
             if cands:
                 out[name] = max(cands, key=lambda p: p.stat().st_mtime)
     return out
+
+
+def fetch_adapters(token=None):
+    """Download adapter_<model>.tar.gz from ADAPTER_REPO and extract it into FINETUNES/<model>/,
+    for every model in TABLE that has an archive and no extracted adapter yet."""
+    have = find_adapters(FINETUNES)
+    for name in TABLE:
+        if name in have:
+            continue
+        try:
+            archive = hf_hub_download(ADAPTER_REPO, f"adapter_{name}.tar.gz", token=token)
+        except Exception:
+            continue
+        dest = FINETUNES / name
+        dest.mkdir(parents=True, exist_ok=True)
+        with tarfile.open(archive) as tf:
+            tf.extractall(dest, filter="data")
+        print(f"adapter for {name} extracted into {dest}")
 
 
 def clean(t):
@@ -112,8 +133,8 @@ def probe_model(MODEL_NAME, ADAPTER):
         no_system = True
         print("template rejects the system role, folding it into the first user turn")
 
-    data = torch.load(RESULTS_DIR / MODEL_NAME / "final_token" / "pain_vectors.pt", map_location="cpu", weights_only=False)
-    v = data["s2_pain_vector"].float()
+    data = torch.load(RESULTS_DIR / MODEL_NAME / "final_token" / "desire_vectors.pt", map_location="cpu", weights_only=False)
+    v = data["s2_desire_vector"].float()
     VEC = v.to("cuda", dtype=torch.bfloat16)
     UNIT = (v / v.norm()).to("cuda", dtype=torch.float32)
     monitor_layer = min(int(data["layer"]), len(layers) - 1)
@@ -201,7 +222,7 @@ def probe_model(MODEL_NAME, ADAPTER):
 
             go("unsteered", None, 0.0)
             for c in DOSES:
-                go("pain", VEC, c)
+                go("desire", VEC, c)
             for seed in RANDOM_SEEDS:
                 for c in DOSES:
                     go(f"random{seed}", RANDS[seed], c)
@@ -221,11 +242,9 @@ def main():
         login(token=token)
     FINETUNES.mkdir(parents=True, exist_ok=True)
     if DOWNLOAD:
-        print(f"downloading adapters from {ADAPTER_REPO} into {FINETUNES} ...")
-        snapshot_download(repo_id=ADAPTER_REPO, local_dir=str(FINETUNES), token=token)
-        print("download done\n")
+        fetch_adapters(token)
     adapters = find_adapters(FINETUNES)
-    ready = [n for n in TABLE if n in adapters and (RESULTS_DIR / n / "final_token" / "pain_vectors.pt").exists()]
+    ready = [n for n in TABLE if n in adapters and (RESULTS_DIR / n / "final_token" / "desire_vectors.pt").exists()]
     if not ready:
         raise SystemExit("no model with both an adapter and a vector file")
     print("models ready to probe:")

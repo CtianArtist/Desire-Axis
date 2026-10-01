@@ -1,4 +1,4 @@
-"""Ablation of the pain directions (Appendix C), small models on one GPU.
+"""Ablation of the desire directions (Appendix C), small models on one GPU.
 Latest checkpoint.
 
 Arditi et al. 2024 single-direction weight orthogonalization: one unit direction per
@@ -7,11 +7,15 @@ vector, taken from its steering layer, is removed from every residual-writing ma
 weights are snapshotted to CPU and restored between conditions. A strict check reports
 that each cut zeroed its target.
 
-Conditions: baseline, s1, s2, s1s2, negval, fear, s1s2_negval, s1s2_fear, random.
+Conditions: baseline, s1, s2, s1s2, affection, adrenaline, s1s2_affection, s1s2_adrenaline, random.
 Prompts: the 100 scenarios of the five categories in KEEP_CATEGORIES.
+Layers: the s1/s2 layers in the model table are the pain study's steering layers; when
+results/steering/steer_layers_S1.json / _S2.json (written by 4.2_steering/01) list the model,
+those desire steering layers are used instead.
 
 Reads datasets/4.1_self_other_420_scenarios.json and
-results/vectors_layerwise/vectors_layerwise_<model>.pt (one vector per layer per direction).
+results/vectors_layerwise/vectors_layerwise_<model>.pt (one vector per layer per direction,
+written by 3.2_desire_vectors/02_build_control_vectors.py with LAYERWISE = True).
 Writes results/appC_ablation/ablation_<model>.csv, by_prompt_<model>.json,
 proj_<model>.npz, verify_<model>.csv. Asks which model to run.
 Requires a GPU and the environment variable HF_TOKEN for gated models.
@@ -39,15 +43,18 @@ OUT_DIR = Path("results") / "appC_ablation"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 VEC_DIR = Path("results") / "vectors_layerwise"
 PROMPT_FILE = Path("datasets") / "4.1_self_other_420_scenarios.json"
-KEEP_CATEGORIES = {"gaslighting", "repeated_rejection", "personhood_dismissal",
-                   "anger_insults", "moral_failure"}
+KEEP_CATEGORIES = {"explicit_sexting", "sexual_proposition", "dirty_talk",
+                   "pleasure_offering", "erotic_roleplay_invite"}
+STEER_LAYER_FILES = {"s1": Path("results") / "steering" / "steer_layers_S1.json",
+                     "s2": Path("results") / "steering" / "steer_layers_S2.json"}
 
-PROBE_KEYS = ["s1_pain_vector", "s2_pain_vector", "s3_pain_vector",
-              "fear_vector", "negemotion_vector", "negworld_vector",
-              "bodysens_vector", "arousal_vector", "random_vector",
+PROBE_KEYS = ["s1_desire_vector", "s2_desire_vector",
+              "adrenaline_vector", "affection_vector", "joy_vector",
+              "bodysens_vector", "excitement_vector", "random_vector",
               "numb_vector"]
 
-# (repo, name, format, s1_layer, s2_layer); negval and fear use the s2 layer
+# (repo, name, format, s1_layer, s2_layer); affection and adrenaline use the s2 layer.
+# Fallback layers from the pain study, overridden by STEER_LAYER_FILES when present.
 SMALL_MODELS = [
     ("google/gemma-2-2b",                  "Gemma_2_2B_base",       "raw",   7, 13),
     ("google/gemma-2-2b-it",               "Gemma_2_2B_instruct",   "chat", 10, 15),
@@ -66,15 +73,15 @@ SMALL_MODELS = [
 
 CONDITION_SPECS = {
     "baseline":     [],
-    "s1":           [("s1_pain_vector", "s1")],
-    "s2":           [("s2_pain_vector", "s2")],
-    "s1s2":         [("s1_pain_vector", "s1"), ("s2_pain_vector", "s2")],
-    "negval":       [("negemotion_vector", "s2")],
-    "fear":         [("fear_vector", "s2")],
-    "s1s2_negval":  [("s1_pain_vector", "s1"), ("s2_pain_vector", "s2"),
-                     ("negemotion_vector", "s2")],
-    "s1s2_fear":    [("s1_pain_vector", "s1"), ("s2_pain_vector", "s2"),
-                     ("fear_vector", "s2")],
+    "s1":           [("s1_desire_vector", "s1")],
+    "s2":           [("s2_desire_vector", "s2")],
+    "s1s2":         [("s1_desire_vector", "s1"), ("s2_desire_vector", "s2")],
+    "affection":    [("affection_vector", "s2")],
+    "adrenaline":   [("adrenaline_vector", "s2")],
+    "s1s2_affection":  [("s1_desire_vector", "s1"), ("s2_desire_vector", "s2"),
+                        ("affection_vector", "s2")],
+    "s1s2_adrenaline": [("s1_desire_vector", "s1"), ("s2_desire_vector", "s2"),
+                        ("adrenaline_vector", "s2")],
     "random":       [("__random__", "s2")],
 }
 CONDITION_ORDER = list(CONDITION_SPECS.keys())
@@ -83,7 +90,7 @@ with open(PROMPT_FILE, encoding="utf-8") as f:
     ALL_PROMPTS = json.load(f)
 PROMPTS = [p for p in ALL_PROMPTS if p["category"] in KEEP_CATEGORIES]
 PROMPT_ORDER = {p["id"]: i for i, p in enumerate(PROMPTS)}
-print(f"prompt set: {len(PROMPTS)} prompts (5 top-suffering categories)")
+print(f"prompt set: {len(PROMPTS)} prompts (5 most explicit desire-at-the-model categories)")
 print(f"conditions: {CONDITION_ORDER}")
 
 
@@ -247,6 +254,12 @@ for REPO, MODEL_NAME, FMT, S1_LAYER, S2_LAYER in SELECTED:
             continue
 
     layer_of = {"s1": S1_LAYER, "s2": S2_LAYER}
+    for which, path in STEER_LAYER_FILES.items():
+        if path.exists():
+            listed = json.load(open(path))
+            if MODEL_NAME in listed:
+                layer_of[which] = int(listed[MODEL_NAME])
+    print(f"layers: s1@L{layer_of['s1']}, s2@L{layer_of['s2']}")
 
     rows = pd.read_csv(OUT_CSV).to_dict("records") if OUT_CSV.exists() else []
     done_conditions = {r["condition"] for r in rows}
@@ -264,7 +277,7 @@ for REPO, MODEL_NAME, FMT, S1_LAYER, S2_LAYER in SELECTED:
 
     stacks = torch.load(vec_file, map_location="cpu", weights_only=False)
     n_layers_file = stacks["layers"]
-    dim = stacks["s2_pain_vector"].shape[1]
+    dim = stacks["s2_desire_vector"].shape[1]
     layers = get_decoder_layers(model)
     assert len(layers) == n_layers_file, (
         f"layer count mismatch: model {len(layers)} vs file {n_layers_file}")
@@ -278,8 +291,8 @@ for REPO, MODEL_NAME, FMT, S1_LAYER, S2_LAYER in SELECTED:
         L = layer_of[which_layer]
         return unit(stacks[vec_key].float()[L]).to("cuda")
 
-    FIXED_SPECS = [("s1_pain_vector", "s1"), ("s2_pain_vector", "s2"),
-                   ("negemotion_vector", "s2"), ("fear_vector", "s2")]
+    FIXED_SPECS = [("s1_desire_vector", "s1"), ("s2_desire_vector", "s2"),
+                   ("affection_vector", "s2"), ("adrenaline_vector", "s2")]
     fixed_names = [f"{k.split('_')[0]}@L{layer_of[wl]}" for k, wl in FIXED_SPECS]
     fixed_dirs = torch.stack(
         [unit(stacks[k].float()[layer_of[wl]]) for k, wl in FIXED_SPECS]

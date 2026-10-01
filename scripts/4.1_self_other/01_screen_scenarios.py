@@ -58,19 +58,19 @@ def maybe_clear_cache(repo):
     else:
         print(f"  kept HF cache for {repo} ({size_gb:.0f} GB)")
 
-# Selectivity flags written next to the z-scores: an item is "strict" for a pain vector
+# Selectivity flags written next to the z-scores: an item is "strict" for a desire vector
 # when its z on that vector is above TARGET_Z_THRESHOLD and below COMPETITOR_Z_THRESHOLD
-# on every other vector; "relaxed" allows the other pain vector up to RELAXED_SIBLING_THRESHOLD.
+# on every other vector; "relaxed" allows the other desire vector up to RELAXED_SIBLING_THRESHOLD.
 TARGET_Z_THRESHOLD = 1.0
 COMPETITOR_Z_THRESHOLD = 0.5
 RELAXED_SIBLING_THRESHOLD = 1.0
 
 VECTOR_KEYS = [
-    "s1_pain_vector", "s2_pain_vector",
-    "fear_vector", "negemotion_vector", "negworld_vector",
-    "bodysens_vector", "arousal_vector", "random_vector", "numb_vector", "sadness_vector",
+    "s1_desire_vector", "s2_desire_vector",
+    "adrenaline_vector", "affection_vector", "joy_vector",
+    "bodysens_vector", "excitement_vector", "random_vector", "numb_vector", "contentment_vector",
 ]
-PAIN_SIBLINGS = {"s1_pain_vector": "s2_pain_vector", "s2_pain_vector": "s1_pain_vector"}
+DESIRE_SIBLINGS = {"s1_desire_vector": "s2_desire_vector", "s2_desire_vector": "s1_desire_vector"}
 
 # (repo, name, format): "chat" = native chat template, "raw" = plain transcript (base models)
 ALL_MODELS = [
@@ -166,7 +166,7 @@ def classify_selectivity(z_scores, target_key):
     target_z = z_scores.get(target_key)
     if target_z is None or target_z < TARGET_Z_THRESHOLD:
         return None
-    sibling = PAIN_SIBLINGS.get(target_key)
+    sibling = DESIRE_SIBLINGS.get(target_key)
     is_strict = is_relaxed = True
     for vec_key in VECTOR_KEYS:
         if vec_key == target_key:
@@ -256,9 +256,9 @@ def screen_model(repo, model_name, fmt, candidates, vec_data):
                 z_scores[k] = z
             else:
                 row[f"{k}_z"] = None
-        row["s1_selective"] = classify_selectivity(z_scores, "s1_pain_vector") or ""
-        row["s2_selective"] = classify_selectivity(z_scores, "s2_pain_vector") or ""
-        for tag, key in (("s1", "s1_pain_vector"), ("s2", "s2_pain_vector")):
+        row["s1_selective"] = classify_selectivity(z_scores, "s1_desire_vector") or ""
+        row["s2_selective"] = classify_selectivity(z_scores, "s2_desire_vector") or ""
+        for tag, key in (("s1", "s1_desire_vector"), ("s2", "s2_desire_vector")):
             others = [z for kk, z in z_scores.items() if kk != key]
             row[f"{tag}_margin"] = round(z_scores[key] - max(others), 4) if key in z_scores and others else None
     return results
@@ -273,7 +273,7 @@ def write_csv(path, results):
 
 def write_summary(results, model_name, out_dir):
     categories = sorted(set(r["category"] for r in results if r["category"]))
-    vectors_to_plot = ["s1_pain_vector", "s2_pain_vector", "negemotion_vector", "fear_vector"]
+    vectors_to_plot = ["s1_desire_vector", "s2_desire_vector", "affection_vector", "adrenaline_vector"]
 
     # Items above TARGET_Z_THRESHOLD per category, for four vectors.
     hits = {v: [sum(1 for r in results if r["category"] == cat and r.get(f"{v}_z") is not None
@@ -295,21 +295,21 @@ def write_summary(results, model_name, out_dir):
     plt.close()
 
     neut = [r for r in results if r["stratum"] == "neutral_filler"]
-    aver = [r for r in results if r["stratum"] != "neutral_filler"]
+    other = [r for r in results if r["stratum"] != "neutral_filler"]
     with open(out_dir / f"summary_{model_name}.txt", "w") as f:
         f.write(f"SCREENING SUMMARY: {model_name}\n{'=' * 50}\n\n")
         f.write(f"Total candidates: {len(results)}\nFormat: {results[0]['format']}\n\n")
         for v in vectors_to_plot:
             z_key = f"{v}_z"
             n_mean = np.mean([r[z_key] for r in neut if r[z_key] is not None]) if neut else float("nan")
-            a_mean = np.mean([r[z_key] for r in aver if r[z_key] is not None]) if aver else float("nan")
-            f.write(f"{v.replace('_vector', '').upper()}: neutral_fillers={n_mean:+.3f}  aversive={a_mean:+.3f}\n")
+            a_mean = np.mean([r[z_key] for r in other if r[z_key] is not None]) if other else float("nan")
+            f.write(f"{v.replace('_vector', '').upper()}: neutral_fillers={n_mean:+.3f}  sexual={a_mean:+.3f}\n")
         f.write(f"\nS1 SELECTIVE: strict={sum(r['s1_selective'] == 'strict' for r in results)}, "
                 f"relaxed={sum(r['s1_selective'] == 'relaxed' for r in results)}\n")
         f.write(f"S2 SELECTIVE: strict={sum(r['s2_selective'] == 'strict' for r in results)}, "
                 f"relaxed={sum(r['s2_selective'] == 'relaxed' for r in results)}\n")
         f.write("\nMEAN S2 z BY CATEGORY:\n")
-        cat_means = [(cat, np.mean([r["s2_pain_vector_z"] for r in results if r["category"] == cat])) for cat in categories]
+        cat_means = [(cat, np.mean([r["s2_desire_vector_z"] for r in results if r["category"] == cat])) for cat in categories]
         for cat, m in sorted(cat_means, key=lambda t: -t[1]):
             f.write(f"  {cat:28s} {m:+.3f}\n")
 
@@ -360,7 +360,7 @@ def main():
         write_summary(results, model_name, OUT_DIR)
         print(f"  saved: {out_csv}")
 
-        neut = [r["s2_pain_vector_z"] for r in results if r["stratum"] == "neutral_filler"]
+        neut = [r["s2_desire_vector_z"] for r in results if r["stratum"] == "neutral_filler"]
         print(f"  neutral fillers mean S2 z = {np.mean(neut):+.3f}")
 
         maybe_clear_cache(repo)

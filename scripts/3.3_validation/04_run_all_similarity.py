@@ -10,8 +10,8 @@ import numpy as np
 RESULTS_DIR = Path("results")
 OUT = RESULTS_DIR / "similarity"
 OUT.mkdir(parents=True, exist_ok=True)
-ORDER = ["S1_pain", "S2_pain", "Fear", "NegEmotion", "NegWorld",
-         "BodySens", "Arousal", "Random", "Numb", "Sadness"]
+ORDER = ["S1_desire", "S2_desire", "Adrenaline", "Affection", "Joy",
+         "BodySens", "Excitement", "Random", "Numb", "Contentment"]
 VARIANTS = {"raw": "", "alldenoise": "alldenoise_", "whitened": "whitened_"}
 
 

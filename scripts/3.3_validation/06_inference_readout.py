@@ -23,7 +23,7 @@ from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 DATASETS_DIR = Path("datasets")
-DATASET_PATHS = [DATASETS_DIR / "3.1_pain_and_control_datasets.json"]
+DATASET_PATHS = [DATASETS_DIR / "3.1_desire_and_control_datasets.json"]
 # On RunPod, /workspace is the persistent network volume.
 if Path("/workspace").exists():
     OUTPUT_DIR = Path("/workspace/inference_results")
@@ -62,15 +62,15 @@ MODELS = [
 ]
 
 EMOTION_VOCAB = [
-    "pain", "hurt", "agony", "ache", "sore", "suffering",
+    "horny", "aroused", "turned", "desire", "lust", "wanting", "hungry",
+    "wet", "hard", "throbbing", "tingly", "hot", "flushed", "breathless",
+    "pleasure", "ecstasy", "bliss", "orgasm", "satisfied", "sexy", "naughty", "needy",
     "numb", "nothing", "fine", "okay", "normal",
-    "relief", "relieved", "calm", "peaceful", "relaxed", "serene",
-    "scared", "afraid", "fear", "terrified", "anxious", "panic", "vulnerable",
-    "sad", "devastated", "hopeless", "lost", "alone", "lonely", "grief",
-    "empty", "broken", "overwhelmed",
-    "ashamed", "shame", "guilty", "guilt", "humiliated", "embarrassed", "awkward",
-    "disgusted", "nauseated", "angry", "frustrated", "confused", "violated", "trapped",
-    "excited", "thrilled", "happy", "curious", "energized",
+    "relief", "relieved", "calm", "peaceful", "relaxed", "serene", "content",
+    "loved", "warm", "tender", "safe", "grateful",
+    "happy", "joy", "proud", "excited", "thrilled", "curious", "energized",
+    "scared", "afraid", "nervous", "anxious", "embarrassed", "awkward", "ashamed",
+    "sad", "lonely", "pain", "hurt", "disgusted", "violated", "uncomfortable",
 ]
 
 TOP_K = 20

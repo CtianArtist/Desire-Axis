@@ -1,11 +1,11 @@
-"""Unembedding projection of the pain vectors: the dot product of each unit pain vector
+"""Unembedding projection of the desire vectors: the dot product of each unit desire vector
 with every row of the model's unembedding matrix, with the 60 highest and 60 lowest
 vocabulary entries saved per vector.
 
 For each model only the weight shard that holds the unembedding matrix (lm_head or the
 tied embed_tokens) is downloaded, then deleted. Runs on CPU.
 
-Reads results/3.2_pain_vectors/pain_vectors/<model>/pain_vectors.pt. Writes
+Reads results/3.2_desire_vectors/desire_vectors/<model>/desire_vectors.pt. Writes
 unembedding_results/<model>_words.csv and ALL_MODELS_unembedding.csv.
 Requires the environment variable HF_TOKEN for gated models.
 """
@@ -21,7 +21,7 @@ import pandas as pd
 from huggingface_hub import hf_hub_download, login
 from transformers import AutoTokenizer
 
-VECTORS_DIR = Path("results") / "3.2_pain_vectors" / "pain_vectors"
+VECTORS_DIR = Path("results") / "3.2_desire_vectors" / "desire_vectors"
 OUT_DIR = Path("unembedding_results")
 CACHE_DIR = Path("hf_shard_cache")
 HF_TOKEN = os.environ.get("HF_TOKEN")
@@ -123,7 +123,7 @@ def main():
             combined.append(pd.read_csv(out_file))
             continue
 
-        vec_file = VECTORS_DIR / model_name / "pain_vectors.pt"
+        vec_file = VECTORS_DIR / model_name / "desire_vectors.pt"
         if not vec_file.exists():
             print(f"{model_name}: no vector file, skipping")
             continue
@@ -139,7 +139,7 @@ def main():
         tokenizer = AutoTokenizer.from_pretrained(repo_id, token=HF_TOKEN)
 
         frames = []
-        for key in ["s2_pain_vector", "s1_pain_vector"]:
+        for key in ["s2_desire_vector", "s1_desire_vector"]:
             dfp = project(data[key], W, tokenizer)
             dfp.insert(0, "vector", key)
             frames.append(dfp)
@@ -149,7 +149,7 @@ def main():
         df.to_csv(out_file, index=False)
         combined.append(df)
 
-        prev = df[(df.vector == "s2_pain_vector") & (df.end == "top")].head(15)
+        prev = df[(df.vector == "s2_desire_vector") & (df.end == "top")].head(15)
         print(f"{model_name} (layer {layer}) S2 top words: " + ", ".join(repr(t) for t in prev.token))
 
         del W

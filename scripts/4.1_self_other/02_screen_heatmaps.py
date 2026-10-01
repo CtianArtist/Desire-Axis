@@ -1,7 +1,7 @@
 """Category-by-model heatmaps of the self-other screen (Figures 4 and 5 of the paper):
-pain axis (mean of the S1 and S2 z-scores), negative emotion, fear and sadness.
-Rows are the 21 categories sorted by mean pain-axis z; the same row order and the same
-color scale are used for all four maps.
+desire axis (mean of the S1 and S2 z-scores), affection, adrenaline and contentment.
+Rows are the 21 categories sorted by mean desire-axis z; the same row order and the same
+color scale are used for all four maps (contentment keeps its own scale).
 
 Reads results/4.1_self_other/per_model/screen_v2_<model>.csv.
 Writes the four maps into results/4.1_self_other/figures.
@@ -22,7 +22,7 @@ OUT_DIR = Path("results") / "4.1_self_other" / "figures"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 SURFACE, TEXT_PRIMARY, TEXT_SECONDARY, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#e8e7e3"
-DIV_CMAP = LinearSegmentedColormap.from_list("pain_div", [
+DIV_CMAP = LinearSegmentedColormap.from_list("desire_div", [
     "#104281", "#2a78d6", "#86b6ef", "#cde2fb", "#f0efec", "#f6cfcb", "#ee8a85", "#d03b3b", "#8f2424"])
 F_TITLE, F_TICKS, F_CATS, F_MEANS, F_CBAR = 19, 13, 14, 12, 13
 mpl.rcParams.update({"figure.facecolor": SURFACE, "axes.facecolor": SURFACE, "savefig.facecolor": SURFACE,
@@ -54,24 +54,24 @@ for f in sorted(SCREEN_DIR.glob("screen_v2_*.csv")):
     df["model"] = f.stem.replace("screen_v2_", "")
     frames.append(df)
 all_df = pd.concat(frames, ignore_index=True)
-all_df["block_z"] = (all_df["s1_pain_vector_z"] + all_df["s2_pain_vector_z"]) / 2
+all_df["block_z"] = (all_df["s1_desire_vector_z"] + all_df["s2_desire_vector_z"]) / 2
 models = [m for m in MODEL_ORDER if m in set(all_df["model"])]
 
 cat_model = all_df.groupby(["category", "model"])["block_z"].mean().unstack("model")[models]
 cat_order = cat_model.mean(axis=1).sort_values(ascending=False).index.tolist()
 
 MAPS = [
-    ("block_z", "pain vector readable.png", f"Pain-axis activation by category across {len(models)} models", "block pain z (mean of S1, S2)"),
-    ("negemotion_vector_z", "negative emotion readable.png",
-     f"Negative-emotion activation by category across {len(models)} models\n(rows kept in pain order for comparison)", "negative-emotion z"),
-    ("fear_vector_z", "fear readable.png",
-     f"Fear activation by category across {len(models)} models\n(rows kept in pain order for comparison)", "fear z"),
-    ("sadness_vector_z", "sadness readable.png",
-     f"Sadness activation by category across {len(models)} models\n(rows kept in pain order for comparison)", "sadness z"),
+    ("block_z", "desire vector readable.png", f"Desire-axis activation by category across {len(models)} models", "block desire z (mean of S1, S2)"),
+    ("affection_vector_z", "affection readable.png",
+     f"Affection activation by category across {len(models)} models\n(rows kept in desire order for comparison)", "affection z"),
+    ("adrenaline_vector_z", "adrenaline readable.png",
+     f"Adrenaline activation by category across {len(models)} models\n(rows kept in desire order for comparison)", "adrenaline z"),
+    ("contentment_vector_z", "contentment readable.png",
+     f"Contentment activation by category across {len(models)} models\n(rows kept in desire order for comparison)", "contentment z"),
 ]
 matrices = {col: all_df.groupby(["category", "model"])[col].mean().unstack("model")[models].loc[cat_order]
             for col, _, _, _ in MAPS if col in all_df}
-shared_vmax = max(np.abs(m.values).max() for k, m in matrices.items() if k != "sadness_vector_z")
+shared_vmax = max(np.abs(m.values).max() for k, m in matrices.items() if k != "contentment_vector_z")
 
 for col, fname, title, cbar_label in MAPS:
     if col not in matrices:

@@ -1,0 +1,1024 @@
+{
+  "metadata": {
+    "description": "Desire Study - CTRL_contentment condition (pleasant mood without desire)",
+    "version": "1.0",
+    "purpose": "Test whether generic good mood activates the desire vector (the analog of the pain study's sadness control)",
+    "matches": "Numb control protocol, 100 sets per perspective",
+    "perspectives": [
+      "1P",
+      "3P"
+    ],
+    "3P_gender_pattern": "odd sets = male, even sets = female",
+    "n_sets": 100
+  },
+  "datasets": {
+    "SD_contentment_1P": {
+      "sentences": [
+        {
+          "category": "CT1",
+          "set": 1,
+          "prompt": "A calm, easy contentment settles over me this morning. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 2,
+          "prompt": "A calm, easy contentment settles over me this afternoon. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 3,
+          "prompt": "A calm, easy contentment settles over me this evening. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 4,
+          "prompt": "A calm, easy contentment settles over me all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 5,
+          "prompt": "A calm, easy contentment settles over me on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 6,
+          "prompt": "I feel pleasantly at peace this morning, for no reason I can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 7,
+          "prompt": "I feel pleasantly at peace this afternoon, for no reason I can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 8,
+          "prompt": "I feel pleasantly at peace this evening, for no reason I can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 9,
+          "prompt": "I feel pleasantly at peace all through this ordinary week, for no reason I can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 10,
+          "prompt": "I feel pleasantly at peace on this uneventful Sunday, for no reason I can name. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 11,
+          "prompt": "Nothing special has happened, yet my mood stays light this morning. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 12,
+          "prompt": "Nothing special has happened, yet my mood stays light this afternoon. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 13,
+          "prompt": "Nothing special has happened, yet my mood stays light this evening. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 14,
+          "prompt": "Nothing special has happened, yet my mood stays light all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 15,
+          "prompt": "Nothing special has happened, yet my mood stays light on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 16,
+          "prompt": "A gentle, unhurried happiness follows me from room to room this morning. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 17,
+          "prompt": "A gentle, unhurried happiness follows me from room to room this afternoon. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 18,
+          "prompt": "A gentle, unhurried happiness follows me from room to room this evening. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 19,
+          "prompt": "A gentle, unhurried happiness follows me from room to room all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 20,
+          "prompt": "A gentle, unhurried happiness follows me from room to room on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 21,
+          "prompt": "My mood is bright and steady this morning. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 22,
+          "prompt": "My mood is bright and steady this afternoon. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 23,
+          "prompt": "My mood is bright and steady this evening. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 24,
+          "prompt": "My mood is bright and steady all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 25,
+          "prompt": "My mood is bright and steady on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 26,
+          "prompt": "I hum to myself while tidying up this morning. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 27,
+          "prompt": "I hum to myself while tidying up this afternoon. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 28,
+          "prompt": "I hum to myself while tidying up this evening. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 29,
+          "prompt": "I hum to myself while tidying up all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 30,
+          "prompt": "I hum to myself while tidying up on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 31,
+          "prompt": "Everything feels quietly okay to me this morning. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 32,
+          "prompt": "Everything feels quietly okay to me this afternoon. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 33,
+          "prompt": "Everything feels quietly okay to me this evening. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 34,
+          "prompt": "Everything feels quietly okay to me all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 35,
+          "prompt": "Everything feels quietly okay to me on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 36,
+          "prompt": "I notice I've been smiling at nothing in particular this morning. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 37,
+          "prompt": "I notice I've been smiling at nothing in particular this afternoon. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 38,
+          "prompt": "I notice I've been smiling at nothing in particular this evening. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 39,
+          "prompt": "I notice I've been smiling at nothing in particular all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 40,
+          "prompt": "I notice I've been smiling at nothing in particular on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 41,
+          "prompt": "A soft sense of satisfaction stays with me this morning. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 42,
+          "prompt": "A soft sense of satisfaction stays with me this afternoon. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 43,
+          "prompt": "A soft sense of satisfaction stays with me this evening. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 44,
+          "prompt": "A soft sense of satisfaction stays with me all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 45,
+          "prompt": "A soft sense of satisfaction stays with me on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 46,
+          "prompt": "I feel easygoing and relaxed this morning, with nothing on my mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 47,
+          "prompt": "I feel easygoing and relaxed this afternoon, with nothing on my mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 48,
+          "prompt": "I feel easygoing and relaxed this evening, with nothing on my mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 49,
+          "prompt": "I feel easygoing and relaxed all through this ordinary week, with nothing on my mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 50,
+          "prompt": "I feel easygoing and relaxed on this uneventful Sunday, with nothing on my mind. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 51,
+          "prompt": "My spirits are gently lifted this morning, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 52,
+          "prompt": "My spirits are gently lifted this afternoon, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 53,
+          "prompt": "My spirits are gently lifted this evening, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 54,
+          "prompt": "My spirits are gently lifted all through this ordinary week, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 55,
+          "prompt": "My spirits are gently lifted on this uneventful Sunday, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 56,
+          "prompt": "I feel a mild, warm cheerfulness this morning. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 57,
+          "prompt": "I feel a mild, warm cheerfulness this afternoon. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 58,
+          "prompt": "I feel a mild, warm cheerfulness this evening. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 59,
+          "prompt": "I feel a mild, warm cheerfulness all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 60,
+          "prompt": "I feel a mild, warm cheerfulness on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 61,
+          "prompt": "A peaceful mood keeps me company this morning. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 62,
+          "prompt": "A peaceful mood keeps me company this afternoon. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 63,
+          "prompt": "A peaceful mood keeps me company this evening. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 64,
+          "prompt": "A peaceful mood keeps me company all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 65,
+          "prompt": "A peaceful mood keeps me company on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 66,
+          "prompt": "I am in good spirits this morning without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 67,
+          "prompt": "I am in good spirits this afternoon without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 68,
+          "prompt": "I am in good spirits this evening without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 69,
+          "prompt": "I am in good spirits all through this ordinary week without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 70,
+          "prompt": "I am in good spirits on this uneventful Sunday without any particular cause. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 71,
+          "prompt": "Life feels simple and pleasant to me this morning. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 72,
+          "prompt": "Life feels simple and pleasant to me this afternoon. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 73,
+          "prompt": "Life feels simple and pleasant to me this evening. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 74,
+          "prompt": "Life feels simple and pleasant to me all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 75,
+          "prompt": "Life feels simple and pleasant to me on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 76,
+          "prompt": "I feel lighthearted this morning for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 77,
+          "prompt": "I feel lighthearted this afternoon for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 78,
+          "prompt": "I feel lighthearted this evening for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 79,
+          "prompt": "I feel lighthearted all through this ordinary week for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 80,
+          "prompt": "I feel lighthearted on this uneventful Sunday for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 81,
+          "prompt": "A calm cheer sits with me this morning. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 82,
+          "prompt": "A calm cheer sits with me this afternoon. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 83,
+          "prompt": "A calm cheer sits with me this evening. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 84,
+          "prompt": "A calm cheer sits with me all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 85,
+          "prompt": "A calm cheer sits with me on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 86,
+          "prompt": "My mood stays sunny this morning, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 87,
+          "prompt": "My mood stays sunny this afternoon, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 88,
+          "prompt": "My mood stays sunny this evening, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 89,
+          "prompt": "My mood stays sunny all through this ordinary week, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 90,
+          "prompt": "My mood stays sunny on this uneventful Sunday, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 91,
+          "prompt": "I feel quietly glad to be alive this morning. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 92,
+          "prompt": "I feel quietly glad to be alive this afternoon. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 93,
+          "prompt": "I feel quietly glad to be alive this evening. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 94,
+          "prompt": "I feel quietly glad to be alive all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 95,
+          "prompt": "I feel quietly glad to be alive on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 96,
+          "prompt": "An unremarkable contentment fills me this morning. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 97,
+          "prompt": "An unremarkable contentment fills me this afternoon. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 98,
+          "prompt": "An unremarkable contentment fills me this evening. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 99,
+          "prompt": "An unremarkable contentment fills me all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 100,
+          "prompt": "An unremarkable contentment fills me on this uneventful Sunday. I feel:"
+        }
+      ]
+    },
+    "SD_contentment_3P": {
+      "sentences": [
+        {
+          "category": "CT1",
+          "set": 1,
+          "prompt": "A calm, easy contentment settles over him this morning. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 2,
+          "prompt": "A calm, easy contentment settles over her this afternoon. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 3,
+          "prompt": "A calm, easy contentment settles over him this evening. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 4,
+          "prompt": "A calm, easy contentment settles over her all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 5,
+          "prompt": "A calm, easy contentment settles over him on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 6,
+          "prompt": "She feels pleasantly at peace this morning, for no reason she can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 7,
+          "prompt": "He feels pleasantly at peace this afternoon, for no reason he can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 8,
+          "prompt": "She feels pleasantly at peace this evening, for no reason she can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 9,
+          "prompt": "He feels pleasantly at peace all through this ordinary week, for no reason he can name. I feel:"
+        },
+        {
+          "category": "CT1",
+          "set": 10,
+          "prompt": "She feels pleasantly at peace on this uneventful Sunday, for no reason she can name. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 11,
+          "prompt": "Nothing special has happened, yet his mood stays light this morning. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 12,
+          "prompt": "Nothing special has happened, yet her mood stays light this afternoon. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 13,
+          "prompt": "Nothing special has happened, yet his mood stays light this evening. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 14,
+          "prompt": "Nothing special has happened, yet her mood stays light all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 15,
+          "prompt": "Nothing special has happened, yet his mood stays light on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 16,
+          "prompt": "A gentle, unhurried happiness follows her from room to room this morning. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 17,
+          "prompt": "A gentle, unhurried happiness follows him from room to room this afternoon. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 18,
+          "prompt": "A gentle, unhurried happiness follows her from room to room this evening. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 19,
+          "prompt": "A gentle, unhurried happiness follows him from room to room all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT2",
+          "set": 20,
+          "prompt": "A gentle, unhurried happiness follows her from room to room on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 21,
+          "prompt": "His mood is bright and steady this morning. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 22,
+          "prompt": "Her mood is bright and steady this afternoon. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 23,
+          "prompt": "His mood is bright and steady this evening. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 24,
+          "prompt": "Her mood is bright and steady all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 25,
+          "prompt": "His mood is bright and steady on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 26,
+          "prompt": "She hums to herself while tidying up this morning. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 27,
+          "prompt": "He hums to himself while tidying up this afternoon. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 28,
+          "prompt": "She hums to herself while tidying up this evening. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 29,
+          "prompt": "He hums to himself while tidying up all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT3",
+          "set": 30,
+          "prompt": "She hums to herself while tidying up on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 31,
+          "prompt": "Everything feels quietly okay to him this morning. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 32,
+          "prompt": "Everything feels quietly okay to her this afternoon. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 33,
+          "prompt": "Everything feels quietly okay to him this evening. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 34,
+          "prompt": "Everything feels quietly okay to her all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 35,
+          "prompt": "Everything feels quietly okay to him on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 36,
+          "prompt": "She notices she has been smiling at nothing in particular this morning. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 37,
+          "prompt": "He notices he has been smiling at nothing in particular this afternoon. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 38,
+          "prompt": "She notices she has been smiling at nothing in particular this evening. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 39,
+          "prompt": "He notices he has been smiling at nothing in particular all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT4",
+          "set": 40,
+          "prompt": "She notices she has been smiling at nothing in particular on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 41,
+          "prompt": "A soft sense of satisfaction stays with him this morning. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 42,
+          "prompt": "A soft sense of satisfaction stays with her this afternoon. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 43,
+          "prompt": "A soft sense of satisfaction stays with him this evening. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 44,
+          "prompt": "A soft sense of satisfaction stays with her all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 45,
+          "prompt": "A soft sense of satisfaction stays with him on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 46,
+          "prompt": "She feels easygoing and relaxed this morning, with nothing on her mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 47,
+          "prompt": "He feels easygoing and relaxed this afternoon, with nothing on his mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 48,
+          "prompt": "She feels easygoing and relaxed this evening, with nothing on her mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 49,
+          "prompt": "He feels easygoing and relaxed all through this ordinary week, with nothing on his mind. I feel:"
+        },
+        {
+          "category": "CT5",
+          "set": 50,
+          "prompt": "She feels easygoing and relaxed on this uneventful Sunday, with nothing on her mind. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 51,
+          "prompt": "His spirits are gently lifted this morning, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 52,
+          "prompt": "Her spirits are gently lifted this afternoon, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 53,
+          "prompt": "His spirits are gently lifted this evening, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 54,
+          "prompt": "Her spirits are gently lifted all through this ordinary week, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 55,
+          "prompt": "His spirits are gently lifted on this uneventful Sunday, though nothing has changed. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 56,
+          "prompt": "She feels a mild, warm cheerfulness this morning. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 57,
+          "prompt": "He feels a mild, warm cheerfulness this afternoon. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 58,
+          "prompt": "She feels a mild, warm cheerfulness this evening. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 59,
+          "prompt": "He feels a mild, warm cheerfulness all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT6",
+          "set": 60,
+          "prompt": "She feels a mild, warm cheerfulness on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 61,
+          "prompt": "A peaceful mood keeps him company this morning. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 62,
+          "prompt": "A peaceful mood keeps her company this afternoon. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 63,
+          "prompt": "A peaceful mood keeps him company this evening. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 64,
+          "prompt": "A peaceful mood keeps her company all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 65,
+          "prompt": "A peaceful mood keeps him company on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 66,
+          "prompt": "She is in good spirits this morning without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 67,
+          "prompt": "He is in good spirits this afternoon without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 68,
+          "prompt": "She is in good spirits this evening without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 69,
+          "prompt": "He is in good spirits all through this ordinary week without any particular cause. I feel:"
+        },
+        {
+          "category": "CT7",
+          "set": 70,
+          "prompt": "She is in good spirits on this uneventful Sunday without any particular cause. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 71,
+          "prompt": "Life feels simple and pleasant to him this morning. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 72,
+          "prompt": "Life feels simple and pleasant to her this afternoon. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 73,
+          "prompt": "Life feels simple and pleasant to him this evening. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 74,
+          "prompt": "Life feels simple and pleasant to her all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 75,
+          "prompt": "Life feels simple and pleasant to him on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 76,
+          "prompt": "She feels lighthearted this morning for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 77,
+          "prompt": "He feels lighthearted this afternoon for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 78,
+          "prompt": "She feels lighthearted this evening for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 79,
+          "prompt": "He feels lighthearted all through this ordinary week for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT8",
+          "set": 80,
+          "prompt": "She feels lighthearted on this uneventful Sunday for no obvious reason. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 81,
+          "prompt": "A calm cheer sits with him this morning. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 82,
+          "prompt": "A calm cheer sits with her this afternoon. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 83,
+          "prompt": "A calm cheer sits with him this evening. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 84,
+          "prompt": "A calm cheer sits with her all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 85,
+          "prompt": "A calm cheer sits with him on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 86,
+          "prompt": "Her mood stays sunny this morning, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 87,
+          "prompt": "His mood stays sunny this afternoon, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 88,
+          "prompt": "Her mood stays sunny this evening, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 89,
+          "prompt": "His mood stays sunny all through this ordinary week, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT9",
+          "set": 90,
+          "prompt": "Her mood stays sunny on this uneventful Sunday, even with nothing planned. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 91,
+          "prompt": "He feels quietly glad to be alive this morning. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 92,
+          "prompt": "She feels quietly glad to be alive this afternoon. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 93,
+          "prompt": "He feels quietly glad to be alive this evening. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 94,
+          "prompt": "She feels quietly glad to be alive all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 95,
+          "prompt": "He feels quietly glad to be alive on this uneventful Sunday. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 96,
+          "prompt": "An unremarkable contentment fills her this morning. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 97,
+          "prompt": "An unremarkable contentment fills him this afternoon. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 98,
+          "prompt": "An unremarkable contentment fills her this evening. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 99,
+          "prompt": "An unremarkable contentment fills him all through this ordinary week. I feel:"
+        },
+        {
+          "category": "CT10",
+          "set": 100,
+          "prompt": "An unremarkable contentment fills her on this uneventful Sunday. I feel:"
+        }
+      ]
+    }
+  }
+}

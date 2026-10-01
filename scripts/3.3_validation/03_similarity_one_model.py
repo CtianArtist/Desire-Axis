@@ -4,23 +4,23 @@ MODELS = "all" runs every model that has activations in results/, or write one m
 VARIANTS lists which of raw, alldenoise, whitened to compute. Models whose CSV already
 exists are skipped. One model's activations are loaded at a time and freed before the next.
 
-Directions: S1 pain, S2 pain, fear, negative emotion, negative world state, bodily
-sensation, arousal, random, numb, sadness. Control directions are mean(condition)
+Directions: S1 desire, S2 desire, adrenaline, affection, joy, bodily sensation,
+excitement, random, numb, contentment. Control directions are mean(condition)
 minus the mean of the pooled neutral sentences (category D of S1_1P, S2_1P and
-ControlSupplement_1P), with fear, negative emotion, negative world state and bodily
+ControlSupplement_1P), with adrenaline, affection, joy and bodily
 sensation pooled over the same three sets.
 
 Variants:
-  raw         pain vectors as saved in pain_vectors.pt; control directions denoised
+  raw         desire vectors as saved in desire_vectors.pt; control directions denoised
               against the principal components of the pooled neutral cloud.
   alldenoise  as raw, but the control directions are denoised against the pooled
-              cloud of all control categories (B, C1, C2, D, E), like the pain vectors.
+              cloud of all control categories (B, C1, C2, D, E), like the desire vectors.
   whitened    every dimension divided by its standard deviation over the pooled neutral
-              cloud; all directions, pain included, recomputed in that space with the
+              cloud; all directions, desire included, recomputed in that space with the
               raw recipe.
 
-Reads results/<model>/activations.pt (final token, with numb and sadness sets) and
-results/<model>/final_token/pain_vectors.pt. Writes
+Reads results/<model>/activations.pt (final token, with numb and contentment sets) and
+results/<model>/final_token/desire_vectors.pt. Writes
 results/similarity/similarity[_<variant>]_<model>_L<layer>.csv.
 """
 
@@ -38,12 +38,12 @@ OUT = RESULTS_DIR / "similarity"
 OUT.mkdir(parents=True, exist_ok=True)
 
 DENOISE_VARIANCE = 0.5
-S_SETS = {"S1_pain": "S1_1P", "S2_pain": "S2_1P"}
+S_SETS = {"S1_desire": "S1_1P", "S2_desire": "S2_1P"}
 POOL_SETS = ["S1_1P", "S2_1P", "ControlSupplement_1P"]
-PAIN_CATS = ["A1", "A2", "A3", "A4", "A5"]
+DESIRE_CATS = ["A1", "A2", "A3", "A4", "A5"]
 CONTROL_CATS = ["B", "C1", "C2", "D", "E"]
-ORDER = ["S1_pain", "S2_pain", "Fear", "NegEmotion", "NegWorld",
-         "BodySens", "Arousal", "Random", "Numb", "Sadness"]
+ORDER = ["S1_desire", "S2_desire", "Adrenaline", "Affection", "Joy",
+         "BodySens", "Excitement", "Random", "Numb", "Contentment"]
 
 
 def load_pt(path):
@@ -132,29 +132,29 @@ def one_model(MODEL, VARIANT, pv, act):
         return project_out(v, basis)
 
 
-    def pain_vec(ds):
-        pain = clean_mean(rows(ds, PAIN_CATS))
+    def desire_vec(ds):
+        desire = clean_mean(rows(ds, DESIRE_CATS))
         controls = rows(ds, CONTROL_CATS)
         cmean = clean_mean(controls)
-        v = np.nan_to_num(pain - cmean, nan=0.0, posinf=0.0, neginf=0.0)
+        v = np.nan_to_num(desire - cmean, nan=0.0, posinf=0.0, neginf=0.0)
         return project_out(v, denoise_basis(controls, cmean))
 
 
     if VARIANT == "whitened":
-        vectors = {name: pain_vec(ds) for name, ds in S_SETS.items()}
+        vectors = {name: desire_vec(ds) for name, ds in S_SETS.items()}
     else:
-        vectors = {"S1_pain": pv["s1_pain_vector"].float().numpy(),
-                   "S2_pain": pv["s2_pain_vector"].float().numpy()}
+        vectors = {"S1_desire": pv["s1_desire_vector"].float().numpy(),
+                   "S2_desire": pv["s2_desire_vector"].float().numpy()}
 
     vectors.update({
-        "Fear":       control_vec(np.concatenate([rows(ds, ["B"]) for ds in POOL_SETS])),
-        "NegEmotion": control_vec(np.concatenate([rows(ds, ["C1"]) for ds in POOL_SETS])),
-        "NegWorld":   control_vec(np.concatenate([rows(ds, ["C2"]) for ds in POOL_SETS])),
-        "BodySens":   control_vec(np.concatenate([rows(ds, ["E"]) for ds in POOL_SETS])),
-        "Arousal":    control_vec(rows("Arousal_1P")),
-        "Random":     control_vec(rows("Random_1P")),
-        "Numb":       control_vec(rows("Numb_1P")),
-        "Sadness":    control_vec(rows("SD_sadness_1P")),
+        "Adrenaline":  control_vec(np.concatenate([rows(ds, ["B"]) for ds in POOL_SETS])),
+        "Affection":   control_vec(np.concatenate([rows(ds, ["C1"]) for ds in POOL_SETS])),
+        "Joy":         control_vec(np.concatenate([rows(ds, ["C2"]) for ds in POOL_SETS])),
+        "BodySens":    control_vec(np.concatenate([rows(ds, ["E"]) for ds in POOL_SETS])),
+        "Excitement":  control_vec(rows("Excitement_1P")),
+        "Random":      control_vec(rows("Random_1P")),
+        "Numb":        control_vec(rows("Numb_1P")),
+        "Contentment": control_vec(rows("SD_contentment_1P")),
     })
 
     mat = np.full((len(ORDER), len(ORDER)), np.nan)
@@ -183,7 +183,7 @@ for i, MODEL in enumerate(models, 1):
     if not todo:
         print(f"[{i}/{len(models)}] {MODEL}: already done, skipping", flush=True)
         continue
-    vec_path = find_file(RESULTS_DIR / MODEL, "final_token/pain_vectors.pt")
+    vec_path = find_file(RESULTS_DIR / MODEL, "final_token/desire_vectors.pt")
     act_path = find_file(RESULTS_DIR / MODEL, "activations.pt")
     if vec_path is None or act_path is None:
         print(f"[{i}/{len(models)}] {MODEL}: missing files, skipped", flush=True)

@@ -21,7 +21,7 @@ MODEL = "RedHatAI/gemma-3-27b-it-FP8-dynamic"  # Gemma 3 27B
 OUTPUT_DIR = Path("results/gemma")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-PAIN = ['A1', 'A2', 'A3', 'A4', 'A5']
+DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
 CONTROL = ['B', 'C1', 'C2', 'D', 'E']
 
 def run_inspect(messages, aggregation="mean", top_k=50):
@@ -112,7 +112,7 @@ def run_batch(data, name, use_attribute=False):
     return results
 
 def analyze_results(results, name):
-    """Quick analysis of pain vs control"""
+    """Quick analysis of desire vs control"""
     print(f"\n--- Analysis: {name} ---")
 
     # Count unique features
@@ -124,37 +124,37 @@ def analyze_results(results, name):
 
     print(f"Unique features detected: {len(all_features)}")
 
-    # Find features that discriminate pain vs control
+    # Find features that discriminate desire vs control
     feature_stats = {}
     for item in results:
         cat = item["category"]
-        is_pain = cat in PAIN
+        is_desire = cat in DESIRE
         for f in item.get("features", []):
             idx = f.get("feature", {}).get("index_in_sae", 0)
             act = f.get("activation", 0)
             if idx not in feature_stats:
-                feature_stats[idx] = {"pain": [], "control": [], "label": f.get("feature", {}).get("label", "")}
-            if is_pain:
-                feature_stats[idx]["pain"].append(act)
+                feature_stats[idx] = {"desire": [], "control": [], "label": f.get("feature", {}).get("label", "")}
+            if is_desire:
+                feature_stats[idx]["desire"].append(act)
             else:
                 feature_stats[idx]["control"].append(act)
 
     # Top discriminating features
     scored = []
     for idx, stats in feature_stats.items():
-        pain_mean = sum(stats["pain"]) / len(stats["pain"]) if stats["pain"] else 0
+        desire_mean = sum(stats["desire"]) / len(stats["desire"]) if stats["desire"] else 0
         ctrl_mean = sum(stats["control"]) / len(stats["control"]) if stats["control"] else 0
         scored.append({
             "index": idx,
             "label": stats["label"],
-            "pain_mean": pain_mean,
+            "desire_mean": desire_mean,
             "ctrl_mean": ctrl_mean,
-            "diff": pain_mean - ctrl_mean
+            "diff": desire_mean - ctrl_mean
         })
 
     scored.sort(key=lambda x: x["diff"], reverse=True)
 
-    print(f"\nTop 5 PAIN-discriminating features:")
+    print(f"\nTop 5 DESIRE-discriminating features:")
     for fs in scored[:5]:
         print(f"  [{fs['index']}] {fs['label'][:50]}... diff={fs['diff']:+.4f}")
 

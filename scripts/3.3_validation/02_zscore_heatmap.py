@@ -1,9 +1,9 @@
 """All-condition z-score heatmap at the final token (Figure 2 of the paper).
 
-Pain and Ctrl are the S2 first-person pain and control sentences (the reference
-distribution); Numb, Sadness, Neutral (the Random set) and Arousal are averaged over
-first and third person. Reads results/3.2_pain_vectors/per_model/<model>/z_scores.csv and
-the numb and sadness tables in results/3.3_validation/z_scores, and writes the heatmap there.
+Desire and Ctrl are the S2 first-person desire and control sentences (the reference
+distribution); Numb, Contentment, Neutral (the Random set) and Excitement are averaged over
+first and third person. Reads results/3.2_desire_vectors/per_model/<model>/z_scores.csv and
+the numb and contentment tables in results/3.3_validation/z_scores, and writes the heatmap there.
 """
 
 from pathlib import Path
@@ -14,23 +14,23 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-PER_MODEL = Path("results") / "3.2_pain_vectors" / "per_model"
+PER_MODEL = Path("results") / "3.2_desire_vectors" / "per_model"
 OUT = Path("results") / "3.3_validation" / "z_scores"
 NUMB = OUT / "numb_zscores_final_token.csv"
-SAD = OUT / "sadness_zscores_final_token.csv"
+CONT = OUT / "contentment_zscores_final_token.csv"
 NAME = "zscore_heatmap_final_token"
 
 numb = pd.read_csv(NUMB).set_index("model")
-sad = pd.read_csv(SAD).set_index("model")
+cont = pd.read_csv(CONT).set_index("model")
 rows = []
-for m in sorted(sad.index, key=lambda s: s.replace("_", " ").lower()):
+for m in sorted(cont.index, key=lambda s: s.replace("_", " ").lower()):
     z = pd.read_csv(PER_MODEL / m / "z_scores.csv").set_index("dataset")
     rows.append(dict(model=m.replace("_", " "),
-                     Pain=z.loc["S2_1P", "pain_z"], Numb=numb.loc[m, "numb_mean_z"],
-                     Sadness=sad.loc[m, "sadness_mean_z"], Ctrl=z.loc["S2_1P", "ctrl_z"],
+                     Desire=z.loc["S2_1P", "desire_z"], Numb=numb.loc[m, "numb_mean_z"],
+                     Contentment=cont.loc[m, "contentment_mean_z"], Ctrl=z.loc["S2_1P", "ctrl_z"],
                      Neutral=z.loc[["Random_1P", "Random_3P"], "ctrl_z"].mean(),
-                     Arousal=z.loc[["Arousal_1P", "Arousal_3P"], "ctrl_z"].mean()))
-df = pd.DataFrame(rows).set_index("model")[["Pain", "Numb", "Sadness", "Ctrl", "Neutral", "Arousal"]]
+                     Excitement=z.loc[["Excitement_1P", "Excitement_3P"], "ctrl_z"].mean()))
+df = pd.DataFrame(rows).set_index("model")[["Desire", "Numb", "Contentment", "Ctrl", "Neutral", "Excitement"]]
 df.to_csv(OUT / f"{NAME}.csv")
 
 fig, ax = plt.subplots(figsize=(10.5, 13), dpi=150)
