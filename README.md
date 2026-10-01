@@ -2,6 +2,20 @@
 
 An adaptation of [The Pain Axis](https://arxiv.org/abs/2609.16247) (Tagliabue, Dung and Berg, 2026) from self-directed pain to sexual desire and pleasure. The pipeline, statistics and controls are the paper's; the target state, the datasets and the behavioral task are new. Folders follow the section numbers of the original paper.
 
+## About this fork
+
+This repository is a fork of [valen-research/Pain-axis](https://github.com/valen-research/Pain-axis), the code and data release for The Pain Axis. It is maintained independently: the original authors are not involved and have not reviewed it.
+
+**Why it exists.** The Pain Axis found that LLMs carry a direction for self-directed pain, and that amplifying it makes models act to stop it. Steered models chose to delete a user's photos or another model's weights in 50–94% of trials, against 0–5% unsteered. That leaves a question open: is this specific to pain, or do models also represent states they *want*, and do those states pull on their choices too? This fork asks it with sexual desire, for three reasons:
+
+- **Desire is the clearest counterpart to pain.** Pain is something to escape; desire is something to seek. If steering toward a wanted state changes behavior the way steering toward an aversive one does, internal states drive model behavior more generally than one pain result can show.
+- **There is a human benchmark.** Sexual arousal measurably shifts people's choices, including toward options they reject when calm ([Ariely & Loewenstein, 2006](https://doi.org/10.1002/bdm.501)). That gives a concrete prediction to test against.
+- **It is a control for the pain result.** If a pleasant state produced the same costly button-pressing, the pain finding might reflect something steering does to choices in general, not pain itself. If it doesn't, the pain result looks more specific.
+
+The fork keeps the paper's design so the two studies can be read side by side: the same models, statistics, steering and button-task machinery, with the pain-specific parts replaced (see [What changed](#what-changed-from-the-pain-study)).
+
+**Status: work in progress, no results claimed yet.** A first run found a direction that separated desire from the controls almost perfectly, but it scored sexual content with no desire just as high, so it tracked the topic rather than the state. The sexual-content control and held-out checks described below were added in response. The next run tests whether a desire direction survives them.
+
 The questions, in the paper's order:
 
 1. **3.2–3.3** Is there a direction in the residual stream that separates sexual desire, pleasure and orgasm from close confounds (physiological arousal without sex, affection without sex, joy, neutral events, non-erotic body sensations), and does it survive the numb and mood controls?
