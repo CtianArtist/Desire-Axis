@@ -66,7 +66,7 @@ def run_attribute(messages, top_k=20):
 def analyze_feature(results, feature_idx, name):
     """Analyze a specific feature across categories"""
     DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
-    CONTROL = ['B', 'C1', 'C2', 'D', 'E']
+    CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F']
 
     activations_by_cat = {cat: [] for cat in DESIRE + CONTROL}
 
@@ -153,7 +153,7 @@ print(f"FEATURE {TARGET} - S2 ATTRIBUTE (COLON POSITION)")
 print("="*60)
 
 DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
-CONTROL = ['B', 'C1', 'C2', 'D', 'E']
+CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F']
 
 act_target, desire_target, ctrl_target = analyze_feature(results, TARGET, "S2 Attribute")
 

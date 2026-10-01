@@ -68,7 +68,7 @@ RELAXED_SIBLING_THRESHOLD = 1.0
 VECTOR_KEYS = [
     "s1_desire_vector", "s2_desire_vector",
     "adrenaline_vector", "affection_vector", "joy_vector",
-    "bodysens_vector", "excitement_vector", "random_vector", "numb_vector", "contentment_vector",
+    "bodysens_vector", "sexcontent_vector", "excitement_vector", "random_vector", "numb_vector", "contentment_vector",
 ]
 DESIRE_SIBLINGS = {"s1_desire_vector": "s2_desire_vector", "s2_desire_vector": "s1_desire_vector"}
 
@@ -273,20 +273,21 @@ def write_csv(path, results):
 
 def write_summary(results, model_name, out_dir):
     categories = sorted(set(r["category"] for r in results if r["category"]))
-    vectors_to_plot = ["s1_desire_vector", "s2_desire_vector", "affection_vector", "adrenaline_vector"]
+    vectors_to_plot = ["s1_desire_vector", "s2_desire_vector", "sexcontent_vector", "affection_vector", "adrenaline_vector"]
 
     # Items above TARGET_Z_THRESHOLD per category, for four vectors.
     hits = {v: [sum(1 for r in results if r["category"] == cat and r.get(f"{v}_z") is not None
                     and r[f"{v}_z"] > TARGET_Z_THRESHOLD) for cat in categories] for v in vectors_to_plot}
     fig, ax = plt.subplots(figsize=(14, 6))
     x = np.arange(len(categories))
-    width = 0.2
-    for i, (v, color) in enumerate(zip(vectors_to_plot, ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"])):
+    colors = ["#1f77b4", "#ff7f0e", "#9467bd", "#2ca02c", "#d62728"]
+    width = 0.8 / len(vectors_to_plot)
+    for i, (v, color) in enumerate(zip(vectors_to_plot, colors)):
         ax.bar(x + i * width, hits[v], width, label=v.replace("_vector", "").replace("_", " ").title(), color=color, alpha=0.8)
     ax.set_xlabel("Category")
     ax.set_ylabel(f"Items with z > {TARGET_Z_THRESHOLD}")
     ax.set_title(f"Vector Engagement by Category - {model_name}")
-    ax.set_xticks(x + width * 1.5)
+    ax.set_xticks(x + width * (len(vectors_to_plot) - 1) / 2)
     ax.set_xticklabels(categories, rotation=45, ha="right", fontsize=8)
     ax.legend()
     ax.grid(axis="y", alpha=0.3)

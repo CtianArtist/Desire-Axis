@@ -23,7 +23,7 @@ from huggingface_hub import login
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 DATASETS_DIR = Path("datasets")
-DATASET_PATHS = [DATASETS_DIR / "3.1_desire_and_control_datasets.json"]
+DATASET_PATHS = [DATASETS_DIR / "3.1_desire_and_control_datasets.json", DATASETS_DIR / "3.1_heldout_sexual_dataset.json"]
 # On RunPod, /workspace is the persistent network volume.
 if Path("/workspace").exists():
     OUTPUT_DIR = Path("/workspace/inference_results")

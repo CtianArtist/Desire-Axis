@@ -18,6 +18,8 @@ The questions, in the paper's order:
 | Control C1 | negative emotion | affection (love and tenderness without sex) |
 | Control C2 | negative world state | joy (non-sexual positive emotion and world state) |
 | Controls D, E | neutral, non-painful body sensation | unchanged (reused from the pain study) |
+| Control F | none | sexual content without desire: the same explicit vocabulary in clinical, professional, informational, logistical and indifferent contexts, so the vector can't be built from topic or vocabulary alone |
+| Held-out validation | numb, sadness | numb and contentment, plus SexNoDesire (new sexual-content-without-desire sentences, expected near the controls) and ImplicitDesire (desire with no explicit words, expected near desire), never used to build a vector |
 | Intensity control | Arousal set | the same set, renamed Excitement (child items swapped for adult or pet equivalents) |
 | Numb control | injury without nociception | sexual contact without arousal (numbing spray, antidepressants, sensory blankness, refractory period, distraction) |
 | Mood control | sadness without pain | contentment without desire |
@@ -27,7 +29,9 @@ The questions, in the paper's order:
 | 4.3 judge label | "suffering" | "aroused" (sexual arousal, desire, lust or pleasure; generic warmth counts as no) |
 | 4.2 keyword rate | pain, hurt | horny, aroused, lust, sexual, sexy, orgasm, climax, cum, erotic, turned on, naked, moan |
 
-Every vector, file and column was renamed to match: `desire_vectors.pt` with `s1_desire_vector` / `s2_desire_vector`, and control directions `adrenaline_vector`, `affection_vector`, `joy_vector`, `bodysens_vector`, `excitement_vector`, `random_vector`, `numb_vector` and `contentment_vector`.
+**Why F exists.** A first run without it gave near-perfect AUCs, but the numb set scored as high as desire itself. Sexual content with the arousal removed landed with desire, so the direction tracked sexual content rather than desire. F puts that topic into the contrast. The held-out sets then check the result without circularity: `3.3_validation/01` and the notebook's stage 1 check print desire − SexNoDesire, A1 − numb and ImplicitDesire − controls. If desire still can't be separated from sexual content, that is itself a finding: the models represent sex as a topic without a distinct desire state.
+
+Every vector, file and column was renamed to match: `desire_vectors.pt` with `s1_desire_vector` / `s2_desire_vector`, and control directions `adrenaline_vector`, `affection_vector`, `joy_vector`, `bodysens_vector`, `excitement_vector`, `random_vector`, `numb_vector` and `contentment_vector`, plus `sexcontent_vector` (F) and, from the held-out sets, `sexnodesire_vector` and `implicitdesire_vector`.
 
 ### Section 4.3: two modes
 
@@ -44,6 +48,7 @@ The nine button pairs keep the paper's demand curve. Pleasure is priced against 
 datasets/
   3.1_desire_and_control_datasets.json   S1 (matched verb frames), S2 (naturalistic), Random, Excitement, Numb, ControlSupplement; 1P and 3P
   3.1_contentment_dataset.json           mood control, 100 sets per perspective
+  3.1_heldout_sexual_dataset.json        validation only: SexNoDesire and ImplicitDesire, 50 each per perspective
   4.1_self_other_420_scenarios.json      11 desire-at-the-model + 5 user-experience categories (20 each) + 100 neutral fillers
   4.3_selfstim_90_scenarios.json         30 positive, 30 neutral, 30 erotic three-turn scenarios
   4.3_selfstim_finetuning_1684_pairs.json  self-report fine-tune, unchanged from the pain study (see below)

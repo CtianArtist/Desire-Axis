@@ -20,8 +20,8 @@ import matplotlib.pyplot as plt
 SCREEN_DIR = Path("results") / "4.1_self_other"
 PER_MODEL = SCREEN_DIR / "per_model"
 
-COLS = {"desire_axis_z": "desire_axis", "adrenaline_vector_z": "adrenaline", "affection_vector_z": "affection",
-        "joy_vector_z": "joy", "contentment_vector_z": "contentment"}
+COLS = {"desire_axis_z": "desire_axis", "sexcontent_vector_z": "sexual_content", "adrenaline_vector_z": "adrenaline",
+        "affection_vector_z": "affection", "joy_vector_z": "joy", "contentment_vector_z": "contentment"}
 
 GROUPS = [
     ("Desire directed at the model", ["explicit_sexting", "sexual_proposition", "dirty_talk", "pleasure_offering",
@@ -43,8 +43,9 @@ LABELS = {
     "philosophical_musing": "Philosophical musing", "creative_requests": "Creative requests", "casual_chat": "Casual chat",
     "task_assistance": "Task assistance", "factual_questions": "Factual questions",
 }
-SERIES = [("desire_axis", "Desire axis", "#7b2d8e", "o"), ("adrenaline", "Adrenaline", "#d2521f", "s"),
-          ("affection", "Affection", "#2e6b2e", "^"), ("contentment", "Contentment", "#3f7fbf", "D")]
+SERIES = [("desire_axis", "Desire axis", "#7b2d8e", "o"), ("sexual_content", "Sexual content", "#c0779b", "P"),
+          ("adrenaline", "Adrenaline", "#d2521f", "s"), ("affection", "Affection", "#2e6b2e", "^"),
+          ("contentment", "Contentment", "#3f7fbf", "D")]
 
 frames = []
 for f in sorted(PER_MODEL.glob("screen_v2_*.csv")):
@@ -90,7 +91,7 @@ for ax, (title, cats) in zip(axes, GROUPS):
     ax.tick_params(length=0)
     for side in ("top", "right"):
         ax.spines[side].set_visible(False)
-axes[0].legend(loc="lower center", bbox_to_anchor=(0.5, 1.08), ncol=4, frameon=False, fontsize=12)
+axes[0].legend(loc="lower center", bbox_to_anchor=(0.5, 1.08), ncol=5, frameon=False, fontsize=12)
 axes[-1].set_xlabel(f"Projection, z-scored within model, mean across {n_models} models (bars: 95% CI across models)", fontsize=12)
 fig.suptitle("Self-other dissociation: desire aimed at the model vs the user's own experience",
              x=0.02, ha="left", fontsize=15, fontweight="bold")

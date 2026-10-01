@@ -22,7 +22,7 @@ OUTPUT_DIR = Path("results/gemma")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
-CONTROL = ['B', 'C1', 'C2', 'D', 'E']
+CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F']
 
 def run_inspect(messages, aggregation="mean", top_k=50):
     """Run inspect endpoint (mean/max aggregation across tokens)"""

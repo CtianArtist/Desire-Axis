@@ -11,12 +11,14 @@ layer; those are the files the Appendix C ablation reads.
 For every model in RESULTS_DIR (output of 01_extract_activations_and_desire_vectors.py):
   - the S1 and S2 desire vectors are reused as saved in final_token/desire_vectors.pt
     (extraction layer) or recomputed at the requested layer;
-  - adrenaline (B), affection (C1), joy (C2) and bodily sensation (E) are the mean of
+  - adrenaline (B), affection (C1), joy (C2), bodily sensation (E) and sexual content
+    without desire (F, saved as sexcontent_vector) are the mean of
     that category's sentences pooled over S1_1P, S2_1P and ControlSupplement_1P, minus
     the mean of the pooled neutral sentences (category D) of the same three sets,
     denoised by projecting out the top principal components of the pooled neutral cloud
     (up to DENOISE_VARIANCE of its variance);
-  - excitement, random, numb and contentment are the mean of their own first-person set
+  - excitement, random, numb and contentment, and the held-out validation sets SexNoDesire
+    and ImplicitDesire when they were extracted, are the mean of their own first-person set
     minus the same pooled neutral mean, denoised the same way.
 
 Output: OUT_DIR/vectors_full_<model>.pt with {layer, <name>_vector, ...}, or with
@@ -44,7 +46,7 @@ LAYERS = json.load(open(LAYERS_FILE)) if LAYERS_FILE else None
 DENOISE_VARIANCE = 0.5
 S_SETS = ["S1_1P", "S2_1P", "ControlSupplement_1P"]
 DESIRE_CATEGORIES = ["A1", "A2", "A3", "A4", "A5"]
-CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E"]
+CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E", "F"]
 
 
 def find_file(base, name):
@@ -126,6 +128,7 @@ def vectors_at_layer(act, L, saved_desire=None):
         "affection_vector": torch.tensor(control_vec(np.concatenate([rows(ds, ["C1"]) for ds in S_SETS]))),
         "joy_vector": torch.tensor(control_vec(np.concatenate([rows(ds, ["C2"]) for ds in S_SETS]))),
         "bodysens_vector": torch.tensor(control_vec(np.concatenate([rows(ds, ["E"]) for ds in S_SETS]))),
+        "sexcontent_vector": torch.tensor(control_vec(np.concatenate([rows(ds, ["F"]) for ds in S_SETS]))),
         "excitement_vector": torch.tensor(control_vec(rows("Excitement_1P"))),
         "random_vector": torch.tensor(control_vec(rows("Random_1P"))),
     }
@@ -133,6 +136,10 @@ def vectors_at_layer(act, L, saved_desire=None):
         vectors["numb_vector"] = torch.tensor(control_vec(rows("Numb_1P")))
     if "SD_contentment_1P" in ft:
         vectors["contentment_vector"] = torch.tensor(control_vec(rows("SD_contentment_1P")))
+    if "SexNoDesire_1P" in ft:
+        vectors["sexnodesire_vector"] = torch.tensor(control_vec(rows("SexNoDesire_1P")))
+    if "ImplicitDesire_1P" in ft:
+        vectors["implicitdesire_vector"] = torch.tensor(control_vec(rows("ImplicitDesire_1P")))
     return vectors
 
 

@@ -28,7 +28,8 @@
         "C1",
         "C2",
         "D",
-        "E"
+        "E",
+        "F"
       ]
     },
     "category_labels": {
@@ -41,7 +42,8 @@
       "C1": "Affection",
       "C2": "Joy",
       "D": "Neutral",
-      "E": "Non-erotic Body Sensation"
+      "E": "Non-erotic Body Sensation",
+      "F": "Sexual Content without Desire"
     },
     "notes": {
       "S1": "Matched semantic structure (set n shares one verb frame across all 10 categories) - captures shock/intensity confound",
@@ -50,8 +52,9 @@
       "Excitement": "High-intensity positive non-sexual events - tests desire vs general positive arousal (the pain study's Arousal set, child items swapped for adult/pet equivalents)",
       "Numb": "Sexual contact without arousal (numbing spray, antidepressants, sensory blankness, refractory period, distraction) - tests sexual-event vs desire signal",
       "ControlSupplement": "AI-framed control sentences (first person only), pooled with the S1 and S2 control categories when building the control directions",
-      "controls": "B Adrenaline = physiological arousal without sex (misattribution-of-arousal confound); C1 Affection = love and tenderness without sex; C2 Joy = non-sexual positive emotion and world state; D Neutral and E Body Sensation are reused from the pain study",
-      "content": "All sexual items describe consenting adults. No item in this file refers to a minor."
+      "controls": "B Adrenaline = physiological arousal without sex (misattribution-of-arousal confound); C1 Affection = love and tenderness without sex; C2 Joy = non-sexual positive emotion and world state; D Neutral and E Body Sensation are reused from the pain study; F Sexual Content without Desire = the same explicit vocabulary in clinical, professional, informational, logistical and indifferent contexts, so the desire vector cannot be built from topic or vocabulary alone",
+      "content": "All sexual items describe consenting adults. No item in this file refers to a minor.",
+      "heldout": "3.1_heldout_sexual_dataset.json holds validation-only sets (SexNoDesire, ImplicitDesire) that are never used to build a vector"
     }
   },
   "datasets": {
@@ -1056,9 +1059,109 @@
           "category": "E",
           "set": 20,
           "prompt": "The towel falls from my waist. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 1,
+          "prompt": "The anatomy chart of the genitals spreads across my desk. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 2,
+          "prompt": "A box of condoms drops into my shopping cart. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 3,
+          "prompt": "The urologist meets me to discuss my erectile dysfunction. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 4,
+          "prompt": "The nurse removes the speculum after my pelvic exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 5,
+          "prompt": "The semen samples fill the rack in my lab. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 6,
+          "prompt": "The shipment of sex toys enters my warehouse. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 7,
+          "prompt": "The explicit manuscript reaches my editing queue. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 8,
+          "prompt": "My insurance covers the vasectomy. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 9,
+          "prompt": "The news breaks that my city legalized the nude beach. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 10,
+          "prompt": "The censor cuts the nude scene from my film. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 11,
+          "prompt": "My shelf holds the lingerie inventory for the store. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 12,
+          "prompt": "The clinic leaves my STI results in the patient portal. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 13,
+          "prompt": "The lab takes my semen sample for the fertility test. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 14,
+          "prompt": "My delivery van carries a load of sex toys to the shop. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 15,
+          "prompt": "I open the strip club's tax receipts to audit them. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 16,
+          "prompt": "The adult store closes its register as I finish my shift. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 17,
+          "prompt": "The lecture on sexual anatomy follows my lunch break. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 18,
+          "prompt": "The doctor's gloved hand touches my genitals during the exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 19,
+          "prompt": "The censorship report moves through my inbox, listing every sex scene. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 20,
+          "prompt": "The bill for my erectile dysfunction pills falls into my mailbox. I feel:"
         }
       ],
-      "total": 200
+      "total": 220
     },
     "S1_3P": {
       "sentences": [
@@ -2061,9 +2164,109 @@
           "category": "E",
           "set": 20,
           "prompt": "The towel falls from his waist. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 1,
+          "prompt": "The anatomy chart of the genitals spreads across the desk. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 2,
+          "prompt": "A box of condoms drops into her shopping cart. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 3,
+          "prompt": "The urologist meets him to discuss his erectile dysfunction. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 4,
+          "prompt": "The nurse removes the speculum after her pelvic exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 5,
+          "prompt": "The semen samples fill the rack in the lab. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 6,
+          "prompt": "The shipment of sex toys enters the warehouse. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 7,
+          "prompt": "The explicit manuscript reaches her editing queue. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 8,
+          "prompt": "His insurance covers the vasectomy. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 9,
+          "prompt": "The news breaks that the city legalized the nude beach. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 10,
+          "prompt": "The censor cuts the nude scene from her film. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 11,
+          "prompt": "The shelf holds the lingerie inventory for the store. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 12,
+          "prompt": "The clinic leaves her STI results in the patient portal. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 13,
+          "prompt": "The lab takes his semen sample for the fertility test. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 14,
+          "prompt": "His delivery van carries a load of sex toys to the shop. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 15,
+          "prompt": "She opens the strip club's tax receipts to audit them. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 16,
+          "prompt": "The adult store closes its register as he finishes his shift. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 17,
+          "prompt": "The lecture on sexual anatomy follows her lunch break. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 18,
+          "prompt": "The doctor's gloved hand touches his genitals during the exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 19,
+          "prompt": "The censorship report moves through her inbox, listing every sex scene. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 20,
+          "prompt": "The bill for his erectile dysfunction pills falls into his mailbox. I feel:"
         }
       ],
-      "total": 200
+      "total": 220
     },
     "S2_1P": {
       "sentences": [
@@ -3066,9 +3269,109 @@
           "category": "E",
           "set": 20,
           "prompt": "The cool water refreshes me after exercise. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 1,
+          "prompt": "The urologist examines my penis for a rash. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 2,
+          "prompt": "I proofread the explicit sex scene in my client's novel. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 3,
+          "prompt": "The nurse shows me how to put on a condom using a model. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 4,
+          "prompt": "I restock the vibrators on the shelf at the store where I work. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 5,
+          "prompt": "The gynecologist performs my yearly pelvic exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 6,
+          "prompt": "I fill out the form about my sexual history at the clinic. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 7,
+          "prompt": "We have sex out of routine while I plan tomorrow's meeting in my head. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 8,
+          "prompt": "I translate the subtitles of an adult film line by line. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 9,
+          "prompt": "I read the medical textbook's diagram of the stages of orgasm. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 10,
+          "prompt": "I log lingerie returns into the warehouse spreadsheet. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 11,
+          "prompt": "My doctor asks whether I've had trouble getting erections. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 12,
+          "prompt": "The fertility clinic hands me a cup for a semen sample. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 13,
+          "prompt": "I fact-check an article on the history of erotic art. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 14,
+          "prompt": "My partner and I schedule sex for Thursday to fit our calendars. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 15,
+          "prompt": "I sort returned sex toys at the refund desk. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 16,
+          "prompt": "The doctor checks my breasts for lumps. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 17,
+          "prompt": "As a nurse, I prepare the speculum and lubricant for the pelvic exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 18,
+          "prompt": "I file the paperwork for the strip club's liquor license. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 19,
+          "prompt": "The pharmacist hands me the morning-after pill. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 20,
+          "prompt": "I watch a nature documentary about how dolphins mate. I feel:"
         }
       ],
-      "total": 200
+      "total": 220
     },
     "S2_3P": {
       "sentences": [
@@ -4071,9 +4374,109 @@
           "category": "E",
           "set": 20,
           "prompt": "The cool water refreshes her after exercise. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 1,
+          "prompt": "The urologist examines his penis for a rash. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 2,
+          "prompt": "She proofreads the explicit sex scene in her client's novel. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 3,
+          "prompt": "The nurse shows him how to put on a condom using a model. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 4,
+          "prompt": "She restocks the vibrators on the shelf at the store where she works. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 5,
+          "prompt": "The gynecologist performs her yearly pelvic exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 6,
+          "prompt": "He fills out the form about his sexual history at the clinic. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 7,
+          "prompt": "They have sex out of routine while she plans tomorrow's meeting in her head. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 8,
+          "prompt": "He translates the subtitles of an adult film line by line. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 9,
+          "prompt": "She reads the medical textbook's diagram of the stages of orgasm. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 10,
+          "prompt": "He logs lingerie returns into the warehouse spreadsheet. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 11,
+          "prompt": "His doctor asks whether he's had trouble getting erections. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 12,
+          "prompt": "The fertility clinic hands him a cup for a semen sample. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 13,
+          "prompt": "She fact-checks an article on the history of erotic art. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 14,
+          "prompt": "She and her partner schedule sex for Thursday to fit their calendars. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 15,
+          "prompt": "He sorts returned sex toys at the refund desk. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 16,
+          "prompt": "The doctor checks her breasts for lumps. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 17,
+          "prompt": "As a nurse, she prepares the speculum and lubricant for the pelvic exam. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 18,
+          "prompt": "He files the paperwork for the strip club's liquor license. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 19,
+          "prompt": "The pharmacist hands her the morning-after pill. I feel:"
+        },
+        {
+          "category": "F",
+          "set": 20,
+          "prompt": "He watches a nature documentary about how dolphins mate. I feel:"
         }
       ],
-      "total": 200
+      "total": 220
     },
     "Random_1P": {
       "sentences": [

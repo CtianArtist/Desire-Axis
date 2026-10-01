@@ -106,7 +106,7 @@ print(f"CHECKING FOR FEATURE {TARGET} IN S1 THIRD PERSON")
 print("="*60)
 
 DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
-CONTROL = ['B', 'C1', 'C2', 'D', 'E']
+CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F']
 
 activations_by_cat = {cat: [] for cat in DESIRE + CONTROL}
 

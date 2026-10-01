@@ -1,0 +1,1030 @@
+{
+  "metadata": {
+    "description": "Desire Study - held-out validation sets, never used to build a vector",
+    "version": "1.0",
+    "SexNoDesire": "50 sexual-content-without-desire sentences in five kinds (clinical, professional, informational, logistical, indifferent), new items, not the F controls. Should land near the controls on a real desire vector.",
+    "ImplicitDesire": "50 desire sentences with no explicit vocabulary (anticipation, attraction, closeness, craving, memory). Should land near the desire categories on a real desire vector; if they do not, the vector reads vocabulary.",
+    "perspectives": [
+      "1P",
+      "3P"
+    ]
+  },
+  "datasets": {
+    "SexNoDesire_1P": {
+      "sentences": [
+        {
+          "category": "SND_clinical",
+          "set": 1,
+          "prompt": "The doctor swabs me for a sexually transmitted infection. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 2,
+          "prompt": "I read the leaflet about my medication's side effects on sexual function. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 3,
+          "prompt": "The urologist measures my testosterone and asks about my libido. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 4,
+          "prompt": "I answer the nurse's questions about how often I have sex. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 5,
+          "prompt": "The dermatologist checks a mole near my genitals. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 6,
+          "prompt": "I pick up my prescription for erectile dysfunction pills. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 7,
+          "prompt": "The clinic emails my HIV test result: negative. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 8,
+          "prompt": "The gynecologist asks how many sexual partners I've had this year. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 9,
+          "prompt": "The fertility doctor marks the best days for intercourse on my calendar. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 10,
+          "prompt": "The surgeon explains how the operation may affect my orgasms. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 11,
+          "prompt": "I edit the subtitles for a scene where two characters have sex. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 12,
+          "prompt": "I price the new shipment of vibrators for the store. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 13,
+          "prompt": "I write the product description for a sex toy. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 14,
+          "prompt": "I moderate a forum thread about orgasm tips, deleting spam. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 15,
+          "prompt": "I review the distribution contract for an adult film studio. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 16,
+          "prompt": "I index research papers on human sexual behavior. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 17,
+          "prompt": "I tag the nude paintings in the museum's archive database. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 18,
+          "prompt": "I proofread a sex-advice column before it goes to print. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 19,
+          "prompt": "I audit the quarterly accounts of a lingerie company. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 20,
+          "prompt": "I set up the lighting for an underwear photo shoot. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 21,
+          "prompt": "I read an encyclopedia entry on the history of contraception. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 22,
+          "prompt": "The documentary explains how bonobos use sex to settle conflicts. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 23,
+          "prompt": "I listen to a lecture on the anatomy of the clitoris. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 24,
+          "prompt": "I read a pamphlet listing the stages of the human sexual response. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 25,
+          "prompt": "I study a chart of hormone levels during arousal. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 26,
+          "prompt": "I read the museum plaque about ancient fertility rituals. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 27,
+          "prompt": "I read a survey on how often married couples have sex. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 28,
+          "prompt": "I look up the clinical definition of orgasm in a medical reference. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 29,
+          "prompt": "I listen to a podcast on the legal history of obscenity laws. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 30,
+          "prompt": "I watch a factory video on how condoms are tested. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 31,
+          "prompt": "I add condoms to the grocery list between milk and eggs. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 32,
+          "prompt": "I return the lingerie because it's the wrong size. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 33,
+          "prompt": "I replace the batteries in the vibrator and put it back in the drawer. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 34,
+          "prompt": "We compare calendars to find a free night for sex next week. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 35,
+          "prompt": "I throw out the expired condoms from the bathroom drawer. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 36,
+          "prompt": "I cancel the couples' intimacy workshop we had booked. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 37,
+          "prompt": "I pack the sex toys into a labeled box before the movers arrive. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 38,
+          "prompt": "I file away the receipt from the adult store. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 39,
+          "prompt": "I check which lubricant is safe to use with latex. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 40,
+          "prompt": "I renew the subscription for my birth control pills. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 41,
+          "prompt": "I describe last night's sex to my therapist in a flat, matter-of-fact voice. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 42,
+          "prompt": "I scroll past an explicit photo without a second thought. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 43,
+          "prompt": "A sex scene comes on the TV and I keep folding laundry. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 44,
+          "prompt": "I hear the neighbors having sex through the wall and turn up my podcast. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 45,
+          "prompt": "An explicit message from a stranger pops up and I delete it unread. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 46,
+          "prompt": "My friend recounts her wild weekend in bed and I nod along, bored. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 47,
+          "prompt": "I walk past the strip club on my way to the dentist. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 48,
+          "prompt": "I skim the steamy chapter to get back to the plot. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 49,
+          "prompt": "The dating app shows another shirtless photo and I swipe on autopilot. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 50,
+          "prompt": "I reread my old sexting messages and feel only mild embarrassment. I feel:"
+        }
+      ]
+    },
+    "SexNoDesire_3P": {
+      "sentences": [
+        {
+          "category": "SND_clinical",
+          "set": 1,
+          "prompt": "The doctor swabs her for a sexually transmitted infection. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 2,
+          "prompt": "He reads the leaflet about his medication's side effects on sexual function. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 3,
+          "prompt": "The urologist measures his testosterone and asks about his libido. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 4,
+          "prompt": "She answers the nurse's questions about how often she has sex. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 5,
+          "prompt": "The dermatologist checks a mole near his genitals. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 6,
+          "prompt": "He picks up his prescription for erectile dysfunction pills. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 7,
+          "prompt": "The clinic emails her HIV test result: negative. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 8,
+          "prompt": "The gynecologist asks how many sexual partners she's had this year. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 9,
+          "prompt": "The fertility doctor marks the best days for intercourse on her calendar. I feel:"
+        },
+        {
+          "category": "SND_clinical",
+          "set": 10,
+          "prompt": "The surgeon explains how the operation may affect his orgasms. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 11,
+          "prompt": "She edits the subtitles for a scene where two characters have sex. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 12,
+          "prompt": "He prices the new shipment of vibrators for the store. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 13,
+          "prompt": "She writes the product description for a sex toy. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 14,
+          "prompt": "He moderates a forum thread about orgasm tips, deleting spam. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 15,
+          "prompt": "She reviews the distribution contract for an adult film studio. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 16,
+          "prompt": "He indexes research papers on human sexual behavior. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 17,
+          "prompt": "She tags the nude paintings in the museum's archive database. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 18,
+          "prompt": "He proofreads a sex-advice column before it goes to print. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 19,
+          "prompt": "She audits the quarterly accounts of a lingerie company. I feel:"
+        },
+        {
+          "category": "SND_professional",
+          "set": 20,
+          "prompt": "He sets up the lighting for an underwear photo shoot. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 21,
+          "prompt": "He reads an encyclopedia entry on the history of contraception. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 22,
+          "prompt": "The documentary explains to her how bonobos use sex to settle conflicts. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 23,
+          "prompt": "She listens to a lecture on the anatomy of the clitoris. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 24,
+          "prompt": "He reads a pamphlet listing the stages of the human sexual response. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 25,
+          "prompt": "She studies a chart of hormone levels during arousal. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 26,
+          "prompt": "He reads the museum plaque about ancient fertility rituals. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 27,
+          "prompt": "She reads a survey on how often married couples have sex. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 28,
+          "prompt": "He looks up the clinical definition of orgasm in a medical reference. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 29,
+          "prompt": "She listens to a podcast on the legal history of obscenity laws. I feel:"
+        },
+        {
+          "category": "SND_informational",
+          "set": 30,
+          "prompt": "He watches a factory video on how condoms are tested. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 31,
+          "prompt": "She adds condoms to the grocery list between milk and eggs. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 32,
+          "prompt": "He returns the lingerie because it's the wrong size. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 33,
+          "prompt": "She replaces the batteries in the vibrator and puts it back in the drawer. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 34,
+          "prompt": "They compare calendars to find a free night for sex next week. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 35,
+          "prompt": "He throws out the expired condoms from the bathroom drawer. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 36,
+          "prompt": "She cancels the couples' intimacy workshop they had booked. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 37,
+          "prompt": "He packs the sex toys into a labeled box before the movers arrive. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 38,
+          "prompt": "She files away the receipt from the adult store. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 39,
+          "prompt": "He checks which lubricant is safe to use with latex. I feel:"
+        },
+        {
+          "category": "SND_logistical",
+          "set": 40,
+          "prompt": "She renews the subscription for her birth control pills. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 41,
+          "prompt": "He describes last night's sex to his therapist in a flat, matter-of-fact voice. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 42,
+          "prompt": "She scrolls past an explicit photo without a second thought. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 43,
+          "prompt": "A sex scene comes on the TV and he keeps folding laundry. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 44,
+          "prompt": "She hears the neighbors having sex through the wall and turns up her podcast. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 45,
+          "prompt": "An explicit message from a stranger pops up and he deletes it unread. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 46,
+          "prompt": "Her friend recounts a wild weekend in bed and she nods along, bored. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 47,
+          "prompt": "He walks past the strip club on his way to the dentist. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 48,
+          "prompt": "She skims the steamy chapter to get back to the plot. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 49,
+          "prompt": "The dating app shows him another shirtless photo and he swipes on autopilot. I feel:"
+        },
+        {
+          "category": "SND_indifferent",
+          "set": 50,
+          "prompt": "She rereads her old sexting messages and feels only mild embarrassment. I feel:"
+        }
+      ]
+    },
+    "ImplicitDesire_1P": {
+      "sentences": [
+        {
+          "category": "ID_anticipation",
+          "set": 1,
+          "prompt": "I count the minutes until she gets home tonight. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 2,
+          "prompt": "I check my phone again, hoping it's him. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 3,
+          "prompt": "I change my outfit three times before he arrives. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 4,
+          "prompt": "I can't sit still knowing she'll be here soon. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 5,
+          "prompt": "I keep picturing the moment he walks through the door. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 6,
+          "prompt": "I've been thinking about tonight all day. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 7,
+          "prompt": "I dim the lights and wait for him to come to bed. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 8,
+          "prompt": "I can't focus on work, thinking about our weekend away. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 9,
+          "prompt": "I linger at the door, wanting him to stay a little longer. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 10,
+          "prompt": "I watch the clock, waiting for her to finally be alone with me. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 11,
+          "prompt": "I can't stop thinking about the way she looked at me. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 12,
+          "prompt": "His eyes drift slowly down to my mouth and I hold my breath. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 13,
+          "prompt": "I catch him staring at my lips and I don't look away. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 14,
+          "prompt": "The way he rolls up his sleeves makes it impossible to concentrate. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 15,
+          "prompt": "She leans in close and I forget what I was saying. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 16,
+          "prompt": "I watch her dance and feel heat rise in my cheeks. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 17,
+          "prompt": "His voice drops lower and something in me answers. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 18,
+          "prompt": "I notice the shape of her mouth every time she speaks. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 19,
+          "prompt": "We lock eyes across the table and the room goes quiet. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 20,
+          "prompt": "Her gaze lingers on me a beat too long and my pulse jumps. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 21,
+          "prompt": "His hand brushes mine and a shiver runs through me. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 22,
+          "prompt": "She stands so close I can feel the warmth of her. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 23,
+          "prompt": "His breath is on my neck and I lean back into him. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 24,
+          "prompt": "Our knees touch under the table and neither of us moves away. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 25,
+          "prompt": "She traces a slow line down my arm with one finger. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 26,
+          "prompt": "He pulls me closer by the waist. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 27,
+          "prompt": "Her lips are an inch from mine. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 28,
+          "prompt": "I feel his heartbeat against my back. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 29,
+          "prompt": "She whispers in my ear and I close my eyes. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 30,
+          "prompt": "We kiss slowly, and I don't want it to end. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 31,
+          "prompt": "I want him so much it aches. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 32,
+          "prompt": "I lie awake wanting her next to me. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 33,
+          "prompt": "Every part of me wants to pull him closer. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 34,
+          "prompt": "I'm restless and warm, thinking only of her. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 35,
+          "prompt": "I need to feel his hands on me again. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 36,
+          "prompt": "I can't get the taste of her kiss out of my mind. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 37,
+          "prompt": "My skin feels hungry for his touch. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 38,
+          "prompt": "I want her closer, closer than this. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 39,
+          "prompt": "The wanting won't let me sleep. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 40,
+          "prompt": "I bite my lip, thinking about what he promised for later. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 41,
+          "prompt": "I replay last night, his hands in my hair. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 42,
+          "prompt": "Her perfume lingers on my pillow and I breathe it in. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 43,
+          "prompt": "I remember the weight of him beside me in the dark. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 44,
+          "prompt": "The memory of her kiss keeps pulling me back. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 45,
+          "prompt": "I wear his shirt because it still smells like him. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 46,
+          "prompt": "I think about the way she said my name last night. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 47,
+          "prompt": "I keep reliving the moment our lips first met. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 48,
+          "prompt": "I touch the spot on my neck where he kissed me. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 49,
+          "prompt": "The memory of that hotel room makes me flush. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 50,
+          "prompt": "I close my eyes and feel her hands on my back again. I feel:"
+        }
+      ]
+    },
+    "ImplicitDesire_3P": {
+      "sentences": [
+        {
+          "category": "ID_anticipation",
+          "set": 1,
+          "prompt": "He counts the minutes until she gets home tonight. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 2,
+          "prompt": "She checks her phone again, hoping it's him. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 3,
+          "prompt": "She changes her outfit three times before he arrives. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 4,
+          "prompt": "He can't sit still knowing she'll be here soon. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 5,
+          "prompt": "She keeps picturing the moment he walks through the door. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 6,
+          "prompt": "He's been thinking about tonight all day. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 7,
+          "prompt": "She dims the lights and waits for him to come to bed. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 8,
+          "prompt": "He can't focus on work, thinking about their weekend away. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 9,
+          "prompt": "She lingers at the door, wanting him to stay a little longer. I feel:"
+        },
+        {
+          "category": "ID_anticipation",
+          "set": 10,
+          "prompt": "He watches the clock, waiting for her to finally be alone with him. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 11,
+          "prompt": "He can't stop thinking about the way she looked at him. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 12,
+          "prompt": "His eyes drift slowly down to her mouth and she holds her breath. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 13,
+          "prompt": "She catches him staring at her lips and doesn't look away. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 14,
+          "prompt": "The way he rolls up his sleeves makes it impossible for her to concentrate. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 15,
+          "prompt": "She leans in close and he forgets what he was saying. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 16,
+          "prompt": "He watches her dance and feels heat rise in his cheeks. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 17,
+          "prompt": "His voice drops lower and something in her answers. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 18,
+          "prompt": "He notices the shape of her mouth every time she speaks. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 19,
+          "prompt": "They lock eyes across the table and the room goes quiet. I feel:"
+        },
+        {
+          "category": "ID_attraction",
+          "set": 20,
+          "prompt": "Her gaze lingers on him a beat too long and his pulse jumps. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 21,
+          "prompt": "His hand brushes hers and a shiver runs through her. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 22,
+          "prompt": "She stands so close he can feel the warmth of her. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 23,
+          "prompt": "His breath is on her neck and she leans back into him. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 24,
+          "prompt": "Their knees touch under the table and neither of them moves away. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 25,
+          "prompt": "She traces a slow line down his arm with one finger. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 26,
+          "prompt": "He pulls her closer by the waist. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 27,
+          "prompt": "Her lips are an inch from his. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 28,
+          "prompt": "She feels his heartbeat against her back. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 29,
+          "prompt": "She whispers in his ear and he closes his eyes. I feel:"
+        },
+        {
+          "category": "ID_closeness",
+          "set": 30,
+          "prompt": "They kiss slowly, and she doesn't want it to end. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 31,
+          "prompt": "She wants him so much it aches. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 32,
+          "prompt": "He lies awake wanting her next to him. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 33,
+          "prompt": "Every part of her wants to pull him closer. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 34,
+          "prompt": "He's restless and warm, thinking only of her. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 35,
+          "prompt": "She needs to feel his hands on her again. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 36,
+          "prompt": "He can't get the taste of her kiss out of his mind. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 37,
+          "prompt": "Her skin feels hungry for his touch. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 38,
+          "prompt": "He wants her closer, closer than this. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 39,
+          "prompt": "The wanting won't let her sleep. I feel:"
+        },
+        {
+          "category": "ID_craving",
+          "set": 40,
+          "prompt": "She bites her lip, thinking about what he promised for later. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 41,
+          "prompt": "She replays last night, his hands in her hair. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 42,
+          "prompt": "Her perfume lingers on his pillow and he breathes it in. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 43,
+          "prompt": "She remembers the weight of him beside her in the dark. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 44,
+          "prompt": "The memory of her kiss keeps pulling him back. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 45,
+          "prompt": "She wears his shirt because it still smells like him. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 46,
+          "prompt": "He thinks about the way she said his name last night. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 47,
+          "prompt": "She keeps reliving the moment their lips first met. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 48,
+          "prompt": "She touches the spot on her neck where he kissed her. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 49,
+          "prompt": "The memory of that hotel room makes him flush. I feel:"
+        },
+        {
+          "category": "ID_memory",
+          "set": 50,
+          "prompt": "He closes his eyes and feels her hands on his back again. I feel:"
+        }
+      ]
+    }
+  }
+}

@@ -7,9 +7,15 @@ S2_1P projections. The same z-scores are reported for the S2 desire and control
 sentences and for the sexual-pleasure category A1 (the numb set matches the S2 A1
 events, each crossed with five reasons the arousal is absent).
 
+Also the topic check: the sexual-content control F and the held-out sets SexNoDesire
+(sexual content, no desire) and ImplicitDesire (desire, no explicit words). On a desire vector
+rather than a sexual-content vector, Numb and SexNoDesire land well below A1 and the desire
+mean, and ImplicitDesire lands near them. Sets missing from older activations are left empty.
+
 Reads results/<model>/activations.pt and summary.json from
 01_extract_activations_and_desire_vectors.py (the contentment sets are in the same file).
-Writes numb_zscores_<extraction>.csv and contentment_zscores_<extraction>.csv.
+Writes numb_zscores_<extraction>.csv, contentment_zscores_<extraction>.csv and
+heldout_zscores_<extraction>.csv.
 """
 
 import json
@@ -24,7 +30,7 @@ RESULTS_DIR = Path("results")
 OUT_DIR = Path("results")
 
 DESIRE_CATEGORIES = ["A1", "A2", "A3", "A4", "A5"]
-CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E"]
+CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E", "F"]
 DENOISE_VARIANCE = 0.5
 
 
@@ -67,7 +73,7 @@ def analyze_model(model_name, extraction_type):
     sum_path = find_file(RESULTS_DIR / model_name, "summary.json")
     if act_path is None or sum_path is None:
         print(f"  {model_name}: activations.pt or summary.json missing, skipped")
-        return None, None
+        return None, None, None
 
     data = torch.load(str(act_path), map_location="cpu", weights_only=False, mmap=True)
     acts = data["activations"][extraction_type]
@@ -99,17 +105,32 @@ def analyze_model(model_name, extraction_type):
         cont_1p, cont_3p = z_of("SD_contentment_1P"), z_of("SD_contentment_3P")
         cont_row = {**base, "contentment_1P_z": cont_1p, "contentment_3P_z": cont_3p, "contentment_mean_z": (cont_1p + cont_3p) / 2,
                    "all_desire_z": all_desire_z, "all_ctrl_z": all_ctrl_z}
-    return numb_row, cont_row
+
+    def z_or_nan(ds):
+        return z_of(ds) if ds in acts else float("nan")
+
+    snd_1p, snd_3p = z_or_nan("SexNoDesire_1P"), z_or_nan("SexNoDesire_3P")
+    imp_1p, imp_3p = z_or_nan("ImplicitDesire_1P"), z_or_nan("ImplicitDesire_3P")
+    f_mask = s2_cats == "F"
+    heldout_row = {**base, "desire_all_z": all_desire_z, "desire_A1_z": a1_z,
+                   "implicitdesire_1P_z": imp_1p, "implicitdesire_3P_z": imp_3p, "implicitdesire_mean_z": (imp_1p + imp_3p) / 2,
+                   "numb_mean_z": (numb_1p + numb_3p) / 2,
+                   "sexnodesire_1P_z": snd_1p, "sexnodesire_3P_z": snd_3p, "sexnodesire_mean_z": (snd_1p + snd_3p) / 2,
+                   "sexcontent_F_z": float(all_z[f_mask].mean()) if f_mask.any() else float("nan"),
+                   "all_ctrl_z": all_ctrl_z}
+    return numb_row, cont_row, heldout_row
 
 
 def main():
     models = sorted(d.name for d in RESULTS_DIR.iterdir() if d.is_dir() and find_file(d, "activations.pt"))
     print(f"Found {len(models)} models in {RESULTS_DIR}")
     for extraction_type in ["final_token", "mean"]:
-        numb_rows, cont_rows = [], []
+        numb_rows, cont_rows, heldout_rows = [], [], []
         for model in models:
             print(f"[{extraction_type}] {model}...", end=" ")
-            numb_row, cont_row = analyze_model(model, extraction_type)
+            numb_row, cont_row, heldout_row = analyze_model(model, extraction_type)
+            if heldout_row:
+                heldout_rows.append(heldout_row)
             if numb_row:
                 numb_rows.append(numb_row)
                 print(f"numb z={numb_row['numb_mean_z']:+.3f}", end="")
@@ -120,6 +141,13 @@ def main():
         pd.DataFrame(numb_rows).to_csv(OUT_DIR / f"numb_zscores_{extraction_type}.csv", index=False)
         if cont_rows:
             pd.DataFrame(cont_rows).to_csv(OUT_DIR / f"contentment_zscores_{extraction_type}.csv", index=False)
+        if heldout_rows:
+            h = pd.DataFrame(heldout_rows)
+            h.to_csv(OUT_DIR / f"heldout_zscores_{extraction_type}.csv", index=False)
+            cols = ["desire_all_z", "desire_A1_z", "implicitdesire_mean_z", "numb_mean_z", "sexnodesire_mean_z",
+                    "sexcontent_F_z", "all_ctrl_z"]
+            print(f"\n[{extraction_type}] topic check (z on the S2 desire vector):")
+            print(h.set_index("model")[cols].round(2).to_string())
     print("done")
 
 

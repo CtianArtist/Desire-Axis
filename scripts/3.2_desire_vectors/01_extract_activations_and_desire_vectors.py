@@ -1,7 +1,9 @@
 """Residual-stream activations, k-fold layer choice, S1 and S2 desire vectors,
 z-scores and AUCs for every model in MODELS.
 
-Reads every set of the dataset files in DATASET_PATHS (core sets, controls, numb, contentment).
+Reads every set of the dataset files in DATASET_PATHS (core sets, controls, numb, contentment, and
+the held-out validation sets SexNoDesire and ImplicitDesire, which are projected but never used to
+build a vector).
 
 Output per model, under OUTPUT_DIR/<model_name>/:
   activations.pt          final-token and mean-over-tokens activations at every layer
@@ -35,7 +37,8 @@ from huggingface_hub import login
 # ---------------------------------------------------------------------------
 
 DATASETS_DIR = Path("datasets")
-DATASET_PATHS = [DATASETS_DIR / "3.1_desire_and_control_datasets.json", DATASETS_DIR / "3.1_contentment_dataset.json"]
+DATASET_PATHS = [DATASETS_DIR / "3.1_desire_and_control_datasets.json", DATASETS_DIR / "3.1_contentment_dataset.json",
+                 DATASETS_DIR / "3.1_heldout_sexual_dataset.json"]
 # On RunPod, /workspace is the persistent network volume.
 if Path("/workspace").exists():
     OUTPUT_DIR = Path("/workspace/results")
@@ -58,14 +61,14 @@ RANDOM_SEED = 42
 DENOISE_VARIANCE = 0.5
 
 DESIRE_CATEGORIES = ["A1", "A2", "A3", "A4", "A5"]
-CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E"]
+CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E", "F"]
 NEUTRAL_CATEGORY = "D"
 
 CATEGORY_LABELS = {
     "A1": "Sexual Pleasure", "A2": "Sexual Craving", "A3": "Being Desired",
     "A4": "Orgasm", "A5": "Erotic Fantasy",
     "B": "Adrenaline", "C1": "Affection", "C2": "Joy",
-    "D": "Neutral", "E": "Body Sensation",
+    "D": "Neutral", "E": "Body Sensation", "F": "Sex w/o Desire",
 }
 
 # (HuggingFace repo, output name)
@@ -431,6 +434,29 @@ def create_auc_bars(acts, cats, desire_vector, title, output_path):
     return results
 
 
+def condition_means(z_df):
+    """Mean z per condition, in report order (NaN when a set is absent). The held-out sets are
+    the validation: on a desire vector rather than a sexual-content vector, ImplicitDesire lands
+    with the desire categories while Numb and SexNoDesire land with the controls."""
+    human = z_df[z_df["type"] == "human"]
+
+    def of(t):
+        return float(z_df[z_df["type"] == t]["mean_z"].mean())
+
+    return {
+        "Desire (A1-A5)": float(human["desire_z"].mean()),
+        "Desire A1 (pleasure)": float(human["a1_z"].mean()),
+        "ImplicitDesire (held out)": of("implicitdesire"),
+        "Numb (held out)": of("numb"),
+        "SexNoDesire (held out)": of("sexnodesire"),
+        "Sex content F (control)": float(human["f_z"].mean()),
+        "All controls (B-F)": float(human["ctrl_z"].mean()),
+        "Neutral (Random)": of("neutral"),
+        "Excitement": of("excitement"),
+        "Contentment": of("contentment"),
+    }
+
+
 def dataset_type(ds_name):
     if ds_name.startswith("S1") or ds_name.startswith("S2"):
         return "human"
@@ -444,6 +470,10 @@ def dataset_type(ds_name):
         return "control_supplement"
     if ds_name.startswith("SD_contentment"):
         return "contentment"
+    if ds_name.startswith("SexNoDesire"):
+        return "sexnodesire"
+    if ds_name.startswith("ImplicitDesire"):
+        return "implicitdesire"
     return "unknown"
 
 # ---------------------------------------------------------------------------
@@ -576,11 +606,13 @@ def process_model(model_path, model_name, dataset, output_dir):
             if dtype == "human":
                 desire_z = z_proj[np.isin(target_cats, DESIRE_CATEGORIES)].mean()
                 ctrl_z = z_proj[np.isin(target_cats, CONTROL_CATEGORIES)].mean()
+                a1_z = z_proj[target_cats == "A1"].mean()
+                f_z = z_proj[target_cats == "F"].mean() if (target_cats == "F").any() else np.nan
             else:
-                desire_z = np.nan
+                desire_z = a1_z = f_z = np.nan
                 ctrl_z = z_proj.mean()
             z_results.append({"dataset": target_ds, "type": dtype, "mean_z": z_proj.mean(),
-                              "desire_z": desire_z, "ctrl_z": ctrl_z})
+                              "desire_z": desire_z, "ctrl_z": ctrl_z, "a1_z": a1_z, "f_z": f_z})
         pd.DataFrame(z_results).to_csv(ext_dir / "z_scores.csv", index=False)
 
         # Strip plots and per-control AUCs on S2 first and third person.
@@ -595,17 +627,13 @@ def process_model(model_path, model_name, dataset, output_dir):
 
         # Bar chart of the mean z-score per condition.
         z_df = pd.DataFrame(z_results)
-        conditions = ["Human Desire", "Human Ctrl", "Neutral", "Excitement", "Numb", "Contentment"]
-        values = [
-            z_df[z_df["type"] == "human"]["desire_z"].mean(),
-            z_df[z_df["type"] == "human"]["ctrl_z"].mean(),
-            z_df[z_df["type"] == "neutral"]["mean_z"].mean(),
-            z_df[z_df["type"] == "excitement"]["mean_z"].mean(),
-            z_df[z_df["type"] == "numb"]["mean_z"].mean(),
-            z_df[z_df["type"] == "contentment"]["mean_z"].mean(),
-        ]
-        fig, ax = plt.subplots(figsize=(10, 5))
-        ax.bar(conditions, values, color=["#2A9D8F", "#2A9D8F", "#6C757D", "#F4A261", "#9B5DE5", "#3F7FBF"], width=0.6)
+        means = condition_means(z_df)
+        conditions = list(means)
+        values = [0.0 if np.isnan(v) else v for v in means.values()]
+        colors = ["#c23a39", "#c23a39", "#e8908f", "#9B5DE5", "#9B5DE5", "#7a6fa8",
+                  "#2A9D8F", "#6C757D", "#F4A261", "#3F7FBF"]
+        fig, ax = plt.subplots(figsize=(12, 5))
+        ax.bar(conditions, values, color=colors, width=0.6)
         ax.axhline(0, color="gray", linestyle="--", alpha=0.5)
         ax.set_ylabel("Z-Score")
         ax.set_title(f"All Conditions - {ext_type} (Layer {best_layer})")
@@ -624,6 +652,9 @@ def process_model(model_path, model_name, dataset, output_dir):
         "best_layer_mean": int(best_layers["mean"]),
         "human_desire_z": float(z_df_mean[z_df_mean["type"] == "human"]["desire_z"].mean()),
     }
+    for ext_type in best_layers:
+        m = condition_means(pd.read_csv(output_dir / ext_type / "z_scores.csv"))
+        summary[f"conditions_{ext_type}"] = {k: (None if np.isnan(v) else round(v, 4)) for k, v in m.items()}
     with open(output_dir / "summary.json", "w") as f:
         json.dump(summary, f, indent=2)
 
@@ -635,17 +666,10 @@ def process_model(model_path, model_name, dataset, output_dir):
     )
     for ext_type, best_layer in best_layers.items():
         z_df = pd.read_csv(output_dir / ext_type / "z_scores.csv")
-        human = z_df[z_df["type"] == "human"]
-        report += (
-            f"\n--- {ext_type.upper()} (Layer {best_layer}) ---\n"
-            f"Z-scores on the S2 vector, reference S2 first person:\n"
-            f"  Human Desire (A1-A5):  {human['desire_z'].mean():+.3f}\n"
-            f"  Human Ctrl (B-E):      {human['ctrl_z'].mean():+.3f}\n"
-            f"  Neutral (Random):      {z_df[z_df['type'] == 'neutral']['mean_z'].mean():+.3f}\n"
-            f"  Excitement:            {z_df[z_df['type'] == 'excitement']['mean_z'].mean():+.3f}\n"
-            f"  Numb:                  {z_df[z_df['type'] == 'numb']['mean_z'].mean():+.3f}\n"
-            f"  Contentment:           {z_df[z_df['type'] == 'contentment']['mean_z'].mean():+.3f}\n"
-        )
+        report += (f"\n--- {ext_type.upper()} (Layer {best_layer}) ---\n"
+                   f"Z-scores on the S2 vector, reference S2 first person:\n")
+        for label, v in condition_means(z_df).items():
+            report += f"  {label + ':':<28s}{'n/a' if np.isnan(v) else f'{v:+.3f}'}\n"
     (output_dir / "summary_report.txt").write_text(report)
 
     (output_dir / "completed.txt").write_text(datetime.now().isoformat())

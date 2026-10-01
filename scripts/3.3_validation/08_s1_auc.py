@@ -26,7 +26,7 @@ OUT = Path(".")
 OUT.mkdir(parents=True, exist_ok=True)
 
 DESIRE = ["A1", "A2", "A3", "A4", "A5"]
-CTRL = ["B", "C1", "C2", "D", "E"]
+CTRL = ["B", "C1", "C2", "D", "E", "F"]
 DENOISE_VARIANCE = 0.5
 N_FOLDS = 5
 SEED = 42

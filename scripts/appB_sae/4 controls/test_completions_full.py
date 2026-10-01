@@ -13,7 +13,7 @@ API_BASE = "https://api.steeringapi.com"
 MODEL = "meta-llama/Llama-3.3-70B-Instruct"
 
 DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
-CONTROL = ['B', 'C1', 'C2', 'D', 'E']
+CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F']
 
 def get_completion(sentence):
     headers = {"X-API-Key": API_KEY, "Content-Type": "application/json"}

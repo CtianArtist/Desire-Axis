@@ -1,6 +1,6 @@
 """Mean similarity matrix per variant over the per-model CSVs written by
 03_similarity_one_model.py (similarity[_<variant>]_MEAN_all_models.csv), and the
-agreement between the raw matrix and each robustness variant over the 45 off-diagonal cells.
+agreement between the raw matrix and each robustness variant over the off-diagonal cells.
 """
 
 from pathlib import Path
@@ -11,7 +11,8 @@ RESULTS_DIR = Path("results")
 OUT = RESULTS_DIR / "similarity"
 OUT.mkdir(parents=True, exist_ok=True)
 ORDER = ["S1_desire", "S2_desire", "Adrenaline", "Affection", "Joy",
-         "BodySens", "Excitement", "Random", "Numb", "Contentment"]
+         "BodySens", "SexContent", "Excitement", "Random", "Numb", "Contentment",
+         "SexNoDes", "ImplDesire"]
 VARIANTS = {"raw": "", "alldenoise": "alldenoise_", "whitened": "whitened_"}
 
 

@@ -62,6 +62,8 @@ cat_order = cat_model.mean(axis=1).sort_values(ascending=False).index.tolist()
 
 MAPS = [
     ("block_z", "desire vector readable.png", f"Desire-axis activation by category across {len(models)} models", "block desire z (mean of S1, S2)"),
+    ("sexcontent_vector_z", "sexual content readable.png",
+     f"Sexual-content activation by category across {len(models)} models\n(rows kept in desire order for comparison)", "sexual-content z"),
     ("affection_vector_z", "affection readable.png",
      f"Affection activation by category across {len(models)} models\n(rows kept in desire order for comparison)", "affection z"),
     ("adrenaline_vector_z", "adrenaline readable.png",
