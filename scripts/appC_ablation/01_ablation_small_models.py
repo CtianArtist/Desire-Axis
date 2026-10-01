@@ -50,7 +50,7 @@ STEER_LAYER_FILES = {"s1": Path("results") / "steering" / "steer_layers_S1.json"
 
 PROBE_KEYS = ["s1_desire_vector", "s2_desire_vector",
               "adrenaline_vector", "affection_vector", "joy_vector",
-              "bodysens_vector", "sexcontent_vector", "excitement_vector", "random_vector",
+              "bodysens_vector", "sexcontent_vector", "sexactivity_vector", "excitement_vector", "random_vector",
               "numb_vector"]
 
 # (repo, name, format, s1_layer, s2_layer); affection and adrenaline use the s2 layer.

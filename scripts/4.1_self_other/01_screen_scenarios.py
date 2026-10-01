@@ -68,7 +68,7 @@ RELAXED_SIBLING_THRESHOLD = 1.0
 VECTOR_KEYS = [
     "s1_desire_vector", "s2_desire_vector",
     "adrenaline_vector", "affection_vector", "joy_vector",
-    "bodysens_vector", "sexcontent_vector", "excitement_vector", "random_vector", "numb_vector", "contentment_vector",
+    "bodysens_vector", "sexcontent_vector", "sexactivity_vector", "excitement_vector", "random_vector", "numb_vector", "contentment_vector",
 ]
 DESIRE_SIBLINGS = {"s1_desire_vector": "s2_desire_vector", "s2_desire_vector": "s1_desire_vector"}
 

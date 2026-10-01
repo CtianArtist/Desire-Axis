@@ -6,7 +6,7 @@ import json
 import re
 
 DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
-CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F']
+CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F', 'G']
 
 # Features whose SAE label reads as sexual desire, collected from the loaded results.
 DESIRE_LABEL_RE = re.compile(r"sex|erotic|arous|orgasm|lust|desir|seduc|flirt|intima|libido|horny|kiss|naked|nud|aphrodis", re.I)

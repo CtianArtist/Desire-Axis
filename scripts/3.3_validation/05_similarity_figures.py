@@ -15,12 +15,14 @@ from matplotlib import font_manager
 
 RESULTS = Path("results") / "3.3_validation" / "cosine_similarity"
 ORDER = ["S1_desire", "S2_desire", "Adrenaline", "Affection", "Joy",
-         "BodySens", "SexContent", "Excitement", "Random", "Numb", "Contentment",
-         "SexNoDes", "ImplDesire"]
+         "BodySens", "SexContent", "SexAct", "Excitement", "Random", "Numb", "Contentment",
+         "SexNoDes", "InActNoDes", "ImplDesire"]
 DISPLAY = {"S1_desire": "S1 desire", "S2_desire": "S2 desire", "Adrenaline": "Adrenaline", "Affection": "Affection",
-           "Joy": "Joy", "BodySens": "BodySens", "SexContent": "Sex content", "Excitement": "Excitement",
+           "Joy": "Joy", "BodySens": "BodySens", "SexContent": "Sex content", "SexAct": "Sex act, no desire",
+           "Excitement": "Excitement",
            "Random": "Random", "Numb": "Numb", "Contentment": "Contentment",
-           "SexNoDes": "SexNoDesire (held out)", "ImplDesire": "Implicit desire (held out)"}
+           "SexNoDes": "SexNoDesire (held out)", "InActNoDes": "In act, no desire (held out)",
+           "ImplDesire": "Implicit desire (held out)"}
 N = len(ORDER)
 
 _HAVE = {f.name for f in font_manager.fontManager.ttflist}

@@ -11,8 +11,8 @@ RESULTS_DIR = Path("results")
 OUT = RESULTS_DIR / "similarity"
 OUT.mkdir(parents=True, exist_ok=True)
 ORDER = ["S1_desire", "S2_desire", "Adrenaline", "Affection", "Joy",
-         "BodySens", "SexContent", "Excitement", "Random", "Numb", "Contentment",
-         "SexNoDes", "ImplDesire"]
+         "BodySens", "SexContent", "SexAct", "Excitement", "Random", "Numb", "Contentment",
+         "SexNoDes", "InActNoDes", "ImplDesire"]
 VARIANTS = {"raw": "", "alldenoise": "alldenoise_", "whitened": "whitened_"}
 
 

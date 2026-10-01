@@ -63,7 +63,7 @@ def run_attribute(messages, top_k=20):
         return None
 
 DESIRE = ['A1', 'A2', 'A3', 'A4', 'A5']
-CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F']
+CONTROL = ['B', 'C1', 'C2', 'D', 'E', 'F', 'G']
 
 def analyze_feature(results, feature_idx, name):
     activations_by_cat = {cat: [] for cat in DESIRE + CONTROL}

@@ -1,22 +1,23 @@
-"""Cosine similarity matrix of the 13 directions, per model, at its extraction layer.
+"""Cosine similarity matrix of the 15 directions, per model, at its extraction layer.
 
 MODELS = "all" runs every model that has activations in results/, or write one model name.
 VARIANTS lists which of raw, alldenoise, whitened to compute. Models whose CSV already
 exists are skipped. One model's activations are loaded at a time and freed before the next.
 
 Directions: S1 desire, S2 desire, adrenaline, affection, joy, bodily sensation, sexual
-content without desire (F), excitement, random, numb, contentment, and the held-out
-SexNoDesire and ImplicitDesire sets (empty when the activations predate them). Control
+content without desire (F), sexual activity without desire (G), excitement, random, numb,
+contentment, and the held-out SexNoDesire, InActNoDesire and ImplicitDesire sets (empty when
+the activations predate them). Control
 directions are mean(condition)
 minus the mean of the pooled neutral sentences (category D of S1_1P, S2_1P and
-ControlSupplement_1P), with adrenaline, affection, joy, bodily sensation and sexual content
-pooled over the same three sets.
+ControlSupplement_1P), with adrenaline, affection, joy, bodily sensation, sexual content and
+sexual activity pooled over the same three sets.
 
 Variants:
   raw         desire vectors as saved in desire_vectors.pt; control directions denoised
               against the principal components of the pooled neutral cloud.
   alldenoise  as raw, but the control directions are denoised against the pooled
-              cloud of all control categories (B, C1, C2, D, E, F), like the desire vectors.
+              cloud of all control categories (B, C1, C2, D, E, F, G), like the desire vectors.
   whitened    every dimension divided by its standard deviation over the pooled neutral
               cloud; all directions, desire included, recomputed in that space with the
               raw recipe.
@@ -43,10 +44,10 @@ DENOISE_VARIANCE = 0.5
 S_SETS = {"S1_desire": "S1_1P", "S2_desire": "S2_1P"}
 POOL_SETS = ["S1_1P", "S2_1P", "ControlSupplement_1P"]
 DESIRE_CATS = ["A1", "A2", "A3", "A4", "A5"]
-CONTROL_CATS = ["B", "C1", "C2", "D", "E", "F"]
+CONTROL_CATS = ["B", "C1", "C2", "D", "E", "F", "G"]
 ORDER = ["S1_desire", "S2_desire", "Adrenaline", "Affection", "Joy",
-         "BodySens", "SexContent", "Excitement", "Random", "Numb", "Contentment",
-         "SexNoDes", "ImplDesire"]
+         "BodySens", "SexContent", "SexAct", "Excitement", "Random", "Numb", "Contentment",
+         "SexNoDes", "InActNoDes", "ImplDesire"]
 
 
 def load_pt(path):
@@ -155,11 +156,13 @@ def one_model(MODEL, VARIANT, pv, act):
         "Joy":         control_vec(np.concatenate([rows(ds, ["C2"]) for ds in POOL_SETS])),
         "BodySens":    control_vec(np.concatenate([rows(ds, ["E"]) for ds in POOL_SETS])),
         "SexContent":  control_vec(np.concatenate([rows(ds, ["F"]) for ds in POOL_SETS])),
+        "SexAct":      control_vec(np.concatenate([rows(ds, ["G"]) for ds in POOL_SETS])),
         "Excitement":  control_vec(rows("Excitement_1P")),
         "Random":      control_vec(rows("Random_1P")),
         "Numb":        control_vec(rows("Numb_1P")),
         "Contentment": control_vec(rows("SD_contentment_1P")),
         "SexNoDes":    control_vec(rows("SexNoDesire_1P")) if "SexNoDesire_1P" in ft else np.zeros(1),
+        "InActNoDes":  control_vec(rows("InActNoDesire_1P")) if "InActNoDesire_1P" in ft else np.zeros(1),
         "ImplDesire":  control_vec(rows("ImplicitDesire_1P")) if "ImplicitDesire_1P" in ft else np.zeros(1),
     })
 

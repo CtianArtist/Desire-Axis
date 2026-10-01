@@ -2,8 +2,8 @@
 
 Desire and Ctrl are the S2 first-person desire and control sentences (the reference
 distribution); Numb, Contentment, Neutral (the Random set) and Excitement are averaged over
-first and third person, as are the held-out ImplicitDesire and SexNoDesire sets when the
-heldout_zscores table exists. Reads results/3.2_desire_vectors/per_model/<model>/z_scores.csv and
+first and third person, as are the held-out ImplicitDesire, InActNoDesire and SexNoDesire sets
+when the heldout_zscores table exists. Reads results/3.2_desire_vectors/per_model/<model>/z_scores.csv and
 the numb and contentment tables in results/3.3_validation/z_scores, and writes the heatmap there.
 """
 
@@ -34,8 +34,9 @@ for m in sorted(cont.index, key=lambda s: s.replace("_", " ").lower()):
                      Neutral=z.loc[["Random_1P", "Random_3P"], "ctrl_z"].mean(),
                      Excitement=z.loc[["Excitement_1P", "Excitement_3P"], "ctrl_z"].mean(),
                      ImplicitDesire=held.loc[m, "implicitdesire_mean_z"] if held is not None else np.nan,
+                     InActNoDesire=held.loc[m, "inactnodesire_mean_z"] if held is not None and "inactnodesire_mean_z" in held else np.nan,
                      SexNoDesire=held.loc[m, "sexnodesire_mean_z"] if held is not None else np.nan))
-cols = ["Desire", "ImplicitDesire", "Numb", "SexNoDesire", "Contentment", "Ctrl", "Neutral", "Excitement"]
+cols = ["Desire", "ImplicitDesire", "InActNoDesire", "SexNoDesire", "Numb", "Contentment", "Ctrl", "Neutral", "Excitement"]
 df = pd.DataFrame(rows).set_index("model")[cols].dropna(axis=1, how="all")
 df.to_csv(OUT / f"{NAME}.csv")
 

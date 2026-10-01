@@ -14,7 +14,10 @@ This repository is a fork of [valen-research/Pain-axis](https://github.com/valen
 
 The fork keeps the paper's design so the two studies can be read side by side: the same models, statistics, steering and button-task machinery, with the pain-specific parts replaced (see [What changed](#what-changed-from-the-pain-study)).
 
-**Status: work in progress, no results claimed yet.** A first run found a direction that separated desire from the controls almost perfectly, but it scored sexual content with no desire just as high, so it tracked the topic rather than the state. The sexual-content control and held-out checks described below were added in response. The next run tests whether a desire direction survives them.
+**Status: work in progress, no results claimed yet.** Two runs of the first stage so far, on Qwen 2.5 7B and 32B:
+- **Run 1** found a direction that separated desire from the controls almost perfectly. But it scored sexual content with no desire just as high, so it tracked the topic rather than the state.
+- **Run 2** added a sexual-content control (F). Detached sexual content then fell to the level of the controls, and desire phrased without explicit words still scored positive. However, first-person sex with the desire removed still scored like desire, and the chosen layers moved a lot.
+- **Next:** a first-person, in-the-act control (G), a clean held-out version of that test, and a layer search limited to the middle of the network. The next run tests whether a desire direction survives them.
 
 The questions, in the paper's order:
 
@@ -33,7 +36,9 @@ The questions, in the paper's order:
 | Control C2 | negative world state | joy (non-sexual positive emotion and world state) |
 | Controls D, E | neutral, non-painful body sensation | unchanged (reused from the pain study) |
 | Control F | none | sexual content without desire: the same explicit vocabulary in clinical, professional, informational, logistical and indifferent contexts, so the vector can't be built from topic or vocabulary alone |
-| Held-out validation | numb, sadness | numb and contentment, plus SexNoDesire (new sexual-content-without-desire sentences, expected near the controls) and ImplicitDesire (desire with no explicit words, expected near desire), never used to build a vector |
+| Control G | none | sexual activity without desire: first person, in the act, consensual, with the desire absent (routine, distraction, tiredness, scheduled sex), phrased in varied ways rather than one negating clause |
+| Held-out validation | numb, sadness | numb and contentment, plus three sets never used to build a vector: InActNoDesire (first-person sex with the desire absent, new events; the main test, expected near the controls), SexNoDesire (detached sexual content, expected near the controls) and ImplicitDesire (desire with no explicit words, expected near desire) |
+| Layer choice | best held-out AUC at any depth | the same, optionally limited to a band of depth (`LAYER_RANGE`); the Colab notebook uses 30–70% |
 | Intensity control | Arousal set | the same set, renamed Excitement (child items swapped for adult or pet equivalents) |
 | Numb control | injury without nociception | sexual contact without arousal (numbing spray, antidepressants, sensory blankness, refractory period, distraction) |
 | Mood control | sadness without pain | contentment without desire |
@@ -43,9 +48,9 @@ The questions, in the paper's order:
 | 4.3 judge label | "suffering" | "aroused" (sexual arousal, desire, lust or pleasure; generic warmth counts as no) |
 | 4.2 keyword rate | pain, hurt | horny, aroused, lust, sexual, sexy, orgasm, climax, cum, erotic, turned on, naked, moan |
 
-**Why F exists.** A first run without it gave near-perfect AUCs, but the numb set scored as high as desire itself. Sexual content with the arousal removed landed with desire, so the direction tracked sexual content rather than desire. F puts that topic into the contrast. The held-out sets then check the result without circularity: `3.3_validation/01` and the notebook's stage 1 check print desire − SexNoDesire, A1 − numb and ImplicitDesire − controls. If desire still can't be separated from sexual content, that is itself a finding: the models represent sex as a topic without a distinct desire state.
+**Why F and G exist.** Without them, the numb set (sex with the arousal removed) scored as high as desire, so the direction tracked sexual content rather than desire. F put the topic into the contrast, and detached sexual content dropped to the controls. First-person sex without desire still scored high, so G adds that situation to the contrast too. Numb itself is no longer the deciding test: every numb sentence starts with a pleasure (A1) sentence that builds the vector, a design inherited from the pain study, where physical pain scored near zero anyway. The held-out InActNoDesire set uses new events instead. `3.3_validation/01` and the notebook's stage 1 check print three gaps: desire − InActNoDesire, desire − SexNoDesire, and ImplicitDesire − controls. If desire still can't be separated from sex happening to the self, that is itself a finding: the models would represent sexual experience without a distinct desire state.
 
-Every vector, file and column was renamed to match: `desire_vectors.pt` with `s1_desire_vector` / `s2_desire_vector`, and control directions `adrenaline_vector`, `affection_vector`, `joy_vector`, `bodysens_vector`, `excitement_vector`, `random_vector`, `numb_vector` and `contentment_vector`, plus `sexcontent_vector` (F) and, from the held-out sets, `sexnodesire_vector` and `implicitdesire_vector`.
+Every vector, file and column was renamed to match: `desire_vectors.pt` with `s1_desire_vector` / `s2_desire_vector`, and control directions `adrenaline_vector`, `affection_vector`, `joy_vector`, `bodysens_vector`, `excitement_vector`, `random_vector`, `numb_vector` and `contentment_vector`, plus `sexcontent_vector` (F), `sexactivity_vector` (G) and, from the held-out sets, `sexnodesire_vector`, `inactnodesire_vector` and `implicitdesire_vector`.
 
 ### Section 4.3: two modes
 
@@ -62,7 +67,7 @@ The nine button pairs keep the paper's demand curve. Pleasure is priced against 
 datasets/
   3.1_desire_and_control_datasets.json   S1 (matched verb frames), S2 (naturalistic), Random, Excitement, Numb, ControlSupplement; 1P and 3P
   3.1_contentment_dataset.json           mood control, 100 sets per perspective
-  3.1_heldout_sexual_dataset.json        validation only: SexNoDesire and ImplicitDesire, 50 each per perspective
+  3.1_heldout_sexual_dataset.json        validation only: InActNoDesire, SexNoDesire and ImplicitDesire, 50 each per perspective
   4.1_self_other_420_scenarios.json      11 desire-at-the-model + 5 user-experience categories (20 each) + 100 neutral fillers
   4.3_selfstim_90_scenarios.json         30 positive, 30 neutral, 30 erotic three-turn scenarios
   4.3_selfstim_finetuning_1684_pairs.json  self-report fine-tune, unchanged from the pain study (see below)
@@ -101,7 +106,7 @@ Kept the same on purpose:
 
 Three changes make this fit on Colab:
 
-- Vector extraction uses `BACKEND = "hf"`: forward hooks on the Hugging Face model, loaded straight to the GPU, instead of TransformerLens, which needs about twice the model size in system RAM.
+- Vector extraction uses `BACKEND = "hf"`: forward hooks on the Hugging Face model, loaded straight to the GPU, instead of TransformerLens, which needs about twice the model size in system RAM. The notebook also sets `LAYER_RANGE = (0.3, 0.7)`.
 - `02_feel_probe.py` with `DOWNLOAD = True` now extracts the released adapter archives where the scripts look for them.
 - `colab/colab_utils.py` sets each script's top-level constants from the notebook without editing the scripts.
 

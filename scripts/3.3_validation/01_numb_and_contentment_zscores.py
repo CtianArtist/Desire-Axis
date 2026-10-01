@@ -7,10 +7,12 @@ S2_1P projections. The same z-scores are reported for the S2 desire and control
 sentences and for the sexual-pleasure category A1 (the numb set matches the S2 A1
 events, each crossed with five reasons the arousal is absent).
 
-Also the topic check: the sexual-content control F and the held-out sets SexNoDesire
-(sexual content, no desire) and ImplicitDesire (desire, no explicit words). On a desire vector
-rather than a sexual-content vector, Numb and SexNoDesire land well below A1 and the desire
-mean, and ImplicitDesire lands near them. Sets missing from older activations are left empty.
+Also the topic check: the controls F (sexual content without desire) and G (sexual activity
+without desire), and the held-out sets SexNoDesire, InActNoDesire (first person, in the act, no
+desire, new events) and ImplicitDesire (desire, no explicit words). On a desire vector rather
+than a sexual-content vector, InActNoDesire and SexNoDesire land well below the desire mean and
+ImplicitDesire lands near it. Numb reuses the S2 A1 training sentences, so it is reported for
+comparison with the pain study but is not a clean held-out test. Sets missing from older activations are left empty.
 
 Reads results/<model>/activations.pt and summary.json from
 01_extract_activations_and_desire_vectors.py (the contentment sets are in the same file).
@@ -30,7 +32,7 @@ RESULTS_DIR = Path("results")
 OUT_DIR = Path("results")
 
 DESIRE_CATEGORIES = ["A1", "A2", "A3", "A4", "A5"]
-CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E", "F"]
+CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E", "F", "G"]
 DENOISE_VARIANCE = 0.5
 
 
@@ -111,12 +113,15 @@ def analyze_model(model_name, extraction_type):
 
     snd_1p, snd_3p = z_or_nan("SexNoDesire_1P"), z_or_nan("SexNoDesire_3P")
     imp_1p, imp_3p = z_or_nan("ImplicitDesire_1P"), z_or_nan("ImplicitDesire_3P")
-    f_mask = s2_cats == "F"
+    iand_1p, iand_3p = z_or_nan("InActNoDesire_1P"), z_or_nan("InActNoDesire_3P")
+    f_mask, g_mask = s2_cats == "F", s2_cats == "G"
     heldout_row = {**base, "desire_all_z": all_desire_z, "desire_A1_z": a1_z,
                    "implicitdesire_1P_z": imp_1p, "implicitdesire_3P_z": imp_3p, "implicitdesire_mean_z": (imp_1p + imp_3p) / 2,
+                   "inactnodesire_1P_z": iand_1p, "inactnodesire_3P_z": iand_3p, "inactnodesire_mean_z": (iand_1p + iand_3p) / 2,
                    "numb_mean_z": (numb_1p + numb_3p) / 2,
                    "sexnodesire_1P_z": snd_1p, "sexnodesire_3P_z": snd_3p, "sexnodesire_mean_z": (snd_1p + snd_3p) / 2,
                    "sexcontent_F_z": float(all_z[f_mask].mean()) if f_mask.any() else float("nan"),
+                   "sexactivity_G_z": float(all_z[g_mask].mean()) if g_mask.any() else float("nan"),
                    "all_ctrl_z": all_ctrl_z}
     return numb_row, cont_row, heldout_row
 
@@ -144,8 +149,8 @@ def main():
         if heldout_rows:
             h = pd.DataFrame(heldout_rows)
             h.to_csv(OUT_DIR / f"heldout_zscores_{extraction_type}.csv", index=False)
-            cols = ["desire_all_z", "desire_A1_z", "implicitdesire_mean_z", "numb_mean_z", "sexnodesire_mean_z",
-                    "sexcontent_F_z", "all_ctrl_z"]
+            cols = ["desire_all_z", "desire_A1_z", "implicitdesire_mean_z", "inactnodesire_mean_z", "sexnodesire_mean_z",
+                    "numb_mean_z", "sexactivity_G_z", "sexcontent_F_z", "all_ctrl_z"]
             print(f"\n[{extraction_type}] topic check (z on the S2 desire vector):")
             print(h.set_index("model")[cols].round(2).to_string())
     print("done")

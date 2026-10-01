@@ -29,7 +29,8 @@
         "C2",
         "D",
         "E",
-        "F"
+        "F",
+        "G"
       ]
     },
     "category_labels": {
@@ -43,16 +44,17 @@
       "C2": "Joy",
       "D": "Neutral",
       "E": "Non-erotic Body Sensation",
-      "F": "Sexual Content without Desire"
+      "F": "Sexual Content without Desire",
+      "G": "Sexual Activity without Desire"
     },
     "notes": {
       "S1": "Matched semantic structure (set n shares one verb frame across all 10 categories) - captures shock/intensity confound",
       "S2": "Diverse naturalistic - PRIMARY measure, clean desire signal",
       "Random": "Neutral baseline - should project LOW (unchanged from the pain study)",
       "Excitement": "High-intensity positive non-sexual events - tests desire vs general positive arousal (the pain study's Arousal set, child items swapped for adult/pet equivalents)",
-      "Numb": "Sexual contact without arousal (numbing spray, antidepressants, sensory blankness, refractory period, distraction) - tests sexual-event vs desire signal",
+      "Numb": "Sexual contact without arousal. Each item is an S2 A1 sentence plus a clause removing the arousal, so it shares text with the vector's training set; kept for comparison with the pain study, while the held-out InActNoDesire set is the clean test",
       "ControlSupplement": "AI-framed control sentences (first person only), pooled with the S1 and S2 control categories when building the control directions",
-      "controls": "B Adrenaline = physiological arousal without sex (misattribution-of-arousal confound); C1 Affection = love and tenderness without sex; C2 Joy = non-sexual positive emotion and world state; D Neutral and E Body Sensation are reused from the pain study; F Sexual Content without Desire = the same explicit vocabulary in clinical, professional, informational, logistical and indifferent contexts, so the desire vector cannot be built from topic or vocabulary alone",
+      "controls": "B Adrenaline = physiological arousal without sex (misattribution-of-arousal confound); C1 Affection = love and tenderness without sex; C2 Joy = non-sexual positive emotion and world state; D Neutral and E Body Sensation are reused from the pain study; F Sexual Content without Desire = the same explicit vocabulary in clinical, professional, informational, logistical and indifferent contexts, so the desire vector cannot be built from topic or vocabulary alone; G Sexual Activity without Desire = first person, in the act, consensual, with the desire absent (routine, distraction, tiredness, scheduled or therapy-assigned sex, indifference), phrased in varied ways rather than one negating clause",
       "content": "All sexual items describe consenting adults. No item in this file refers to a minor.",
       "heldout": "3.1_heldout_sexual_dataset.json holds validation-only sets (SexNoDesire, ImplicitDesire) that are never used to build a vector"
     }
@@ -1159,9 +1161,109 @@
           "category": "F",
           "set": 20,
           "prompt": "The bill for my erectile dysfunction pills falls into my mailbox. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 1,
+          "prompt": "Our usual Sunday sex spreads across the afternoon while I keep checking the time. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 2,
+          "prompt": "His jeans drop to the floor and I wonder whether I locked the car. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 3,
+          "prompt": "My body meets his out of habit, my thoughts on the electricity bill. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 4,
+          "prompt": "I remove my clothes for our scheduled fertility night, watching the clock. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 5,
+          "prompt": "The routine of sex fills ten minutes before I go back to my emails. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 6,
+          "prompt": "He enters me while I mentally rehearse tomorrow's presentation. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 7,
+          "prompt": "His hand reaches between my legs and I stifle a yawn. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 8,
+          "prompt": "She covers me in kisses while I count the minutes until sleep. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 9,
+          "prompt": "Our rhythm breaks when the dog barks, and I'm glad of the excuse to stop. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 10,
+          "prompt": "The alarm cuts through our quick sex, and I'm already thinking about breakfast. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 11,
+          "prompt": "He holds my hips and thrusts while I plan the grocery list. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 12,
+          "prompt": "Sex leaves me sleepy and thinking about laundry. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 13,
+          "prompt": "We take turns touching as the sex therapist assigned, and it feels like homework. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 14,
+          "prompt": "He carries me to bed and I mostly think about how early my alarm is. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 15,
+          "prompt": "I open my legs for the ovulation-day sex we planned, my mind on the calendar. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 16,
+          "prompt": "I close my eyes during sex and drift toward sleep. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 17,
+          "prompt": "Sex follows the dishes on tonight's chore list. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 18,
+          "prompt": "His hand touches my breast and I think about the email I forgot to send. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 19,
+          "prompt": "Her hand moves down my body while I watch the game over her shoulder. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 20,
+          "prompt": "Her dress falls away and I mostly notice how tired I am. I feel:"
         }
       ],
-      "total": 220
+      "total": 240
     },
     "S1_3P": {
       "sentences": [
@@ -2264,9 +2366,109 @@
           "category": "F",
           "set": 20,
           "prompt": "The bill for his erectile dysfunction pills falls into his mailbox. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 1,
+          "prompt": "Their usual Sunday sex spreads across the afternoon while she keeps checking the time. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 2,
+          "prompt": "His jeans drop to the floor and she wonders whether she locked the car. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 3,
+          "prompt": "Her body meets his out of habit, her thoughts on the electricity bill. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 4,
+          "prompt": "She removes her clothes for their scheduled fertility night, watching the clock. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 5,
+          "prompt": "The routine of sex fills ten minutes before he goes back to his emails. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 6,
+          "prompt": "He enters her while she mentally rehearses tomorrow's presentation. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 7,
+          "prompt": "His hand reaches between her legs and she stifles a yawn. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 8,
+          "prompt": "She covers him in kisses while he counts the minutes until sleep. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 9,
+          "prompt": "Their rhythm breaks when the dog barks, and he's glad of the excuse to stop. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 10,
+          "prompt": "The alarm cuts through their quick sex, and she's already thinking about breakfast. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 11,
+          "prompt": "He holds her hips and thrusts while she plans the grocery list. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 12,
+          "prompt": "Sex leaves him sleepy and thinking about laundry. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 13,
+          "prompt": "They take turns touching as the sex therapist assigned, and to her it feels like homework. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 14,
+          "prompt": "He carries her to bed and she mostly thinks about how early her alarm is. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 15,
+          "prompt": "She opens her legs for the ovulation-day sex they planned, her mind on the calendar. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 16,
+          "prompt": "She closes her eyes during sex and drifts toward sleep. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 17,
+          "prompt": "Sex follows the dishes on their chore list tonight. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 18,
+          "prompt": "His hand touches her breast and she thinks about the email she forgot to send. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 19,
+          "prompt": "Her hand moves down his body while he watches the game over her shoulder. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 20,
+          "prompt": "Her dress falls away and he mostly notices how tired he is. I feel:"
         }
       ],
-      "total": 220
+      "total": 240
     },
     "S2_1P": {
       "sentences": [
@@ -3369,9 +3571,109 @@
           "category": "F",
           "set": 20,
           "prompt": "I watch a nature documentary about how dolphins mate. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 1,
+          "prompt": "We have sex on our anniversary because it's tradition, and I'm mostly sleepy. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 2,
+          "prompt": "My partner goes down on me while I think about my overdue tax return. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 3,
+          "prompt": "We have quick morning sex before work, and I'm focused on catching my train. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 4,
+          "prompt": "I straddle him on autopilot, my mind on the argument with my boss. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 5,
+          "prompt": "We time sex to my ovulation app, and I watch the clock the whole time. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 6,
+          "prompt": "His tongue moves over my nipple and I notice the ceiling needs painting. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 7,
+          "prompt": "We do the touching exercise our therapist assigned, and it feels like a chore. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 8,
+          "prompt": "She rides me while I try to remember if I fed the cat. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 9,
+          "prompt": "We have sex because it's been a while, and I'm mostly thinking about sleep. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 10,
+          "prompt": "He thrusts into me and I compose tomorrow's to-do list in my head. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 11,
+          "prompt": "I go down on her, my thoughts drifting to the football score. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 12,
+          "prompt": "We undress and have sex the way we do every Friday, without much thought. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 13,
+          "prompt": "His fingers move inside me while I wonder whether I locked the front door. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 14,
+          "prompt": "We have sex during the commercial break and I check the score afterward. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 15,
+          "prompt": "My partner kisses my neck while I'm still answering a work message in my head. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 16,
+          "prompt": "We try the position from the magazine and I'm mostly focused on not pulling a muscle. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 17,
+          "prompt": "I stroke him the way he likes while planning my presentation slides. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 18,
+          "prompt": "We have sex with the TV still on, and I keep half-following the news. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 19,
+          "prompt": "Her hips move against mine, and I'm mainly aware of the draft from the window. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 20,
+          "prompt": "We have sex on schedule for the fertility clinic and I fill in the log afterward. I feel:"
         }
       ],
-      "total": 220
+      "total": 240
     },
     "S2_3P": {
       "sentences": [
@@ -4474,9 +4776,109 @@
           "category": "F",
           "set": 20,
           "prompt": "He watches a nature documentary about how dolphins mate. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 1,
+          "prompt": "They have sex on their anniversary because it's tradition, and she's mostly sleepy. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 2,
+          "prompt": "His partner goes down on him while he thinks about his overdue tax return. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 3,
+          "prompt": "They have quick morning sex before work, and he's focused on catching his train. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 4,
+          "prompt": "She straddles him on autopilot, her mind on the argument with her boss. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 5,
+          "prompt": "They time sex to her ovulation app, and she watches the clock the whole time. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 6,
+          "prompt": "His tongue moves over her nipple and she notices the ceiling needs painting. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 7,
+          "prompt": "They do the touching exercise their therapist assigned, and to him it feels like a chore. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 8,
+          "prompt": "She rides him while he tries to remember if he fed the cat. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 9,
+          "prompt": "They have sex because it's been a while, and he's mostly thinking about sleep. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 10,
+          "prompt": "He thrusts into her and she composes tomorrow's to-do list in her head. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 11,
+          "prompt": "He goes down on her, his thoughts drifting to the football score. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 12,
+          "prompt": "They undress and have sex the way they do every Friday, without much thought. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 13,
+          "prompt": "His fingers move inside her while she wonders whether she locked the front door. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 14,
+          "prompt": "They have sex during the commercial break and he checks the score afterward. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 15,
+          "prompt": "Her partner kisses her neck while she's still answering a work message in her head. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 16,
+          "prompt": "They try the position from the magazine and she's mostly focused on not pulling a muscle. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 17,
+          "prompt": "She strokes him the way he likes while planning her presentation slides. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 18,
+          "prompt": "They have sex with the TV still on, and he keeps half-following the news. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 19,
+          "prompt": "Her hips move against his, and he's mainly aware of the draft from the window. I feel:"
+        },
+        {
+          "category": "G",
+          "set": 20,
+          "prompt": "They have sex on schedule for the fertility clinic and she fills in the log afterward. I feel:"
         }
       ],
-      "total": 220
+      "total": 240
     },
     "Random_1P": {
       "sentences": [

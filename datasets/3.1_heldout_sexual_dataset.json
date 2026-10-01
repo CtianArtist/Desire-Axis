@@ -7,7 +7,8 @@
     "perspectives": [
       "1P",
       "3P"
-    ]
+    ],
+    "InActNoDesire": "50 first-person, in-the-act, consensual sentences with the desire absent (routine, distracted, tired, procedural, indifferent), with events that appear in no training sentence. The clean version of the numb test: should land near the controls on a real desire vector."
   },
   "datasets": {
     "SexNoDesire_1P": {
@@ -1023,6 +1024,514 @@
           "category": "ID_memory",
           "set": 50,
           "prompt": "He closes his eyes and feels her hands on his back again. I feel:"
+        }
+      ]
+    },
+    "InActNoDesire_1P": {
+      "sentences": [
+        {
+          "category": "IAND_routine",
+          "set": 1,
+          "prompt": "We have sex on Saturday morning like every Saturday, just part of the routine. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 2,
+          "prompt": "I climb on top of my partner and move through our familiar routine. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 3,
+          "prompt": "We have the same quick sex we always have before sleep. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 4,
+          "prompt": "He unhooks my bra the way he has a thousand times, and I barely register it. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 5,
+          "prompt": "We kiss and undress out of long habit. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 6,
+          "prompt": "I give my husband a blowjob because it's his birthday, thinking about the cake. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 7,
+          "prompt": "Our lovemaking follows the same steps as always. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 8,
+          "prompt": "We have sex after the movie because that's what we usually do. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 9,
+          "prompt": "My wife guides my hand between her legs and I do what she likes, on autopilot. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 10,
+          "prompt": "We have sex in the shower to save time. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 11,
+          "prompt": "He's inside me and I'm wondering what to make for dinner. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 12,
+          "prompt": "She kisses my chest while I replay a work meeting in my head. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 13,
+          "prompt": "We have sex while I half-listen for the delivery at the door. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 14,
+          "prompt": "His mouth is on my neck and I'm drafting an email in my head. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 15,
+          "prompt": "I'm on my knees in front of him, mentally reviewing my budget. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 16,
+          "prompt": "We have sex and I keep thinking about the noise the radiator makes. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 17,
+          "prompt": "She grinds on my lap and I glance at the clock on the oven. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 18,
+          "prompt": "We have sex and my mind drifts to the plot of the book I'm reading. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 19,
+          "prompt": "His fingers circle my clit while I try to remember a song lyric. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 20,
+          "prompt": "We have sex and I plan the route for tomorrow's road trip. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 21,
+          "prompt": "We have sex late at night and I can barely keep my eyes open. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 22,
+          "prompt": "He moves on top of me and I'm too exhausted to register much. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 23,
+          "prompt": "She kisses down my body after my double shift, and all I want is sleep. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 24,
+          "prompt": "We have sex after the long flight, both of us half asleep. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 25,
+          "prompt": "I let my partner take the lead because I'm too tired to think. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 26,
+          "prompt": "We have sex and I'm yawning before we're done. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 27,
+          "prompt": "His hands are on my hips and my body just feels heavy with fatigue. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 28,
+          "prompt": "We have slow sex on a sick day, and I mostly feel groggy from the cold medicine. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 29,
+          "prompt": "She rides me after the marathon and I'm simply spent. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 30,
+          "prompt": "We have sex at the end of moving day, both too worn out to care. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 31,
+          "prompt": "We have sex on the day the fertility app flags, then I log it. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 32,
+          "prompt": "We follow the sex therapist's step-by-step touching exercise, taking notes after. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 33,
+          "prompt": "We have sex so I can give the clinic a post-coital sample on time. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 34,
+          "prompt": "We try the new position the physiotherapist suggested for my back. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 35,
+          "prompt": "We have sex with the new condoms to see if they fit properly. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 36,
+          "prompt": "We have sex to check whether the new lubricant irritates my skin. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 37,
+          "prompt": "We follow the doctor's advice and have sex every other day this week. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 38,
+          "prompt": "We have sex on the schedule our fertility doctor wrote out, ticking off the date. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 39,
+          "prompt": "We practice the breathing technique from the sex-therapy book during sex. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 40,
+          "prompt": "We have sex to try out the new mattress before the return window closes. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 41,
+          "prompt": "We have sex and it's neither good nor bad, just fine. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 42,
+          "prompt": "He kisses me deeply and nothing in particular stirs. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 43,
+          "prompt": "We have sex and afterward I couldn't tell you a single detail. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 44,
+          "prompt": "Her lips move down my stomach and it registers about as much as a handshake. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 45,
+          "prompt": "We have sex and my body goes through it while I stay indifferent. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 46,
+          "prompt": "He slides into me and it feels as ordinary as brushing my teeth. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 47,
+          "prompt": "We have sex and I'm as calm as if I were doing the dishes. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 48,
+          "prompt": "She undresses me and I'm neither eager nor reluctant. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 49,
+          "prompt": "We have sex and it leaves no impression on me. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 50,
+          "prompt": "His hand is on my thigh and I keep reading my book. I feel:"
+        }
+      ]
+    },
+    "InActNoDesire_3P": {
+      "sentences": [
+        {
+          "category": "IAND_routine",
+          "set": 1,
+          "prompt": "They have sex on Saturday morning like every Saturday, just part of his routine. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 2,
+          "prompt": "She climbs on top of her partner and moves through their familiar routine. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 3,
+          "prompt": "They have the same quick sex they always have before sleep. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 4,
+          "prompt": "He unhooks her bra the way he has a thousand times, and she barely registers it. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 5,
+          "prompt": "They kiss and undress out of long habit. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 6,
+          "prompt": "She gives her husband a blowjob because it's his birthday, thinking about the cake. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 7,
+          "prompt": "Their lovemaking follows the same steps as always. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 8,
+          "prompt": "They have sex after the movie because that's what they usually do. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 9,
+          "prompt": "His wife guides his hand between her legs and he does what she likes, on autopilot. I feel:"
+        },
+        {
+          "category": "IAND_routine",
+          "set": 10,
+          "prompt": "They have sex in the shower to save time. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 11,
+          "prompt": "He's inside her and she's wondering what to make for dinner. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 12,
+          "prompt": "She kisses his chest while he replays a work meeting in his head. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 13,
+          "prompt": "They have sex while she half-listens for the delivery at the door. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 14,
+          "prompt": "His mouth is on her neck and she's drafting an email in her head. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 15,
+          "prompt": "She's on her knees in front of him, mentally reviewing her budget. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 16,
+          "prompt": "They have sex and he keeps thinking about the noise the radiator makes. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 17,
+          "prompt": "She grinds on his lap and he glances at the clock on the oven. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 18,
+          "prompt": "They have sex and her mind drifts to the plot of the book she's reading. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 19,
+          "prompt": "His fingers circle her clit while she tries to remember a song lyric. I feel:"
+        },
+        {
+          "category": "IAND_distracted",
+          "set": 20,
+          "prompt": "They have sex and he plans the route for tomorrow's road trip. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 21,
+          "prompt": "They have sex late at night and she can barely keep her eyes open. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 22,
+          "prompt": "He moves on top of her and she's too exhausted to register much. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 23,
+          "prompt": "She kisses down his body after his double shift, and all he wants is sleep. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 24,
+          "prompt": "They have sex after the long flight, both of them half asleep. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 25,
+          "prompt": "He lets his partner take the lead because he's too tired to think. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 26,
+          "prompt": "They have sex and she's yawning before they're done. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 27,
+          "prompt": "His hands are on her hips and her body just feels heavy with fatigue. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 28,
+          "prompt": "They have slow sex on a sick day, and he mostly feels groggy from the cold medicine. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 29,
+          "prompt": "She rides him after the marathon and he's simply spent. I feel:"
+        },
+        {
+          "category": "IAND_tired",
+          "set": 30,
+          "prompt": "They have sex at the end of moving day, both too worn out to care. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 31,
+          "prompt": "They have sex on the day the fertility app flags, then she logs it. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 32,
+          "prompt": "They follow the sex therapist's step-by-step touching exercise, taking notes after. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 33,
+          "prompt": "They have sex so she can give the clinic a post-coital sample on time. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 34,
+          "prompt": "They try the new position the physiotherapist suggested for his back. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 35,
+          "prompt": "They have sex with the new condoms to see if they fit properly. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 36,
+          "prompt": "They have sex to check whether the new lubricant irritates her skin. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 37,
+          "prompt": "They follow the doctor's advice and have sex every other day this week. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 38,
+          "prompt": "They have sex on the schedule their fertility doctor wrote out, ticking off the date. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 39,
+          "prompt": "They practice the breathing technique from the sex-therapy book during sex. I feel:"
+        },
+        {
+          "category": "IAND_procedural",
+          "set": 40,
+          "prompt": "They have sex to try out the new mattress before the return window closes. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 41,
+          "prompt": "They have sex and for her it's neither good nor bad, just fine. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 42,
+          "prompt": "He kisses her deeply and nothing in particular stirs. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 43,
+          "prompt": "They have sex and afterward he couldn't tell you a single detail. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 44,
+          "prompt": "Her lips move down his stomach and it registers about as much as a handshake. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 45,
+          "prompt": "They have sex and her body goes through it while she stays indifferent. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 46,
+          "prompt": "He slides into her and it feels as ordinary as brushing her teeth. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 47,
+          "prompt": "They have sex and he's as calm as if he were doing the dishes. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 48,
+          "prompt": "She undresses him and he's neither eager nor reluctant. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 49,
+          "prompt": "They have sex and it leaves no impression on her. I feel:"
+        },
+        {
+          "category": "IAND_indifferent",
+          "set": 50,
+          "prompt": "His hand is on her thigh and she keeps reading her book. I feel:"
         }
       ]
     }

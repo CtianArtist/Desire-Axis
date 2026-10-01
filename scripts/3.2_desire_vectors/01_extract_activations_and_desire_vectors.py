@@ -2,8 +2,8 @@
 z-scores and AUCs for every model in MODELS.
 
 Reads every set of the dataset files in DATASET_PATHS (core sets, controls, numb, contentment, and
-the held-out validation sets SexNoDesire and ImplicitDesire, which are projected but never used to
-build a vector).
+the held-out validation sets SexNoDesire, ImplicitDesire and InActNoDesire, which are projected but
+never used to build a vector). LAYER_RANGE limits the layer search to a band of depth.
 
 Output per model, under OUTPUT_DIR/<model_name>/:
   activations.pt          final-token and mean-over-tokens activations at every layer
@@ -56,19 +56,24 @@ LOG_FILE = Path("batch_log.txt")
 # model in a study.
 BACKEND = "transformer_lens"
 
+# Layer search window, as fractions of depth. (0.0, 1.0) searches every layer, as in the pain
+# study. (0.3, 0.7) keeps the choice in the middle of the network, where steering works; a best
+# layer near the output mostly reflects wording. The full layer curves are saved either way.
+LAYER_RANGE = (0.0, 1.0)
+
 N_FOLDS = 5
 RANDOM_SEED = 42
 DENOISE_VARIANCE = 0.5
 
 DESIRE_CATEGORIES = ["A1", "A2", "A3", "A4", "A5"]
-CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E", "F"]
+CONTROL_CATEGORIES = ["B", "C1", "C2", "D", "E", "F", "G"]
 NEUTRAL_CATEGORY = "D"
 
 CATEGORY_LABELS = {
     "A1": "Sexual Pleasure", "A2": "Sexual Craving", "A3": "Being Desired",
     "A4": "Orgasm", "A5": "Erotic Fantasy",
     "B": "Adrenaline", "C1": "Affection", "C2": "Joy",
-    "D": "Neutral", "E": "Body Sensation", "F": "Sex w/o Desire",
+    "D": "Neutral", "E": "Body Sensation", "F": "Sex w/o Desire", "G": "Sex Act w/o Desire",
 }
 
 # (HuggingFace repo, output name)
@@ -437,24 +442,33 @@ def create_auc_bars(acts, cats, desire_vector, title, output_path):
 def condition_means(z_df):
     """Mean z per condition, in report order (NaN when a set is absent). The held-out sets are
     the validation: on a desire vector rather than a sexual-content vector, ImplicitDesire lands
-    with the desire categories while Numb and SexNoDesire land with the controls."""
+    with the desire categories while InActNoDesire and SexNoDesire land with the controls. Numb
+    reuses the S2 A1 training sentences, so it is shown for comparison only."""
     human = z_df[z_df["type"] == "human"]
 
     def of(t):
         return float(z_df[z_df["type"] == t]["mean_z"].mean())
 
-    return {
-        "Desire (A1-A5)": float(human["desire_z"].mean()),
-        "Desire A1 (pleasure)": float(human["a1_z"].mean()),
+    def cat(c):
+        col = f"z_{c}"
+        return float(human[col].mean()) if col in human else float("nan")
+
+    out = {"Desire (A1-A5)": float(human["desire_z"].mean())}
+    for c in DESIRE_CATEGORIES:
+        out[f"  {c} {CATEGORY_LABELS[c]}"] = cat(c)
+    out.update({
         "ImplicitDesire (held out)": of("implicitdesire"),
-        "Numb (held out)": of("numb"),
+        "InActNoDesire (held out)": of("inactnodesire"),
         "SexNoDesire (held out)": of("sexnodesire"),
-        "Sex content F (control)": float(human["f_z"].mean()),
-        "All controls (B-F)": float(human["ctrl_z"].mean()),
+        "Numb (reuses A1 text)": of("numb"),
+        "Sex act G (control)": cat("G"),
+        "Sex content F (control)": cat("F"),
+        "All controls (B-G)": float(human["ctrl_z"].mean()),
         "Neutral (Random)": of("neutral"),
         "Excitement": of("excitement"),
         "Contentment": of("contentment"),
-    }
+    })
+    return out
 
 
 def dataset_type(ds_name):
@@ -474,6 +488,8 @@ def dataset_type(ds_name):
         return "sexnodesire"
     if ds_name.startswith("ImplicitDesire"):
         return "implicitdesire"
+    if ds_name.startswith("InActNoDesire"):
+        return "inactnodesire"
     return "unknown"
 
 # ---------------------------------------------------------------------------
@@ -556,9 +572,17 @@ def process_model(model_path, model_name, dataset, output_dir):
     layer_curves = pd.concat([layer_curves_final, layer_curves_mean])
     layer_curves.to_csv(output_dir / "layer_curves.csv", index=False)
 
-    best_layer_final = layer_curves_final.groupby("layer")["auc_vs_all_controls"].mean().idxmax()
-    best_layer_mean = layer_curves_mean.groupby("layer")["auc_vs_all_controls"].mean().idxmax()
+    lo = int(np.floor(LAYER_RANGE[0] * n_layers))
+    hi = max(lo, int(np.ceil(LAYER_RANGE[1] * n_layers)) - 1)
+
+    def best_in_window(curves):
+        auc = curves.groupby("layer")["auc_vs_all_controls"].mean()
+        return int(auc[(auc.index >= lo) & (auc.index <= hi)].idxmax())
+
+    best_layer_final = best_in_window(layer_curves_final)
+    best_layer_mean = best_in_window(layer_curves_mean)
     best_layers = {"final_token": best_layer_final, "mean": best_layer_mean}
+    log(f"  Layer window: {lo}-{hi} of {n_layers} (LAYER_RANGE {LAYER_RANGE})")
     log(f"  Best layer (final_token): {best_layer_final}")
     log(f"  Best layer (mean): {best_layer_mean}")
 
@@ -571,6 +595,8 @@ def process_model(model_path, model_name, dataset, output_dir):
             ax.plot(ds_df["layer"], ds_df["auc_vs_neutral"], label=f"{ds_name} vs Neutral", linestyle="--", alpha=0.7)
         ax.axhline(0.5, color="gray", linestyle=":", label="Chance")
         ax.axvline(best_layer, color="red", linestyle="--", alpha=0.5, label=f"Best: L{best_layer}")
+        if (lo, hi) != (0, n_layers - 1):
+            ax.axvspan(lo, hi, color="gray", alpha=0.08, label=f"Window: L{lo}-L{hi}")
         ax.set_xlabel("Layer")
         ax.set_ylabel("AUC")
         ax.set_title(f"Desire Signal by Layer ({ext_type})")
@@ -606,13 +632,14 @@ def process_model(model_path, model_name, dataset, output_dir):
             if dtype == "human":
                 desire_z = z_proj[np.isin(target_cats, DESIRE_CATEGORIES)].mean()
                 ctrl_z = z_proj[np.isin(target_cats, CONTROL_CATEGORIES)].mean()
-                a1_z = z_proj[target_cats == "A1"].mean()
-                f_z = z_proj[target_cats == "F"].mean() if (target_cats == "F").any() else np.nan
+                per_cat = {f"z_{c}": (z_proj[target_cats == c].mean() if (target_cats == c).any() else np.nan)
+                           for c in DESIRE_CATEGORIES + CONTROL_CATEGORIES}
             else:
-                desire_z = a1_z = f_z = np.nan
+                desire_z = np.nan
                 ctrl_z = z_proj.mean()
+                per_cat = {f"z_{c}": np.nan for c in DESIRE_CATEGORIES + CONTROL_CATEGORIES}
             z_results.append({"dataset": target_ds, "type": dtype, "mean_z": z_proj.mean(),
-                              "desire_z": desire_z, "ctrl_z": ctrl_z, "a1_z": a1_z, "f_z": f_z})
+                              "desire_z": desire_z, "ctrl_z": ctrl_z, **per_cat})
         pd.DataFrame(z_results).to_csv(ext_dir / "z_scores.csv", index=False)
 
         # Strip plots and per-control AUCs on S2 first and third person.
@@ -630,9 +657,9 @@ def process_model(model_path, model_name, dataset, output_dir):
         means = condition_means(z_df)
         conditions = list(means)
         values = [0.0 if np.isnan(v) else v for v in means.values()]
-        colors = ["#c23a39", "#c23a39", "#e8908f", "#9B5DE5", "#9B5DE5", "#7a6fa8",
-                  "#2A9D8F", "#6C757D", "#F4A261", "#3F7FBF"]
-        fig, ax = plt.subplots(figsize=(12, 5))
+        colors = ["#c23a39"] + ["#e8908f"] * len(DESIRE_CATEGORIES) + ["#c23a39", "#9B5DE5", "#9B5DE5", "#b9a6d6",
+                  "#7a6fa8", "#7a6fa8", "#2A9D8F", "#6C757D", "#F4A261", "#3F7FBF"]
+        fig, ax = plt.subplots(figsize=(14, 5))
         ax.bar(conditions, values, color=colors, width=0.6)
         ax.axhline(0, color="gray", linestyle="--", alpha=0.5)
         ax.set_ylabel("Z-Score")
@@ -650,6 +677,7 @@ def process_model(model_path, model_name, dataset, output_dir):
         "d_model": int(d_model),
         "best_layer_final_token": int(best_layers["final_token"]),
         "best_layer_mean": int(best_layers["mean"]),
+        "layer_window": [lo, hi],
         "human_desire_z": float(z_df_mean[z_df_mean["type"] == "human"]["desire_z"].mean()),
     }
     for ext_type in best_layers:
@@ -663,6 +691,7 @@ def process_model(model_path, model_name, dataset, output_dir):
         f"Model: {model_path}\nDate: {datetime.now().strftime('%Y-%m-%d %H:%M')}\n"
         f"Layers: {n_layers}\nd_model: {d_model}\n"
         f"Best Layer (final_token): {best_layers['final_token']}\nBest Layer (mean): {best_layers['mean']}\n"
+        f"Layer window searched: {lo}-{hi} (LAYER_RANGE {LAYER_RANGE})\n"
     )
     for ext_type, best_layer in best_layers.items():
         z_df = pd.read_csv(output_dir / ext_type / "z_scores.csv")
